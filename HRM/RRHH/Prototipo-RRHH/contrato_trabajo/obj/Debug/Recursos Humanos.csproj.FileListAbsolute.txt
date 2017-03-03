@@ -1,0 +1,149 @@
+C:\Users\GABRIELA\Documents\Visual Studio 2015\Projects\contrato_trabajo\contrato_trabajo\bin\Debug\contrato_trabajo.exe.config
+C:\Users\GABRIELA\Documents\Visual Studio 2015\Projects\contrato_trabajo\contrato_trabajo\obj\Debug\contrato_trabajo.exe
+C:\Users\GABRIELA\Documents\Visual Studio 2015\Projects\contrato_trabajo\contrato_trabajo\obj\Debug\contrato_trabajo.pdb
+C:\Users\GABRIELA\Documents\Visual Studio 2015\Projects\contrato_trabajo\contrato_trabajo\bin\Debug\contrato_trabajo.exe
+C:\Users\GABRIELA\Documents\Visual Studio 2015\Projects\contrato_trabajo\contrato_trabajo\bin\Debug\contrato_trabajo.pdb
+C:\Users\GABRIELA\Documents\Visual Studio 2015\Projects\contrato_trabajo\contrato_trabajo\obj\Debug\Recursos Humanos.csprojResolveAssemblyReference.cache
+C:\Users\GABRIELA\Documents\Visual Studio 2015\Projects\contrato_trabajo\contrato_trabajo\obj\Debug\contrato_trabajo.contrato.resources
+C:\Users\GABRIELA\Documents\Visual Studio 2015\Projects\contrato_trabajo\contrato_trabajo\obj\Debug\contrato_trabajo.Empleado.resources
+C:\Users\GABRIELA\Documents\Visual Studio 2015\Projects\contrato_trabajo\contrato_trabajo\obj\Debug\contrato_trabajo.Contenedor.resources
+C:\Users\GABRIELA\Documents\Visual Studio 2015\Projects\contrato_trabajo\contrato_trabajo\obj\Debug\contrato_trabajo.empresa.resources
+C:\Users\GABRIELA\Documents\Visual Studio 2015\Projects\contrato_trabajo\contrato_trabajo\obj\Debug\contrato_trabajo.Nomina.resources
+C:\Users\GABRIELA\Documents\Visual Studio 2015\Projects\contrato_trabajo\contrato_trabajo\obj\Debug\contrato_trabajo.Properties.Resources.resources
+C:\Users\GABRIELA\Documents\Visual Studio 2015\Projects\contrato_trabajo\contrato_trabajo\obj\Debug\Recursos Humanos.csproj.GenerateResource.Cache
+C:\Users\GABRIELA\Documents\Visual Studio 2015\Projects\contrato_trabajo\contrato_trabajo\obj\Debug\contrato_trabajo.Reporte_Nomina1.resources
+C:\Users\GABRIELA\Documents\Visual Studio 2015\Projects\contrato_trabajo\contrato_trabajo\obj\Debug\contrato_trabajo.cancelar_nominas.resources
+C:\Users\GABRIELA\Documents\Visual Studio 2015\Projects\contrato_trabajo\contrato_trabajo\obj\Debug\contrato_trabajo.Reportes_de_empleado.resources
+C:\Users\javie\Downloads\contrato_trabajo\contrato_trabajo\bin\Debug\contrato_trabajo.exe.config
+C:\Users\javie\Downloads\contrato_trabajo\contrato_trabajo\obj\Debug\contrato_trabajo.exe
+C:\Users\javie\Downloads\contrato_trabajo\contrato_trabajo\obj\Debug\contrato_trabajo.pdb
+C:\Users\javie\Downloads\contrato_trabajo\contrato_trabajo\bin\Debug\contrato_trabajo.exe
+C:\Users\javie\Downloads\contrato_trabajo\contrato_trabajo\bin\Debug\contrato_trabajo.pdb
+C:\Users\javie\Downloads\contrato_trabajo\contrato_trabajo\obj\Debug\Recursos Humanos.csprojResolveAssemblyReference.cache
+C:\Users\javie\Downloads\contrato_trabajo\contrato_trabajo\obj\Debug\contrato_trabajo.cancelar_nominas.resources
+C:\Users\javie\Downloads\contrato_trabajo\contrato_trabajo\obj\Debug\contrato_trabajo.contrato.resources
+C:\Users\javie\Downloads\contrato_trabajo\contrato_trabajo\obj\Debug\contrato_trabajo.Empleado.resources
+C:\Users\javie\Downloads\contrato_trabajo\contrato_trabajo\obj\Debug\contrato_trabajo.Contenedor.resources
+C:\Users\javie\Downloads\contrato_trabajo\contrato_trabajo\obj\Debug\contrato_trabajo.empresa.resources
+C:\Users\javie\Downloads\contrato_trabajo\contrato_trabajo\obj\Debug\contrato_trabajo.Nomina.resources
+C:\Users\javie\Downloads\contrato_trabajo\contrato_trabajo\obj\Debug\contrato_trabajo.Properties.Resources.resources
+C:\Users\javie\Downloads\contrato_trabajo\contrato_trabajo\obj\Debug\contrato_trabajo.Reportes_de_empleado.resources
+C:\Users\javie\Downloads\contrato_trabajo\contrato_trabajo\obj\Debug\contrato_trabajo.Reporte_Nomina1.resources
+C:\Users\javie\Downloads\contrato_trabajo\contrato_trabajo\obj\Debug\Recursos Humanos.csproj.GenerateResource.Cache
+C:\Users\javie\Downloads\Prototipo RRHH\contrato_trabajo\bin\Debug\contrato_trabajo.exe.config
+C:\Users\javie\Downloads\Prototipo RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.exe
+C:\Users\javie\Downloads\Prototipo RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.pdb
+C:\Users\javie\Downloads\Prototipo RRHH\contrato_trabajo\bin\Debug\contrato_trabajo.exe
+C:\Users\javie\Downloads\Prototipo RRHH\contrato_trabajo\bin\Debug\contrato_trabajo.pdb
+C:\Users\javie\Downloads\Prototipo RRHH\contrato_trabajo\obj\Debug\Recursos Humanos.csprojResolveAssemblyReference.cache
+C:\Users\javie\Downloads\Prototipo RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.cancelar_nominas.resources
+C:\Users\javie\Downloads\Prototipo RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.Contrato.resources
+C:\Users\javie\Downloads\Prototipo RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.Empleado.resources
+C:\Users\javie\Downloads\Prototipo RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.Contenedor.resources
+C:\Users\javie\Downloads\Prototipo RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.empresa.resources
+C:\Users\javie\Downloads\Prototipo RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.Nomina.resources
+C:\Users\javie\Downloads\Prototipo RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.Properties.Resources.resources
+C:\Users\javie\Downloads\Prototipo RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.Reportes_de_empleado.resources
+C:\Users\javie\Downloads\Prototipo RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.Reporte_Nomina1.resources
+C:\Users\javie\Downloads\Prototipo RRHH\contrato_trabajo\obj\Debug\Recursos Humanos.csproj.GenerateResource.Cache
+C:\Users\javie\Downloads\Prototipo RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.Loading.resources
+C:\Users\Cristian\Desktop\EJERCICIO\IS\PROTOTIPO\Prototipo-RRHH\Prototipo RRHH\contrato_trabajo\bin\Debug\contrato_trabajo.exe.config
+C:\Users\Cristian\Desktop\EJERCICIO\IS\PROTOTIPO\Prototipo-RRHH\Prototipo RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.exe
+C:\Users\Cristian\Desktop\EJERCICIO\IS\PROTOTIPO\Prototipo-RRHH\Prototipo RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.pdb
+C:\Users\ottog\Desktop\Proyecto Ingenieria del sofware\Prototipo\Prototipo-RRHH\contrato_trabajo\bin\Debug\contrato_trabajo.exe.config
+C:\Users\ottog\Desktop\Proyecto Ingenieria del sofware\Prototipo\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.exe
+C:\Users\ottog\Desktop\Proyecto Ingenieria del sofware\Prototipo\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.pdb
+C:\Users\ottog\Desktop\Proyecto Ingenieria del sofware\Prototipo\Prototipo-RRHH\contrato_trabajo\bin\Debug\contrato_trabajo.exe
+C:\Users\ottog\Desktop\Proyecto Ingenieria del sofware\Prototipo\Prototipo-RRHH\contrato_trabajo\bin\Debug\contrato_trabajo.pdb
+C:\Users\ottog\Desktop\Proyecto Ingenieria del sofware\Prototipo\Prototipo-RRHH\contrato_trabajo\obj\Debug\Recursos Humanos.csprojResolveAssemblyReference.cache
+C:\Users\ottog\Desktop\Proyecto Ingenieria del sofware\Prototipo\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.cancelar_nominas.resources
+C:\Users\ottog\Desktop\Proyecto Ingenieria del sofware\Prototipo\Prototipo-RRHH\contrato_trabajo\obj\Debug\Capacitacion.Capacitacion.resources
+C:\Users\ottog\Desktop\Proyecto Ingenieria del sofware\Prototipo\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.Contrato.resources
+C:\Users\ottog\Desktop\Proyecto Ingenieria del sofware\Prototipo\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.Empleado.resources
+C:\Users\ottog\Desktop\Proyecto Ingenieria del sofware\Prototipo\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.Contenedor.resources
+C:\Users\ottog\Desktop\Proyecto Ingenieria del sofware\Prototipo\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.empresa.resources
+C:\Users\ottog\Desktop\Proyecto Ingenieria del sofware\Prototipo\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.Loading.resources
+C:\Users\ottog\Desktop\Proyecto Ingenieria del sofware\Prototipo\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.Nomina.resources
+C:\Users\ottog\Desktop\Proyecto Ingenieria del sofware\Prototipo\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.Properties.Resources.resources
+C:\Users\ottog\Desktop\Proyecto Ingenieria del sofware\Prototipo\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.Reportes_de_empleado.resources
+C:\Users\ottog\Desktop\Proyecto Ingenieria del sofware\Prototipo\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.Reporte_Nomina1.resources
+C:\Users\ottog\Desktop\Proyecto Ingenieria del sofware\Prototipo\Prototipo-RRHH\contrato_trabajo\obj\Debug\Recursos Humanos.csproj.GenerateResource.Cache
+C:\Users\javie\Downloads\Prototipo-RRHH\Prototipo-RRHH\contrato_trabajo\bin\Debug\contrato_trabajo.exe.config
+C:\Users\javie\Downloads\Prototipo-RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.exe
+C:\Users\javie\Downloads\Prototipo-RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.pdb
+C:\Users\javie\Downloads\Prototipo-RRHH\Prototipo-RRHH\contrato_trabajo\bin\Debug\contrato_trabajo.exe
+C:\Users\javie\Downloads\Prototipo-RRHH\Prototipo-RRHH\contrato_trabajo\bin\Debug\contrato_trabajo.pdb
+C:\Users\javie\Downloads\Prototipo-RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\Recursos Humanos.csprojResolveAssemblyReference.cache
+C:\Users\javie\Downloads\Prototipo-RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.cancelar_nominas.resources
+C:\Users\javie\Downloads\Prototipo-RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\Capacitacion.Capacitacion.resources
+C:\Users\javie\Downloads\Prototipo-RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.Contrato.resources
+C:\Users\javie\Downloads\Prototipo-RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.Empleado.resources
+C:\Users\javie\Downloads\Prototipo-RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.Contenedor.resources
+C:\Users\javie\Downloads\Prototipo-RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.empresa.resources
+C:\Users\javie\Downloads\Prototipo-RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.Loading.resources
+C:\Users\javie\Downloads\Prototipo-RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.Nomina.resources
+C:\Users\javie\Downloads\Prototipo-RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.Properties.Resources.resources
+C:\Users\javie\Downloads\Prototipo-RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.Reportes_de_empleado.resources
+C:\Users\javie\Downloads\Prototipo-RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.Reporte_Nomina1.resources
+C:\Users\javie\Downloads\Prototipo-RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\Recursos Humanos.csproj.GenerateResource.Cache
+C:\Users\javie\Downloads\Prototipo-RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.Reporte_espefico.resources
+C:\Users\javie\Downloads\Prototipo-RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.Desempeno_Laboral.resources
+C:\Users\javie\Downloads\Prototipo-RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.Estadistica_Pagos.resources
+C:\Users\javie\Downloads\Prototipo-RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.Prestaciones.resources
+C:\Users\Cristian\Desktop\EJERCICIO\IS\Prototipo-RRHH-V5.1\Prototipo-RRHH-V5.1\Prototipo-RRHH\contrato_trabajo\bin\Debug\contrato_trabajo.exe.config
+C:\Users\Cristian\Desktop\EJERCICIO\IS\Prototipo-RRHH-V5.1\Prototipo-RRHH-V5.1\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.exe
+C:\Users\Cristian\Desktop\EJERCICIO\IS\Prototipo-RRHH-V5.1\Prototipo-RRHH-V5.1\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.pdb
+C:\Users\Cristian\Desktop\EJERCICIO\IS\Prototipo-RRHH-V5.1\Prototipo-RRHH-V5.1\Prototipo-RRHH\contrato_trabajo\obj\Debug\Recursos Humanos.csprojResolveAssemblyReference.cache
+C:\Users\Cristian\Desktop\EJERCICIO\IS\Prototipo-RRHH-V5.1\Prototipo-RRHH-V5.1\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.cancelar_nominas.resources
+C:\Users\Cristian\Desktop\EJERCICIO\IS\Prototipo-RRHH-V5.1\Prototipo-RRHH-V5.1\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.Contrato.resources
+C:\Users\Cristian\Desktop\EJERCICIO\IS\Prototipo-RRHH-V5.1\Prototipo-RRHH-V5.1\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.Desempeno_Laboral.resources
+C:\Users\Cristian\Desktop\EJERCICIO\IS\Prototipo-RRHH-V5.1\Prototipo-RRHH-V5.1\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.Empleado.resources
+C:\Users\Cristian\Desktop\EJERCICIO\IS\Prototipo-RRHH-V5.1\Prototipo-RRHH-V5.1\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.Contenedor.resources
+C:\Users\Cristian\Desktop\EJERCICIO\IS\Prototipo-RRHH-V5.1\Prototipo-RRHH-V5.1\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.empresa.resources
+C:\Users\Cristian\Desktop\EJERCICIO\IS\Prototipo-RRHH-V5.1\Prototipo-RRHH-V5.1\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.Estadistica_Pagos.resources
+C:\Users\Cristian\Desktop\EJERCICIO\IS\Prototipo-RRHH-V5.1\Prototipo-RRHH-V5.1\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.Loading.resources
+C:\Users\Cristian\Desktop\EJERCICIO\IS\Prototipo-RRHH-V5.1\Prototipo-RRHH-V5.1\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.Nomina.resources
+C:\Users\Cristian\Desktop\EJERCICIO\IS\Prototipo-RRHH-V5.1\Prototipo-RRHH-V5.1\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.Prestaciones.resources
+C:\Users\Cristian\Desktop\EJERCICIO\IS\Prototipo-RRHH-V5.1\Prototipo-RRHH-V5.1\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.Properties.Resources.resources
+C:\Users\Cristian\Desktop\EJERCICIO\IS\Prototipo-RRHH-V5.1\Prototipo-RRHH-V5.1\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.Reporte_espefico.resources
+C:\Users\Cristian\Desktop\EJERCICIO\IS\Prototipo-RRHH-V5.1\Prototipo-RRHH-V5.1\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.Reportes_de_empleado.resources
+C:\Users\Cristian\Desktop\EJERCICIO\IS\Prototipo-RRHH-V5.1\Prototipo-RRHH-V5.1\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.Reporte_Nomina1.resources
+C:\Users\Cristian\Desktop\EJERCICIO\IS\Prototipo-RRHH-V5.1\Prototipo-RRHH-V5.1\Prototipo-RRHH\contrato_trabajo\obj\Debug\Recursos Humanos.csproj.GenerateResource.Cache
+C:\Users\Cristian\Desktop\EJERCICIO\IS\Prototipo-RRHH-V5.1\Prototipo-RRHH-V5.1\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.Capacitaciones.resources
+C:\Users\Cristian\Desktop\EJERCICIO\IS\Prototipo-RRHH-V5.1\Prototipo-RRHH-V5.1\Prototipo-RRHH\contrato_trabajo\bin\Debug\contrato_trabajo.exe
+C:\Users\Cristian\Desktop\EJERCICIO\IS\Prototipo-RRHH-V5.1\Prototipo-RRHH-V5.1\Prototipo-RRHH\contrato_trabajo\bin\Debug\contrato_trabajo.pdb
+C:\Users\javie\Downloads\Prototipo-RRHH-V5.2\Prototipo-RRHH-V5.1\Prototipo-RRHH\contrato_trabajo\bin\Debug\contrato_trabajo.exe.config
+C:\Users\javie\Downloads\Prototipo-RRHH-V5.2\Prototipo-RRHH-V5.1\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.exe
+C:\Users\javie\Downloads\Prototipo-RRHH-V5.2\Prototipo-RRHH-V5.1\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.pdb
+C:\Users\javie\Downloads\Prototipo-RRHH-V5.2\Prototipo-RRHH-V5.1\Prototipo-RRHH\contrato_trabajo\bin\Debug\contrato_trabajo.exe
+C:\Users\javie\Downloads\Prototipo-RRHH-V5.2\Prototipo-RRHH-V5.1\Prototipo-RRHH\contrato_trabajo\bin\Debug\contrato_trabajo.pdb
+C:\Users\javie\Downloads\Prototipo-RRHH-V5.2\Prototipo-RRHH-V5.1\Prototipo-RRHH\contrato_trabajo\obj\Debug\Recursos Humanos.csprojResolveAssemblyReference.cache
+C:\Users\javie\Downloads\Prototipo-RRHH-V5.2\Prototipo-RRHH-V5.1\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.Contrato.resources
+C:\Users\javie\Downloads\Prototipo-RRHH-V5.2\Prototipo-RRHH-V5.1\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.Loading.resources
+C:\Users\javie\Downloads\Prototipo-RRHH-V5.2\Prototipo-RRHH-V5.1\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.Properties.Resources.resources
+C:\Users\javie\Downloads\Prototipo-RRHH-V5.2\Prototipo-RRHH-V5.1\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.Reporte_espefico.resources
+C:\Users\javie\Downloads\Prototipo-RRHH-V5.2\Prototipo-RRHH-V5.1\Prototipo-RRHH\contrato_trabajo\obj\Debug\Recursos Humanos.csproj.GenerateResource.Cache
+C:\Users\javie\Downloads\Prototipo-RRHH-V5.2\Prototipo-RRHH-V5.1\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_cancelar_nominas.resources
+C:\Users\javie\Downloads\Prototipo-RRHH-V5.2\Prototipo-RRHH-V5.1\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_capacitaciones.resources
+C:\Users\javie\Downloads\Prototipo-RRHH-V5.2\Prototipo-RRHH-V5.1\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_capacitaciones_grid.resources
+C:\Users\javie\Downloads\Prototipo-RRHH-V5.2\Prototipo-RRHH-V5.1\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_comisiones_grid.resources
+C:\Users\javie\Downloads\Prototipo-RRHH-V5.2\Prototipo-RRHH-V5.1\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_comisiones_linea.resources
+C:\Users\javie\Downloads\Prototipo-RRHH-V5.2\Prototipo-RRHH-V5.1\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_comisiones_marca.resources
+C:\Users\javie\Downloads\Prototipo-RRHH-V5.2\Prototipo-RRHH-V5.1\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_comisiones_producto.resources
+C:\Users\javie\Downloads\Prototipo-RRHH-V5.2\Prototipo-RRHH-V5.1\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_comisiones_vendedor.resources
+C:\Users\javie\Downloads\Prototipo-RRHH-V5.2\Prototipo-RRHH-V5.1\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_contrato_grid.resources
+C:\Users\javie\Downloads\Prototipo-RRHH-V5.2\Prototipo-RRHH-V5.1\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_desempeno_laboral.resources
+C:\Users\javie\Downloads\Prototipo-RRHH-V5.2\Prototipo-RRHH-V5.1\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_empleado.resources
+C:\Users\javie\Downloads\Prototipo-RRHH-V5.2\Prototipo-RRHH-V5.1\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_empleado_grid.resources
+C:\Users\javie\Downloads\Prototipo-RRHH-V5.2\Prototipo-RRHH-V5.1\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_empresa_grid.resources
+C:\Users\javie\Downloads\Prototipo-RRHH-V5.2\Prototipo-RRHH-V5.1\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_nomina_grid.resources
+C:\Users\javie\Downloads\Prototipo-RRHH-V5.2\Prototipo-RRHH-V5.1\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.mdi_contenedor.resources
+C:\Users\javie\Downloads\Prototipo-RRHH-V5.2\Prototipo-RRHH-V5.1\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_empresa.resources
+C:\Users\javie\Downloads\Prototipo-RRHH-V5.2\Prototipo-RRHH-V5.1\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_estadistica_Pagos.resources
+C:\Users\javie\Downloads\Prototipo-RRHH-V5.2\Prototipo-RRHH-V5.1\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_nomina.resources
+C:\Users\javie\Downloads\Prototipo-RRHH-V5.2\Prototipo-RRHH-V5.1\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_prestaciones.resources
+C:\Users\javie\Downloads\Prototipo-RRHH-V5.2\Prototipo-RRHH-V5.1\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_reportes_de_empleado.resources
+C:\Users\javie\Downloads\Prototipo-RRHH-V5.2\Prototipo-RRHH-V5.1\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_reporte_nomina1.resources
+C:\Users\Cristian\Desktop\EJERCICIO\IS\Prototipo-RRHH-V5.3\Prototipo-RRHH\contrato_trabajo\bin\Debug\contrato_trabajo.exe.config
+C:\Users\Cristian\Desktop\EJERCICIO\IS\Prototipo-RRHH-V5.3\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.exe
+C:\Users\Cristian\Desktop\EJERCICIO\IS\Prototipo-RRHH-V5.3\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.pdb
