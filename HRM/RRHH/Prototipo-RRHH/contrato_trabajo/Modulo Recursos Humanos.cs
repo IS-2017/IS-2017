@@ -41,7 +41,7 @@ namespace contrato_trabajo
         void t_Tick(object sender, EventArgs e)
         {
             t.Stop();
-            mdi_contenedor con = new mdi_contenedor();
+            Login con = new Login();
             con.Show();
             this.Hide();
         }
