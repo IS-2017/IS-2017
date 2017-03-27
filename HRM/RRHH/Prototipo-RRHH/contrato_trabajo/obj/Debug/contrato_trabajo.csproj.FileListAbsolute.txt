@@ -1,0 +1,11 @@
+c:\users\gabriela\documents\visual studio 2015\Projects\contrato_trabajo\contrato_trabajo\bin\Debug\contrato_trabajo.exe.config
+c:\users\gabriela\documents\visual studio 2015\Projects\contrato_trabajo\contrato_trabajo\bin\Debug\contrato_trabajo.exe
+c:\users\gabriela\documents\visual studio 2015\Projects\contrato_trabajo\contrato_trabajo\bin\Debug\contrato_trabajo.pdb
+c:\users\gabriela\documents\visual studio 2015\Projects\contrato_trabajo\contrato_trabajo\obj\Debug\contrato_trabajo.csprojResolveAssemblyReference.cache
+c:\users\gabriela\documents\visual studio 2015\Projects\contrato_trabajo\contrato_trabajo\obj\Debug\contrato_trabajo.contrato.resources
+c:\users\gabriela\documents\visual studio 2015\Projects\contrato_trabajo\contrato_trabajo\obj\Debug\contrato_trabajo.Properties.Resources.resources
+c:\users\gabriela\documents\visual studio 2015\Projects\contrato_trabajo\contrato_trabajo\obj\Debug\contrato_trabajo.csproj.GenerateResource.Cache
+c:\users\gabriela\documents\visual studio 2015\Projects\contrato_trabajo\contrato_trabajo\obj\Debug\contrato_trabajo.exe
+c:\users\gabriela\documents\visual studio 2015\Projects\contrato_trabajo\contrato_trabajo\obj\Debug\contrato_trabajo.pdb
+c:\users\gabriela\documents\visual studio 2015\Projects\contrato_trabajo\contrato_trabajo\obj\Debug\contrato_trabajo.Empleado.resources
+c:\users\gabriela\documents\visual studio 2015\Projects\contrato_trabajo\contrato_trabajo\obj\Debug\contrato_trabajo.Contenedor.resources
