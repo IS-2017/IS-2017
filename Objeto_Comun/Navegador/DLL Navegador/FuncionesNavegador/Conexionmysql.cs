@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using System.Data.Odbc;
-using seguridad;
 
 namespace FuncionesNavegador
 {
@@ -27,7 +26,7 @@ namespace FuncionesNavegador
 
         public static void EjecutarMySql(String Query)
         {
-            OdbcCommand MiComando = new OdbcCommand(Query, seguridad.Conexion.ObtenerConexionNavegador());
+            OdbcCommand MiComando = new OdbcCommand(Query,ObtenerConexion());
             int FilasAfectadas = MiComando.ExecuteNonQuery();
             if (FilasAfectadas > 0)
             {

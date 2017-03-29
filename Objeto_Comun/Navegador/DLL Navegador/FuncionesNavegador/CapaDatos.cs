@@ -9,43 +9,41 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.Odbc;
-using seguridad;
 
 namespace FuncionesNavegador
 {
     public class CapaDatos
     {
-        #region insertar - Otto Hernandez
+        #region insertar
         public static void insertar(string query)
         {
-            seguridad.Conexion.ObtenerConexionNavegador();
-            seguridad.Conexion.EjecutarMySqlNavegador(query);
+            Conexionmysql.ObtenerConexion();
+            Conexionmysql.EjecutarMySql(query);
             MessageBox.Show("Se inserto el registro", "Confirmado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            seguridad.Conexion.DesconectarNavegador();
+            Conexionmysql.Desconectar();
         }
         #endregion
 
-        #region modificar - Cristian Estrada 
+        #region modificar
         public static void modificar(string query)
         {
-            seguridad.Conexion.ObtenerConexionNavegador();
-            seguridad.Conexion.EjecutarMySqlNavegador(query);
+            Conexionmysql.ObtenerConexion();
+            Conexionmysql.EjecutarMySql(query);
             MessageBox.Show("Se realizo la modificacion del registro", "Confirmado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            seguridad.Conexion.DesconectarNavegador();
+            Conexionmysql.Desconectar();
         }
         #endregion
 
-        #region eliminar - Cristian Estrada
+        #region eliminar
         public static void eliminar(string query)
         {
-            seguridad.Conexion.ObtenerConexionNavegador();
-            seguridad.Conexion.EjecutarMySqlNavegador(query);
+            Conexionmysql.EjecutarMySql(query);
             MessageBox.Show("Se realizo la eliminacion del registro", "Confirmado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            seguridad.Conexion.DesconectarNavegador();
+            Conexionmysql.Desconectar();
         }
         #endregion
 
-        #region Navegacion - Nilson Reguan
+        #region Navegacion
 
         #region Navegacion Siguiente
         public static int Siguiente(DataGridView datagridview)
@@ -138,8 +136,9 @@ namespace FuncionesNavegador
 
         #endregion
 
+
         //MANEJO DE CONTROLES
-        #region Abilitar/Inhabilidat Controles - Javier Figueroa
+        #region Abilitar/Inhabilidat Controles
 
 
         public static int FunControlTextbox(TextBox textbox, Boolean valor)
