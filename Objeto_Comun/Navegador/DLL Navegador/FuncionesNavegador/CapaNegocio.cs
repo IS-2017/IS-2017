@@ -9,7 +9,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.Odbc;
-using seguridad;
 
 
 namespace FuncionesNavegador
@@ -18,7 +17,7 @@ namespace FuncionesNavegador
     {
         public int cc;
 
-        #region insertar - Otto Hernandez
+        #region insertar
         public void insertar(DataTable datos, string tabla)
         {
             string query1 = "insert into " + tabla + " (";
@@ -41,7 +40,7 @@ namespace FuncionesNavegador
         }
         #endregion
 
-        #region Crear DataTable para procesos - Otto Hernandez
+        #region Crear DataTable para procesos
         public DataTable construirDataTable(TextBox[] textbox)
         {
             DataTable datos = new DataTable();
@@ -64,7 +63,7 @@ namespace FuncionesNavegador
         }
         #endregion
 
-        #region Modificar - Cristian Estrada
+        #region Modificar
         public void modificar(DataTable datos, string tabla,string atributo,string comparar)
         {
             string query1 = "UPDATE  " + tabla + " SET ";
@@ -90,7 +89,7 @@ namespace FuncionesNavegador
         }
         #endregion
 
-        #region eliminar - Cristian Estrada
+        #region eliminar
         public void eliminar(string tabla, string atributo, string codigo)
         {
             string estado = "INACTIVO";
@@ -101,7 +100,7 @@ namespace FuncionesNavegador
         }
         #endregion
 
-        #region Botones de navegacion - Nilson Reguan
+        #region Botones de navegacion
 
         #region Boton Siguiente
         public void Siguiente(DataGridView datagridview)
@@ -152,7 +151,7 @@ namespace FuncionesNavegador
 
         #endregion
 
-        #region limpiar - Otto Hernandez
+        #region limpiar 
         public void LimpiarTextbox(TextBox textbox)
         {
             textbox.Text = "";
@@ -164,16 +163,16 @@ namespace FuncionesNavegador
         }
         #endregion
 
-        #region LlenarCombobox - Otto Hernandez
+        #region LlenarCombobox
         public ComboBox llenarCbo(string Query, string tabla, ComboBox cbo, string valor, string mostrar)
         {
             //se realiza la conexión a la base de datos
-            seguridad.Conexion.ObtenerConexionNavegador();
+            Conexionmysql.ObtenerConexion();
             //se inicia un DataSet
             DataSet ds = new DataSet();
             //se indica la consulta en sql
             String Query1 = Query;
-            OdbcDataAdapter dad = new OdbcDataAdapter(Query1, seguridad.Conexion.ObtenerConexionNavegador());
+            OdbcDataAdapter dad = new OdbcDataAdapter(Query1, Conexionmysql.ObtenerConexion());
             //se indica con quu tabla se llena
             dad.Fill(ds, tabla);
             cbo.DataSource = ds.Tables[0].DefaultView;
@@ -185,27 +184,27 @@ namespace FuncionesNavegador
         }
         #endregion
 
-        #region Llenar Datagrid - Cristian Estrada
+        #region Llenar Datagrid
         public void ActualizarGrid(DataGridView dg, String Query, string tabla)
         {
-            seguridad.Conexion.ObtenerConexionNavegador();
+            Conexionmysql.ObtenerConexion();
             //crear DataSet
             System.Data.DataSet MiDataSet = new System.Data.DataSet();
             //Crear Adaptador de datos
-            OdbcDataAdapter MiDataAdapter = new OdbcDataAdapter(Query, seguridad.Conexion.ObtenerConexionNavegador());
+            OdbcDataAdapter MiDataAdapter = new OdbcDataAdapter(Query, Conexionmysql.ObtenerConexion());
             //LLenar el DataSet
             MiDataAdapter.Fill(MiDataSet, tabla);
             //Asignarle el valor adecuado a las propiedades del DataGrid
             dg.DataSource = MiDataSet;
             dg.DataMember = tabla;
             //nos desconectamos de la base de datos...
-            seguridad.Conexion.DesconectarNavegador();
+            Conexionmysql.Desconectar();
         }
         #endregion
 
 
-            //MANEJO DE CONTROLES
-            #region Abilitar/Inhabilidat Controles - Javier Figueroa
+        //MANEJO DE CONTROLES
+        #region Abilitar/Inhabilidat Controles
 
         public void desactivarPermiso(DataTable datos, Button guardar, Button eliminar, Button modificar, Button nuevo, Button cancelar, Button refrescar, Button buscar, Button anterior, Button siguiente, Button primero, Button ultimo)
         {
@@ -366,7 +365,7 @@ namespace FuncionesNavegador
         #endregion
 
         //CANCELAR Y LIMPIAR CONTROLES
-        #region Limpiar e inhabilitar Controles - Javier Figueroa
+        #region Limpiar e inhabilitar Controles
 
         public void LimpiarComponentes(Control control)
         {
