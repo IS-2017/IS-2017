@@ -80,7 +80,9 @@ namespace contrato_trabajo
 
         void mdi_FormClosed(object sender, FormClosedEventArgs e)
         {
+            
             this.Close();
+            Application.Exit();
         }
 
         private void txt_contraseña_KeyPress_1(object sender, KeyPressEventArgs e)
@@ -91,6 +93,10 @@ namespace contrato_trabajo
             }
         }
 
+        public void Login_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
 
