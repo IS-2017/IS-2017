@@ -18,17 +18,17 @@ namespace contrato_trabajo
         }
         Timer t;
 
-        private void Loading_Load(object sender, EventArgs e)
+        public void Loading_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void process1_Exited(object sender, EventArgs e)
+        public void process1_Exited(object sender, EventArgs e)
         {
 
         }
 
-        private void Loading_Shown(object sender, EventArgs e)
+        public void Loading_Shown(object sender, EventArgs e)
         {
             t = new Timer();
             t.Interval = 4000;
@@ -41,17 +41,17 @@ namespace contrato_trabajo
         void t_Tick(object sender, EventArgs e)
         {
             t.Stop();
-            mdi_contenedor con = new mdi_contenedor();
+            Login con = new Login();
             con.Show();
             this.Hide();
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
+        public void timer1_Tick(object sender, EventArgs e)
         {
             this.progressBar1.Increment(1);
         }
 
-        private void timer2_Tick(object sender, EventArgs e)
+        public void timer2_Tick(object sender, EventArgs e)
         {
             this.progressBar1.Increment(1);
         }

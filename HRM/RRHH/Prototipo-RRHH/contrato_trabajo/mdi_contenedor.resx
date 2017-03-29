@@ -2448,6 +2448,90 @@
   <data name="helpMenu.Text" xml:space="preserve">
     <value>Ay&amp;uda</value>
   </data>
+  <data name="crerToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>172, 26</value>
+  </data>
+  <data name="crerToolStripMenuItem.Text" xml:space="preserve">
+    <value>Crer</value>
+  </data>
+  <data name="modificarToolStripMenuItem2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>172, 26</value>
+  </data>
+  <data name="modificarToolStripMenuItem2.Text" xml:space="preserve">
+    <value>Modificar</value>
+  </data>
+  <data name="deshabilitarToolStripMenuItem2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>172, 26</value>
+  </data>
+  <data name="deshabilitarToolStripMenuItem2.Text" xml:space="preserve">
+    <value>Deshabilitar</value>
+  </data>
+  <data name="gestiónDePerfilesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>231, 26</value>
+  </data>
+  <data name="gestiónDePerfilesToolStripMenuItem.Text" xml:space="preserve">
+    <value>Gestión de Perfiles</value>
+  </data>
+  <data name="crearUsuarioToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>232, 26</value>
+  </data>
+  <data name="crearUsuarioToolStripMenuItem.Text" xml:space="preserve">
+    <value>Crear Usuario</value>
+  </data>
+  <data name="modificarUSuarioToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>232, 26</value>
+  </data>
+  <data name="modificarUSuarioToolStripMenuItem.Text" xml:space="preserve">
+    <value>Modificar Usuario</value>
+  </data>
+  <data name="deshabilitarUsuarioToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>232, 26</value>
+  </data>
+  <data name="deshabilitarUsuarioToolStripMenuItem.Text" xml:space="preserve">
+    <value>Deshabilitar Usuario</value>
+  </data>
+  <data name="gestiónDeUsuariosToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>231, 26</value>
+  </data>
+  <data name="gestiónDeUsuariosToolStripMenuItem.Text" xml:space="preserve">
+    <value>Gestión de Usuarios</value>
+  </data>
+  <data name="gestiónToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 26</value>
+  </data>
+  <data name="gestiónToolStripMenuItem.Text" xml:space="preserve">
+    <value>Visualizar</value>
+  </data>
+  <data name="bitacoraToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>231, 26</value>
+  </data>
+  <data name="bitacoraToolStripMenuItem.Text" xml:space="preserve">
+    <value>Bitácora</value>
+  </data>
+  <data name="gestiónToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>140, 26</value>
+  </data>
+  <data name="gestiónToolStripMenuItem1.Text" xml:space="preserve">
+    <value>Gestión</value>
+  </data>
+  <data name="aplicaciónToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>231, 26</value>
+  </data>
+  <data name="aplicaciónToolStripMenuItem.Text" xml:space="preserve">
+    <value>Aplicación</value>
+  </data>
+  <data name="seguridadToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>122, 25</value>
+  </data>
+  <data name="seguridadToolStripMenuItem1.Text" xml:space="preserve">
+    <value>Seguridad</value>
+  </data>
+  <data name="reporteadorToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>142, 25</value>
+  </data>
+  <data name="reporteadorToolStripMenuItem.Text" xml:space="preserve">
+    <value>Reporteador</value>
+  </data>
   <data name="menuStrip1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
@@ -10244,7 +10328,7 @@
     <value>CenterScreen</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Recursos Humanos</value>
+    <value>Modulo Recursos Humanos</value>
   </data>
   <data name="&gt;&gt;inicioToolStripMenuItem.Name" xml:space="preserve">
     <value>inicioToolStripMenuItem</value>
@@ -10546,6 +10630,90 @@
   <data name="&gt;&gt;aboutToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;seguridadToolStripMenuItem1.Name" xml:space="preserve">
+    <value>seguridadToolStripMenuItem1</value>
+  </data>
+  <data name="&gt;&gt;seguridadToolStripMenuItem1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gestiónDePerfilesToolStripMenuItem.Name" xml:space="preserve">
+    <value>gestiónDePerfilesToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;gestiónDePerfilesToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;crerToolStripMenuItem.Name" xml:space="preserve">
+    <value>crerToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;crerToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;modificarToolStripMenuItem2.Name" xml:space="preserve">
+    <value>modificarToolStripMenuItem2</value>
+  </data>
+  <data name="&gt;&gt;modificarToolStripMenuItem2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;deshabilitarToolStripMenuItem2.Name" xml:space="preserve">
+    <value>deshabilitarToolStripMenuItem2</value>
+  </data>
+  <data name="&gt;&gt;deshabilitarToolStripMenuItem2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gestiónDeUsuariosToolStripMenuItem.Name" xml:space="preserve">
+    <value>gestiónDeUsuariosToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;gestiónDeUsuariosToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;crearUsuarioToolStripMenuItem.Name" xml:space="preserve">
+    <value>crearUsuarioToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;crearUsuarioToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;modificarUSuarioToolStripMenuItem.Name" xml:space="preserve">
+    <value>modificarUSuarioToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;modificarUSuarioToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;deshabilitarUsuarioToolStripMenuItem.Name" xml:space="preserve">
+    <value>deshabilitarUsuarioToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;deshabilitarUsuarioToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;bitacoraToolStripMenuItem.Name" xml:space="preserve">
+    <value>bitacoraToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;bitacoraToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gestiónToolStripMenuItem.Name" xml:space="preserve">
+    <value>gestiónToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;gestiónToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;aplicaciónToolStripMenuItem.Name" xml:space="preserve">
+    <value>aplicaciónToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;aplicaciónToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gestiónToolStripMenuItem1.Name" xml:space="preserve">
+    <value>gestiónToolStripMenuItem1</value>
+  </data>
+  <data name="&gt;&gt;gestiónToolStripMenuItem1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;reporteadorToolStripMenuItem.Name" xml:space="preserve">
+    <value>reporteadorToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;reporteadorToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;toolStripStatusLabel.Name" xml:space="preserve">
     <value>toolStripStatusLabel</value>
   </data>
@@ -10559,7 +10727,7 @@
     <value>System.Windows.Forms.ToolStripProgressBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>Contenedor</value>
+    <value>mdi_contenedor</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>

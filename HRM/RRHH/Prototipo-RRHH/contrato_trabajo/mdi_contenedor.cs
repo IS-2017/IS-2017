@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
-
+using Abrir;
 
 namespace contrato_trabajo
 {
@@ -204,6 +204,66 @@ namespace contrato_trabajo
             comi_prod.MdiParent = this;
             comi_prod.StartPosition = FormStartPosition.CenterScreen;
             comi_prod.Show();
+        }
+
+        private void reporteadorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Abrir.Form2 f2 = new Form2();
+            f2.Show();   
+        }
+
+        private void modificarUSuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            seguridad.Form_EditarPrivilegios editar = new seguridad.Form_EditarPrivilegios();
+            editar.Show();
+        }
+
+        private void gestiónToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            seguridad.Historial historial = new seguridad.Historial();
+            historial.Show();
+        }
+
+        private void bitacoraToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void crerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            seguridad.FormAsignacionPerfil asig = new seguridad.FormAsignacionPerfil();
+            asig.Show();
+        }
+
+        private void modificarToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            seguridad.Form_EditarPerfil editar = new seguridad.Form_EditarPerfil();
+            editar.Show();
+        }
+
+        private void deshabilitarToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            seguridad.FormEliminarPerfil eliminar = new seguridad.FormEliminarPerfil();
+            eliminar.Show();
+        }
+
+        private void crearUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            seguridad.FormAsignarPermisosUsuario asignar = new seguridad.FormAsignarPermisosUsuario();
+            asignar.Show();
+        }
+
+        private void deshabilitarUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            seguridad.FormDeshabilitarUsuario deshabilitar = new  seguridad.FormDeshabilitarUsuario();
+            deshabilitar.Show();
+
+        }
+
+        private void gestiónToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            seguridad.agregarapp agregar = new seguridad.agregarapp();
+            agregar.Show();
         }
     }
 }
