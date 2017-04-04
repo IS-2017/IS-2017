@@ -14,7 +14,10 @@ namespace contrato_trabajo
 {
     public partial class mdi_contenedor : Form
     {
-        
+
+        frm_empleado_grid frm_emp_dgv;
+        frm_empleado frm_emp;
+
         public mdi_contenedor()
         {
             InitializeComponent();
@@ -67,14 +70,25 @@ namespace contrato_trabajo
 
         private void empleadosToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            frm_empleado cn = new frm_empleado();
-            cn.MdiParent = this;
-            cn.StartPosition = FormStartPosition.CenterScreen;
-            cn.Show();
-            for (int i = 1; i <= 50; i++) {
-                Thread.Sleep(50); toolStripProgressBar1.Value = i;
-            } toolStripProgressBar1.Value = 1;
+            if (frm_emp_dgv == null)
+            {
+                frm_emp_dgv = new frm_empleado_grid();
+                frm_emp_dgv.MdiParent = this;
+                frm_emp_dgv.FormClosed += new FormClosedEventHandler(frm_empleados_FormClosed);
+                frm_emp_dgv.Show();
 
+                for (int i = 1; i <= 10; i++)
+                {
+                    Thread.Sleep(10); toolStripProgressBar1.Value = i;
+                }
+                toolStripProgressBar1.Value = 1;
+            }
+
+        }
+
+        void frm_empleados_FormClosed(object sender, EventArgs e)
+        {
+            frm_emp_dgv = null;
         }
 
         private void contratosToolStripMenuItem1_Click(object sender, EventArgs e)

@@ -43,44 +43,91 @@
             this.btn_actualizar = new System.Windows.Forms.Button();
             this.btn_cancelar = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.tbc_datos_emp = new System.Windows.Forms.TabControl();
+            this.General = new System.Windows.Forms.TabPage();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.lbl_igss_emp = new System.Windows.Forms.Label();
+            this.txt_correo_emp = new System.Windows.Forms.TextBox();
+            this.lbl_correo_emp = new System.Windows.Forms.Label();
+            this.txt_tel_movil_emp = new System.Windows.Forms.TextBox();
+            this.lbl_tel_movil_emp = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label4 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.txt_codigo_telefono_emp = new System.Windows.Forms.TextBox();
+            this.lbl_telefono_emp = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.textBox15 = new System.Windows.Forms.TextBox();
-            this.textBox16 = new System.Windows.Forms.TextBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.textBox18 = new System.Windows.Forms.TextBox();
-            this.label20 = new System.Windows.Forms.Label();
+            this.lbl_nacionalidad_emp = new System.Windows.Forms.Label();
+            this.lbl_municipio_emp = new System.Windows.Forms.Label();
+            this.txt_municipio_emp = new System.Windows.Forms.TextBox();
+            this.btn_municipio = new System.Windows.Forms.Button();
+            this.txt__planta_domc_emp = new System.Windows.Forms.TextBox();
+            this.txt_piso_domc_emp = new System.Windows.Forms.TextBox();
+            this.txt_escalera_domc_emp = new System.Windows.Forms.TextBox();
+            this.txt_bloque_domc_emp = new System.Windows.Forms.TextBox();
+            this.lbl_planta_domc_emp = new System.Windows.Forms.Label();
+            this.lbl_piso_domc_emp = new System.Windows.Forms.Label();
+            this.lbl_escalera_domc_emp = new System.Windows.Forms.Label();
+            this.lbl_bloque_domc_emp = new System.Windows.Forms.Label();
+            this.txt_numer_domc_emp = new System.Windows.Forms.TextBox();
+            this.lbl_numero_domc_emp = new System.Windows.Forms.Label();
+            this.txt_domicilio_emp = new System.Windows.Forms.TextBox();
+            this.cbo_domicilio_emp = new System.Windows.Forms.ComboBox();
+            this.lbl_domicilio_emp = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.lbl_dpi_emp = new System.Windows.Forms.Label();
+            this.lbl_datos_contacto_emp = new System.Windows.Forms.Label();
+            this.btn_detalle_nombre_emp = new System.Windows.Forms.Button();
+            this.dtp_fecha_baja_emp = new System.Windows.Forms.DateTimePicker();
+            this.lbl_fecha_baja_emp = new System.Windows.Forms.Label();
+            this.dtp_fecha_alta_emp = new System.Windows.Forms.DateTimePicker();
+            this.lbl_fecha_alta_emp = new System.Windows.Forms.Label();
+            this.cbo_estado_emp = new System.Windows.Forms.ComboBox();
+            this.txt_apellidos_emp = new System.Windows.Forms.TextBox();
+            this.txt_nombres_emp = new System.Windows.Forms.TextBox();
+            this.txt_codigo_emp = new System.Windows.Forms.TextBox();
+            this.lbl_estado_emp = new System.Windows.Forms.Label();
+            this.lbl_apellido_emp = new System.Windows.Forms.Label();
+            this.lbl_nombre_emp = new System.Windows.Forms.Label();
+            this.lbl_codigo_emp = new System.Windows.Forms.Label();
+            this.Personal = new System.Windows.Forms.TabPage();
+            this.txt_observaciones_emp = new System.Windows.Forms.TextBox();
+            this.lbl_observaciones_emp = new System.Windows.Forms.Label();
+            this.btn_examinar_documentacion_emp = new System.Windows.Forms.Button();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.lbl_documentacion_emp = new System.Windows.Forms.Label();
+            this.lbl_carpeta_emp = new System.Windows.Forms.Label();
+            this.cbo_estado_civil_emp = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.txt_nombre_madre_emp = new System.Windows.Forms.TextBox();
+            this.dtp_fecha_nacimiento_emp = new System.Windows.Forms.DateTimePicker();
+            this.txt_nombre_padre_emp = new System.Windows.Forms.TextBox();
+            this.lbl_estado_civil_emp = new System.Windows.Forms.Label();
+            this.lbl_sexo_emp = new System.Windows.Forms.Label();
+            this.lbl_nombre_madre_emp = new System.Windows.Forms.Label();
+            this.lbl_nombre_padre_emp = new System.Windows.Forms.Label();
+            this.lbl_fecha_nacimiento_emp = new System.Windows.Forms.Label();
+            this.lbl_datos_personales_emp = new System.Windows.Forms.Label();
+            this.Situacion = new System.Windows.Forms.TabPage();
+            this.lbl_puesto_trabaj_emp = new System.Windows.Forms.Label();
+            this.txt_puesto_trabaj_emp = new System.Windows.Forms.TextBox();
+            this.btn_puesto_trabaj_emp = new System.Windows.Forms.Button();
+            this.lbl_centro_trabajo_emp = new System.Windows.Forms.Label();
+            this.txt_centro_trabajo_emp = new System.Windows.Forms.TextBox();
+            this.txt_descrip_trabajo_emp = new System.Windows.Forms.TextBox();
+            this.btn_centro_trabajo_emp = new System.Windows.Forms.Button();
+            this.lbl_descripcion_trabajo_emp = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
+            this.pic_empleado = new System.Windows.Forms.PictureBox();
+            this.btn_examinar_pic_emp = new System.Windows.Forms.Button();
+            this.txt_img_final = new System.Windows.Forms.TextBox();
+            this.txt_nom_img = new System.Windows.Forms.TextBox();
+            this.txt_direc_img = new System.Windows.Forms.TextBox();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.tbc_datos_emp.SuspendLayout();
+            this.General.SuspendLayout();
+            this.Personal.SuspendLayout();
+            this.Situacion.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_empleado)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox2
@@ -98,7 +145,7 @@
             this.groupBox2.Controls.Add(this.btn_actualizar);
             this.groupBox2.Controls.Add(this.btn_cancelar);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(76, 20);
+            this.groupBox2.Location = new System.Drawing.Point(12, 38);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(695, 106);
             this.groupBox2.TabIndex = 13;
@@ -287,385 +334,864 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.dataGridView1);
-            this.groupBox3.Controls.Add(this.label1);
-            this.groupBox3.Controls.Add(this.comboBox5);
-            this.groupBox3.Controls.Add(this.textBox2);
-            this.groupBox3.Controls.Add(this.comboBox4);
-            this.groupBox3.Controls.Add(this.comboBox3);
-            this.groupBox3.Controls.Add(this.textBox1);
-            this.groupBox3.Controls.Add(this.label7);
-            this.groupBox3.Controls.Add(this.label6);
-            this.groupBox3.Controls.Add(this.label5);
-            this.groupBox3.Controls.Add(this.dateTimePicker1);
-            this.groupBox3.Controls.Add(this.label4);
-            this.groupBox3.Controls.Add(this.pictureBox1);
-            this.groupBox3.Controls.Add(this.comboBox2);
-            this.groupBox3.Controls.Add(this.comboBox1);
-            this.groupBox3.Controls.Add(this.label3);
-            this.groupBox3.Controls.Add(this.label2);
-            this.groupBox3.Controls.Add(this.textBox10);
-            this.groupBox3.Controls.Add(this.label11);
-            this.groupBox3.Controls.Add(this.label13);
-            this.groupBox3.Controls.Add(this.textBox12);
-            this.groupBox3.Controls.Add(this.label14);
-            this.groupBox3.Controls.Add(this.label15);
-            this.groupBox3.Controls.Add(this.textBox13);
-            this.groupBox3.Controls.Add(this.textBox14);
-            this.groupBox3.Controls.Add(this.label16);
-            this.groupBox3.Controls.Add(this.label17);
-            this.groupBox3.Controls.Add(this.textBox15);
-            this.groupBox3.Controls.Add(this.textBox16);
-            this.groupBox3.Controls.Add(this.label18);
-            this.groupBox3.Controls.Add(this.label19);
-            this.groupBox3.Controls.Add(this.textBox18);
-            this.groupBox3.Controls.Add(this.label20);
-            this.groupBox3.Location = new System.Drawing.Point(5, 193);
+            this.groupBox3.Controls.Add(this.tbc_datos_emp);
+            this.groupBox3.Location = new System.Drawing.Point(11, 185);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox3.Size = new System.Drawing.Size(862, 396);
+            this.groupBox3.Size = new System.Drawing.Size(923, 360);
             this.groupBox3.TabIndex = 36;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Datos del empleador:";
             // 
-            // dataGridView1
+            // tbc_datos_emp
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(7, 172);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(848, 219);
-            this.dataGridView1.TabIndex = 67;
+            this.tbc_datos_emp.Controls.Add(this.General);
+            this.tbc_datos_emp.Controls.Add(this.Personal);
+            this.tbc_datos_emp.Controls.Add(this.Situacion);
+            this.tbc_datos_emp.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbc_datos_emp.Location = new System.Drawing.Point(7, 18);
+            this.tbc_datos_emp.Name = "tbc_datos_emp";
+            this.tbc_datos_emp.SelectedIndex = 0;
+            this.tbc_datos_emp.Size = new System.Drawing.Size(911, 337);
+            this.tbc_datos_emp.TabIndex = 0;
             // 
-            // label1
+            // General
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(4, 145);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 13);
-            this.label1.TabIndex = 66;
-            this.label1.Text = "Empresa:";
+            this.General.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
+            this.General.Controls.Add(this.txt_img_final);
+            this.General.Controls.Add(this.txt_nom_img);
+            this.General.Controls.Add(this.textBox3);
+            this.General.Controls.Add(this.txt_direc_img);
+            this.General.Controls.Add(this.lbl_igss_emp);
+            this.General.Controls.Add(this.txt_correo_emp);
+            this.General.Controls.Add(this.lbl_correo_emp);
+            this.General.Controls.Add(this.txt_tel_movil_emp);
+            this.General.Controls.Add(this.lbl_tel_movil_emp);
+            this.General.Controls.Add(this.textBox2);
+            this.General.Controls.Add(this.txt_codigo_telefono_emp);
+            this.General.Controls.Add(this.lbl_telefono_emp);
+            this.General.Controls.Add(this.comboBox1);
+            this.General.Controls.Add(this.lbl_nacionalidad_emp);
+            this.General.Controls.Add(this.lbl_municipio_emp);
+            this.General.Controls.Add(this.txt_municipio_emp);
+            this.General.Controls.Add(this.btn_municipio);
+            this.General.Controls.Add(this.txt__planta_domc_emp);
+            this.General.Controls.Add(this.txt_piso_domc_emp);
+            this.General.Controls.Add(this.txt_escalera_domc_emp);
+            this.General.Controls.Add(this.txt_bloque_domc_emp);
+            this.General.Controls.Add(this.lbl_planta_domc_emp);
+            this.General.Controls.Add(this.lbl_piso_domc_emp);
+            this.General.Controls.Add(this.lbl_escalera_domc_emp);
+            this.General.Controls.Add(this.lbl_bloque_domc_emp);
+            this.General.Controls.Add(this.txt_numer_domc_emp);
+            this.General.Controls.Add(this.lbl_numero_domc_emp);
+            this.General.Controls.Add(this.txt_domicilio_emp);
+            this.General.Controls.Add(this.cbo_domicilio_emp);
+            this.General.Controls.Add(this.lbl_domicilio_emp);
+            this.General.Controls.Add(this.textBox1);
+            this.General.Controls.Add(this.lbl_dpi_emp);
+            this.General.Controls.Add(this.lbl_datos_contacto_emp);
+            this.General.Controls.Add(this.btn_detalle_nombre_emp);
+            this.General.Controls.Add(this.dtp_fecha_baja_emp);
+            this.General.Controls.Add(this.lbl_fecha_baja_emp);
+            this.General.Controls.Add(this.dtp_fecha_alta_emp);
+            this.General.Controls.Add(this.lbl_fecha_alta_emp);
+            this.General.Controls.Add(this.cbo_estado_emp);
+            this.General.Controls.Add(this.txt_apellidos_emp);
+            this.General.Controls.Add(this.txt_nombres_emp);
+            this.General.Controls.Add(this.txt_codigo_emp);
+            this.General.Controls.Add(this.lbl_estado_emp);
+            this.General.Controls.Add(this.lbl_apellido_emp);
+            this.General.Controls.Add(this.lbl_nombre_emp);
+            this.General.Controls.Add(this.lbl_codigo_emp);
+            this.General.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.General.Location = new System.Drawing.Point(4, 27);
+            this.General.Name = "General";
+            this.General.Padding = new System.Windows.Forms.Padding(3);
+            this.General.Size = new System.Drawing.Size(903, 306);
+            this.General.TabIndex = 1;
+            this.General.Text = "General";
             // 
-            // comboBox5
+            // textBox3
             // 
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(80, 142);
-            this.comboBox5.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(138, 21);
-            this.comboBox5.TabIndex = 65;
+            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.textBox3.Location = new System.Drawing.Point(594, 6);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(201, 20);
+            this.textBox3.TabIndex = 44;
+            // 
+            // lbl_igss_emp
+            // 
+            this.lbl_igss_emp.AutoSize = true;
+            this.lbl_igss_emp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_igss_emp.Location = new System.Drawing.Point(507, 9);
+            this.lbl_igss_emp.Name = "lbl_igss_emp";
+            this.lbl_igss_emp.Size = new System.Drawing.Size(60, 17);
+            this.lbl_igss_emp.TabIndex = 43;
+            this.lbl_igss_emp.Text = "I.G.S.S.:";
+            // 
+            // txt_correo_emp
+            // 
+            this.txt_correo_emp.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.txt_correo_emp.Location = new System.Drawing.Point(147, 270);
+            this.txt_correo_emp.Name = "txt_correo_emp";
+            this.txt_correo_emp.Size = new System.Drawing.Size(726, 20);
+            this.txt_correo_emp.TabIndex = 42;
+            // 
+            // lbl_correo_emp
+            // 
+            this.lbl_correo_emp.AutoSize = true;
+            this.lbl_correo_emp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_correo_emp.Location = new System.Drawing.Point(7, 273);
+            this.lbl_correo_emp.Name = "lbl_correo_emp";
+            this.lbl_correo_emp.Size = new System.Drawing.Size(128, 17);
+            this.lbl_correo_emp.TabIndex = 41;
+            this.lbl_correo_emp.Text = "Correo electrónico:";
+            // 
+            // txt_tel_movil_emp
+            // 
+            this.txt_tel_movil_emp.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.txt_tel_movil_emp.Location = new System.Drawing.Point(527, 244);
+            this.txt_tel_movil_emp.Name = "txt_tel_movil_emp";
+            this.txt_tel_movil_emp.Size = new System.Drawing.Size(210, 20);
+            this.txt_tel_movil_emp.TabIndex = 40;
+            // 
+            // lbl_tel_movil_emp
+            // 
+            this.lbl_tel_movil_emp.AutoSize = true;
+            this.lbl_tel_movil_emp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_tel_movil_emp.Location = new System.Drawing.Point(450, 247);
+            this.lbl_tel_movil_emp.Name = "lbl_tel_movil_emp";
+            this.lbl_tel_movil_emp.Size = new System.Drawing.Size(44, 17);
+            this.lbl_tel_movil_emp.TabIndex = 39;
+            this.lbl_tel_movil_emp.Text = "Móvil:";
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(256, 110);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.textBox2.Location = new System.Drawing.Point(202, 244);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(183, 20);
-            this.textBox2.TabIndex = 64;
+            this.textBox2.Size = new System.Drawing.Size(210, 20);
+            this.textBox2.TabIndex = 38;
             // 
-            // comboBox4
+            // txt_codigo_telefono_emp
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(556, 54);
-            this.comboBox4.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(168, 21);
-            this.comboBox4.TabIndex = 63;
+            this.txt_codigo_telefono_emp.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.txt_codigo_telefono_emp.Location = new System.Drawing.Point(147, 244);
+            this.txt_codigo_telefono_emp.Name = "txt_codigo_telefono_emp";
+            this.txt_codigo_telefono_emp.Size = new System.Drawing.Size(49, 20);
+            this.txt_codigo_telefono_emp.TabIndex = 37;
             // 
-            // comboBox3
+            // lbl_telefono_emp
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(174, 49);
-            this.comboBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(36, 21);
-            this.comboBox3.TabIndex = 62;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(212, 80);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(76, 20);
-            this.textBox1.TabIndex = 61;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(156, 80);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(52, 13);
-            this.label7.TabIndex = 60;
-            this.label7.Text = "Telefono:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(443, 80);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(55, 13);
-            this.label6.TabIndex = 59;
-            this.label6.Text = "Dirección:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(307, 80);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(52, 13);
-            this.label5.TabIndex = 58;
-            this.label5.Text = "No. IGSS";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(556, 29);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(168, 20);
-            this.dateTimePicker1.TabIndex = 57;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(443, 29);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(111, 13);
-            this.label4.TabIndex = 56;
-            this.label4.Text = "Fecha de Nacimiento:";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(740, 17);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(116, 120);
-            this.pictureBox1.TabIndex = 42;
-            this.pictureBox1.TabStop = false;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(490, 110);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(86, 21);
-            this.comboBox2.TabIndex = 42;
+            this.lbl_telefono_emp.AutoSize = true;
+            this.lbl_telefono_emp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_telefono_emp.Location = new System.Drawing.Point(7, 247);
+            this.lbl_telefono_emp.Name = "lbl_telefono_emp";
+            this.lbl_telefono_emp.Size = new System.Drawing.Size(68, 17);
+            this.lbl_telefono_emp.TabIndex = 36;
+            this.lbl_telefono_emp.Text = "Teléfono:";
             // 
             // comboBox1
             // 
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(633, 110);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBox1.Location = new System.Drawing.Point(147, 217);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(92, 21);
-            this.comboBox1.TabIndex = 55;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.comboBox1.Size = new System.Drawing.Size(725, 21);
+            this.comboBox1.TabIndex = 35;
             // 
-            // label3
+            // lbl_nacionalidad_emp
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(443, 113);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(43, 13);
-            this.label3.TabIndex = 54;
-            this.label3.Text = "Puesto:";
+            this.lbl_nacionalidad_emp.AutoSize = true;
+            this.lbl_nacionalidad_emp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_nacionalidad_emp.Location = new System.Drawing.Point(7, 221);
+            this.lbl_nacionalidad_emp.Name = "lbl_nacionalidad_emp";
+            this.lbl_nacionalidad_emp.Size = new System.Drawing.Size(94, 17);
+            this.lbl_nacionalidad_emp.TabIndex = 34;
+            this.lbl_nacionalidad_emp.Text = "Nacionalidad:";
             // 
-            // label2
+            // lbl_municipio_emp
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(586, 113);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(31, 13);
-            this.label2.TabIndex = 53;
-            this.label2.Text = "Tipo:";
+            this.lbl_municipio_emp.AutoSize = true;
+            this.lbl_municipio_emp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_municipio_emp.Location = new System.Drawing.Point(255, 194);
+            this.lbl_municipio_emp.Name = "lbl_municipio_emp";
+            this.lbl_municipio_emp.Size = new System.Drawing.Size(31, 17);
+            this.lbl_municipio_emp.TabIndex = 33;
+            this.lbl_municipio_emp.Text = "test";
             // 
-            // textBox10
+            // txt_municipio_emp
             // 
-            this.textBox10.Location = new System.Drawing.Point(556, 80);
-            this.textBox10.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(168, 20);
-            this.textBox10.TabIndex = 50;
+            this.txt_municipio_emp.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.txt_municipio_emp.Location = new System.Drawing.Point(147, 191);
+            this.txt_municipio_emp.Name = "txt_municipio_emp";
+            this.txt_municipio_emp.Size = new System.Drawing.Size(102, 20);
+            this.txt_municipio_emp.TabIndex = 32;
             // 
-            // label11
+            // btn_municipio
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(1, 28);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(0, 13);
-            this.label11.TabIndex = 33;
+            this.btn_municipio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_municipio.Location = new System.Drawing.Point(10, 188);
+            this.btn_municipio.Name = "btn_municipio";
+            this.btn_municipio.Size = new System.Drawing.Size(76, 23);
+            this.btn_municipio.TabIndex = 31;
+            this.btn_municipio.Text = "Municipio:";
+            this.btn_municipio.UseVisualStyleBackColor = true;
             // 
-            // label13
+            // txt__planta_domc_emp
             // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(2, 54);
-            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(35, 13);
-            this.label13.TabIndex = 35;
-            this.label13.Text = "Edad:";
+            this.txt__planta_domc_emp.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.txt__planta_domc_emp.Location = new System.Drawing.Point(654, 170);
+            this.txt__planta_domc_emp.Name = "txt__planta_domc_emp";
+            this.txt__planta_domc_emp.Size = new System.Drawing.Size(31, 20);
+            this.txt__planta_domc_emp.TabIndex = 30;
             // 
-            // textBox12
+            // txt_piso_domc_emp
             // 
-            this.textBox12.Location = new System.Drawing.Point(52, 25);
-            this.textBox12.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(388, 20);
-            this.textBox12.TabIndex = 36;
+            this.txt_piso_domc_emp.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.txt_piso_domc_emp.Location = new System.Drawing.Point(536, 168);
+            this.txt_piso_domc_emp.Name = "txt_piso_domc_emp";
+            this.txt_piso_domc_emp.Size = new System.Drawing.Size(31, 20);
+            this.txt_piso_domc_emp.TabIndex = 29;
             // 
-            // label14
+            // txt_escalera_domc_emp
             // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(221, 113);
-            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(39, 13);
-            this.label14.TabIndex = 49;
-            this.label14.Text = "Depto:";
+            this.txt_escalera_domc_emp.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.txt_escalera_domc_emp.Location = new System.Drawing.Point(430, 167);
+            this.txt_escalera_domc_emp.Name = "txt_escalera_domc_emp";
+            this.txt_escalera_domc_emp.Size = new System.Drawing.Size(31, 20);
+            this.txt_escalera_domc_emp.TabIndex = 28;
             // 
-            // label15
+            // txt_bloque_domc_emp
             // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(1, 29);
-            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(47, 13);
-            this.label15.TabIndex = 37;
-            this.label15.Text = "Nombre:";
+            this.txt_bloque_domc_emp.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.txt_bloque_domc_emp.Location = new System.Drawing.Point(301, 165);
+            this.txt_bloque_domc_emp.Name = "txt_bloque_domc_emp";
+            this.txt_bloque_domc_emp.Size = new System.Drawing.Size(31, 20);
+            this.txt_bloque_domc_emp.TabIndex = 27;
             // 
-            // textBox13
+            // lbl_planta_domc_emp
             // 
-            this.textBox13.Location = new System.Drawing.Point(80, 110);
-            this.textBox13.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(138, 20);
-            this.textBox13.TabIndex = 48;
+            this.lbl_planta_domc_emp.AutoSize = true;
+            this.lbl_planta_domc_emp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_planta_domc_emp.Location = new System.Drawing.Point(596, 171);
+            this.lbl_planta_domc_emp.Name = "lbl_planta_domc_emp";
+            this.lbl_planta_domc_emp.Size = new System.Drawing.Size(52, 17);
+            this.lbl_planta_domc_emp.TabIndex = 26;
+            this.lbl_planta_domc_emp.Text = "Planta:";
             // 
-            // textBox14
+            // lbl_piso_domc_emp
             // 
-            this.textBox14.Location = new System.Drawing.Point(52, 51);
-            this.textBox14.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(76, 20);
-            this.textBox14.TabIndex = 38;
+            this.lbl_piso_domc_emp.AutoSize = true;
+            this.lbl_piso_domc_emp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_piso_domc_emp.Location = new System.Drawing.Point(491, 170);
+            this.lbl_piso_domc_emp.Name = "lbl_piso_domc_emp";
+            this.lbl_piso_domc_emp.Size = new System.Drawing.Size(39, 17);
+            this.lbl_piso_domc_emp.TabIndex = 25;
+            this.lbl_piso_domc_emp.Text = "Piso:";
             // 
-            // label16
+            // lbl_escalera_domc_emp
             // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(2, 113);
-            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(75, 13);
-            this.label16.TabIndex = 47;
-            this.label16.Text = "Municipalidad:";
+            this.lbl_escalera_domc_emp.AutoSize = true;
+            this.lbl_escalera_domc_emp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_escalera_domc_emp.Location = new System.Drawing.Point(357, 168);
+            this.lbl_escalera_domc_emp.Name = "lbl_escalera_domc_emp";
+            this.lbl_escalera_domc_emp.Size = new System.Drawing.Size(67, 17);
+            this.lbl_escalera_domc_emp.TabIndex = 24;
+            this.lbl_escalera_domc_emp.Text = "Escalera:";
             // 
-            // label17
+            // lbl_bloque_domc_emp
             // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(140, 51);
-            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(31, 13);
-            this.label17.TabIndex = 39;
-            this.label17.Text = "Sexo";
+            this.lbl_bloque_domc_emp.AutoSize = true;
+            this.lbl_bloque_domc_emp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_bloque_domc_emp.Location = new System.Drawing.Point(239, 165);
+            this.lbl_bloque_domc_emp.Name = "lbl_bloque_domc_emp";
+            this.lbl_bloque_domc_emp.Size = new System.Drawing.Size(56, 17);
+            this.lbl_bloque_domc_emp.TabIndex = 23;
+            this.lbl_bloque_domc_emp.Text = "Bloque:";
             // 
-            // textBox15
+            // txt_numer_domc_emp
             // 
-            this.textBox15.Location = new System.Drawing.Point(256, 51);
-            this.textBox15.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(183, 20);
-            this.textBox15.TabIndex = 46;
+            this.txt_numer_domc_emp.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.txt_numer_domc_emp.Location = new System.Drawing.Point(147, 162);
+            this.txt_numer_domc_emp.Name = "txt_numer_domc_emp";
+            this.txt_numer_domc_emp.Size = new System.Drawing.Size(70, 20);
+            this.txt_numer_domc_emp.TabIndex = 22;
             // 
-            // textBox16
+            // lbl_numero_domc_emp
             // 
-            this.textBox16.Location = new System.Drawing.Point(358, 80);
-            this.textBox16.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(81, 20);
-            this.textBox16.TabIndex = 40;
+            this.lbl_numero_domc_emp.AutoSize = true;
+            this.lbl_numero_domc_emp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_numero_domc_emp.Location = new System.Drawing.Point(7, 165);
+            this.lbl_numero_domc_emp.Name = "lbl_numero_domc_emp";
+            this.lbl_numero_domc_emp.Size = new System.Drawing.Size(62, 17);
+            this.lbl_numero_domc_emp.TabIndex = 21;
+            this.lbl_numero_domc_emp.Text = "Número:";
             // 
-            // label18
+            // txt_domicilio_emp
             // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(221, 54);
-            this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(28, 13);
-            this.label18.TabIndex = 45;
-            this.label18.Text = "DPI:";
+            this.txt_domicilio_emp.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.txt_domicilio_emp.Location = new System.Drawing.Point(223, 136);
+            this.txt_domicilio_emp.Name = "txt_domicilio_emp";
+            this.txt_domicilio_emp.Size = new System.Drawing.Size(649, 20);
+            this.txt_domicilio_emp.TabIndex = 20;
             // 
-            // label19
+            // cbo_domicilio_emp
             // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(2, 80);
-            this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(62, 13);
-            this.label19.TabIndex = 41;
-            this.label19.Text = "Estado Civil";
+            this.cbo_domicilio_emp.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.cbo_domicilio_emp.FormattingEnabled = true;
+            this.cbo_domicilio_emp.Location = new System.Drawing.Point(147, 135);
+            this.cbo_domicilio_emp.Name = "cbo_domicilio_emp";
+            this.cbo_domicilio_emp.Size = new System.Drawing.Size(70, 21);
+            this.cbo_domicilio_emp.TabIndex = 19;
             // 
-            // textBox18
+            // lbl_domicilio_emp
             // 
-            this.textBox18.Location = new System.Drawing.Point(68, 80);
-            this.textBox18.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(76, 20);
-            this.textBox18.TabIndex = 42;
+            this.lbl_domicilio_emp.AutoSize = true;
+            this.lbl_domicilio_emp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_domicilio_emp.Location = new System.Drawing.Point(7, 135);
+            this.lbl_domicilio_emp.Name = "lbl_domicilio_emp";
+            this.lbl_domicilio_emp.Size = new System.Drawing.Size(68, 17);
+            this.lbl_domicilio_emp.TabIndex = 18;
+            this.lbl_domicilio_emp.Text = "Domicilio:";
             // 
-            // label20
+            // textBox1
             // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(443, 54);
-            this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(72, 13);
-            this.label20.TabIndex = 43;
-            this.label20.Text = "Nacionalidad:";
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.textBox1.Location = new System.Drawing.Point(274, 6);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(201, 20);
+            this.textBox1.TabIndex = 17;
+            // 
+            // lbl_dpi_emp
+            // 
+            this.lbl_dpi_emp.AutoSize = true;
+            this.lbl_dpi_emp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_dpi_emp.Location = new System.Drawing.Point(222, 7);
+            this.lbl_dpi_emp.Name = "lbl_dpi_emp";
+            this.lbl_dpi_emp.Size = new System.Drawing.Size(46, 17);
+            this.lbl_dpi_emp.TabIndex = 16;
+            this.lbl_dpi_emp.Text = "D.P.I.:";
+            // 
+            // lbl_datos_contacto_emp
+            // 
+            this.lbl_datos_contacto_emp.AutoSize = true;
+            this.lbl_datos_contacto_emp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_datos_contacto_emp.Location = new System.Drawing.Point(6, 99);
+            this.lbl_datos_contacto_emp.Name = "lbl_datos_contacto_emp";
+            this.lbl_datos_contacto_emp.Size = new System.Drawing.Size(157, 20);
+            this.lbl_datos_contacto_emp.TabIndex = 15;
+            this.lbl_datos_contacto_emp.Text = "Datos de contacto";
+            // 
+            // btn_detalle_nombre_emp
+            // 
+            this.btn_detalle_nombre_emp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_detalle_nombre_emp.Location = new System.Drawing.Point(809, 32);
+            this.btn_detalle_nombre_emp.Name = "btn_detalle_nombre_emp";
+            this.btn_detalle_nombre_emp.Size = new System.Drawing.Size(64, 23);
+            this.btn_detalle_nombre_emp.TabIndex = 14;
+            this.btn_detalle_nombre_emp.Text = "Detallar";
+            this.btn_detalle_nombre_emp.UseVisualStyleBackColor = true;
+            // 
+            // dtp_fecha_baja_emp
+            // 
+            this.dtp_fecha_baja_emp.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtp_fecha_baja_emp.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtp_fecha_baja_emp.Location = new System.Drawing.Point(572, 61);
+            this.dtp_fecha_baja_emp.Name = "dtp_fecha_baja_emp";
+            this.dtp_fecha_baja_emp.Size = new System.Drawing.Size(98, 20);
+            this.dtp_fecha_baja_emp.TabIndex = 11;
+            // 
+            // lbl_fecha_baja_emp
+            // 
+            this.lbl_fecha_baja_emp.AutoSize = true;
+            this.lbl_fecha_baja_emp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_fecha_baja_emp.Location = new System.Drawing.Point(525, 61);
+            this.lbl_fecha_baja_emp.Name = "lbl_fecha_baja_emp";
+            this.lbl_fecha_baja_emp.Size = new System.Drawing.Size(40, 17);
+            this.lbl_fecha_baja_emp.TabIndex = 10;
+            this.lbl_fecha_baja_emp.Text = "Baja:";
+            // 
+            // dtp_fecha_alta_emp
+            // 
+            this.dtp_fecha_alta_emp.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtp_fecha_alta_emp.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtp_fecha_alta_emp.Location = new System.Drawing.Point(421, 59);
+            this.dtp_fecha_alta_emp.Name = "dtp_fecha_alta_emp";
+            this.dtp_fecha_alta_emp.Size = new System.Drawing.Size(98, 20);
+            this.dtp_fecha_alta_emp.TabIndex = 9;
+            // 
+            // lbl_fecha_alta_emp
+            // 
+            this.lbl_fecha_alta_emp.AutoSize = true;
+            this.lbl_fecha_alta_emp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_fecha_alta_emp.Location = new System.Drawing.Point(315, 61);
+            this.lbl_fecha_alta_emp.Name = "lbl_fecha_alta_emp";
+            this.lbl_fecha_alta_emp.Size = new System.Drawing.Size(98, 17);
+            this.lbl_fecha_alta_emp.TabIndex = 8;
+            this.lbl_fecha_alta_emp.Text = "Fecha de alta:";
+            // 
+            // cbo_estado_emp
+            // 
+            this.cbo_estado_emp.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.cbo_estado_emp.FormattingEnabled = true;
+            this.cbo_estado_emp.Location = new System.Drawing.Point(147, 58);
+            this.cbo_estado_emp.Name = "cbo_estado_emp";
+            this.cbo_estado_emp.Size = new System.Drawing.Size(162, 21);
+            this.cbo_estado_emp.TabIndex = 7;
+            // 
+            // txt_apellidos_emp
+            // 
+            this.txt_apellidos_emp.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.txt_apellidos_emp.Location = new System.Drawing.Point(509, 32);
+            this.txt_apellidos_emp.Name = "txt_apellidos_emp";
+            this.txt_apellidos_emp.Size = new System.Drawing.Size(290, 20);
+            this.txt_apellidos_emp.TabIndex = 6;
+            // 
+            // txt_nombres_emp
+            // 
+            this.txt_nombres_emp.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.txt_nombres_emp.Location = new System.Drawing.Point(148, 32);
+            this.txt_nombres_emp.Name = "txt_nombres_emp";
+            this.txt_nombres_emp.Size = new System.Drawing.Size(278, 20);
+            this.txt_nombres_emp.TabIndex = 5;
+            // 
+            // txt_codigo_emp
+            // 
+            this.txt_codigo_emp.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.txt_codigo_emp.Location = new System.Drawing.Point(147, 6);
+            this.txt_codigo_emp.Name = "txt_codigo_emp";
+            this.txt_codigo_emp.Size = new System.Drawing.Size(50, 20);
+            this.txt_codigo_emp.TabIndex = 4;
+            // 
+            // lbl_estado_emp
+            // 
+            this.lbl_estado_emp.AutoSize = true;
+            this.lbl_estado_emp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_estado_emp.Location = new System.Drawing.Point(7, 62);
+            this.lbl_estado_emp.Name = "lbl_estado_emp";
+            this.lbl_estado_emp.Size = new System.Drawing.Size(56, 17);
+            this.lbl_estado_emp.TabIndex = 3;
+            this.lbl_estado_emp.Text = "Estado:";
+            // 
+            // lbl_apellido_emp
+            // 
+            this.lbl_apellido_emp.AutoSize = true;
+            this.lbl_apellido_emp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_apellido_emp.Location = new System.Drawing.Point(432, 34);
+            this.lbl_apellido_emp.Name = "lbl_apellido_emp";
+            this.lbl_apellido_emp.Size = new System.Drawing.Size(69, 17);
+            this.lbl_apellido_emp.TabIndex = 2;
+            this.lbl_apellido_emp.Text = "Apellidos:";
+            // 
+            // lbl_nombre_emp
+            // 
+            this.lbl_nombre_emp.AutoSize = true;
+            this.lbl_nombre_emp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_nombre_emp.Location = new System.Drawing.Point(7, 35);
+            this.lbl_nombre_emp.Name = "lbl_nombre_emp";
+            this.lbl_nombre_emp.Size = new System.Drawing.Size(62, 17);
+            this.lbl_nombre_emp.TabIndex = 1;
+            this.lbl_nombre_emp.Text = "Nombre:";
+            // 
+            // lbl_codigo_emp
+            // 
+            this.lbl_codigo_emp.AutoSize = true;
+            this.lbl_codigo_emp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_codigo_emp.Location = new System.Drawing.Point(7, 8);
+            this.lbl_codigo_emp.Name = "lbl_codigo_emp";
+            this.lbl_codigo_emp.Size = new System.Drawing.Size(56, 17);
+            this.lbl_codigo_emp.TabIndex = 0;
+            this.lbl_codigo_emp.Text = "Código:";
+            // 
+            // Personal
+            // 
+            this.Personal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
+            this.Personal.Controls.Add(this.txt_observaciones_emp);
+            this.Personal.Controls.Add(this.lbl_observaciones_emp);
+            this.Personal.Controls.Add(this.btn_examinar_documentacion_emp);
+            this.Personal.Controls.Add(this.textBox4);
+            this.Personal.Controls.Add(this.lbl_documentacion_emp);
+            this.Personal.Controls.Add(this.lbl_carpeta_emp);
+            this.Personal.Controls.Add(this.cbo_estado_civil_emp);
+            this.Personal.Controls.Add(this.comboBox2);
+            this.Personal.Controls.Add(this.txt_nombre_madre_emp);
+            this.Personal.Controls.Add(this.dtp_fecha_nacimiento_emp);
+            this.Personal.Controls.Add(this.txt_nombre_padre_emp);
+            this.Personal.Controls.Add(this.lbl_estado_civil_emp);
+            this.Personal.Controls.Add(this.lbl_sexo_emp);
+            this.Personal.Controls.Add(this.lbl_nombre_madre_emp);
+            this.Personal.Controls.Add(this.lbl_nombre_padre_emp);
+            this.Personal.Controls.Add(this.lbl_fecha_nacimiento_emp);
+            this.Personal.Controls.Add(this.lbl_datos_personales_emp);
+            this.Personal.Location = new System.Drawing.Point(4, 27);
+            this.Personal.Name = "Personal";
+            this.Personal.Padding = new System.Windows.Forms.Padding(3);
+            this.Personal.Size = new System.Drawing.Size(903, 306);
+            this.Personal.TabIndex = 2;
+            this.Personal.Text = "Personal";
+            // 
+            // txt_observaciones_emp
+            // 
+            this.txt_observaciones_emp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_observaciones_emp.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_observaciones_emp.Location = new System.Drawing.Point(519, 54);
+            this.txt_observaciones_emp.Multiline = true;
+            this.txt_observaciones_emp.Name = "txt_observaciones_emp";
+            this.txt_observaciones_emp.Size = new System.Drawing.Size(360, 187);
+            this.txt_observaciones_emp.TabIndex = 15;
+            // 
+            // lbl_observaciones_emp
+            // 
+            this.lbl_observaciones_emp.AutoSize = true;
+            this.lbl_observaciones_emp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_observaciones_emp.Location = new System.Drawing.Point(516, 36);
+            this.lbl_observaciones_emp.Name = "lbl_observaciones_emp";
+            this.lbl_observaciones_emp.Size = new System.Drawing.Size(91, 15);
+            this.lbl_observaciones_emp.TabIndex = 14;
+            this.lbl_observaciones_emp.Text = "Observaciones:";
+            // 
+            // btn_examinar_documentacion_emp
+            // 
+            this.btn_examinar_documentacion_emp.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_examinar_documentacion_emp.Location = new System.Drawing.Point(423, 195);
+            this.btn_examinar_documentacion_emp.Name = "btn_examinar_documentacion_emp";
+            this.btn_examinar_documentacion_emp.Size = new System.Drawing.Size(75, 23);
+            this.btn_examinar_documentacion_emp.TabIndex = 13;
+            this.btn_examinar_documentacion_emp.Text = "Examinar...";
+            this.btn_examinar_documentacion_emp.UseVisualStyleBackColor = true;
+            // 
+            // textBox4
+            // 
+            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox4.Location = new System.Drawing.Point(19, 195);
+            this.textBox4.Multiline = true;
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(398, 46);
+            this.textBox4.TabIndex = 12;
+            // 
+            // lbl_documentacion_emp
+            // 
+            this.lbl_documentacion_emp.AutoSize = true;
+            this.lbl_documentacion_emp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_documentacion_emp.Location = new System.Drawing.Point(16, 177);
+            this.lbl_documentacion_emp.Name = "lbl_documentacion_emp";
+            this.lbl_documentacion_emp.Size = new System.Drawing.Size(237, 15);
+            this.lbl_documentacion_emp.TabIndex = 11;
+            this.lbl_documentacion_emp.Text = "Carpeta de documentacíon del trabajador:";
+            // 
+            // lbl_carpeta_emp
+            // 
+            this.lbl_carpeta_emp.AutoSize = true;
+            this.lbl_carpeta_emp.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_carpeta_emp.Location = new System.Drawing.Point(4, 149);
+            this.lbl_carpeta_emp.Name = "lbl_carpeta_emp";
+            this.lbl_carpeta_emp.Size = new System.Drawing.Size(67, 18);
+            this.lbl_carpeta_emp.TabIndex = 10;
+            this.lbl_carpeta_emp.Text = "Carpeta";
+            // 
+            // cbo_estado_civil_emp
+            // 
+            this.cbo_estado_civil_emp.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbo_estado_civil_emp.Items.AddRange(new object[] {
+            "Soltero/a",
+            "Casado/a",
+            "Divorciado/a",
+            "Viudo/a"});
+            this.cbo_estado_civil_emp.Location = new System.Drawing.Point(383, 112);
+            this.cbo_estado_civil_emp.Name = "cbo_estado_civil_emp";
+            this.cbo_estado_civil_emp.Size = new System.Drawing.Size(115, 21);
+            this.cbo_estado_civil_emp.TabIndex = 9;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox2.Items.AddRange(new object[] {
+            "Hombre",
+            "Mujer"});
+            this.comboBox2.Location = new System.Drawing.Point(203, 112);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(97, 21);
+            this.comboBox2.TabIndex = 0;
+            // 
+            // txt_nombre_madre_emp
+            // 
+            this.txt_nombre_madre_emp.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_nombre_madre_emp.Location = new System.Drawing.Point(203, 86);
+            this.txt_nombre_madre_emp.Name = "txt_nombre_madre_emp";
+            this.txt_nombre_madre_emp.Size = new System.Drawing.Size(295, 20);
+            this.txt_nombre_madre_emp.TabIndex = 8;
+            // 
+            // dtp_fecha_nacimiento_emp
+            // 
+            this.dtp_fecha_nacimiento_emp.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtp_fecha_nacimiento_emp.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtp_fecha_nacimiento_emp.Location = new System.Drawing.Point(203, 34);
+            this.dtp_fecha_nacimiento_emp.Name = "dtp_fecha_nacimiento_emp";
+            this.dtp_fecha_nacimiento_emp.Size = new System.Drawing.Size(97, 20);
+            this.dtp_fecha_nacimiento_emp.TabIndex = 7;
+            // 
+            // txt_nombre_padre_emp
+            // 
+            this.txt_nombre_padre_emp.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_nombre_padre_emp.Location = new System.Drawing.Point(203, 60);
+            this.txt_nombre_padre_emp.Name = "txt_nombre_padre_emp";
+            this.txt_nombre_padre_emp.Size = new System.Drawing.Size(295, 20);
+            this.txt_nombre_padre_emp.TabIndex = 6;
+            // 
+            // lbl_estado_civil_emp
+            // 
+            this.lbl_estado_civil_emp.AutoSize = true;
+            this.lbl_estado_civil_emp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_estado_civil_emp.Location = new System.Drawing.Point(306, 115);
+            this.lbl_estado_civil_emp.Name = "lbl_estado_civil_emp";
+            this.lbl_estado_civil_emp.Size = new System.Drawing.Size(71, 15);
+            this.lbl_estado_civil_emp.TabIndex = 5;
+            this.lbl_estado_civil_emp.Text = "Estado civil:";
+            // 
+            // lbl_sexo_emp
+            // 
+            this.lbl_sexo_emp.AutoSize = true;
+            this.lbl_sexo_emp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_sexo_emp.Location = new System.Drawing.Point(16, 115);
+            this.lbl_sexo_emp.Name = "lbl_sexo_emp";
+            this.lbl_sexo_emp.Size = new System.Drawing.Size(38, 15);
+            this.lbl_sexo_emp.TabIndex = 4;
+            this.lbl_sexo_emp.Text = "Sexo:";
+            // 
+            // lbl_nombre_madre_emp
+            // 
+            this.lbl_nombre_madre_emp.AutoSize = true;
+            this.lbl_nombre_madre_emp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_nombre_madre_emp.Location = new System.Drawing.Point(16, 88);
+            this.lbl_nombre_madre_emp.Name = "lbl_nombre_madre_emp";
+            this.lbl_nombre_madre_emp.Size = new System.Drawing.Size(124, 15);
+            this.lbl_nombre_madre_emp.TabIndex = 3;
+            this.lbl_nombre_madre_emp.Text = "Nombre de la madre:";
+            // 
+            // lbl_nombre_padre_emp
+            // 
+            this.lbl_nombre_padre_emp.AutoSize = true;
+            this.lbl_nombre_padre_emp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_nombre_padre_emp.Location = new System.Drawing.Point(16, 62);
+            this.lbl_nombre_padre_emp.Name = "lbl_nombre_padre_emp";
+            this.lbl_nombre_padre_emp.Size = new System.Drawing.Size(110, 15);
+            this.lbl_nombre_padre_emp.TabIndex = 2;
+            this.lbl_nombre_padre_emp.Text = "Nombre del padre:";
+            // 
+            // lbl_fecha_nacimiento_emp
+            // 
+            this.lbl_fecha_nacimiento_emp.AutoSize = true;
+            this.lbl_fecha_nacimiento_emp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_fecha_nacimiento_emp.Location = new System.Drawing.Point(16, 36);
+            this.lbl_fecha_nacimiento_emp.Name = "lbl_fecha_nacimiento_emp";
+            this.lbl_fecha_nacimiento_emp.Size = new System.Drawing.Size(125, 15);
+            this.lbl_fecha_nacimiento_emp.TabIndex = 1;
+            this.lbl_fecha_nacimiento_emp.Text = "Fecha de nacimiento:";
+            // 
+            // lbl_datos_personales_emp
+            // 
+            this.lbl_datos_personales_emp.AutoSize = true;
+            this.lbl_datos_personales_emp.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_datos_personales_emp.Location = new System.Drawing.Point(3, 3);
+            this.lbl_datos_personales_emp.Name = "lbl_datos_personales_emp";
+            this.lbl_datos_personales_emp.Size = new System.Drawing.Size(146, 18);
+            this.lbl_datos_personales_emp.TabIndex = 0;
+            this.lbl_datos_personales_emp.Text = "Datos personales:";
+            // 
+            // Situacion
+            // 
+            this.Situacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
+            this.Situacion.Controls.Add(this.lbl_puesto_trabaj_emp);
+            this.Situacion.Controls.Add(this.txt_puesto_trabaj_emp);
+            this.Situacion.Controls.Add(this.btn_puesto_trabaj_emp);
+            this.Situacion.Controls.Add(this.lbl_centro_trabajo_emp);
+            this.Situacion.Controls.Add(this.txt_centro_trabajo_emp);
+            this.Situacion.Controls.Add(this.txt_descrip_trabajo_emp);
+            this.Situacion.Controls.Add(this.btn_centro_trabajo_emp);
+            this.Situacion.Controls.Add(this.lbl_descripcion_trabajo_emp);
+            this.Situacion.Location = new System.Drawing.Point(4, 27);
+            this.Situacion.Name = "Situacion";
+            this.Situacion.Padding = new System.Windows.Forms.Padding(3);
+            this.Situacion.Size = new System.Drawing.Size(903, 306);
+            this.Situacion.TabIndex = 3;
+            this.Situacion.Text = "Situación";
+            // 
+            // lbl_puesto_trabaj_emp
+            // 
+            this.lbl_puesto_trabaj_emp.AutoSize = true;
+            this.lbl_puesto_trabaj_emp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_puesto_trabaj_emp.Location = new System.Drawing.Point(717, 51);
+            this.lbl_puesto_trabaj_emp.Name = "lbl_puesto_trabaj_emp";
+            this.lbl_puesto_trabaj_emp.Size = new System.Drawing.Size(26, 15);
+            this.lbl_puesto_trabaj_emp.TabIndex = 7;
+            this.lbl_puesto_trabaj_emp.Text = "test";
+            // 
+            // txt_puesto_trabaj_emp
+            // 
+            this.txt_puesto_trabaj_emp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_puesto_trabaj_emp.Location = new System.Drawing.Point(651, 45);
+            this.txt_puesto_trabaj_emp.Name = "txt_puesto_trabaj_emp";
+            this.txt_puesto_trabaj_emp.Size = new System.Drawing.Size(60, 21);
+            this.txt_puesto_trabaj_emp.TabIndex = 6;
+            // 
+            // btn_puesto_trabaj_emp
+            // 
+            this.btn_puesto_trabaj_emp.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_puesto_trabaj_emp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_puesto_trabaj_emp.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_puesto_trabaj_emp.Location = new System.Drawing.Point(569, 43);
+            this.btn_puesto_trabaj_emp.Name = "btn_puesto_trabaj_emp";
+            this.btn_puesto_trabaj_emp.Size = new System.Drawing.Size(76, 23);
+            this.btn_puesto_trabaj_emp.TabIndex = 5;
+            this.btn_puesto_trabaj_emp.Text = "Puesto:";
+            this.btn_puesto_trabaj_emp.UseVisualStyleBackColor = true;
+            // 
+            // lbl_centro_trabajo_emp
+            // 
+            this.lbl_centro_trabajo_emp.AutoSize = true;
+            this.lbl_centro_trabajo_emp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_centro_trabajo_emp.Location = new System.Drawing.Point(251, 47);
+            this.lbl_centro_trabajo_emp.Name = "lbl_centro_trabajo_emp";
+            this.lbl_centro_trabajo_emp.Size = new System.Drawing.Size(26, 15);
+            this.lbl_centro_trabajo_emp.TabIndex = 4;
+            this.lbl_centro_trabajo_emp.Text = "test";
+            this.lbl_centro_trabajo_emp.Click += new System.EventHandler(this.lbl_centro_trabajo_emp_Click);
+            // 
+            // txt_centro_trabajo_emp
+            // 
+            this.txt_centro_trabajo_emp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_centro_trabajo_emp.Location = new System.Drawing.Point(185, 43);
+            this.txt_centro_trabajo_emp.Name = "txt_centro_trabajo_emp";
+            this.txt_centro_trabajo_emp.Size = new System.Drawing.Size(60, 21);
+            this.txt_centro_trabajo_emp.TabIndex = 3;
+            // 
+            // txt_descrip_trabajo_emp
+            // 
+            this.txt_descrip_trabajo_emp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_descrip_trabajo_emp.Location = new System.Drawing.Point(185, 16);
+            this.txt_descrip_trabajo_emp.Name = "txt_descrip_trabajo_emp";
+            this.txt_descrip_trabajo_emp.Size = new System.Drawing.Size(712, 21);
+            this.txt_descrip_trabajo_emp.TabIndex = 2;
+            // 
+            // btn_centro_trabajo_emp
+            // 
+            this.btn_centro_trabajo_emp.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_centro_trabajo_emp.FlatAppearance.BorderSize = 0;
+            this.btn_centro_trabajo_emp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_centro_trabajo_emp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_centro_trabajo_emp.Location = new System.Drawing.Point(7, 43);
+            this.btn_centro_trabajo_emp.Name = "btn_centro_trabajo_emp";
+            this.btn_centro_trabajo_emp.Size = new System.Drawing.Size(113, 23);
+            this.btn_centro_trabajo_emp.TabIndex = 1;
+            this.btn_centro_trabajo_emp.Text = "Centro de trabajo:";
+            this.btn_centro_trabajo_emp.UseVisualStyleBackColor = true;
+            // 
+            // lbl_descripcion_trabajo_emp
+            // 
+            this.lbl_descripcion_trabajo_emp.AutoSize = true;
+            this.lbl_descripcion_trabajo_emp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_descripcion_trabajo_emp.Location = new System.Drawing.Point(7, 19);
+            this.lbl_descripcion_trabajo_emp.Name = "lbl_descripcion_trabajo_emp";
+            this.lbl_descripcion_trabajo_emp.Size = new System.Drawing.Size(140, 15);
+            this.lbl_descripcion_trabajo_emp.TabIndex = 0;
+            this.lbl_descripcion_trabajo_emp.Text = "Descripción del Trabajo:";
             // 
             // label35
             // 
             this.label35.AutoSize = true;
             this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label35.Location = new System.Drawing.Point(238, 149);
+            this.label35.Location = new System.Drawing.Point(253, 9);
             this.label35.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(370, 26);
             this.label35.TabIndex = 40;
             this.label35.Text = "INFORMACIÓN DEL EMPLEADO";
             // 
-            // Empleado
+            // pic_empleado
+            // 
+            this.pic_empleado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
+            this.pic_empleado.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pic_empleado.InitialImage = ((System.Drawing.Image)(resources.GetObject("pic_empleado.InitialImage")));
+            this.pic_empleado.Location = new System.Drawing.Point(796, 12);
+            this.pic_empleado.Name = "pic_empleado";
+            this.pic_empleado.Size = new System.Drawing.Size(133, 134);
+            this.pic_empleado.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pic_empleado.TabIndex = 168;
+            this.pic_empleado.TabStop = false;
+            // 
+            // btn_examinar_pic_emp
+            // 
+            this.btn_examinar_pic_emp.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_examinar_pic_emp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_examinar_pic_emp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_examinar_pic_emp.Location = new System.Drawing.Point(817, 152);
+            this.btn_examinar_pic_emp.Name = "btn_examinar_pic_emp";
+            this.btn_examinar_pic_emp.Size = new System.Drawing.Size(112, 28);
+            this.btn_examinar_pic_emp.TabIndex = 169;
+            this.btn_examinar_pic_emp.Text = "Examinar...";
+            this.btn_examinar_pic_emp.UseVisualStyleBackColor = true;
+            this.btn_examinar_pic_emp.Click += new System.EventHandler(this.btn_examinar_pic_emp_Click);
+            // 
+            // txt_img_final
+            // 
+            this.txt_img_final.Location = new System.Drawing.Point(869, 101);
+            this.txt_img_final.Name = "txt_img_final";
+            this.txt_img_final.Size = new System.Drawing.Size(28, 23);
+            this.txt_img_final.TabIndex = 176;
+            this.txt_img_final.Tag = "";
+            this.txt_img_final.Visible = false;
+            // 
+            // txt_nom_img
+            // 
+            this.txt_nom_img.Location = new System.Drawing.Point(835, 101);
+            this.txt_nom_img.Name = "txt_nom_img";
+            this.txt_nom_img.Size = new System.Drawing.Size(28, 23);
+            this.txt_nom_img.TabIndex = 177;
+            this.txt_nom_img.Tag = "foto_empleado";
+            this.txt_nom_img.Visible = false;
+            // 
+            // txt_direc_img
+            // 
+            this.txt_direc_img.Location = new System.Drawing.Point(801, 101);
+            this.txt_direc_img.Name = "txt_direc_img";
+            this.txt_direc_img.Size = new System.Drawing.Size(28, 23);
+            this.txt_direc_img.TabIndex = 178;
+            this.txt_direc_img.Tag = "";
+            this.txt_direc_img.Visible = false;
+            // 
+            // frm_empleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
-            this.ClientSize = new System.Drawing.Size(876, 598);
+            this.ClientSize = new System.Drawing.Size(945, 555);
+            this.Controls.Add(this.btn_examinar_pic_emp);
+            this.Controls.Add(this.pic_empleado);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.label35);
             this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.groupBox2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Empleado";
+            this.Name = "frm_empleado";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Empleado";
             this.Load += new System.EventHandler(this.Empleado_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.tbc_datos_emp.ResumeLayout(false);
+            this.General.ResumeLayout(false);
+            this.General.PerformLayout();
+            this.Personal.ResumeLayout(false);
+            this.Personal.PerformLayout();
+            this.Situacion.ResumeLayout(false);
+            this.Situacion.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_empleado)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -687,39 +1213,83 @@
         private System.Windows.Forms.Button btn_actualizar;
         private System.Windows.Forms.Button btn_cancelar;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.TextBox textBox14;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox textBox15;
-        private System.Windows.Forms.TextBox textBox16;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.TextBox textBox18;
-        private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TabControl tbc_datos_emp;
+        private System.Windows.Forms.TabPage General;
+        private System.Windows.Forms.TextBox txt_correo_emp;
+        private System.Windows.Forms.Label lbl_correo_emp;
+        private System.Windows.Forms.TextBox txt_tel_movil_emp;
+        private System.Windows.Forms.Label lbl_tel_movil_emp;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox5;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox txt_codigo_telefono_emp;
+        private System.Windows.Forms.Label lbl_telefono_emp;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label lbl_nacionalidad_emp;
+        private System.Windows.Forms.Label lbl_municipio_emp;
+        private System.Windows.Forms.TextBox txt_municipio_emp;
+        private System.Windows.Forms.Button btn_municipio;
+        private System.Windows.Forms.TextBox txt__planta_domc_emp;
+        private System.Windows.Forms.TextBox txt_piso_domc_emp;
+        private System.Windows.Forms.TextBox txt_escalera_domc_emp;
+        private System.Windows.Forms.TextBox txt_bloque_domc_emp;
+        private System.Windows.Forms.Label lbl_planta_domc_emp;
+        private System.Windows.Forms.Label lbl_piso_domc_emp;
+        private System.Windows.Forms.Label lbl_escalera_domc_emp;
+        private System.Windows.Forms.Label lbl_bloque_domc_emp;
+        private System.Windows.Forms.TextBox txt_numer_domc_emp;
+        private System.Windows.Forms.Label lbl_numero_domc_emp;
+        private System.Windows.Forms.TextBox txt_domicilio_emp;
+        private System.Windows.Forms.ComboBox cbo_domicilio_emp;
+        private System.Windows.Forms.Label lbl_domicilio_emp;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label lbl_dpi_emp;
+        private System.Windows.Forms.Label lbl_datos_contacto_emp;
+        private System.Windows.Forms.Button btn_detalle_nombre_emp;
+        private System.Windows.Forms.DateTimePicker dtp_fecha_baja_emp;
+        private System.Windows.Forms.Label lbl_fecha_baja_emp;
+        private System.Windows.Forms.DateTimePicker dtp_fecha_alta_emp;
+        private System.Windows.Forms.Label lbl_fecha_alta_emp;
+        private System.Windows.Forms.ComboBox cbo_estado_emp;
+        private System.Windows.Forms.TextBox txt_apellidos_emp;
+        private System.Windows.Forms.TextBox txt_nombres_emp;
+        private System.Windows.Forms.TextBox txt_codigo_emp;
+        private System.Windows.Forms.Label lbl_estado_emp;
+        private System.Windows.Forms.Label lbl_apellido_emp;
+        private System.Windows.Forms.Label lbl_nombre_emp;
+        private System.Windows.Forms.Label lbl_codigo_emp;
+        private System.Windows.Forms.TabPage Personal;
+        public System.Windows.Forms.PictureBox pic_empleado;
+        public System.Windows.Forms.Button btn_examinar_pic_emp;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label lbl_igss_emp;
+        private System.Windows.Forms.Label lbl_nombre_padre_emp;
+        private System.Windows.Forms.Label lbl_fecha_nacimiento_emp;
+        private System.Windows.Forms.Label lbl_datos_personales_emp;
+        private System.Windows.Forms.Label lbl_estado_civil_emp;
+        private System.Windows.Forms.Label lbl_sexo_emp;
+        private System.Windows.Forms.Label lbl_nombre_madre_emp;
+        private System.Windows.Forms.TextBox txt_observaciones_emp;
+        private System.Windows.Forms.Label lbl_observaciones_emp;
+        private System.Windows.Forms.Button btn_examinar_documentacion_emp;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Label lbl_documentacion_emp;
+        private System.Windows.Forms.Label lbl_carpeta_emp;
+        private System.Windows.Forms.ComboBox cbo_estado_civil_emp;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.TextBox txt_nombre_madre_emp;
+        private System.Windows.Forms.DateTimePicker dtp_fecha_nacimiento_emp;
+        private System.Windows.Forms.TextBox txt_nombre_padre_emp;
+        private System.Windows.Forms.TabPage Situacion;
+        private System.Windows.Forms.Label lbl_centro_trabajo_emp;
+        private System.Windows.Forms.TextBox txt_centro_trabajo_emp;
+        private System.Windows.Forms.TextBox txt_descrip_trabajo_emp;
+        private System.Windows.Forms.Button btn_centro_trabajo_emp;
+        private System.Windows.Forms.Label lbl_descripcion_trabajo_emp;
+        private System.Windows.Forms.Label lbl_puesto_trabaj_emp;
+        private System.Windows.Forms.TextBox txt_puesto_trabaj_emp;
+        private System.Windows.Forms.Button btn_puesto_trabaj_emp;
+        private System.Windows.Forms.TextBox txt_img_final;
+        private System.Windows.Forms.TextBox txt_nom_img;
+        private System.Windows.Forms.TextBox txt_direc_img;
     }
 }
