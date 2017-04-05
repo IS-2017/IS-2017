@@ -39,14 +39,12 @@
             this.btn_buscar = new System.Windows.Forms.Button();
             this.btn_actualizar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.txt_titulo_puesto_busq_rec = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.dgv_rec_busq = new System.Windows.Forms.DataGridView();
             this.gpb_navegador.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_rec_busq)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_form_emp
@@ -91,6 +89,7 @@
             this.btn_nuevo.Size = new System.Drawing.Size(65, 65);
             this.btn_nuevo.TabIndex = 0;
             this.btn_nuevo.UseVisualStyleBackColor = true;
+            this.btn_nuevo.Click += new System.EventHandler(this.btn_nuevo_Click);
             // 
             // btn_ultimo
             // 
@@ -106,6 +105,7 @@
             this.btn_ultimo.Size = new System.Drawing.Size(33, 33);
             this.btn_ultimo.TabIndex = 10;
             this.btn_ultimo.UseVisualStyleBackColor = true;
+            this.btn_ultimo.Click += new System.EventHandler(this.btn_ultimo_Click);
             // 
             // btn_primero
             // 
@@ -121,6 +121,7 @@
             this.btn_primero.Size = new System.Drawing.Size(33, 33);
             this.btn_primero.TabIndex = 9;
             this.btn_primero.UseVisualStyleBackColor = true;
+            this.btn_primero.Click += new System.EventHandler(this.btn_primero_Click);
             // 
             // btn_siguiente
             // 
@@ -136,6 +137,7 @@
             this.btn_siguiente.Size = new System.Drawing.Size(33, 33);
             this.btn_siguiente.TabIndex = 8;
             this.btn_siguiente.UseVisualStyleBackColor = true;
+            this.btn_siguiente.Click += new System.EventHandler(this.btn_siguiente_Click);
             // 
             // btn_anterior
             // 
@@ -151,6 +153,7 @@
             this.btn_anterior.Size = new System.Drawing.Size(33, 33);
             this.btn_anterior.TabIndex = 7;
             this.btn_anterior.UseVisualStyleBackColor = true;
+            this.btn_anterior.Click += new System.EventHandler(this.btn_anterior_Click);
             // 
             // btn_buscar
             // 
@@ -166,6 +169,7 @@
             this.btn_buscar.Size = new System.Drawing.Size(65, 65);
             this.btn_buscar.TabIndex = 4;
             this.btn_buscar.UseVisualStyleBackColor = true;
+            this.btn_buscar.Click += new System.EventHandler(this.btn_buscar_Click);
             // 
             // btn_actualizar
             // 
@@ -181,14 +185,13 @@
             this.btn_actualizar.Size = new System.Drawing.Size(65, 65);
             this.btn_actualizar.TabIndex = 6;
             this.btn_actualizar.UseVisualStyleBackColor = true;
+            this.btn_actualizar.Click += new System.EventHandler(this.btn_actualizar_Click);
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.comboBox2);
-            this.groupBox1.Controls.Add(this.comboBox1);
-            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.txt_titulo_puesto_busq_rec);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.dataGridView1);
+            this.groupBox1.Controls.Add(this.dgv_rec_busq);
             this.groupBox1.Location = new System.Drawing.Point(14, 170);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(837, 329);
@@ -196,13 +199,13 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Filtros";
             // 
-            // dataGridView1
+            // txt_titulo_puesto_busq_rec
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(209, 19);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(612, 304);
-            this.dataGridView1.TabIndex = 0;
+            this.txt_titulo_puesto_busq_rec.Location = new System.Drawing.Point(17, 48);
+            this.txt_titulo_puesto_busq_rec.Name = "txt_titulo_puesto_busq_rec";
+            this.txt_titulo_puesto_busq_rec.Size = new System.Drawing.Size(158, 20);
+            this.txt_titulo_puesto_busq_rec.TabIndex = 2;
+            this.txt_titulo_puesto_busq_rec.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_titulo_puesto_busq_rec_KeyUp);
             // 
             // label1
             // 
@@ -213,30 +216,14 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Titulo del puesto";
             // 
-            // label2
+            // dgv_rec_busq
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(14, 91);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(42, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Estatus";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(17, 55);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(171, 21);
-            this.comboBox1.TabIndex = 3;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(16, 116);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(172, 21);
-            this.comboBox2.TabIndex = 4;
+            this.dgv_rec_busq.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_rec_busq.Location = new System.Drawing.Point(181, 19);
+            this.dgv_rec_busq.Name = "dgv_rec_busq";
+            this.dgv_rec_busq.Size = new System.Drawing.Size(640, 304);
+            this.dgv_rec_busq.TabIndex = 0;
+            this.dgv_rec_busq.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_rec_busq_CellDoubleClick);
             // 
             // frm_reclutamiento_grid
             // 
@@ -247,11 +234,13 @@
             this.Controls.Add(this.lbl_form_emp);
             this.Controls.Add(this.gpb_navegador);
             this.Name = "frm_reclutamiento_grid";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frm_reclutamiento_grid";
+            this.Load += new System.EventHandler(this.frm_reclutamiento_grid_Load);
             this.gpb_navegador.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_rec_busq)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -269,10 +258,8 @@
         private System.Windows.Forms.Button btn_buscar;
         private System.Windows.Forms.Button btn_actualizar;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.DataGridView dgv_rec_busq;
+        private System.Windows.Forms.TextBox txt_titulo_puesto_busq_rec;
     }
 }

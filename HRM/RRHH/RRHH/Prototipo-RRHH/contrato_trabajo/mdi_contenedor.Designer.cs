@@ -97,6 +97,7 @@
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
+            this.reclutamientoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
@@ -209,7 +210,8 @@
             this.nominasToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.listaDeEmpleadosAPagarToolStripMenuItem,
             this.capacitacionesToolStripMenuItem,
-            this.comisionDeVendedorToolStripMenuItem});
+            this.comisionDeVendedorToolStripMenuItem,
+            this.reclutamientoToolStripMenuItem});
             resources.ApplyResources(this.nominasToolStripMenuItem1, "nominasToolStripMenuItem1");
             this.nominasToolStripMenuItem1.Name = "nominasToolStripMenuItem1";
             // 
@@ -586,6 +588,12 @@
             this.toolStripProgressBar1.Name = "toolStripProgressBar1";
             resources.ApplyResources(this.toolStripProgressBar1, "toolStripProgressBar1");
             // 
+            // reclutamientoToolStripMenuItem
+            // 
+            this.reclutamientoToolStripMenuItem.Name = "reclutamientoToolStripMenuItem";
+            resources.ApplyResources(this.reclutamientoToolStripMenuItem, "reclutamientoToolStripMenuItem");
+            this.reclutamientoToolStripMenuItem.Click += new System.EventHandler(this.reclutamientoToolStripMenuItem_Click);
+            // 
             // mdi_contenedor
             // 
             this.AllowDrop = true;
@@ -681,6 +689,7 @@
         private System.Windows.Forms.ToolStripMenuItem gestiónToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aplicaciónToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gestiónToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem reclutamientoToolStripMenuItem;
     }
 }
 

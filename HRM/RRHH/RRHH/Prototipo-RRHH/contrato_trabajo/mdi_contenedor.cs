@@ -54,7 +54,7 @@ namespace contrato_trabajo
 
         private void empresaToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            frm_empresa cn = new frm_empresa();
+            frm_empresa_grid cn = new frm_empresa_grid();
             cn.MdiParent = this;
             cn.StartPosition = FormStartPosition.CenterScreen;
             cn.Show();
@@ -264,6 +264,14 @@ namespace contrato_trabajo
         {
             seguridad.agregarapp agregar = new seguridad.agregarapp();
             agregar.Show();
+        }
+
+        private void reclutamientoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_reclutamiento_grid cn = new frm_reclutamiento_grid();
+            cn.MdiParent = this;
+            cn.StartPosition = FormStartPosition.CenterScreen;
+            cn.Show();
         }
     }
 }
