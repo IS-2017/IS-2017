@@ -49,6 +49,7 @@
             this.porVendedorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.porLineaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.porProductoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reclutamientoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reporteDeContratosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reporteDeEmpleadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -97,7 +98,7 @@
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
-            this.reclutamientoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.indemnizaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
@@ -264,10 +265,17 @@
             resources.ApplyResources(this.porProductoToolStripMenuItem, "porProductoToolStripMenuItem");
             this.porProductoToolStripMenuItem.Click += new System.EventHandler(this.porProductoToolStripMenuItem_Click);
             // 
+            // reclutamientoToolStripMenuItem
+            // 
+            this.reclutamientoToolStripMenuItem.Name = "reclutamientoToolStripMenuItem";
+            resources.ApplyResources(this.reclutamientoToolStripMenuItem, "reclutamientoToolStripMenuItem");
+            this.reclutamientoToolStripMenuItem.Click += new System.EventHandler(this.reclutamientoToolStripMenuItem_Click);
+            // 
             // reportesToolStripMenuItem
             // 
             this.reportesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.reporteDeContratosToolStripMenuItem,
+            this.indemnizaciónToolStripMenuItem,
             this.reporteDeEmpleadosToolStripMenuItem,
             this.reporteDeNominasToolStripMenuItem});
             resources.ApplyResources(this.reportesToolStripMenuItem, "reportesToolStripMenuItem");
@@ -588,11 +596,11 @@
             this.toolStripProgressBar1.Name = "toolStripProgressBar1";
             resources.ApplyResources(this.toolStripProgressBar1, "toolStripProgressBar1");
             // 
-            // reclutamientoToolStripMenuItem
+            // indemnizaciónToolStripMenuItem
             // 
-            this.reclutamientoToolStripMenuItem.Name = "reclutamientoToolStripMenuItem";
-            resources.ApplyResources(this.reclutamientoToolStripMenuItem, "reclutamientoToolStripMenuItem");
-            this.reclutamientoToolStripMenuItem.Click += new System.EventHandler(this.reclutamientoToolStripMenuItem_Click);
+            this.indemnizaciónToolStripMenuItem.Image = global::contrato_trabajo.Properties.Resources.indemnizacion;
+            this.indemnizaciónToolStripMenuItem.Name = "indemnizaciónToolStripMenuItem";
+            resources.ApplyResources(this.indemnizaciónToolStripMenuItem, "indemnizaciónToolStripMenuItem");
             // 
             // mdi_contenedor
             // 
@@ -690,6 +698,7 @@
         private System.Windows.Forms.ToolStripMenuItem aplicaciónToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gestiónToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem reclutamientoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem indemnizaciónToolStripMenuItem;
     }
 }
 
