@@ -538,3 +538,6 @@ C:\Users\GABRIELA\Dropbox\Semestre 9\Ingenieria de Software\RRHH\Prototipo-RRHH\
 C:\Users\GABRIELA\Dropbox\Semestre 9\Ingenieria de Software\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\Recursos Humanos.csproj.GenerateResource.Cache
 C:\Users\GABRIELA\Dropbox\Semestre 9\Ingenieria de Software\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_Otros.resources
 C:\Users\GABRIELA\Dropbox\Semestre 9\Ingenieria de Software\RRHH\Prototipo-RRHH\contrato_trabajo\bin\Debug\seguridad.pdb
+E:\iles\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\bin\Debug\contrato_trabajo.exe.config
+E:\iles\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.exe
+E:\iles\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.pdb

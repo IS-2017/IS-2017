@@ -193,6 +193,12 @@
     <Compile Include="frm_reclutamiento_grid.Designer.cs">
       <DependentUpon>frm_reclutamiento_grid.cs</DependentUpon>
     </Compile>
+    <Compile Include="Indemnizacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Indemnizacion.Designer.cs">
+      <DependentUpon>Indemnizacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -266,6 +272,12 @@
     </Compile>
     <Compile Include="frm_reportes_de_empleado.Designer.cs">
       <DependentUpon>frm_reportes_de_empleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vacaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vacaciones.Designer.cs">
+      <DependentUpon>Vacaciones.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="frm_aguinaldo.resx">
       <DependentUpon>frm_aguinaldo.cs</DependentUpon>
@@ -346,6 +358,9 @@
     <EmbeddedResource Include="frm_reclutamiento_grid.resx">
       <DependentUpon>frm_reclutamiento_grid.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Indemnizacion.resx">
+      <DependentUpon>Indemnizacion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -382,6 +397,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_reportes_de_empleado.resx">
       <DependentUpon>frm_reportes_de_empleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vacaciones.resx">
+      <DependentUpon>Vacaciones.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -464,6 +482,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\klosions-seguridad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\indemnizacion.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -579,6 +579,12 @@
   <data name="comisionDeVendedorToolStripMenuItem.Text" xml:space="preserve">
     <value>Comision de vendedor</value>
   </data>
+  <data name="reclutamientoToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>260, 26</value>
+  </data>
+  <data name="reclutamientoToolStripMenuItem.Text" xml:space="preserve">
+    <value>Reclutamiento</value>
+  </data>
   <data name="nominasToolStripMenuItem1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAYAAABccqhmAAAABGdBTUEAALGPC/xhBQAAPV9JREFUeF7t
@@ -854,19 +860,25 @@
     <value>Procesos</value>
   </data>
   <data name="reporteDeContratosToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>190, 26</value>
+    <value>199, 26</value>
   </data>
   <data name="reporteDeContratosToolStripMenuItem.Text" xml:space="preserve">
     <value>Planilla IGSS</value>
   </data>
+  <data name="indemnizaciónToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>199, 26</value>
+  </data>
+  <data name="indemnizaciónToolStripMenuItem.Text" xml:space="preserve">
+    <value>Indemnización</value>
+  </data>
   <data name="reporteDeEmpleadosToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>190, 26</value>
+    <value>199, 26</value>
   </data>
   <data name="reporteDeEmpleadosToolStripMenuItem.Text" xml:space="preserve">
     <value>Bitacora</value>
   </data>
   <data name="reporteDeNominasToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>190, 26</value>
+    <value>199, 26</value>
   </data>
   <data name="reporteDeNominasToolStripMenuItem.Text" xml:space="preserve">
     <value>Personalizado</value>
@@ -10444,6 +10456,12 @@
   <data name="&gt;&gt;porProductoToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;reclutamientoToolStripMenuItem.Name" xml:space="preserve">
+    <value>reclutamientoToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;reclutamientoToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;reportesToolStripMenuItem.Name" xml:space="preserve">
     <value>reportesToolStripMenuItem</value>
   </data>
@@ -10725,6 +10743,12 @@
   </data>
   <data name="&gt;&gt;toolStripProgressBar1.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripProgressBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;indemnizaciónToolStripMenuItem.Name" xml:space="preserve">
+    <value>indemnizaciónToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;indemnizaciónToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>mdi_contenedor</value>
