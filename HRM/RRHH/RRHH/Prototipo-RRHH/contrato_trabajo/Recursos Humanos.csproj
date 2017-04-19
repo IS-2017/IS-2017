@@ -63,6 +63,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Ayuda.cs" />
     <Compile Include="Conexionmysql.cs" />
     <Compile Include="frm_activos.cs">
       <SubType>Form</SubType>
@@ -214,11 +215,41 @@
     <Compile Include="frm_emp_telefono_grid.Designer.cs">
       <DependentUpon>frm_emp_telefono_grid.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_funcion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_funcion.Designer.cs">
+      <DependentUpon>frm_funcion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_grid_candidato.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_grid_candidato.Designer.cs">
+      <DependentUpon>frm_grid_candidato.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_grid_funcion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_grid_funcion.Designer.cs">
+      <DependentUpon>frm_grid_funcion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_grid_medio_distribucion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_grid_medio_distribucion.Designer.cs">
+      <DependentUpon>frm_grid_medio_distribucion.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_horas_extras.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frm_horas_extras.Designer.cs">
       <DependentUpon>frm_horas_extras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_medio_distribucion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_medio_distribucion.Designer.cs">
+      <DependentUpon>frm_medio_distribucion.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_municipio_emp.cs">
       <SubType>Form</SubType>
@@ -237,6 +268,18 @@
     </Compile>
     <Compile Include="frm_nomina_grid.Designer.cs">
       <DependentUpon>frm_nomina_grid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_perfil_reclutamiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_perfil_reclutamiento.Designer.cs">
+      <DependentUpon>frm_perfil_reclutamiento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_perfil_reclutamiento_grid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_perfil_reclutamiento_grid.Designer.cs">
+      <DependentUpon>frm_perfil_reclutamiento_grid.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_progreso_reclutamiento.cs">
       <SubType>Form</SubType>
@@ -415,8 +458,23 @@
     <EmbeddedResource Include="frm_emp_telefono_grid.resx">
       <DependentUpon>frm_emp_telefono_grid.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_funcion.resx">
+      <DependentUpon>frm_funcion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_grid_candidato.resx">
+      <DependentUpon>frm_grid_candidato.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_grid_funcion.resx">
+      <DependentUpon>frm_grid_funcion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_grid_medio_distribucion.resx">
+      <DependentUpon>frm_grid_medio_distribucion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_horas_extras.resx">
       <DependentUpon>frm_horas_extras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_medio_distribucion.resx">
+      <DependentUpon>frm_medio_distribucion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_municipio_emp.resx">
       <DependentUpon>frm_municipio_emp.cs</DependentUpon>
@@ -429,6 +487,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_pago_impuestos.resx">
       <DependentUpon>frm_pago_impuestos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_perfil_reclutamiento.resx">
+      <DependentUpon>frm_perfil_reclutamiento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_perfil_reclutamiento_grid.resx">
+      <DependentUpon>frm_perfil_reclutamiento_grid.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_progreso_reclutamiento.resx">
       <DependentUpon>frm_progreso_reclutamiento.cs</DependentUpon>

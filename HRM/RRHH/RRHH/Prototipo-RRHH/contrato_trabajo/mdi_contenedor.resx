@@ -520,16 +520,40 @@
     <value>Inicio</value>
   </data>
   <data name="empleadosToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>170, 26</value>
+    <value>252, 26</value>
   </data>
   <data name="empleadosToolStripMenuItem1.Text" xml:space="preserve">
     <value>Empleados</value>
   </data>
   <data name="contratosToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>170, 26</value>
+    <value>252, 26</value>
   </data>
   <data name="contratosToolStripMenuItem1.Text" xml:space="preserve">
     <value>Contratos</value>
+  </data>
+  <data name="perfilReclutamientoToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>252, 26</value>
+  </data>
+  <data name="perfilReclutamientoToolStripMenuItem.Text" xml:space="preserve">
+    <value>Perfil Reclutamiento</value>
+  </data>
+  <data name="candidatoToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>252, 26</value>
+  </data>
+  <data name="candidatoToolStripMenuItem.Text" xml:space="preserve">
+    <value>Candidato</value>
+  </data>
+  <data name="medioDeDistribucionToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>252, 26</value>
+  </data>
+  <data name="medioDeDistribucionToolStripMenuItem.Text" xml:space="preserve">
+    <value>Medio de Distribucion</value>
+  </data>
+  <data name="funcionToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>252, 26</value>
+  </data>
+  <data name="funcionToolStripMenuItem.Text" xml:space="preserve">
+    <value>Funcion</value>
   </data>
   <data name="catalogoToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>118, 25</value>
@@ -10450,6 +10474,12 @@
   <data name="&gt;&gt;porProductoToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;activosToolStripMenuItem.Name" xml:space="preserve">
+    <value>activosToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;activosToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;reportesToolStripMenuItem.Name" xml:space="preserve">
     <value>reportesToolStripMenuItem</value>
   </data>
@@ -10732,10 +10762,28 @@
   <data name="&gt;&gt;toolStripProgressBar1.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripProgressBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;activosToolStripMenuItem.Name" xml:space="preserve">
-    <value>activosToolStripMenuItem</value>
+  <data name="&gt;&gt;perfilReclutamientoToolStripMenuItem.Name" xml:space="preserve">
+    <value>perfilReclutamientoToolStripMenuItem</value>
   </data>
-  <data name="&gt;&gt;activosToolStripMenuItem.Type" xml:space="preserve">
+  <data name="&gt;&gt;perfilReclutamientoToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;candidatoToolStripMenuItem.Name" xml:space="preserve">
+    <value>candidatoToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;candidatoToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;medioDeDistribucionToolStripMenuItem.Name" xml:space="preserve">
+    <value>medioDeDistribucionToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;medioDeDistribucionToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;funcionToolStripMenuItem.Name" xml:space="preserve">
+    <value>funcionToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;funcionToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

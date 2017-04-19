@@ -18,6 +18,10 @@ namespace contrato_trabajo
         frm_empleado_grid frm_emp_dgv;
         frm_empleado frm_emp;
         frm_activos_grid frm_act_grid;
+        frm_perfil_reclutamiento_grid frm_perf_rec_grid;
+        frm_grid_candidato frm_cand_grid;
+        frm_grid_funcion frm_func_grid;
+        frm_grid_medio_distribucion frm_med_dist_grid;
 
         public mdi_contenedor()
         {
@@ -295,6 +299,70 @@ namespace contrato_trabajo
         void frm_act_grid_FormClosed(object sender, EventArgs e)
         {
             frm_act_grid = null;
+        }
+
+        private void perfilReclutamientoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (frm_perf_rec_grid == null)
+            {
+                frm_perf_rec_grid = new frm_perfil_reclutamiento_grid();
+                frm_perf_rec_grid.MdiParent = this;
+                frm_perf_rec_grid.FormClosed += new FormClosedEventHandler(frm_perf_rec_grid_FormClosed);
+                frm_perf_rec_grid.Show();
+            }
+        }
+
+        void frm_perf_rec_grid_FormClosed(object sender, EventArgs e)
+        {
+            frm_perf_rec_grid = null;
+        }
+
+        private void candidatoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (frm_cand_grid == null)
+            {
+                frm_cand_grid = new frm_grid_candidato();
+                frm_cand_grid.MdiParent = this;
+                frm_cand_grid.FormClosed += new FormClosedEventHandler(frm_cand_grid_FormClosed);
+                frm_cand_grid.Show();
+            }
+        }
+
+        void frm_cand_grid_FormClosed(object sender, EventArgs e)
+        {
+            frm_cand_grid = null;
+        }
+
+        private void medioDeDistribucionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (frm_med_dist_grid == null)
+            {
+                frm_med_dist_grid = new frm_grid_medio_distribucion();
+                frm_med_dist_grid.MdiParent = this;
+                frm_med_dist_grid.FormClosed += new FormClosedEventHandler(frm_med_dist_grid_FormClosed);
+                frm_med_dist_grid.Show();
+            }
+        }
+
+        void frm_med_dist_grid_FormClosed(object sender, EventArgs e)
+        {
+            frm_med_dist_grid = null;
+        }
+
+        private void funcionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (frm_func_grid == null)
+            {
+                frm_func_grid = new frm_grid_funcion();
+                frm_func_grid.MdiParent = this;
+                frm_func_grid.FormClosed += new FormClosedEventHandler(frm_func_grid_FormClosed);
+                frm_func_grid.Show();
+            }
+        }
+
+        void frm_func_grid_FormClosed(object sender, EventArgs e)
+        {
+            frm_func_grid = null;
         }
     }
 }

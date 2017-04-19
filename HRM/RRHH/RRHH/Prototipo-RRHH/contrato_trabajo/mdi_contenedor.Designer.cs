@@ -49,6 +49,7 @@
             this.porVendedorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.porLineaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.porProductoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.activosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reporteDeContratosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reporteDeEmpleadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -97,7 +98,10 @@
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
-            this.activosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.perfilReclutamientoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.candidatoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.medioDeDistribucionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.funcionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
@@ -186,7 +190,11 @@
             // 
             this.catalogoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.empleadosToolStripMenuItem1,
-            this.contratosToolStripMenuItem1});
+            this.contratosToolStripMenuItem1,
+            this.perfilReclutamientoToolStripMenuItem,
+            this.candidatoToolStripMenuItem,
+            this.medioDeDistribucionToolStripMenuItem,
+            this.funcionToolStripMenuItem});
             this.catalogoToolStripMenuItem.Image = global::contrato_trabajo.Properties.Resources.Edit_Document_icon1;
             this.catalogoToolStripMenuItem.Name = "catalogoToolStripMenuItem";
             resources.ApplyResources(this.catalogoToolStripMenuItem, "catalogoToolStripMenuItem");
@@ -263,6 +271,12 @@
             this.porProductoToolStripMenuItem.Name = "porProductoToolStripMenuItem";
             resources.ApplyResources(this.porProductoToolStripMenuItem, "porProductoToolStripMenuItem");
             this.porProductoToolStripMenuItem.Click += new System.EventHandler(this.porProductoToolStripMenuItem_Click);
+            // 
+            // activosToolStripMenuItem
+            // 
+            this.activosToolStripMenuItem.Name = "activosToolStripMenuItem";
+            resources.ApplyResources(this.activosToolStripMenuItem, "activosToolStripMenuItem");
+            this.activosToolStripMenuItem.Click += new System.EventHandler(this.activosToolStripMenuItem_Click);
             // 
             // reportesToolStripMenuItem
             // 
@@ -588,11 +602,29 @@
             this.toolStripProgressBar1.Name = "toolStripProgressBar1";
             resources.ApplyResources(this.toolStripProgressBar1, "toolStripProgressBar1");
             // 
-            // activosToolStripMenuItem
+            // perfilReclutamientoToolStripMenuItem
             // 
-            this.activosToolStripMenuItem.Name = "activosToolStripMenuItem";
-            resources.ApplyResources(this.activosToolStripMenuItem, "activosToolStripMenuItem");
-            this.activosToolStripMenuItem.Click += new System.EventHandler(this.activosToolStripMenuItem_Click);
+            this.perfilReclutamientoToolStripMenuItem.Name = "perfilReclutamientoToolStripMenuItem";
+            resources.ApplyResources(this.perfilReclutamientoToolStripMenuItem, "perfilReclutamientoToolStripMenuItem");
+            this.perfilReclutamientoToolStripMenuItem.Click += new System.EventHandler(this.perfilReclutamientoToolStripMenuItem_Click);
+            // 
+            // candidatoToolStripMenuItem
+            // 
+            this.candidatoToolStripMenuItem.Name = "candidatoToolStripMenuItem";
+            resources.ApplyResources(this.candidatoToolStripMenuItem, "candidatoToolStripMenuItem");
+            this.candidatoToolStripMenuItem.Click += new System.EventHandler(this.candidatoToolStripMenuItem_Click);
+            // 
+            // medioDeDistribucionToolStripMenuItem
+            // 
+            this.medioDeDistribucionToolStripMenuItem.Name = "medioDeDistribucionToolStripMenuItem";
+            resources.ApplyResources(this.medioDeDistribucionToolStripMenuItem, "medioDeDistribucionToolStripMenuItem");
+            this.medioDeDistribucionToolStripMenuItem.Click += new System.EventHandler(this.medioDeDistribucionToolStripMenuItem_Click);
+            // 
+            // funcionToolStripMenuItem
+            // 
+            this.funcionToolStripMenuItem.Name = "funcionToolStripMenuItem";
+            resources.ApplyResources(this.funcionToolStripMenuItem, "funcionToolStripMenuItem");
+            this.funcionToolStripMenuItem.Click += new System.EventHandler(this.funcionToolStripMenuItem_Click);
             // 
             // mdi_contenedor
             // 
@@ -690,6 +722,10 @@
         private System.Windows.Forms.ToolStripMenuItem aplicaciónToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gestiónToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem activosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem perfilReclutamientoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem candidatoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem medioDeDistribucionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem funcionToolStripMenuItem;
     }
 }
 
