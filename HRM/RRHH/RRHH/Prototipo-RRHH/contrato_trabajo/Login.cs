@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using seguridad;
 using System.Data.Odbc;
 
 namespace contrato_trabajo
@@ -26,6 +25,7 @@ namespace contrato_trabajo
 
         private void btn_logear_Click(object sender, EventArgs e)
         {
+            /*
             try {
                 // OdbcConnection con = seguridad.Conexion.ObtenerConexionODBC();
                 OdbcConnection con = Conexion.ConexionPermisos();
@@ -35,7 +35,7 @@ namespace contrato_trabajo
                 ClaseTomaIp ip = new ClaseTomaIp();
                 string localIP = ip.direccion();
 
-                /****LLama a una funciòn almacenada que valida la existencia del usuario y la integridad de la contraseña****/
+                //LLama a una funciòn almacenada que valida la existencia del usuario y la integridad de la contraseña
                 string consulta = "select ValidarContrasena('" + usuario + "', '" + contraseña + "','" + localIP + "') ";
                 OdbcCommand comando = new OdbcCommand(consulta, con);
                 object resultado = comando.ExecuteScalar();
@@ -66,12 +66,13 @@ namespace contrato_trabajo
             {
                 MessageBox.Show(ex.Message);
             }
+            */
         }
         
 
         private void Login_Load(object sender, EventArgs e)
         {
-            seguridad.Conexion.DSN = "prueba2";
+           // seguridad.Conexion.DSN = "prueba2";
 
 
 

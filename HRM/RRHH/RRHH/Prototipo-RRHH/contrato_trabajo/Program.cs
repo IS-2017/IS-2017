@@ -16,7 +16,7 @@ namespace contrato_trabajo
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Login());
+            Application.Run(new mdi_contenedor());
 
         }
     }

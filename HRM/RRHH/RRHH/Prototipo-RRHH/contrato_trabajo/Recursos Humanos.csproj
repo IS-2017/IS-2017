@@ -36,12 +36,21 @@
     <Reference Include="Abrir">
       <HintPath>..\..\..\..\..\Desktop\DLLES\Abrir\Abrir\bin\Debug\Abrir.exe</HintPath>
     </Reference>
-    <Reference Include="seguridad, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="dllconsultas, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\Videos\PROGRAMAS GUARDAR 2016\Seguridad version 7 final\Seguridad version 7\seguridad\seguridad\bin\Debug\seguridad.dll</HintPath>
+      <HintPath>bin\Debug\dllconsultas.dll</HintPath>
+    </Reference>
+    <Reference Include="FuncionesNavegador, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\FuncionesNavegador.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\MySql.Data.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -54,7 +63,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="conexion.cs" />
+    <Compile Include="Conexionmysql.cs" />
+    <Compile Include="frm_activos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_activos.Designer.cs">
+      <DependentUpon>frm_activos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_activos_grid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_activos_grid.Designer.cs">
+      <DependentUpon>frm_activos_grid.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_aguinaldo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,6 +166,12 @@
     <Compile Include="frm_desempeno_laboral.Designer.cs">
       <DependentUpon>frm_desempeno_laboral.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_desglosar_nombre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_desglosar_nombre.Designer.cs">
+      <DependentUpon>frm_desglosar_nombre.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_empleado.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -163,11 +190,47 @@
     <Compile Include="frm_empresa_grid.Designer.cs">
       <DependentUpon>frm_empresa_grid.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_emp_correos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_emp_correos.Designer.cs">
+      <DependentUpon>frm_emp_correos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_emp_correos_grid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_emp_correos_grid.Designer.cs">
+      <DependentUpon>frm_emp_correos_grid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_emp_telefonos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_emp_telefonos.Designer.cs">
+      <DependentUpon>frm_emp_telefonos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_emp_telefono_grid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_emp_telefono_grid.Designer.cs">
+      <DependentUpon>frm_emp_telefono_grid.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_horas_extras.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frm_horas_extras.Designer.cs">
       <DependentUpon>frm_horas_extras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_municipio_emp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_municipio_emp.Designer.cs">
+      <DependentUpon>frm_municipio_emp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_municipio_emp_grid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_municipio_emp_grid.Designer.cs">
+      <DependentUpon>frm_municipio_emp_grid.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_nomina_grid.cs">
       <SubType>Form</SubType>
@@ -193,11 +256,17 @@
     <Compile Include="frm_reclutamiento_grid.Designer.cs">
       <DependentUpon>frm_reclutamiento_grid.cs</DependentUpon>
     </Compile>
-    <Compile Include="Indemnizacion.cs">
+    <Compile Include="frm_zona_emp.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Indemnizacion.Designer.cs">
-      <DependentUpon>Indemnizacion.cs</DependentUpon>
+    <Compile Include="frm_zona_emp.Designer.cs">
+      <DependentUpon>frm_zona_emp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_zona_emp_grid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_zona_emp_grid.Designer.cs">
+      <DependentUpon>frm_zona_emp_grid.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -253,12 +322,6 @@
     <Compile Include="Modulo Recursos Humanos.designer.cs">
       <DependentUpon>Modulo Recursos Humanos.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_Otros.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frm_Otros.Designer.cs">
-      <DependentUpon>frm_Otros.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="frm_reporte_espefico.cs">
@@ -273,12 +336,12 @@
     <Compile Include="frm_reportes_de_empleado.Designer.cs">
       <DependentUpon>frm_reportes_de_empleado.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vacaciones.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vacaciones.Designer.cs">
-      <DependentUpon>Vacaciones.cs</DependentUpon>
-    </Compile>
+    <EmbeddedResource Include="frm_activos.resx">
+      <DependentUpon>frm_activos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_activos_grid.resx">
+      <DependentUpon>frm_activos_grid.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_aguinaldo.resx">
       <DependentUpon>frm_aguinaldo.cs</DependentUpon>
     </EmbeddedResource>
@@ -328,6 +391,9 @@
     <EmbeddedResource Include="frm_desempeno_laboral.resx">
       <DependentUpon>frm_desempeno_laboral.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_desglosar_nombre.resx">
+      <DependentUpon>frm_desglosar_nombre.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_empleado.resx">
       <DependentUpon>frm_empleado.cs</DependentUpon>
     </EmbeddedResource>
@@ -337,14 +403,29 @@
     <EmbeddedResource Include="frm_empresa_grid.resx">
       <DependentUpon>frm_empresa_grid.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_emp_correos.resx">
+      <DependentUpon>frm_emp_correos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_emp_correos_grid.resx">
+      <DependentUpon>frm_emp_correos_grid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_emp_telefonos.resx">
+      <DependentUpon>frm_emp_telefonos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_emp_telefono_grid.resx">
+      <DependentUpon>frm_emp_telefono_grid.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_horas_extras.resx">
       <DependentUpon>frm_horas_extras.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_municipio_emp.resx">
+      <DependentUpon>frm_municipio_emp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_municipio_emp_grid.resx">
+      <DependentUpon>frm_municipio_emp_grid.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_nomina_grid.resx">
       <DependentUpon>frm_nomina_grid.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frm_Otros.resx">
-      <DependentUpon>frm_Otros.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_pago_impuestos.resx">
       <DependentUpon>frm_pago_impuestos.cs</DependentUpon>
@@ -358,8 +439,11 @@
     <EmbeddedResource Include="frm_reclutamiento_grid.resx">
       <DependentUpon>frm_reclutamiento_grid.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Indemnizacion.resx">
-      <DependentUpon>Indemnizacion.cs</DependentUpon>
+    <EmbeddedResource Include="frm_zona_emp.resx">
+      <DependentUpon>frm_zona_emp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_zona_emp_grid.resx">
+      <DependentUpon>frm_zona_emp_grid.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -397,9 +481,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_reportes_de_empleado.resx">
       <DependentUpon>frm_reportes_de_empleado.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Vacaciones.resx">
-      <DependentUpon>Vacaciones.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -482,9 +563,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\klosions-seguridad.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\indemnizacion.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
