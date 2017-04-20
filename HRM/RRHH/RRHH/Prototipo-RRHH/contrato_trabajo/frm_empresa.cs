@@ -182,7 +182,7 @@ namespace contrato_trabajo
         private void btn_actualizar_Click(object sender, EventArgs e)
         {
             string tabla = "empresa";
-            fn.ActualizarGrid(this.dg, "Select * from empresa WHERE estado_empresa <> 'INACTIVO' ", tabla);
+            fn.ActualizarGrid(this.dg, "Select * from empresa WHERE estado <> 'INACTIVO' ", tabla);
         }
 
         private void groupBox2_Enter(object sender, EventArgs e)

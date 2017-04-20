@@ -410,134 +410,270 @@ C:\Users\javie\Documents\GitHub\IS-2017\HRM\RRHH\Prototipo-RRHH\contrato_trabajo
 C:\Users\javie\Documents\GitHub\IS-2017\HRM\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.Reporte_espefico.resources
 C:\Users\javie\Documents\GitHub\IS-2017\HRM\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_reportes_de_empleado.resources
 C:\Users\javie\Documents\GitHub\IS-2017\HRM\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\Recursos Humanos.csproj.GenerateResource.Cache
-C:\Users\GABRIELA\Documents\GitHub\IS-2017\HRM\RRHH\Prototipo-RRHH\contrato_trabajo\bin\Debug\contrato_trabajo.exe.config
-C:\Users\GABRIELA\Documents\GitHub\IS-2017\HRM\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.exe
-C:\Users\GABRIELA\Documents\GitHub\IS-2017\HRM\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.pdb
-C:\Users\GABRIELA\Documents\GitHub\IS-2017\HRM\RRHH\Prototipo-RRHH\contrato_trabajo\bin\Debug\contrato_trabajo.exe
-C:\Users\GABRIELA\Documents\GitHub\IS-2017\HRM\RRHH\Prototipo-RRHH\contrato_trabajo\bin\Debug\contrato_trabajo.pdb
-C:\Users\GABRIELA\Documents\GitHub\IS-2017\HRM\RRHH\Prototipo-RRHH\contrato_trabajo\bin\Debug\MySql.Data.dll
-C:\Users\GABRIELA\Documents\GitHub\IS-2017\HRM\RRHH\Prototipo-RRHH\contrato_trabajo\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
-C:\Users\GABRIELA\Documents\GitHub\IS-2017\HRM\RRHH\Prototipo-RRHH\contrato_trabajo\bin\Debug\CrystalDecisions.Windows.Forms.dll
-C:\Users\GABRIELA\Documents\GitHub\IS-2017\HRM\RRHH\Prototipo-RRHH\contrato_trabajo\bin\Debug\CrystalDecisions.Shared.dll
-C:\Users\GABRIELA\Documents\GitHub\IS-2017\HRM\RRHH\Prototipo-RRHH\contrato_trabajo\bin\Debug\CrystalDecisions.ReportSource.dll
-C:\Users\GABRIELA\Documents\GitHub\IS-2017\HRM\RRHH\Prototipo-RRHH\contrato_trabajo\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
-C:\Users\GABRIELA\Documents\GitHub\IS-2017\HRM\RRHH\Prototipo-RRHH\contrato_trabajo\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
-C:\Users\GABRIELA\Documents\GitHub\IS-2017\HRM\RRHH\Prototipo-RRHH\contrato_trabajo\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
-C:\Users\GABRIELA\Documents\GitHub\IS-2017\HRM\RRHH\Prototipo-RRHH\contrato_trabajo\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
-C:\Users\GABRIELA\Documents\GitHub\IS-2017\HRM\RRHH\Prototipo-RRHH\contrato_trabajo\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
-C:\Users\GABRIELA\Documents\GitHub\IS-2017\HRM\RRHH\Prototipo-RRHH\contrato_trabajo\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
-C:\Users\GABRIELA\Documents\GitHub\IS-2017\HRM\RRHH\Prototipo-RRHH\contrato_trabajo\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
-C:\Users\GABRIELA\Documents\GitHub\IS-2017\HRM\RRHH\Prototipo-RRHH\contrato_trabajo\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
-C:\Users\GABRIELA\Documents\GitHub\IS-2017\HRM\RRHH\Prototipo-RRHH\contrato_trabajo\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
-C:\Users\GABRIELA\Documents\GitHub\IS-2017\HRM\RRHH\Prototipo-RRHH\contrato_trabajo\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
-C:\Users\GABRIELA\Documents\GitHub\IS-2017\HRM\RRHH\Prototipo-RRHH\contrato_trabajo\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
-C:\Users\GABRIELA\Documents\GitHub\IS-2017\HRM\RRHH\Prototipo-RRHH\contrato_trabajo\bin\Debug\FlashControlV71.dll
-C:\Users\GABRIELA\Documents\GitHub\IS-2017\HRM\RRHH\Prototipo-RRHH\contrato_trabajo\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
-C:\Users\GABRIELA\Documents\GitHub\IS-2017\HRM\RRHH\Prototipo-RRHH\contrato_trabajo\bin\Debug\stdole.dll
-C:\Users\GABRIELA\Documents\GitHub\IS-2017\HRM\RRHH\Prototipo-RRHH\contrato_trabajo\bin\Debug\ShockwaveFlashObjects.dll
-C:\Users\GABRIELA\Documents\GitHub\IS-2017\HRM\RRHH\Prototipo-RRHH\contrato_trabajo\bin\Debug\MySql.Data.xml
-C:\Users\GABRIELA\Documents\GitHub\IS-2017\HRM\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\Recursos Humanos.csprojResolveAssemblyReference.cache
-C:\Users\GABRIELA\Documents\GitHub\IS-2017\HRM\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_aguinaldo.resources
-C:\Users\GABRIELA\Documents\GitHub\IS-2017\HRM\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_bono_14.resources
-C:\Users\GABRIELA\Documents\GitHub\IS-2017\HRM\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_calculo_seguro_social.resources
-C:\Users\GABRIELA\Documents\GitHub\IS-2017\HRM\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_asistencia_cap.resources
-C:\Users\GABRIELA\Documents\GitHub\IS-2017\HRM\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_cancelar_nominas.resources
-C:\Users\GABRIELA\Documents\GitHub\IS-2017\HRM\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_candidato.resources
-C:\Users\GABRIELA\Documents\GitHub\IS-2017\HRM\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_capacitaciones.resources
-C:\Users\GABRIELA\Documents\GitHub\IS-2017\HRM\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_capacitaciones_grid.resources
-C:\Users\GABRIELA\Documents\GitHub\IS-2017\HRM\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_comisiones_grid.resources
-C:\Users\GABRIELA\Documents\GitHub\IS-2017\HRM\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_comisiones_linea.resources
-C:\Users\GABRIELA\Documents\GitHub\IS-2017\HRM\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_comisiones_marca.resources
-C:\Users\GABRIELA\Documents\GitHub\IS-2017\HRM\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_comisiones_producto.resources
-C:\Users\GABRIELA\Documents\GitHub\IS-2017\HRM\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_comisiones_vendedor.resources
-C:\Users\GABRIELA\Documents\GitHub\IS-2017\HRM\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.Contrato.resources
-C:\Users\GABRIELA\Documents\GitHub\IS-2017\HRM\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_contrato_grid.resources
-C:\Users\GABRIELA\Documents\GitHub\IS-2017\HRM\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_desempeno_laboral.resources
-C:\Users\GABRIELA\Documents\GitHub\IS-2017\HRM\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_empleado.resources
-C:\Users\GABRIELA\Documents\GitHub\IS-2017\HRM\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_empleado_grid.resources
-C:\Users\GABRIELA\Documents\GitHub\IS-2017\HRM\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_empresa_grid.resources
-C:\Users\GABRIELA\Documents\GitHub\IS-2017\HRM\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_horas_extras.resources
-C:\Users\GABRIELA\Documents\GitHub\IS-2017\HRM\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_nomina_grid.resources
-C:\Users\GABRIELA\Documents\GitHub\IS-2017\HRM\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_pago_impuestos.resources
-C:\Users\GABRIELA\Documents\GitHub\IS-2017\HRM\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_progreso_reclutamiento.resources
-C:\Users\GABRIELA\Documents\GitHub\IS-2017\HRM\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_reclutamiento.resources
-C:\Users\GABRIELA\Documents\GitHub\IS-2017\HRM\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_reclutamiento_grid.resources
-C:\Users\GABRIELA\Documents\GitHub\IS-2017\HRM\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.Login.resources
-C:\Users\GABRIELA\Documents\GitHub\IS-2017\HRM\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.mdi_contenedor.resources
-C:\Users\GABRIELA\Documents\GitHub\IS-2017\HRM\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_empresa.resources
-C:\Users\GABRIELA\Documents\GitHub\IS-2017\HRM\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_estadistica_Pagos.resources
-C:\Users\GABRIELA\Documents\GitHub\IS-2017\HRM\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_nomina.resources
-C:\Users\GABRIELA\Documents\GitHub\IS-2017\HRM\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_prestaciones.resources
-C:\Users\GABRIELA\Documents\GitHub\IS-2017\HRM\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.Loading.resources
-C:\Users\GABRIELA\Documents\GitHub\IS-2017\HRM\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.Properties.Resources.resources
-C:\Users\GABRIELA\Documents\GitHub\IS-2017\HRM\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.Reporte_espefico.resources
-C:\Users\GABRIELA\Documents\GitHub\IS-2017\HRM\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_reportes_de_empleado.resources
-C:\Users\GABRIELA\Documents\GitHub\IS-2017\HRM\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\Recursos Humanos.csproj.GenerateResource.Cache
-C:\Users\GABRIELA\Dropbox\Semestre 9\Ingenieria de Software\RRHH\Prototipo-RRHH\contrato_trabajo\bin\Debug\contrato_trabajo.exe.config
-C:\Users\GABRIELA\Dropbox\Semestre 9\Ingenieria de Software\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.exe
-C:\Users\GABRIELA\Dropbox\Semestre 9\Ingenieria de Software\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.pdb
-C:\Users\GABRIELA\Dropbox\Semestre 9\Ingenieria de Software\RRHH\Prototipo-RRHH\contrato_trabajo\bin\Debug\contrato_trabajo.exe
-C:\Users\GABRIELA\Dropbox\Semestre 9\Ingenieria de Software\RRHH\Prototipo-RRHH\contrato_trabajo\bin\Debug\contrato_trabajo.pdb
-C:\Users\GABRIELA\Dropbox\Semestre 9\Ingenieria de Software\RRHH\Prototipo-RRHH\contrato_trabajo\bin\Debug\MySql.Data.dll
-C:\Users\GABRIELA\Dropbox\Semestre 9\Ingenieria de Software\RRHH\Prototipo-RRHH\contrato_trabajo\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
-C:\Users\GABRIELA\Dropbox\Semestre 9\Ingenieria de Software\RRHH\Prototipo-RRHH\contrato_trabajo\bin\Debug\CrystalDecisions.Windows.Forms.dll
-C:\Users\GABRIELA\Dropbox\Semestre 9\Ingenieria de Software\RRHH\Prototipo-RRHH\contrato_trabajo\bin\Debug\CrystalDecisions.Shared.dll
-C:\Users\GABRIELA\Dropbox\Semestre 9\Ingenieria de Software\RRHH\Prototipo-RRHH\contrato_trabajo\bin\Debug\CrystalDecisions.ReportSource.dll
-C:\Users\GABRIELA\Dropbox\Semestre 9\Ingenieria de Software\RRHH\Prototipo-RRHH\contrato_trabajo\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
-C:\Users\GABRIELA\Dropbox\Semestre 9\Ingenieria de Software\RRHH\Prototipo-RRHH\contrato_trabajo\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
-C:\Users\GABRIELA\Dropbox\Semestre 9\Ingenieria de Software\RRHH\Prototipo-RRHH\contrato_trabajo\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
-C:\Users\GABRIELA\Dropbox\Semestre 9\Ingenieria de Software\RRHH\Prototipo-RRHH\contrato_trabajo\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
-C:\Users\GABRIELA\Dropbox\Semestre 9\Ingenieria de Software\RRHH\Prototipo-RRHH\contrato_trabajo\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
-C:\Users\GABRIELA\Dropbox\Semestre 9\Ingenieria de Software\RRHH\Prototipo-RRHH\contrato_trabajo\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
-C:\Users\GABRIELA\Dropbox\Semestre 9\Ingenieria de Software\RRHH\Prototipo-RRHH\contrato_trabajo\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
-C:\Users\GABRIELA\Dropbox\Semestre 9\Ingenieria de Software\RRHH\Prototipo-RRHH\contrato_trabajo\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
-C:\Users\GABRIELA\Dropbox\Semestre 9\Ingenieria de Software\RRHH\Prototipo-RRHH\contrato_trabajo\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
-C:\Users\GABRIELA\Dropbox\Semestre 9\Ingenieria de Software\RRHH\Prototipo-RRHH\contrato_trabajo\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
-C:\Users\GABRIELA\Dropbox\Semestre 9\Ingenieria de Software\RRHH\Prototipo-RRHH\contrato_trabajo\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
-C:\Users\GABRIELA\Dropbox\Semestre 9\Ingenieria de Software\RRHH\Prototipo-RRHH\contrato_trabajo\bin\Debug\FlashControlV71.dll
-C:\Users\GABRIELA\Dropbox\Semestre 9\Ingenieria de Software\RRHH\Prototipo-RRHH\contrato_trabajo\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
-C:\Users\GABRIELA\Dropbox\Semestre 9\Ingenieria de Software\RRHH\Prototipo-RRHH\contrato_trabajo\bin\Debug\stdole.dll
-C:\Users\GABRIELA\Dropbox\Semestre 9\Ingenieria de Software\RRHH\Prototipo-RRHH\contrato_trabajo\bin\Debug\ShockwaveFlashObjects.dll
-C:\Users\GABRIELA\Dropbox\Semestre 9\Ingenieria de Software\RRHH\Prototipo-RRHH\contrato_trabajo\bin\Debug\MySql.Data.xml
-C:\Users\GABRIELA\Dropbox\Semestre 9\Ingenieria de Software\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\Recursos Humanos.csprojResolveAssemblyReference.cache
-C:\Users\GABRIELA\Dropbox\Semestre 9\Ingenieria de Software\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_aguinaldo.resources
-C:\Users\GABRIELA\Dropbox\Semestre 9\Ingenieria de Software\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_bono_14.resources
-C:\Users\GABRIELA\Dropbox\Semestre 9\Ingenieria de Software\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_calculo_seguro_social.resources
-C:\Users\GABRIELA\Dropbox\Semestre 9\Ingenieria de Software\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_asistencia_cap.resources
-C:\Users\GABRIELA\Dropbox\Semestre 9\Ingenieria de Software\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_cancelar_nominas.resources
-C:\Users\GABRIELA\Dropbox\Semestre 9\Ingenieria de Software\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_candidato.resources
-C:\Users\GABRIELA\Dropbox\Semestre 9\Ingenieria de Software\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_capacitaciones.resources
-C:\Users\GABRIELA\Dropbox\Semestre 9\Ingenieria de Software\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_capacitaciones_grid.resources
-C:\Users\GABRIELA\Dropbox\Semestre 9\Ingenieria de Software\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_comisiones_grid.resources
-C:\Users\GABRIELA\Dropbox\Semestre 9\Ingenieria de Software\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_comisiones_linea.resources
-C:\Users\GABRIELA\Dropbox\Semestre 9\Ingenieria de Software\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_comisiones_marca.resources
-C:\Users\GABRIELA\Dropbox\Semestre 9\Ingenieria de Software\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_comisiones_producto.resources
-C:\Users\GABRIELA\Dropbox\Semestre 9\Ingenieria de Software\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_comisiones_vendedor.resources
-C:\Users\GABRIELA\Dropbox\Semestre 9\Ingenieria de Software\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.Contrato.resources
-C:\Users\GABRIELA\Dropbox\Semestre 9\Ingenieria de Software\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_contrato_grid.resources
-C:\Users\GABRIELA\Dropbox\Semestre 9\Ingenieria de Software\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_desempeno_laboral.resources
-C:\Users\GABRIELA\Dropbox\Semestre 9\Ingenieria de Software\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_empleado.resources
-C:\Users\GABRIELA\Dropbox\Semestre 9\Ingenieria de Software\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_empleado_grid.resources
-C:\Users\GABRIELA\Dropbox\Semestre 9\Ingenieria de Software\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_empresa_grid.resources
-C:\Users\GABRIELA\Dropbox\Semestre 9\Ingenieria de Software\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_horas_extras.resources
-C:\Users\GABRIELA\Dropbox\Semestre 9\Ingenieria de Software\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_nomina_grid.resources
-C:\Users\GABRIELA\Dropbox\Semestre 9\Ingenieria de Software\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_pago_impuestos.resources
-C:\Users\GABRIELA\Dropbox\Semestre 9\Ingenieria de Software\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_progreso_reclutamiento.resources
-C:\Users\GABRIELA\Dropbox\Semestre 9\Ingenieria de Software\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_reclutamiento.resources
-C:\Users\GABRIELA\Dropbox\Semestre 9\Ingenieria de Software\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_reclutamiento_grid.resources
-C:\Users\GABRIELA\Dropbox\Semestre 9\Ingenieria de Software\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.Login.resources
-C:\Users\GABRIELA\Dropbox\Semestre 9\Ingenieria de Software\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.mdi_contenedor.resources
-C:\Users\GABRIELA\Dropbox\Semestre 9\Ingenieria de Software\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_empresa.resources
-C:\Users\GABRIELA\Dropbox\Semestre 9\Ingenieria de Software\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_estadistica_Pagos.resources
-C:\Users\GABRIELA\Dropbox\Semestre 9\Ingenieria de Software\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_nomina.resources
-C:\Users\GABRIELA\Dropbox\Semestre 9\Ingenieria de Software\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_prestaciones.resources
-C:\Users\GABRIELA\Dropbox\Semestre 9\Ingenieria de Software\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.Loading.resources
-C:\Users\GABRIELA\Dropbox\Semestre 9\Ingenieria de Software\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.Properties.Resources.resources
-C:\Users\GABRIELA\Dropbox\Semestre 9\Ingenieria de Software\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.Reporte_espefico.resources
-C:\Users\GABRIELA\Dropbox\Semestre 9\Ingenieria de Software\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_reportes_de_empleado.resources
-C:\Users\GABRIELA\Dropbox\Semestre 9\Ingenieria de Software\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\Recursos Humanos.csproj.GenerateResource.Cache
-C:\Users\GABRIELA\Dropbox\Semestre 9\Ingenieria de Software\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_Otros.resources
-C:\Users\GABRIELA\Dropbox\Semestre 9\Ingenieria de Software\RRHH\Prototipo-RRHH\contrato_trabajo\bin\Debug\seguridad.pdb
-E:\iles\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\bin\Debug\contrato_trabajo.exe.config
-E:\iles\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.exe
-E:\iles\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.pdb
+C:\Users\javie\Documents\Prototipo-RRHH\contrato_trabajo\bin\Debug\contrato_trabajo.exe.config
+C:\Users\javie\Documents\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.exe
+C:\Users\javie\Documents\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.pdb
+C:\Users\javie\Documents\Prototipo-RRHH\contrato_trabajo\obj\Debug\Recursos Humanos.csprojResolveAssemblyReference.cache
+C:\Users\javie\Documents\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_aguinaldo.resources
+C:\Users\javie\Documents\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_bono_14.resources
+C:\Users\javie\Documents\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_calculo_seguro_social.resources
+C:\Users\javie\Documents\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_asistencia_cap.resources
+C:\Users\javie\Documents\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_cancelar_nominas.resources
+C:\Users\javie\Documents\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_candidato.resources
+C:\Users\javie\Documents\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_capacitaciones.resources
+C:\Users\javie\Documents\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_capacitaciones_grid.resources
+C:\Users\javie\Documents\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_comisiones_grid.resources
+C:\Users\javie\Documents\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_comisiones_linea.resources
+C:\Users\javie\Documents\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_comisiones_marca.resources
+C:\Users\javie\Documents\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_comisiones_producto.resources
+C:\Users\javie\Documents\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_comisiones_vendedor.resources
+C:\Users\javie\Documents\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.Contrato.resources
+C:\Users\javie\Documents\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_contrato_grid.resources
+C:\Users\javie\Documents\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_desempeno_laboral.resources
+C:\Users\javie\Documents\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_empleado.resources
+C:\Users\javie\Documents\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_empleado_grid.resources
+C:\Users\javie\Documents\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_empresa_grid.resources
+C:\Users\javie\Documents\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_horas_extras.resources
+C:\Users\javie\Documents\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_nomina_grid.resources
+C:\Users\javie\Documents\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_pago_impuestos.resources
+C:\Users\javie\Documents\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_progreso_reclutamiento.resources
+C:\Users\javie\Documents\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_reclutamiento.resources
+C:\Users\javie\Documents\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_reclutamiento_grid.resources
+C:\Users\javie\Documents\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.Login.resources
+C:\Users\javie\Documents\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.mdi_contenedor.resources
+C:\Users\javie\Documents\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_empresa.resources
+C:\Users\javie\Documents\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_estadistica_Pagos.resources
+C:\Users\javie\Documents\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_nomina.resources
+C:\Users\javie\Documents\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_prestaciones.resources
+C:\Users\javie\Documents\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.Loading.resources
+C:\Users\javie\Documents\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.Properties.Resources.resources
+C:\Users\javie\Documents\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.Reporte_espefico.resources
+C:\Users\javie\Documents\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_reportes_de_empleado.resources
+C:\Users\javie\Documents\Prototipo-RRHH\contrato_trabajo\obj\Debug\Recursos Humanos.csproj.GenerateResource.Cache
+C:\Users\javie\Documents\Prototipo-RRHH\contrato_trabajo\bin\Debug\contrato_trabajo.exe
+C:\Users\javie\Documents\Prototipo-RRHH\contrato_trabajo\bin\Debug\contrato_trabajo.pdb
+C:\Users\javie\Documents\Prototipo-RRHH\contrato_trabajo\bin\Debug\stdole.dll
+C:\Users\javie\Documents\Prototipo-RRHH\contrato_trabajo\bin\Debug\MySql.Data.xml
+C:\Users\javie\Documents\Prototipo-RRHH\contrato_trabajo\bin\Debug\seguridad.dll
+C:\Users\javie\Documents\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_desglosar_nombre.resources
+C:\Users\javie\Documents\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_zona_emp.resources
+C:\Users\javie\Documents\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_zona_emp_grid.resources
+C:\Users\javie\Documents\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_municipio_emp.resources
+C:\Users\javie\Documents\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_municipio_emp_grid.resources
+C:\Users\javie\Documents\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_emp_telefonos.resources
+C:\Users\javie\Documents\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_emp_correos.resources
+C:\Users\javie\Documents\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_emp_telefono_grid.resources
+C:\Users\javie\Documents\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_emp_correos_grid.resources
+C:\Users\javie\Documents\Prototipo-RRHH-version 17-04-2017\Prototipo-RRHH\contrato_trabajo\bin\Debug\contrato_trabajo.exe.config
+C:\Users\javie\Documents\Prototipo-RRHH-version 17-04-2017\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.exe
+C:\Users\javie\Documents\Prototipo-RRHH-version 17-04-2017\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.pdb
+C:\Users\javie\Documents\Prototipo-RRHH-version 17-04-2017\Prototipo-RRHH\contrato_trabajo\bin\Debug\contrato_trabajo.exe
+C:\Users\javie\Documents\Prototipo-RRHH-version 17-04-2017\Prototipo-RRHH\contrato_trabajo\bin\Debug\contrato_trabajo.pdb
+C:\Users\javie\Documents\Prototipo-RRHH-version 17-04-2017\Prototipo-RRHH\contrato_trabajo\bin\Debug\seguridad.dll
+C:\Users\javie\Documents\Prototipo-RRHH-version 17-04-2017\Prototipo-RRHH\contrato_trabajo\bin\Debug\stdole.dll
+C:\Users\javie\Documents\Prototipo-RRHH-version 17-04-2017\Prototipo-RRHH\contrato_trabajo\bin\Debug\MySql.Data.xml
+C:\Users\javie\Documents\Prototipo-RRHH-version 17-04-2017\Prototipo-RRHH\contrato_trabajo\obj\Debug\Recursos Humanos.csprojResolveAssemblyReference.cache
+C:\Users\javie\Documents\Prototipo-RRHH-version 17-04-2017\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_aguinaldo.resources
+C:\Users\javie\Documents\Prototipo-RRHH-version 17-04-2017\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_bono_14.resources
+C:\Users\javie\Documents\Prototipo-RRHH-version 17-04-2017\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_calculo_seguro_social.resources
+C:\Users\javie\Documents\Prototipo-RRHH-version 17-04-2017\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_asistencia_cap.resources
+C:\Users\javie\Documents\Prototipo-RRHH-version 17-04-2017\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_cancelar_nominas.resources
+C:\Users\javie\Documents\Prototipo-RRHH-version 17-04-2017\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_candidato.resources
+C:\Users\javie\Documents\Prototipo-RRHH-version 17-04-2017\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_capacitaciones.resources
+C:\Users\javie\Documents\Prototipo-RRHH-version 17-04-2017\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_capacitaciones_grid.resources
+C:\Users\javie\Documents\Prototipo-RRHH-version 17-04-2017\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_comisiones_grid.resources
+C:\Users\javie\Documents\Prototipo-RRHH-version 17-04-2017\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_comisiones_linea.resources
+C:\Users\javie\Documents\Prototipo-RRHH-version 17-04-2017\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_comisiones_marca.resources
+C:\Users\javie\Documents\Prototipo-RRHH-version 17-04-2017\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_comisiones_producto.resources
+C:\Users\javie\Documents\Prototipo-RRHH-version 17-04-2017\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_comisiones_vendedor.resources
+C:\Users\javie\Documents\Prototipo-RRHH-version 17-04-2017\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.Contrato.resources
+C:\Users\javie\Documents\Prototipo-RRHH-version 17-04-2017\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_contrato_grid.resources
+C:\Users\javie\Documents\Prototipo-RRHH-version 17-04-2017\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_desempeno_laboral.resources
+C:\Users\javie\Documents\Prototipo-RRHH-version 17-04-2017\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_desglosar_nombre.resources
+C:\Users\javie\Documents\Prototipo-RRHH-version 17-04-2017\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_empleado.resources
+C:\Users\javie\Documents\Prototipo-RRHH-version 17-04-2017\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_empleado_grid.resources
+C:\Users\javie\Documents\Prototipo-RRHH-version 17-04-2017\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_empresa_grid.resources
+C:\Users\javie\Documents\Prototipo-RRHH-version 17-04-2017\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_emp_correos.resources
+C:\Users\javie\Documents\Prototipo-RRHH-version 17-04-2017\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_emp_correos_grid.resources
+C:\Users\javie\Documents\Prototipo-RRHH-version 17-04-2017\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_emp_telefonos.resources
+C:\Users\javie\Documents\Prototipo-RRHH-version 17-04-2017\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_emp_telefono_grid.resources
+C:\Users\javie\Documents\Prototipo-RRHH-version 17-04-2017\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_horas_extras.resources
+C:\Users\javie\Documents\Prototipo-RRHH-version 17-04-2017\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_municipio_emp.resources
+C:\Users\javie\Documents\Prototipo-RRHH-version 17-04-2017\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_municipio_emp_grid.resources
+C:\Users\javie\Documents\Prototipo-RRHH-version 17-04-2017\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_nomina_grid.resources
+C:\Users\javie\Documents\Prototipo-RRHH-version 17-04-2017\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_pago_impuestos.resources
+C:\Users\javie\Documents\Prototipo-RRHH-version 17-04-2017\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_progreso_reclutamiento.resources
+C:\Users\javie\Documents\Prototipo-RRHH-version 17-04-2017\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_reclutamiento.resources
+C:\Users\javie\Documents\Prototipo-RRHH-version 17-04-2017\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_reclutamiento_grid.resources
+C:\Users\javie\Documents\Prototipo-RRHH-version 17-04-2017\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_zona_emp.resources
+C:\Users\javie\Documents\Prototipo-RRHH-version 17-04-2017\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_zona_emp_grid.resources
+C:\Users\javie\Documents\Prototipo-RRHH-version 17-04-2017\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.Login.resources
+C:\Users\javie\Documents\Prototipo-RRHH-version 17-04-2017\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.mdi_contenedor.resources
+C:\Users\javie\Documents\Prototipo-RRHH-version 17-04-2017\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_empresa.resources
+C:\Users\javie\Documents\Prototipo-RRHH-version 17-04-2017\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_estadistica_Pagos.resources
+C:\Users\javie\Documents\Prototipo-RRHH-version 17-04-2017\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_nomina.resources
+C:\Users\javie\Documents\Prototipo-RRHH-version 17-04-2017\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_prestaciones.resources
+C:\Users\javie\Documents\Prototipo-RRHH-version 17-04-2017\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.Loading.resources
+C:\Users\javie\Documents\Prototipo-RRHH-version 17-04-2017\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.Properties.Resources.resources
+C:\Users\javie\Documents\Prototipo-RRHH-version 17-04-2017\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.Reporte_espefico.resources
+C:\Users\javie\Documents\Prototipo-RRHH-version 17-04-2017\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_reportes_de_empleado.resources
+C:\Users\javie\Documents\Prototipo-RRHH-version 17-04-2017\Prototipo-RRHH\contrato_trabajo\obj\Debug\Recursos Humanos.csproj.GenerateResource.Cache
+C:\Users\javie\Documents\Prototipo-RRHH-version 17-04-2017\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_activos_grid.resources
+C:\Users\javie\Documents\Prototipo-RRHH-version 17-04-2017\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_activos.resources
+C:\Users\javie\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\bin\Debug\contrato_trabajo.exe.config
+C:\Users\javie\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.exe
+C:\Users\javie\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.pdb
+C:\Users\javie\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\bin\Debug\contrato_trabajo.exe
+C:\Users\javie\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\bin\Debug\contrato_trabajo.pdb
+C:\Users\javie\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\javie\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\bin\Debug\CrystalDecisions.Windows.Forms.dll
+C:\Users\javie\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\bin\Debug\seguridad.dll
+C:\Users\javie\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\bin\Debug\CrystalDecisions.Shared.dll
+C:\Users\javie\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
+C:\Users\javie\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
+C:\Users\javie\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+C:\Users\javie\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
+C:\Users\javie\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
+C:\Users\javie\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+C:\Users\javie\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
+C:\Users\javie\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+C:\Users\javie\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+C:\Users\javie\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+C:\Users\javie\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+C:\Users\javie\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\bin\Debug\CrystalDecisions.ReportSource.dll
+C:\Users\javie\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\bin\Debug\FlashControlV71.dll
+C:\Users\javie\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+C:\Users\javie\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\bin\Debug\stdole.dll
+C:\Users\javie\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\bin\Debug\ShockwaveFlashObjects.dll
+C:\Users\javie\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\bin\Debug\MySql.Data.xml
+C:\Users\javie\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\bin\Debug\seguridad.pdb
+C:\Users\javie\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\Recursos Humanos.csprojResolveAssemblyReference.cache
+C:\Users\javie\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_activos.resources
+C:\Users\javie\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_activos_grid.resources
+C:\Users\javie\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_aguinaldo.resources
+C:\Users\javie\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_bono_14.resources
+C:\Users\javie\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_calculo_seguro_social.resources
+C:\Users\javie\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_asistencia_cap.resources
+C:\Users\javie\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_cancelar_nominas.resources
+C:\Users\javie\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_candidato.resources
+C:\Users\javie\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_capacitaciones.resources
+C:\Users\javie\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_capacitaciones_grid.resources
+C:\Users\javie\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_comisiones_grid.resources
+C:\Users\javie\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_comisiones_linea.resources
+C:\Users\javie\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_comisiones_marca.resources
+C:\Users\javie\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_comisiones_producto.resources
+C:\Users\javie\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_comisiones_vendedor.resources
+C:\Users\javie\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.Contrato.resources
+C:\Users\javie\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_contrato_grid.resources
+C:\Users\javie\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_desempeno_laboral.resources
+C:\Users\javie\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_desglosar_nombre.resources
+C:\Users\javie\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_empleado.resources
+C:\Users\javie\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_empleado_grid.resources
+C:\Users\javie\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_empresa_grid.resources
+C:\Users\javie\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_emp_correos.resources
+C:\Users\javie\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_emp_correos_grid.resources
+C:\Users\javie\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_emp_telefonos.resources
+C:\Users\javie\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_emp_telefono_grid.resources
+C:\Users\javie\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_horas_extras.resources
+C:\Users\javie\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_municipio_emp.resources
+C:\Users\javie\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_municipio_emp_grid.resources
+C:\Users\javie\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_nomina_grid.resources
+C:\Users\javie\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_pago_impuestos.resources
+C:\Users\javie\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_progreso_reclutamiento.resources
+C:\Users\javie\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_reclutamiento.resources
+C:\Users\javie\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_reclutamiento_grid.resources
+C:\Users\javie\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_zona_emp.resources
+C:\Users\javie\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_zona_emp_grid.resources
+C:\Users\javie\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.Login.resources
+C:\Users\javie\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.mdi_contenedor.resources
+C:\Users\javie\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_empresa.resources
+C:\Users\javie\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_estadistica_Pagos.resources
+C:\Users\javie\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_nomina.resources
+C:\Users\javie\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_prestaciones.resources
+C:\Users\javie\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.Loading.resources
+C:\Users\javie\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.Properties.Resources.resources
+C:\Users\javie\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.Reporte_espefico.resources
+C:\Users\javie\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_reportes_de_empleado.resources
+C:\Users\javie\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\Recursos Humanos.csproj.GenerateResource.Cache
+C:\Users\ottog\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\bin\Debug\contrato_trabajo.exe.config
+C:\Users\ottog\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.exe
+C:\Users\ottog\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.pdb
+C:\Users\ottog\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\bin\Debug\contrato_trabajo.exe
+C:\Users\ottog\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\bin\Debug\contrato_trabajo.pdb
+C:\Users\ottog\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\ottog\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\bin\Debug\CrystalDecisions.Windows.Forms.dll
+C:\Users\ottog\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\bin\Debug\seguridad.dll
+C:\Users\ottog\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\bin\Debug\CrystalDecisions.Shared.dll
+C:\Users\ottog\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
+C:\Users\ottog\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
+C:\Users\ottog\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+C:\Users\ottog\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
+C:\Users\ottog\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
+C:\Users\ottog\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+C:\Users\ottog\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
+C:\Users\ottog\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+C:\Users\ottog\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+C:\Users\ottog\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+C:\Users\ottog\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+C:\Users\ottog\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\bin\Debug\CrystalDecisions.ReportSource.dll
+C:\Users\ottog\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\bin\Debug\FlashControlV71.dll
+C:\Users\ottog\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+C:\Users\ottog\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\bin\Debug\stdole.dll
+C:\Users\ottog\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\bin\Debug\ShockwaveFlashObjects.dll
+C:\Users\ottog\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\bin\Debug\MySql.Data.xml
+C:\Users\ottog\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\bin\Debug\seguridad.pdb
+C:\Users\ottog\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\Recursos Humanos.csprojResolveAssemblyReference.cache
+C:\Users\ottog\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_activos.resources
+C:\Users\ottog\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_activos_grid.resources
+C:\Users\ottog\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_aguinaldo.resources
+C:\Users\ottog\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_bono_14.resources
+C:\Users\ottog\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_calculo_seguro_social.resources
+C:\Users\ottog\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_asistencia_cap.resources
+C:\Users\ottog\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_cancelar_nominas.resources
+C:\Users\ottog\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_candidato.resources
+C:\Users\ottog\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_capacitaciones.resources
+C:\Users\ottog\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_capacitaciones_grid.resources
+C:\Users\ottog\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_comisiones_grid.resources
+C:\Users\ottog\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_comisiones_linea.resources
+C:\Users\ottog\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_comisiones_marca.resources
+C:\Users\ottog\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_comisiones_producto.resources
+C:\Users\ottog\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_comisiones_vendedor.resources
+C:\Users\ottog\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.Contrato.resources
+C:\Users\ottog\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_contrato_grid.resources
+C:\Users\ottog\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_desempeno_laboral.resources
+C:\Users\ottog\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_desglosar_nombre.resources
+C:\Users\ottog\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_empleado.resources
+C:\Users\ottog\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_empleado_grid.resources
+C:\Users\ottog\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_empresa_grid.resources
+C:\Users\ottog\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_emp_correos.resources
+C:\Users\ottog\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_emp_correos_grid.resources
+C:\Users\ottog\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_emp_telefonos.resources
+C:\Users\ottog\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_emp_telefono_grid.resources
+C:\Users\ottog\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_funcion.resources
+C:\Users\ottog\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_grid_candidato.resources
+C:\Users\ottog\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_grid_funcion.resources
+C:\Users\ottog\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_grid_medio_distribucion.resources
+C:\Users\ottog\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_horas_extras.resources
+C:\Users\ottog\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_medio_distribucion.resources
+C:\Users\ottog\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_municipio_emp.resources
+C:\Users\ottog\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_municipio_emp_grid.resources
+C:\Users\ottog\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_nomina_grid.resources
+C:\Users\ottog\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_pago_impuestos.resources
+C:\Users\ottog\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_perfil_reclutamiento.resources
+C:\Users\ottog\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_perfil_reclutamiento_grid.resources
+C:\Users\ottog\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_progreso_reclutamiento.resources
+C:\Users\ottog\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_reclutamiento.resources
+C:\Users\ottog\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_reclutamiento_grid.resources
+C:\Users\ottog\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_zona_emp.resources
+C:\Users\ottog\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_zona_emp_grid.resources
+C:\Users\ottog\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.Login.resources
+C:\Users\ottog\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.mdi_contenedor.resources
+C:\Users\ottog\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_empresa.resources
+C:\Users\ottog\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_estadistica_Pagos.resources
+C:\Users\ottog\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_nomina.resources
+C:\Users\ottog\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_prestaciones.resources
+C:\Users\ottog\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.Loading.resources
+C:\Users\ottog\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.Properties.Resources.resources
+C:\Users\ottog\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.Reporte_espefico.resources
+C:\Users\ottog\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_reportes_de_empleado.resources
+C:\Users\ottog\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\Recursos Humanos.csproj.GenerateResource.Cache

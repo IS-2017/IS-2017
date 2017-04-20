@@ -28,11 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_nomina));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.fecha_hoy = new System.Windows.Forms.DateTimePicker();
             this.btn_nuevo = new System.Windows.Forms.Button();
             this.btn_ultimo = new System.Windows.Forms.Button();
             this.btn_guardar = new System.Windows.Forms.Button();
@@ -45,7 +43,6 @@
             this.btn_actualizar = new System.Windows.Forms.Button();
             this.btn_cancelar = new System.Windows.Forms.Button();
             this.Nominas = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -53,6 +50,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.Agregar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.textBox7 = new System.Windows.Forms.TextBox();
@@ -72,9 +70,8 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.DESCRIPCION_PAGO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TIPO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TIPO = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.CANTIDAD_EN_QUETZALES = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NUMERO_DE_HORAS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2.SuspendLayout();
@@ -85,7 +82,6 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.button1);
-            this.groupBox2.Controls.Add(this.fecha_hoy);
             this.groupBox2.Controls.Add(this.btn_nuevo);
             this.groupBox2.Controls.Add(this.btn_ultimo);
             this.groupBox2.Controls.Add(this.btn_guardar);
@@ -116,20 +112,13 @@
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Image = global::contrato_trabajo.Properties.Resources.imprimir;
-            this.button1.Location = new System.Drawing.Point(804, 16);
+            this.button1.Location = new System.Drawing.Point(805, 12);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(115, 110);
             this.button1.TabIndex = 12;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // fecha_hoy
-            // 
-            this.fecha_hoy.Location = new System.Drawing.Point(874, 69);
-            this.fecha_hoy.Name = "fecha_hoy";
-            this.fecha_hoy.Size = new System.Drawing.Size(10, 23);
-            this.fecha_hoy.TabIndex = 41;
             // 
             // btn_nuevo
             // 
@@ -309,7 +298,6 @@
             // 
             // Nominas
             // 
-            this.Nominas.Controls.Add(this.button2);
             this.Nominas.Controls.Add(this.textBox1);
             this.Nominas.Controls.Add(this.textBox8);
             this.Nominas.Controls.Add(this.comboBox1);
@@ -317,6 +305,7 @@
             this.Nominas.Controls.Add(this.label2);
             this.Nominas.Controls.Add(this.label1);
             this.Nominas.Controls.Add(this.button3);
+            this.Nominas.Controls.Add(this.button2);
             this.Nominas.Controls.Add(this.Agregar);
             this.Nominas.Controls.Add(this.dataGridView1);
             this.Nominas.Controls.Add(this.textBox7);
@@ -335,28 +324,15 @@
             this.Nominas.Controls.Add(this.label9);
             this.Nominas.Controls.Add(this.label7);
             this.Nominas.Controls.Add(this.label6);
-            this.Nominas.Location = new System.Drawing.Point(12, 180);
+            this.Nominas.Location = new System.Drawing.Point(23, 180);
             this.Nominas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Nominas.Name = "Nominas";
             this.Nominas.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Nominas.Size = new System.Drawing.Size(1279, 495);
+            this.Nominas.Size = new System.Drawing.Size(1268, 495);
             this.Nominas.TabIndex = 19;
             this.Nominas.TabStop = false;
             this.Nominas.Text = "Agregar ";
             this.Nominas.Enter += new System.EventHandler(this.Nominas_Enter);
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.button2.Location = new System.Drawing.Point(534, 439);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(203, 32);
-            this.button2.TabIndex = 33;
-            this.button2.Text = "Agregar Otros";
-            this.toolTip1.SetToolTip(this.button2, "Pago o Deducion");
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // textBox1
             // 
@@ -414,26 +390,35 @@
             // 
             // button3
             // 
-            this.button3.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.button3.Location = new System.Drawing.Point(753, 439);
+            this.button3.Location = new System.Drawing.Point(787, 459);
             this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(203, 32);
             this.button3.TabIndex = 25;
-            this.button3.Text = "Quitar Fila";
-            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Text = "Cancelar";
+            this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(522, 459);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(203, 32);
+            this.button2.TabIndex = 24;
+            this.button2.Text = "Quitar";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Agregar
             // 
-            this.Agregar.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.Agregar.Location = new System.Drawing.Point(314, 439);
+            this.Agregar.Location = new System.Drawing.Point(251, 459);
             this.Agregar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Agregar.Name = "Agregar";
             this.Agregar.Size = new System.Drawing.Size(203, 32);
             this.Agregar.TabIndex = 23;
-            this.Agregar.Text = "Agregar Horas Extra";
-            this.Agregar.UseVisualStyleBackColor = false;
+            this.Agregar.Text = "Agregar";
+            this.Agregar.UseVisualStyleBackColor = true;
             this.Agregar.Click += new System.EventHandler(this.Agregar_Click);
             // 
             // dataGridView1
@@ -447,12 +432,11 @@
             this.TIPO,
             this.CANTIDAD_EN_QUETZALES,
             this.NUMERO_DE_HORAS});
-            this.dataGridView1.Location = new System.Drawing.Point(6, 172);
+            this.dataGridView1.Location = new System.Drawing.Point(6, 160);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1266, 245);
+            this.dataGridView1.Size = new System.Drawing.Size(1256, 295);
             this.dataGridView1.TabIndex = 22;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentDoubleClick);
@@ -615,26 +599,31 @@
             // 
             this.DESCRIPCION_PAGO.HeaderText = "DESCRIPCION PAGO";
             this.DESCRIPCION_PAGO.Name = "DESCRIPCION_PAGO";
-            this.DESCRIPCION_PAGO.ReadOnly = true;
             // 
             // TIPO
             // 
             this.TIPO.HeaderText = "TIPO";
+            this.TIPO.Items.AddRange(new object[] {
+            "SUELDO BASE",
+            "SEGURO SOCIAL",
+            "IMPUESTO",
+            "HORAS EXTRA",
+            "AGUINALDO",
+            "BONO 14",
+            "BONIFICACION",
+            "DEBE",
+            "HABER"});
             this.TIPO.Name = "TIPO";
-            this.TIPO.ReadOnly = true;
             // 
             // CANTIDAD_EN_QUETZALES
             // 
             this.CANTIDAD_EN_QUETZALES.HeaderText = "CANTIDAD EN QUETZALES";
             this.CANTIDAD_EN_QUETZALES.Name = "CANTIDAD_EN_QUETZALES";
-            this.CANTIDAD_EN_QUETZALES.ReadOnly = true;
             // 
             // NUMERO_DE_HORAS
             // 
             this.NUMERO_DE_HORAS.HeaderText = "NUMERO DE HORAS";
             this.NUMERO_DE_HORAS.Name = "NUMERO_DE_HORAS";
-            this.NUMERO_DE_HORAS.ReadOnly = true;
-            this.NUMERO_DE_HORAS.Visible = false;
             // 
             // frm_nomina
             // 
@@ -689,26 +678,24 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.Button Agregar;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.DateTimePicker fecha_hoy;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        public System.Windows.Forms.DataGridView dataGridView1;
-        public System.Windows.Forms.Button Agregar;
-        private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.DataGridViewTextBoxColumn DESCRIPCION_PAGO;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TIPO;
+        private System.Windows.Forms.DataGridViewComboBoxColumn TIPO;
         private System.Windows.Forms.DataGridViewTextBoxColumn CANTIDAD_EN_QUETZALES;
         private System.Windows.Forms.DataGridViewTextBoxColumn NUMERO_DE_HORAS;
     }
