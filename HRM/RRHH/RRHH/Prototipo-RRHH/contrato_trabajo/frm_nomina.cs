@@ -25,10 +25,14 @@ namespace contrato_trabajo
 
         private void Agregar_Click(object sender, EventArgs e)
         {
-
-            DataGridViewRow entrada = new DataGridViewRow();
-            dataGridView1.Rows.Add(entrada);
+          
+            frm_horas_extras he = new frm_horas_extras();
+            he.Show();
+           
+          
+                
         }
+      
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -45,20 +49,76 @@ namespace contrato_trabajo
         {
             try
             {
-                DataGridViewRow entrada = new DataGridViewRow();
-                dataGridView1.Rows.Add(entrada);
-                dataGridView1.Rows[0].Cells[0].Value = "¨Sueldo Base del Mes";
-                DataGridViewComboBoxCell combo = dataGridView1.Rows[0].Cells[1] as DataGridViewComboBoxCell;
-                combo.Value = "SUELDO BASE";
+                //LLENANDO PRIMER FILA DEL DATAGRIDVIEW
+                DataGridViewRow entradabase = new DataGridViewRow();
+                dataGridView1.Rows.Add(entradabase);
+                dataGridView1.Rows[0].Cells[0].Value = "Pago de Salario del Mes";
+                dataGridView1.Rows[0].Cells[1].Value = "SUELDO BASE";
                 dataGridView1.Rows[0].Cells[2].Value = "4000";
 
-                //LLENADO FILA 2
-                DataGridViewRow entrada2 = new DataGridViewRow();
-                dataGridView1.Rows.Add(entrada2);
+
+
+                //LLENADO FILA 2 DEL DATAGRIDVIEW
+                DataGridViewRow entradaboni = new DataGridViewRow();
+                dataGridView1.Rows.Add(entradaboni);
                 dataGridView1.Rows[1].Cells[0].Value = "Pago de Bonificación del Mes";
-                DataGridViewComboBoxCell combito = dataGridView1.Rows[1].Cells[1] as DataGridViewComboBoxCell;
-                combito.Value = "BONIFICACION";
+                dataGridView1.Rows[1].Cells[1].Value = "BONIFICACION";
                 dataGridView1.Rows[1].Cells[2].Value = "250";
+
+                //LLENANDO FILA 3
+                DataGridViewRow entradacomi = new DataGridViewRow();
+                dataGridView1.Rows.Add(entradacomi);
+                dataGridView1.Rows[2].Cells[0].Value = "Pago de Comisión";
+                dataGridView1.Rows[2].Cells[1].Value = "COMISION";
+                dataGridView1.Rows[2].Cells[2].Value = "150";
+
+                //LLENANDO FILA 4
+                DataGridViewRow salidaIGSS = new DataGridViewRow();
+                dataGridView1.Rows.Add(salidaIGSS);
+                dataGridView1.Rows[3].Cells[0].Value = "Pago de Seguro Social";
+                dataGridView1.Rows[3].Cells[1].Value = "IGSS";
+                dataGridView1.Rows[3].Cells[2].Value = "200";
+
+                //LLENANDO FILA 5 
+                DataGridViewRow ISR = new DataGridViewRow();
+                dataGridView1.Rows.Add(ISR);
+                dataGridView1.Rows[4].Cells[0].Value = "Pago de Impuesto";
+                dataGridView1.Rows[4].Cells[1].Value = "ISR";
+                dataGridView1.Rows[4].Cells[2].Value = "75";
+
+
+
+
+
+                //LLENANDO BONO 14 Y AGUINALDO 
+                fecha_hoy.Format = DateTimePickerFormat.Custom;
+                fecha_hoy.CustomFormat = "yyyy-MM-dd";
+                String fecha = fecha_hoy.Text;
+               
+                if (fecha == "2017-07-30")
+                {
+                    int numero = Convert.ToInt32(dataGridView1.Rows.Count);
+                    DataGridViewRow entradabono = new DataGridViewRow();
+                    dataGridView1.Rows.Add(entradabono);
+                    dataGridView1.Rows[numero].Cells[0].Value = "Pago de Bono 14 mes de Julio";
+                    dataGridView1.Rows[numero].Cells[1].Value = "BONO 14";
+                    dataGridView1.Rows[numero].Cells[2].Value = "4000";
+
+                }
+
+                if (fecha == "2017-12-30")
+                {
+                    int numero = Convert.ToInt32(dataGridView1.Rows.Count);
+                    DataGridViewRow entradaguinaldo = new DataGridViewRow();
+                    dataGridView1.Rows.Add(entradaguinaldo);
+                    dataGridView1.Rows[numero].Cells[0].Value = "Pago de Aguinaldo del año";
+                    dataGridView1.Rows[numero].Cells[1].Value = "AGUINALDO";
+                    dataGridView1.Rows[numero].Cells[2].Value = "4000";
+
+                }
+
+
+
 
 
             }
@@ -70,8 +130,53 @@ namespace contrato_trabajo
 
         private void button3_Click(object sender, EventArgs e)
         {
+            if (dataGridView1.CurrentRow.Index == 5)
+            {
+               if (Convert.ToString(dataGridView1.CurrentRow.Cells[1].Value) == "HORAS EXTRA")
+                {
+                    DataGridViewRow entrada = new DataGridViewRow();
+                    entrada = dataGridView1.Rows[dataGridView1.CurrentRow.Index];
+                    dataGridView1.Rows.Remove(entrada);
+                    Agregar.Enabled = true;
+                }
+                else
+                {
+
+                    DataGridViewRow entrada = new DataGridViewRow();
+                    entrada = dataGridView1.Rows[dataGridView1.CurrentRow.Index];
+                    dataGridView1.Rows.Remove(entrada);
+
+                }
+            }
+
+
+           else if (dataGridView1.CurrentRow.Index == 6)
+            {
+                if (Convert.ToString(dataGridView1.CurrentRow.Cells[1].Value) == "HORAS EXTRA")
+                {
+                    DataGridViewRow entrada = new DataGridViewRow();
+                    entrada = dataGridView1.Rows[dataGridView1.CurrentRow.Index];
+                    dataGridView1.Rows.Remove(entrada);
+                    Agregar.Enabled = true;
+                }
+                else
+                {
+
+                    DataGridViewRow entrada = new DataGridViewRow();
+                    entrada = dataGridView1.Rows[dataGridView1.CurrentRow.Index];
+                    dataGridView1.Rows.Remove(entrada);
+                }
+            }
+
+            else
+            {
+                MessageBox.Show("No se Puede eliminar dicha Fila");
+            }
 
         }
+      
+
+
 
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)
         {
@@ -149,44 +254,7 @@ namespace contrato_trabajo
 
         private void dataGridView1_CellEndEdit_1(object sender, DataGridViewCellEventArgs e)
         {
-            if (dataGridView1.Columns[e.ColumnIndex].Name == "TIPO")
-            {
-                DataGridViewComboBoxCell combo = dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex] as DataGridViewComboBoxCell;
-                String prueba = Convert.ToString(combo.Value);
-
-
-                if (prueba == "SEGURO SOCIAL")
-                {
-                    frm_calculo_seguro_social calculo = new frm_calculo_seguro_social();
-                    calculo.Show();
-                }
-                //if (prueba == "BONIFICACION")
-                //{
-                //    dataGridView1.Rows[e.RowIndex].Cells[2].Value = "250";
-
-                //}
-                if (prueba == "HORAS EXTRA")
-                {
-                    frm_horas_extras horas = new frm_horas_extras();
-                    horas.Show();
-                }
-                if (prueba == "IMPUESTO")
-                {
-                    frm_pago_impuestos pago = new frm_pago_impuestos();
-                    pago.Show();
-                }
-                if (prueba == "AGUINALDO")
-                {
-                    frm_aguinaldo aguinaldo = new frm_aguinaldo();
-                    aguinaldo.Show(); 
-                }
-                if(prueba == "BONO 14")
-                {
-                    frm_bono_14 bono14 = new frm_bono_14();
-                    bono14.Show();
-                }
-            
-            }
+           
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -194,6 +262,12 @@ namespace contrato_trabajo
             Abrir.Form1 f1 = new Form1();
             f1.Crystal = @"C:\Users\ccarrera\Desktop\prueba2\CrystalReport2.rpt";
             f1.Show();
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            frm_Otros otros = new frm_Otros();
+            otros.Show();
         }
     }
 }

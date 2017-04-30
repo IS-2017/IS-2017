@@ -28,8 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_activos));
             this.gpb_navegador = new System.Windows.Forms.GroupBox();
+            this.txt_estado = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.btn_nuevo = new System.Windows.Forms.Button();
             this.btn_ultimo = new System.Windows.Forms.Button();
             this.btn_guardar = new System.Windows.Forms.Button();
@@ -42,16 +45,28 @@
             this.btn_actualizar = new System.Windows.Forms.Button();
             this.btn_cancelar = new System.Windows.Forms.Button();
             this.lbl_form_emp = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.gpb_activos = new System.Windows.Forms.GroupBox();
-            this.lbl_nombre_activo = new System.Windows.Forms.Label();
-            this.lbl_cantidad_activo = new System.Windows.Forms.Label();
-            this.lbl_descripcion_activo = new System.Windows.Forms.Label();
-            this.txt_nombre_activo = new System.Windows.Forms.TextBox();
-            this.txt_descripcion_activo = new System.Windows.Forms.TextBox();
-            this.nmup_cantidad_activo = new System.Windows.Forms.NumericUpDown();
+            this.txt_serie_activo = new System.Windows.Forms.TextBox();
+            this.lbl_serie_activo = new System.Windows.Forms.Label();
             this.txt_nmup_cantidad_activo = new System.Windows.Forms.TextBox();
-            this.txt_estado = new System.Windows.Forms.TextBox();
+            this.nmup_cantidad_activo = new System.Windows.Forms.NumericUpDown();
+            this.txt_descripcion_activo = new System.Windows.Forms.TextBox();
+            this.txt_nombre_activo = new System.Windows.Forms.TextBox();
+            this.lbl_descripcion_activo = new System.Windows.Forms.Label();
+            this.lbl_precio_activo = new System.Windows.Forms.Label();
+            this.lbl_nombre_activo = new System.Windows.Forms.Label();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTip3 = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTip4 = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTip5 = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTip6 = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTip7 = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTip8 = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTip9 = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTip10 = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTip11 = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTip12 = new System.Windows.Forms.ToolTip(this.components);
             this.gpb_navegador.SuspendLayout();
             this.gpb_activos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nmup_cantidad_activo)).BeginInit();
@@ -80,6 +95,32 @@
             this.gpb_navegador.TabStop = false;
             this.gpb_navegador.Text = "Navegador";
             // 
+            // txt_estado
+            // 
+            this.txt_estado.Location = new System.Drawing.Point(660, 23);
+            this.txt_estado.Name = "txt_estado";
+            this.txt_estado.Size = new System.Drawing.Size(10, 24);
+            this.txt_estado.TabIndex = 7;
+            this.txt_estado.Tag = "estado";
+            this.txt_estado.Text = "ACTIVO";
+            this.txt_estado.Visible = false;
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(514, 20);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(65, 65);
+            this.button1.TabIndex = 171;
+            this.toolTip5.SetToolTip(this.button1, "Imprimir");
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // btn_nuevo
             // 
             this.btn_nuevo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_nuevo.BackgroundImage")));
@@ -92,7 +133,8 @@
             this.btn_nuevo.Location = new System.Drawing.Point(17, 21);
             this.btn_nuevo.Name = "btn_nuevo";
             this.btn_nuevo.Size = new System.Drawing.Size(65, 65);
-            this.btn_nuevo.TabIndex = 0;
+            this.btn_nuevo.TabIndex = 5;
+            this.toolTip1.SetToolTip(this.btn_nuevo, "Nuevo");
             this.btn_nuevo.UseVisualStyleBackColor = true;
             this.btn_nuevo.Click += new System.EventHandler(this.btn_nuevo_Click);
             // 
@@ -109,6 +151,7 @@
             this.btn_ultimo.Name = "btn_ultimo";
             this.btn_ultimo.Size = new System.Drawing.Size(33, 33);
             this.btn_ultimo.TabIndex = 10;
+            this.toolTip9.SetToolTip(this.btn_ultimo, "Ultimo");
             this.btn_ultimo.UseVisualStyleBackColor = true;
             this.btn_ultimo.Click += new System.EventHandler(this.btn_ultimo_Click);
             // 
@@ -124,7 +167,8 @@
             this.btn_guardar.Location = new System.Drawing.Point(88, 19);
             this.btn_guardar.Name = "btn_guardar";
             this.btn_guardar.Size = new System.Drawing.Size(65, 65);
-            this.btn_guardar.TabIndex = 1;
+            this.btn_guardar.TabIndex = 6;
+            this.toolTip10.SetToolTip(this.btn_guardar, "Guardar");
             this.btn_guardar.UseVisualStyleBackColor = true;
             this.btn_guardar.Click += new System.EventHandler(this.btn_guardar_Click);
             // 
@@ -141,6 +185,7 @@
             this.btn_primero.Name = "btn_primero";
             this.btn_primero.Size = new System.Drawing.Size(33, 33);
             this.btn_primero.TabIndex = 9;
+            this.toolTip8.SetToolTip(this.btn_primero, "Primero");
             this.btn_primero.UseVisualStyleBackColor = true;
             this.btn_primero.Click += new System.EventHandler(this.btn_primero_Click);
             // 
@@ -156,7 +201,8 @@
             this.btn_editar.Location = new System.Drawing.Point(159, 19);
             this.btn_editar.Name = "btn_editar";
             this.btn_editar.Size = new System.Drawing.Size(65, 65);
-            this.btn_editar.TabIndex = 2;
+            this.btn_editar.TabIndex = 7;
+            this.toolTip11.SetToolTip(this.btn_editar, "Modificar");
             this.btn_editar.UseVisualStyleBackColor = true;
             this.btn_editar.Click += new System.EventHandler(this.btn_editar_Click);
             // 
@@ -173,6 +219,7 @@
             this.btn_siguiente.Name = "btn_siguiente";
             this.btn_siguiente.Size = new System.Drawing.Size(33, 33);
             this.btn_siguiente.TabIndex = 8;
+            this.toolTip7.SetToolTip(this.btn_siguiente, "Siguiente");
             this.btn_siguiente.UseVisualStyleBackColor = true;
             this.btn_siguiente.Click += new System.EventHandler(this.btn_siguiente_Click);
             // 
@@ -188,7 +235,8 @@
             this.btn_eliminar.Location = new System.Drawing.Point(230, 19);
             this.btn_eliminar.Name = "btn_eliminar";
             this.btn_eliminar.Size = new System.Drawing.Size(65, 65);
-            this.btn_eliminar.TabIndex = 3;
+            this.btn_eliminar.TabIndex = 8;
+            this.toolTip12.SetToolTip(this.btn_eliminar, "Eliminar");
             this.btn_eliminar.UseVisualStyleBackColor = true;
             this.btn_eliminar.Click += new System.EventHandler(this.btn_eliminar_Click);
             // 
@@ -205,6 +253,7 @@
             this.btn_anterior.Name = "btn_anterior";
             this.btn_anterior.Size = new System.Drawing.Size(33, 33);
             this.btn_anterior.TabIndex = 7;
+            this.toolTip6.SetToolTip(this.btn_anterior, "Anterior");
             this.btn_anterior.UseVisualStyleBackColor = true;
             this.btn_anterior.Click += new System.EventHandler(this.btn_anterior_Click);
             // 
@@ -221,6 +270,7 @@
             this.btn_buscar.Name = "btn_buscar";
             this.btn_buscar.Size = new System.Drawing.Size(65, 65);
             this.btn_buscar.TabIndex = 4;
+            this.toolTip2.SetToolTip(this.btn_buscar, "Buscar");
             this.btn_buscar.UseVisualStyleBackColor = true;
             // 
             // btn_actualizar
@@ -235,7 +285,8 @@
             this.btn_actualizar.Location = new System.Drawing.Point(443, 19);
             this.btn_actualizar.Name = "btn_actualizar";
             this.btn_actualizar.Size = new System.Drawing.Size(65, 65);
-            this.btn_actualizar.TabIndex = 6;
+            this.btn_actualizar.TabIndex = 10;
+            this.toolTip4.SetToolTip(this.btn_actualizar, "Actualizar");
             this.btn_actualizar.UseVisualStyleBackColor = true;
             this.btn_actualizar.Click += new System.EventHandler(this.btn_actualizar_Click);
             // 
@@ -251,7 +302,8 @@
             this.btn_cancelar.Location = new System.Drawing.Point(372, 19);
             this.btn_cancelar.Name = "btn_cancelar";
             this.btn_cancelar.Size = new System.Drawing.Size(65, 65);
-            this.btn_cancelar.TabIndex = 5;
+            this.btn_cancelar.TabIndex = 9;
+            this.toolTip3.SetToolTip(this.btn_cancelar, "Cancelar");
             this.btn_cancelar.UseVisualStyleBackColor = true;
             this.btn_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
             // 
@@ -265,36 +317,103 @@
             this.lbl_form_emp.TabIndex = 170;
             this.lbl_form_emp.Text = "Formulario de Activos";
             // 
-            // button1
-            // 
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(514, 20);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(65, 65);
-            this.button1.TabIndex = 171;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // gpb_activos
             // 
+            this.gpb_activos.Controls.Add(this.txt_serie_activo);
+            this.gpb_activos.Controls.Add(this.lbl_serie_activo);
             this.gpb_activos.Controls.Add(this.txt_nmup_cantidad_activo);
             this.gpb_activos.Controls.Add(this.nmup_cantidad_activo);
             this.gpb_activos.Controls.Add(this.txt_descripcion_activo);
             this.gpb_activos.Controls.Add(this.txt_nombre_activo);
             this.gpb_activos.Controls.Add(this.lbl_descripcion_activo);
-            this.gpb_activos.Controls.Add(this.lbl_cantidad_activo);
+            this.gpb_activos.Controls.Add(this.lbl_precio_activo);
             this.gpb_activos.Controls.Add(this.lbl_nombre_activo);
             this.gpb_activos.Location = new System.Drawing.Point(12, 151);
             this.gpb_activos.Name = "gpb_activos";
-            this.gpb_activos.Size = new System.Drawing.Size(680, 220);
+            this.gpb_activos.Size = new System.Drawing.Size(680, 224);
             this.gpb_activos.TabIndex = 171;
             this.gpb_activos.TabStop = false;
             this.gpb_activos.Text = "Activos";
+            // 
+            // txt_serie_activo
+            // 
+            this.txt_serie_activo.Location = new System.Drawing.Point(124, 41);
+            this.txt_serie_activo.Name = "txt_serie_activo";
+            this.txt_serie_activo.Size = new System.Drawing.Size(384, 20);
+            this.txt_serie_activo.TabIndex = 2;
+            this.txt_serie_activo.Tag = "num_serie_activo";
+            // 
+            // lbl_serie_activo
+            // 
+            this.lbl_serie_activo.AutoSize = true;
+            this.lbl_serie_activo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_serie_activo.Location = new System.Drawing.Point(6, 42);
+            this.lbl_serie_activo.Name = "lbl_serie_activo";
+            this.lbl_serie_activo.Size = new System.Drawing.Size(99, 17);
+            this.lbl_serie_activo.TabIndex = 7;
+            this.lbl_serie_activo.Text = "Numero Serie:";
+            // 
+            // txt_nmup_cantidad_activo
+            // 
+            this.txt_nmup_cantidad_activo.Location = new System.Drawing.Point(250, 67);
+            this.txt_nmup_cantidad_activo.Name = "txt_nmup_cantidad_activo";
+            this.txt_nmup_cantidad_activo.Size = new System.Drawing.Size(63, 20);
+            this.txt_nmup_cantidad_activo.TabIndex = 6;
+            this.txt_nmup_cantidad_activo.Tag = "precio_activo";
+            this.txt_nmup_cantidad_activo.Visible = false;
+            // 
+            // nmup_cantidad_activo
+            // 
+            this.nmup_cantidad_activo.DecimalPlaces = 2;
+            this.nmup_cantidad_activo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nmup_cantidad_activo.Location = new System.Drawing.Point(124, 67);
+            this.nmup_cantidad_activo.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.nmup_cantidad_activo.Name = "nmup_cantidad_activo";
+            this.nmup_cantidad_activo.Size = new System.Drawing.Size(120, 23);
+            this.nmup_cantidad_activo.TabIndex = 3;
+            this.nmup_cantidad_activo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.nmup_cantidad_activo.ValueChanged += new System.EventHandler(this.nmup_cantidad_activo_ValueChanged);
+            // 
+            // txt_descripcion_activo
+            // 
+            this.txt_descripcion_activo.Location = new System.Drawing.Point(124, 96);
+            this.txt_descripcion_activo.Multiline = true;
+            this.txt_descripcion_activo.Name = "txt_descripcion_activo";
+            this.txt_descripcion_activo.Size = new System.Drawing.Size(550, 114);
+            this.txt_descripcion_activo.TabIndex = 4;
+            this.txt_descripcion_activo.Tag = "descripcion_activo";
+            // 
+            // txt_nombre_activo
+            // 
+            this.txt_nombre_activo.Location = new System.Drawing.Point(124, 15);
+            this.txt_nombre_activo.Name = "txt_nombre_activo";
+            this.txt_nombre_activo.Size = new System.Drawing.Size(550, 20);
+            this.txt_nombre_activo.TabIndex = 1;
+            this.txt_nombre_activo.Tag = "nombre_activo";
+            // 
+            // lbl_descripcion_activo
+            // 
+            this.lbl_descripcion_activo.AutoSize = true;
+            this.lbl_descripcion_activo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_descripcion_activo.Location = new System.Drawing.Point(6, 96);
+            this.lbl_descripcion_activo.Name = "lbl_descripcion_activo";
+            this.lbl_descripcion_activo.Size = new System.Drawing.Size(86, 17);
+            this.lbl_descripcion_activo.TabIndex = 2;
+            this.lbl_descripcion_activo.Text = "Descripcion:";
+            // 
+            // lbl_precio_activo
+            // 
+            this.lbl_precio_activo.AutoSize = true;
+            this.lbl_precio_activo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_precio_activo.Location = new System.Drawing.Point(6, 67);
+            this.lbl_precio_activo.Name = "lbl_precio_activo";
+            this.lbl_precio_activo.Size = new System.Drawing.Size(52, 17);
+            this.lbl_precio_activo.TabIndex = 1;
+            this.lbl_precio_activo.Text = "Precio:";
             // 
             // lbl_nombre_activo
             // 
@@ -306,75 +425,15 @@
             this.lbl_nombre_activo.TabIndex = 0;
             this.lbl_nombre_activo.Text = "Nombre:";
             // 
-            // lbl_cantidad_activo
-            // 
-            this.lbl_cantidad_activo.AutoSize = true;
-            this.lbl_cantidad_activo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_cantidad_activo.Location = new System.Drawing.Point(6, 41);
-            this.lbl_cantidad_activo.Name = "lbl_cantidad_activo";
-            this.lbl_cantidad_activo.Size = new System.Drawing.Size(68, 17);
-            this.lbl_cantidad_activo.TabIndex = 1;
-            this.lbl_cantidad_activo.Text = "Cantidad:";
-            // 
-            // lbl_descripcion_activo
-            // 
-            this.lbl_descripcion_activo.AutoSize = true;
-            this.lbl_descripcion_activo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_descripcion_activo.Location = new System.Drawing.Point(6, 70);
-            this.lbl_descripcion_activo.Name = "lbl_descripcion_activo";
-            this.lbl_descripcion_activo.Size = new System.Drawing.Size(86, 17);
-            this.lbl_descripcion_activo.TabIndex = 2;
-            this.lbl_descripcion_activo.Text = "Descripcion:";
-            // 
-            // txt_nombre_activo
-            // 
-            this.txt_nombre_activo.Location = new System.Drawing.Point(124, 15);
-            this.txt_nombre_activo.Name = "txt_nombre_activo";
-            this.txt_nombre_activo.Size = new System.Drawing.Size(384, 20);
-            this.txt_nombre_activo.TabIndex = 3;
-            this.txt_nombre_activo.Tag = "nombre_activo";
-            // 
-            // txt_descripcion_activo
-            // 
-            this.txt_descripcion_activo.Location = new System.Drawing.Point(124, 70);
-            this.txt_descripcion_activo.Multiline = true;
-            this.txt_descripcion_activo.Name = "txt_descripcion_activo";
-            this.txt_descripcion_activo.Size = new System.Drawing.Size(384, 114);
-            this.txt_descripcion_activo.TabIndex = 4;
-            this.txt_descripcion_activo.Tag = "descripcion_activo";
-            // 
-            // nmup_cantidad_activo
-            // 
-            this.nmup_cantidad_activo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nmup_cantidad_activo.Location = new System.Drawing.Point(124, 41);
-            this.nmup_cantidad_activo.Name = "nmup_cantidad_activo";
-            this.nmup_cantidad_activo.Size = new System.Drawing.Size(120, 23);
-            this.nmup_cantidad_activo.TabIndex = 5;
-            this.nmup_cantidad_activo.ValueChanged += new System.EventHandler(this.nmup_cantidad_activo_ValueChanged);
-            // 
-            // txt_nmup_cantidad_activo
-            // 
-            this.txt_nmup_cantidad_activo.Location = new System.Drawing.Point(250, 41);
-            this.txt_nmup_cantidad_activo.Name = "txt_nmup_cantidad_activo";
-            this.txt_nmup_cantidad_activo.Size = new System.Drawing.Size(63, 20);
-            this.txt_nmup_cantidad_activo.TabIndex = 6;
-            this.txt_nmup_cantidad_activo.Tag = "cantidad_activo";
-            // 
-            // txt_estado
-            // 
-            this.txt_estado.Location = new System.Drawing.Point(660, 23);
-            this.txt_estado.Name = "txt_estado";
-            this.txt_estado.Size = new System.Drawing.Size(10, 24);
-            this.txt_estado.TabIndex = 7;
-            this.txt_estado.Tag = "estado";
-            this.txt_estado.Text = "ACTIVO";
-            // 
             // frm_activos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
-            this.ClientSize = new System.Drawing.Size(704, 378);
+            this.AutoScroll = true;
+            this.AutoSize = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.ClientSize = new System.Drawing.Size(704, 387);
             this.Controls.Add(this.gpb_activos);
             this.Controls.Add(this.lbl_form_emp);
             this.Controls.Add(this.gpb_navegador);
@@ -417,8 +476,22 @@
         private System.Windows.Forms.TextBox txt_descripcion_activo;
         private System.Windows.Forms.TextBox txt_nombre_activo;
         private System.Windows.Forms.Label lbl_descripcion_activo;
-        private System.Windows.Forms.Label lbl_cantidad_activo;
+        private System.Windows.Forms.Label lbl_precio_activo;
         private System.Windows.Forms.Label lbl_nombre_activo;
         private System.Windows.Forms.TextBox txt_estado;
+        private System.Windows.Forms.TextBox txt_serie_activo;
+        private System.Windows.Forms.Label lbl_serie_activo;
+        private System.Windows.Forms.ToolTip toolTip5;
+        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.ToolTip toolTip9;
+        private System.Windows.Forms.ToolTip toolTip10;
+        private System.Windows.Forms.ToolTip toolTip8;
+        private System.Windows.Forms.ToolTip toolTip11;
+        private System.Windows.Forms.ToolTip toolTip7;
+        private System.Windows.Forms.ToolTip toolTip12;
+        private System.Windows.Forms.ToolTip toolTip6;
+        private System.Windows.Forms.ToolTip toolTip2;
+        private System.Windows.Forms.ToolTip toolTip4;
+        private System.Windows.Forms.ToolTip toolTip3;
     }
 }

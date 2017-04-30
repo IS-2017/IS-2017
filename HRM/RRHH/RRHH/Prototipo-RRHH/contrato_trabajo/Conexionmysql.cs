@@ -13,13 +13,13 @@ namespace contrato_trabajo
     {
         public static OdbcConnection ObtenerConexion()
         {
-            OdbcConnection miconexion = new OdbcConnection("dsn=crm; server=localhost; database=hotelsancarlos; uid=root; pwd=;");
+            OdbcConnection miconexion = new OdbcConnection("dsn=crm; server=localhost; uid=root; pwd=;");
             miconexion.Open();
             return miconexion;
         }
         public static OdbcConnection Desconectar()
         {
-            OdbcConnection miconexion = new OdbcConnection("dsn=crm; server=localhost; database=hotelsancarlos; uid=root; pwd=;");
+            OdbcConnection miconexion = new OdbcConnection("dsn=crm; server=localhost; uid=root; pwd=;");
             miconexion.Close();
             return miconexion;
         }

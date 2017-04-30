@@ -169,6 +169,7 @@
             // 
             // cbo_empres
             // 
+            this.cbo_empres.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_empres.FormattingEnabled = true;
             this.cbo_empres.Location = new System.Drawing.Point(4, 180);
             this.cbo_empres.Margin = new System.Windows.Forms.Padding(2);
@@ -331,7 +332,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(977, 555);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.lbl_form_emp);

@@ -9,19 +9,67 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
 using Abrir;
+using seguridad;
+
 
 namespace contrato_trabajo
 {
     public partial class mdi_contenedor : Form
     {
-
-        frm_empleado_grid frm_emp_dgv;
-        frm_empleado frm_emp;
-        frm_activos_grid frm_act_grid;
-        frm_perfil_reclutamiento_grid frm_perf_rec_grid;
-        frm_grid_candidato frm_cand_grid;
-        frm_grid_funcion frm_func_grid;
-        frm_grid_medio_distribucion frm_med_dist_grid;
+        frm_activos_grid frm_activo;
+        frm_aguinaldo frm_aguinaldo;
+        frm_area_grid frm_area;
+        frm_asistencia_cap frm_asistencia_cap;
+        frm_bono_14 bono14;
+        frm_calculo_seguro_social calculo_seguro_social;
+        frm_seguro_social_grid seguro_ssocial;
+        frm_cancelar_nominas cancelar_nomina;
+        frm_candidato candidato;
+        frm_capacitaciones_grid capacitaciones;
+        frm_comisiones_grid comisiones;
+        frm_comisiones_linea comisiones_linea;
+        frm_comisiones_marca comisiones_marca;
+        frm_comisiones_producto comisiones_producto;
+        frm_comisiones_vendedor comisiones_vendedor;
+        frm_contrato_grid contrato_grid;
+        frm_desempeno_laboral desempeno_laboral;
+        frm_empleado_grid empleado;
+        frm_empresa_grid empresa;
+        frm_estadistica_Pagos estadistica_pago;
+        frm_grid_funcion funcion_grid;
+        frm_grid_candidato candidato_grid;
+        frm_grid_medio_distribucion medio_difucion;
+        frm_horas_extras horas_extra;
+        frm_jornada_grid jornada_grid;
+        frm_nomina_grid nomina_grid;
+        frm_Otros otros;
+        frm_pago_impuestos pago_impuestos;
+        frm_perfil_reclutamiento_grid perfil_reclutamiento;
+        frm_indemnizacion indemnizacion;
+        frm_prestaciones prestaciones;
+        frm_progreso_reclutamiento progreso_reclutamiento;
+        frm_puesto_lab_grid puesto_laboral;
+        frm_reclutamiento_grid reclutamiento;
+        frm_reportes_de_empleado reporte_empleado;
+        frm_ubicacion ubicacion;
+        FormAsignarPermisosUsuario nusr;
+        FormDeshabilitarUsuario form_desh;
+        Form_EditarPrivilegios form_priv;
+        Form_EditarPerfil form_perf;
+        CambioPass form_cambpass;
+        FormAsignacionPerfil form_asig;
+        agregarapp form_app;
+        //Modificar_aplicacion form_app_UD = new Modificar_aplicacion();
+        seguridad.Historial form_hist;
+        //Form_login form_log = new Form_login();
+        Form_infouser form_infouser;
+        FormEliminarPerfil inofuser;
+        // frm_vacaciones vacaciones;
+        frm_vacaciones frm_vacas;
+        nomina frm_nomina;
+        frm_hora_extras_grid horas_grid;
+        frm_impuesto_grid impuesto_grid;
+        examen_evaluacion_grid frm_examenes;
 
         public mdi_contenedor()
         {
@@ -31,6 +79,8 @@ namespace contrato_trabajo
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            BloquearMDI();
+            Bloqueo.DesbloquearMDI(menuStrip1);
             MdiClient Chld;
             foreach (Control crtl in this.Controls)
             {
@@ -47,22 +97,38 @@ namespace contrato_trabajo
 
         }
 
-
-
-
-        private void listaDeEmpleadosAPagarToolStripMenuItem_Click(object sender, EventArgs e)
+        private void BloquearMDI()
         {
-            frm_nomina_grid cn = new frm_nomina_grid();
-            cn.MdiParent = this;
-            cn.StartPosition = FormStartPosition.CenterScreen;
-            cn.Show();
+            foreach (ToolStripMenuItem menu_principal in menuStrip1.Items)
+            {
+                foreach (ToolStripMenuItem sub_menu in menu_principal.DropDownItems)
+                {
+                    sub_menu.Enabled = false;
+                }
+                menu_principal.Enabled = false;
+            }
+
+
+            inicioToolStripMenuItem.Enabled = true;
+            foreach (ToolStripMenuItem item_inicio in inicioToolStripMenuItem.DropDownItems)
+            {
+                item_inicio.Enabled = true;
+            }
+            helpMenu.Enabled = true;
+            foreach (ToolStripMenuItem help_Menu in helpMenu.DropDownItems)
+            {
+                help_Menu.Enabled = true;
+            }
+            windowsMenu.Enabled = true;
+            foreach (ToolStripMenuItem ventanas in windowsMenu.DropDownItems)
+            {
+                ventanas.Enabled = true;
+            }
         }
-
-
 
         private void empresaToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            frm_empresa cn = new frm_empresa();
+            frm_empresa_grid cn = new frm_empresa_grid();
             cn.MdiParent = this;
             cn.StartPosition = FormStartPosition.CenterScreen;
             cn.Show();
@@ -75,43 +141,49 @@ namespace contrato_trabajo
 
         private void empleadosToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            if (frm_emp_dgv == null)
+            if (empleado == null)
             {
-                frm_emp_dgv = new frm_empleado_grid();
-                frm_emp_dgv.MdiParent = this;
-                frm_emp_dgv.FormClosed += new FormClosedEventHandler(frm_empleados_FormClosed);
-                frm_emp_dgv.Show();
-
-                for (int i = 1; i <= 10; i++)
-                {
-                    Thread.Sleep(10); toolStripProgressBar1.Value = i;
-                }
-                toolStripProgressBar1.Value = 1;
+                empleado = new frm_empleado_grid();
+                empleado.MdiParent = this;
+                empleado.FormClosed += new FormClosedEventHandler(empleado_FormClosed);
+                empleado.Show();
             }
-
         }
-
-        void frm_empleados_FormClosed(object sender, EventArgs e)
+        void empleado_FormClosed(object sender, EventArgs e)
         {
-            frm_emp_dgv = null;
+            empleado = null;
         }
 
         private void contratosToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            Contrato cont = new Contrato();
-            cont.MdiParent = this;
-            cont.StartPosition = FormStartPosition.CenterScreen;
-            cont.Show();
+            if (contrato_grid == null)
+            {
+                contrato_grid = new frm_contrato_grid();
+                contrato_grid.MdiParent = this;
+                contrato_grid.FormClosed += new FormClosedEventHandler(contrato_grid_FormClosed);
+                contrato_grid.Show();
+            }
+        }
+        void contrato_grid_FormClosed(object sender, EventArgs e)
+        {
+            contrato_grid = null;
         }
 
         private void capacitacionesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frm_capacitaciones cap = new frm_capacitaciones();
-            cap.MdiParent = this;
-            cap.StartPosition = FormStartPosition.CenterScreen;
-            cap.Show();
+            if (capacitaciones == null)
+            {
+                capacitaciones = new frm_capacitaciones_grid();
+                capacitaciones.MdiParent = this;
+                capacitaciones.FormClosed += new FormClosedEventHandler(capacitaciones_FormClosed);
+                capacitaciones.Show();
+            }
         }
-        
+        void capacitaciones_FormClosed(object sender, EventArgs e)
+        {
+            capacitaciones = null;
+        }
+
 
         private void cascadeToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -166,7 +238,7 @@ namespace contrato_trabajo
 
         private void prestamosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void prestacionesToolStripMenuItem_Click(object sender, EventArgs e)
@@ -195,174 +267,495 @@ namespace contrato_trabajo
 
         private void porMarcaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frm_comisiones_marca comi_marc = new frm_comisiones_marca();
-            comi_marc.MdiParent = this;
-            comi_marc.StartPosition = FormStartPosition.CenterScreen;
-            comi_marc.Show();
+            if (comisiones_marca == null)
+            {
+                comisiones_marca = new frm_comisiones_marca();
+                comisiones_marca.MdiParent = this;
+                comisiones_marca.FormClosed += new FormClosedEventHandler(comisiones_marca_FormClosed);
+                comisiones_marca.Show();
+            }
+        }
+        void comisiones_marca_FormClosed(object sender, EventArgs e)
+        {
+            comisiones_marca = null;
         }
 
         private void porVendedorToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frm_comisiones_vendedor comi_vend = new frm_comisiones_vendedor();
-            comi_vend.MdiParent = this;
-            comi_vend.StartPosition = FormStartPosition.CenterScreen;
-            comi_vend.Show();
+            if (comisiones_vendedor == null)
+            {
+                comisiones_vendedor = new frm_comisiones_vendedor();
+                comisiones_vendedor.MdiParent = this;
+                comisiones_vendedor.FormClosed += new FormClosedEventHandler(comisiones_vendedor_FormClosed);
+                comisiones_vendedor.Show();
+            }
+        }
+        void comisiones_vendedor_FormClosed(object sender, EventArgs e)
+        {
+            comisiones_vendedor = null;
         }
 
         private void porLineaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frm_comisiones_linea comi_lin = new frm_comisiones_linea();
-            comi_lin.MdiParent = this;
-            comi_lin.StartPosition = FormStartPosition.CenterScreen;
-            comi_lin.Show();
+            if (comisiones_linea == null)
+            {
+                comisiones_linea = new frm_comisiones_linea();
+                comisiones_linea.MdiParent = this;
+                comisiones_linea.FormClosed += new FormClosedEventHandler(comisiones_linea_FormClosed);
+                comisiones_linea.Show();
+            }
+        }
+        void comisiones_linea_FormClosed(object sender, EventArgs e)
+        {
+            comisiones_linea = null;
         }
 
         private void porProductoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frm_comisiones_producto comi_prod = new frm_comisiones_producto();
-            comi_prod.MdiParent = this;
-            comi_prod.StartPosition = FormStartPosition.CenterScreen;
-            comi_prod.Show();
+            if (comisiones_producto == null)
+            {
+                comisiones_producto = new frm_comisiones_producto();
+                comisiones_producto.MdiParent = this;
+                comisiones_producto.FormClosed += new FormClosedEventHandler(comisiones_producto_FormClosed);
+                comisiones_producto.Show();
+            }
+        }
+        void comisiones_producto_FormClosed(object sender, EventArgs e)
+        {
+            comisiones_producto = null;
         }
 
         private void reporteadorToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Abrir.Form2 f2 = new Form2();
-            f2.Show();   
+            f2.Show();
         }
 
         private void modificarUSuarioToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           // seguridad.Form_EditarPrivilegios editar = new seguridad.Form_EditarPrivilegios();
-         //   editar.Show();
-        }
+            if (form_priv == null)
+            {
+                form_priv = new Form_EditarPrivilegios();
+                form_priv.MdiParent = this;
 
-        private void gestiónToolStripMenuItem_Click(object sender, EventArgs e)
+                form_priv.FormClosed += new FormClosedEventHandler(Form_EditarPrivilegios_FormClosed);
+                form_priv.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+                form_priv.Show();
+            }
+        }
+        public void Form_EditarPrivilegios_FormClosed(object sender, FormClosedEventArgs e)
         {
-          //  seguridad.Historial historial = new seguridad.Historial();
-          //  historial.Show();
+            form_priv = null;
         }
 
-        private void bitacoraToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void crerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-         //   seguridad.FormAsignacionPerfil asig = new seguridad.FormAsignacionPerfil();
-         //   asig.Show();
+            if (form_asig == null)
+            {
+                form_asig = new FormAsignacionPerfil();
+                form_asig.MdiParent = this;
+
+                form_asig.FormClosed += new FormClosedEventHandler(FormAsignacionPerfil_FormClosed);
+                form_asig.Show();
+            }
+        }
+        public void FormAsignacionPerfil_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            form_asig = null;
         }
 
         private void modificarToolStripMenuItem2_Click(object sender, EventArgs e)
         {
-          //  seguridad.Form_EditarPerfil editar = new seguridad.Form_EditarPerfil();
-          //  editar.Show();
+            if (form_perf == null)
+            {
+                form_perf = new Form_EditarPerfil();
+                form_perf.MdiParent = this;
+
+                form_perf.FormClosed += new FormClosedEventHandler(Form_EditarPerfil_FormClosed);
+                form_perf.Show();
+            }
+        }
+        public void Form_EditarPerfil_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            form_perf = null;
         }
 
         private void deshabilitarToolStripMenuItem2_Click(object sender, EventArgs e)
         {
-           // seguridad.FormEliminarPerfil eliminar = new seguridad.FormEliminarPerfil();
-          //  eliminar.Show();
+            if (inofuser == null)
+            {
+                inofuser = new FormEliminarPerfil();
+                inofuser.MdiParent = this;
+
+                inofuser.FormClosed += new FormClosedEventHandler(FormEliminarPerfil_FormClosed);
+                inofuser.Show();
+            }
+        }
+        public void FormEliminarPerfil_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            inofuser = null;
         }
 
         private void crearUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
         {
-         //   seguridad.FormAsignarPermisosUsuario asignar = new seguridad.FormAsignarPermisosUsuario();
-         //   asignar.Show();
+            if (nusr == null)
+            {
+                nusr = new FormAsignarPermisosUsuario();
+                nusr.MdiParent = this;
+
+                nusr.FormClosed += new FormClosedEventHandler(FormAsignarPermisosUsuario_FormClosed);
+                nusr.Show();
+            }
+        }
+        public void FormAsignarPermisosUsuario_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            nusr = null;
         }
 
         private void deshabilitarUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
         {
-          //  seguridad.FormDeshabilitarUsuario deshabilitar = new  seguridad.FormDeshabilitarUsuario();
-          //  deshabilitar.Show();
+            if (form_desh == null)
+            {
+                form_desh = new FormDeshabilitarUsuario();
+                form_desh.MdiParent = this;
 
+                form_desh.FormClosed += new FormClosedEventHandler(FormDeshabilitarUsuario_FormClosed);
+                form_desh.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+                form_desh.Show();
+            }
+        }
+        public void FormDeshabilitarUsuario_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            form_desh = null;
         }
 
         private void gestiónToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-         //   seguridad.agregarapp agregar = new seguridad.agregarapp();
-         //   agregar.Show();
-        }
-
-        private void activosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (frm_act_grid == null)
+            if (form_app == null)
             {
-                frm_act_grid = new frm_activos_grid();
-                frm_act_grid.MdiParent = this;
-                frm_act_grid.FormClosed += new FormClosedEventHandler(frm_act_grid_FormClosed);
-                frm_act_grid.Show();
+                form_app = new agregarapp();
+                form_app.MdiParent = this;
+                form_app.FormClosed += new FormClosedEventHandler(agregarapp_FormClosed);
+                form_app.Show();
             }
         }
-
-        void frm_act_grid_FormClosed(object sender, EventArgs e)
+        public void agregarapp_FormClosed(object sender, FormClosedEventArgs e)
         {
-            frm_act_grid = null;
+            form_app = null;
         }
 
-        private void perfilReclutamientoToolStripMenuItem_Click(object sender, EventArgs e)
+        private void reclutamientoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (frm_perf_rec_grid == null)
+            if (reclutamiento == null)
             {
-                frm_perf_rec_grid = new frm_perfil_reclutamiento_grid();
-                frm_perf_rec_grid.MdiParent = this;
-                frm_perf_rec_grid.FormClosed += new FormClosedEventHandler(frm_perf_rec_grid_FormClosed);
-                frm_perf_rec_grid.Show();
+                reclutamiento = new frm_reclutamiento_grid();
+                reclutamiento.MdiParent = this;
+                reclutamiento.FormClosed += new FormClosedEventHandler(reclutamiento_FormClosed);
+                reclutamiento.Show();
             }
         }
-
-        void frm_perf_rec_grid_FormClosed(object sender, EventArgs e)
+        void reclutamiento_FormClosed(object sender, EventArgs e)
         {
-            frm_perf_rec_grid = null;
-        }
-
-        private void candidatoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (frm_cand_grid == null)
-            {
-                frm_cand_grid = new frm_grid_candidato();
-                frm_cand_grid.MdiParent = this;
-                frm_cand_grid.FormClosed += new FormClosedEventHandler(frm_cand_grid_FormClosed);
-                frm_cand_grid.Show();
-            }
-        }
-
-        void frm_cand_grid_FormClosed(object sender, EventArgs e)
-        {
-            frm_cand_grid = null;
+            reclutamiento = null;
         }
 
         private void medioDeDistribucionToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (frm_med_dist_grid == null)
-            {
-                frm_med_dist_grid = new frm_grid_medio_distribucion();
-                frm_med_dist_grid.MdiParent = this;
-                frm_med_dist_grid.FormClosed += new FormClosedEventHandler(frm_med_dist_grid_FormClosed);
-                frm_med_dist_grid.Show();
-            }
+            frm_grid_medio_distribucion cn = new frm_grid_medio_distribucion();
+            cn.MdiParent = this;
+            cn.StartPosition = FormStartPosition.CenterScreen;
+            cn.Show();
         }
 
-        void frm_med_dist_grid_FormClosed(object sender, EventArgs e)
+
+
+        private void activosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frm_med_dist_grid = null;
+            if (frm_activo == null)
+            {
+                frm_activo = new frm_activos_grid();
+                frm_activo.MdiParent = this;
+                frm_activo.FormClosed += new FormClosedEventHandler(frm_activo_FormClosed);
+                frm_activo.Show();
+            }
+        }
+        void frm_activo_FormClosed(object sender, EventArgs e)
+        {
+            frm_activo = null;
+        }
+
+        private void jornadasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (jornada_grid == null)
+            {
+                jornada_grid = new frm_jornada_grid();
+                jornada_grid.MdiParent = this;
+                jornada_grid.FormClosed += new FormClosedEventHandler(jornada_grid_FormClosed);
+                jornada_grid.Show();
+            }
+        }
+        void jornada_grid_FormClosed(object sender, EventArgs e)
+        {
+            jornada_grid = null;
+        }
+
+        private void puestoLaboralToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (puesto_laboral == null)
+            {
+                puesto_laboral = new frm_puesto_lab_grid();
+                puesto_laboral.MdiParent = this;
+                puesto_laboral.FormClosed += new FormClosedEventHandler(puesto_laboral_FormClosed);
+                puesto_laboral.Show();
+            }
+        }
+        void puesto_laboral_FormClosed(object sender, EventArgs e)
+        {
+            puesto_laboral = null;
+        }
+
+        private void perfilReclutamientoToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            if (perfil_reclutamiento == null)
+            {
+                perfil_reclutamiento = new frm_perfil_reclutamiento_grid();
+                perfil_reclutamiento.MdiParent = this;
+                perfil_reclutamiento.FormClosed += new FormClosedEventHandler(perfil_reclutamiento_FormClosed);
+                perfil_reclutamiento.Show();
+            }
+        }
+        void perfil_reclutamiento_FormClosed(object sender, EventArgs e)
+        {
+            perfil_reclutamiento = null;
+        }
+
+        private void candidatoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (candidato_grid == null)
+            {
+                candidato_grid = new frm_grid_candidato();
+                candidato_grid.MdiParent = this;
+                candidato_grid.FormClosed += new FormClosedEventHandler(candidato_grid_FormClosed);
+                candidato_grid.Show();
+            }
+        }
+        void candidato_grid_FormClosed(object sender, EventArgs e)
+        {
+            candidato_grid = null;
+        }
+
+        private void medioDeDifuciónToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (medio_difucion == null)
+            {
+                medio_difucion = new frm_grid_medio_distribucion();
+                medio_difucion.MdiParent = this;
+                medio_difucion.FormClosed += new FormClosedEventHandler(medio_difucion_FormClosed);
+                medio_difucion.Show();
+            }
+        }
+        void medio_difucion_FormClosed(object sender, EventArgs e)
+        {
+            medio_difucion = null;
         }
 
         private void funcionToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (frm_func_grid == null)
+            if (funcion_grid == null)
             {
-                frm_func_grid = new frm_grid_funcion();
-                frm_func_grid.MdiParent = this;
-                frm_func_grid.FormClosed += new FormClosedEventHandler(frm_func_grid_FormClosed);
-                frm_func_grid.Show();
+                funcion_grid = new frm_grid_funcion();
+                funcion_grid.MdiParent = this;
+                funcion_grid.FormClosed += new FormClosedEventHandler(funcion_grid_FormClosed);
+                funcion_grid.Show();
             }
         }
-
-        void frm_func_grid_FormClosed(object sender, EventArgs e)
+        void funcion_grid_FormClosed(object sender, EventArgs e)
         {
-            frm_func_grid = null;
+            funcion_grid = null;
+        }
+
+        private void examenesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (frm_examenes == null)
+            {
+                frm_examenes = new examen_evaluacion_grid();
+                frm_examenes.MdiParent = this;
+                frm_examenes.FormClosed += new FormClosedEventHandler(frm_examenes_FormClosed);
+                frm_examenes.Show();
+            }
+        }
+        void frm_examenes_FormClosed(object sender, EventArgs e)
+        {
+            frm_examenes = null;
+        }
+
+        private void areaDeTrabajoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (frm_area == null)
+            {
+                frm_area = new frm_area_grid();
+                frm_area.MdiParent = this;
+                frm_area.FormClosed += new FormClosedEventHandler(frm_area_FormClosed);
+                frm_area.Show();
+            }
+        }
+        void frm_area_FormClosed(object sender, EventArgs e)
+        {
+            frm_area = null;
+        }
+
+        private void horasExtraToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (horas_grid == null)
+            {
+                horas_grid = new frm_hora_extras_grid();
+                horas_grid.MdiParent = this;
+                horas_grid.FormClosed += new FormClosedEventHandler(horas_grid_FormClosed);
+                horas_grid.Show();
+            }
+        }
+        void horas_grid_FormClosed(object sender, EventArgs e)
+        {
+            horas_grid = null;
+        }
+
+        private void tasaImpuestosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (impuesto_grid == null)
+            {
+                impuesto_grid = new frm_impuesto_grid();
+                impuesto_grid.MdiParent = this;
+                impuesto_grid.FormClosed += new FormClosedEventHandler(impuesto_grid_FormClosed);
+                impuesto_grid.Show();
+            }
+        }
+        void impuesto_grid_FormClosed(object sender, EventArgs e)
+        {
+            impuesto_grid = null;
+        }
+
+        private void seguroSocialToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (seguro_ssocial == null)
+            {
+                seguro_ssocial = new frm_seguro_social_grid();
+                seguro_ssocial.MdiParent = this;
+                seguro_ssocial.FormClosed += new FormClosedEventHandler(seguro_ssocial_FormClosed);
+                seguro_ssocial.Show();
+            }
+        }
+        void seguro_ssocial_FormClosed(object sender, EventArgs e)
+        {
+            seguro_ssocial = null;
+        }
+
+        private void evaluaciónToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (progreso_reclutamiento == null)
+            {
+                progreso_reclutamiento = new frm_progreso_reclutamiento();
+                progreso_reclutamiento.MdiParent = this;
+                progreso_reclutamiento.FormClosed += new FormClosedEventHandler(progreso_reclutamiento_FormClosed);
+                progreso_reclutamiento.Show();
+            }
+        }
+        void progreso_reclutamiento_FormClosed(object sender, EventArgs e)
+        {
+            progreso_reclutamiento = null;
+        }
+
+        private void asistenciaCapacitaciónToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (frm_asistencia_cap == null)
+            {
+                frm_asistencia_cap = new frm_asistencia_cap();
+                frm_asistencia_cap.MdiParent = this;
+                frm_asistencia_cap.FormClosed += new FormClosedEventHandler(frm_asistencia_cap_FormClosed);
+                frm_asistencia_cap.Show();
+            }
+        }
+        void frm_asistencia_cap_FormClosed(object sender, EventArgs e)
+        {
+            frm_asistencia_cap = null;
+        }
+
+        private void indemnizaciónToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (indemnizacion == null)
+            {
+                indemnizacion = new frm_indemnizacion();
+                indemnizacion.MdiParent = this;
+                indemnizacion.FormClosed += new FormClosedEventHandler(indemnizacion_FormClosed);
+                indemnizacion.Show();
+            }
+        }
+        void indemnizacion_FormClosed(object sender, EventArgs e)
+        {
+            indemnizacion = null;
+        }
+
+        private void nominaToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            if (frm_nomina == null)
+            {
+                frm_nomina = new nomina();
+                frm_nomina.MdiParent = this;
+                frm_nomina.FormClosed += new FormClosedEventHandler(nomina_grid_FormClosed);
+                frm_nomina.Show();
+            }
+        }
+        void nomina_grid_FormClosed(object sender, EventArgs e)
+        {
+            frm_nomina = null;
+        }
+
+        private void reporteDeEmpleadosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (form_hist == null)
+            {
+                form_hist = new Historial();
+                form_hist.MdiParent = this;
+
+                form_hist.FormClosed += new FormClosedEventHandler(Historial_FormClosed);
+                form_hist.Show();
+            }
+        }
+        void Historial_FormClosed(object sender, EventArgs e)
+        {
+            form_hist = null;
+        }
+
+        private void usuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (form_infouser == null)
+            {
+                form_infouser = new Form_infouser();
+                form_infouser.MdiParent = this;
+
+                form_infouser.FormClosed += new FormClosedEventHandler(FormInfoUser_FormClosed);
+                form_infouser.Show();
+            }
+        }
+        public void FormInfoUser_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            form_infouser = null;
+        }
+
+        private void vacacionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (frm_vacas == null)
+            {
+                frm_vacas = new frm_vacaciones();
+                frm_vacas.MdiParent = this;
+
+                frm_vacas.FormClosed += new FormClosedEventHandler(vacaciones_FormClosed);
+                frm_vacas.Show();
+            }
+        }
+        public void vacaciones_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            frm_vacas = null;
         }
     }
 }

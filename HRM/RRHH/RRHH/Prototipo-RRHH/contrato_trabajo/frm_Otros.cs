@@ -23,25 +23,52 @@ namespace contrato_trabajo
         }
 
         private void Agregar_Click(object sender, EventArgs e)
+        { 
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
         {
-            try
+
+        }
+        nomina nomina = new nomina();
+        private void button3_Click(object sender, EventArgs e)
+        {
             {
-                frm_nomina nomina = new frm_nomina();
+
                 foreach (Form frm in Application.OpenForms)
                 {
-                    if (frm.Name == "frm_nomina")
+                    if (frm.Name == "nomina")
                     {
-                        nomina = (frm_nomina)frm;
-                        nomina.dataGridView1.Rows.Add(txt_descripcion.Text,cbo_tipo.SelectedItem.ToString(),txt_cant_pagar.Text);
+                        string tipo =cbo_tipo.SelectedItem.ToString();
+                        if (tipo == "DEVENGO")
+                        {
+                            nomina = (nomina)frm;
+                            nomina.dgv_nonimas.CurrentRow.Cells[12].Value = txt_cant_pagar.Text;
+                            nomina.dgv_nonimas.Columns[12].Visible = true;
+                         
+                        }
+                        else
+                        {
+                            nomina = (nomina)frm;
+                            nomina.dgv_nonimas.CurrentRow.Cells[13].Value = txt_cant_pagar.Text;
+                            nomina.dgv_nonimas.Columns[13].Visible = true;
+                        }
                         this.Close();
                         break;
                     }
                 }
             }
-            catch
-            {
 
-            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void txt_cant_pagar_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

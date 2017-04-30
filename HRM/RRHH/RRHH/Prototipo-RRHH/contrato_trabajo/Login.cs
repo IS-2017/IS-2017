@@ -7,7 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using seguridad;
 using System.Data.Odbc;
+using seguridad;
 
 namespace contrato_trabajo
 {
@@ -25,17 +27,19 @@ namespace contrato_trabajo
 
         private void btn_logear_Click(object sender, EventArgs e)
         {
-            /*
-            try {
+            try
+            {
                 // OdbcConnection con = seguridad.Conexion.ObtenerConexionODBC();
-                OdbcConnection con = Conexion.ConexionPermisos();
-                seguridad.SistemaUsuarioDatos ss = new SistemaUsuarioDatos();
+                OdbcConnection con = seguridad.Conexion.ObtenerConexionM();
+                seguridad.SistemaUsuarioDatos ss = new seguridad.SistemaUsuarioDatos();
                 string usuario = txt_usuario.Text.Trim();
                 string contraseña = ss.Encriptar(txt_contraseña.Text.Trim());
-                ClaseTomaIp ip = new ClaseTomaIp();
+                seguridad.ClaseTomaIp ip = new seguridad.ClaseTomaIp();
                 string localIP = ip.direccion();
 
-                //LLama a una funciòn almacenada que valida la existencia del usuario y la integridad de la contraseña
+                /****LLama a una funciòn almacenada que valida la existencia del usuario y la integridad de la contraseña****/
+                //  try
+                // {
                 string consulta = "select ValidarContrasena('" + usuario + "', '" + contraseña + "','" + localIP + "') ";
                 OdbcCommand comando = new OdbcCommand(consulta, con);
                 object resultado = comando.ExecuteScalar();
@@ -46,33 +50,41 @@ namespace contrato_trabajo
                     seguridad.Conexion.PassWord = contraseña;
 
                     MessageBox.Show("¡Bienvenido!: " + usuario);
-                    mdi_contenedor men_mdi = new mdi_contenedor();
-                    men_mdi.FormClosed += new FormClosedEventHandler(mdi_FormClosed);
-                    men_mdi.Show();
+                    mdi_contenedor men_seg = new mdi_contenedor();
+                    men_seg.Show();
                     txt_contraseña.Clear();
                     txt_usuario.Clear();
 
                     this.Hide();
                 }
-                else
+                else if (Convert.ToInt16(resultado) == 0)// contraseña incorrecta
                 {
-                    MessageBox.Show("Usuario y/o contraseña invàlidos"); //De lo contrario, si la contraseña es incorrecta o el usuario, nos devuelve el fallo
-                    txt_contraseña.Clear();
-                    //txt_usuario.Clear();
+                    MessageBox.Show("Contraseña incorrecta"); //De lo contrario, si la contraseña es incorrecta o el usuario, nos devuelve el fallo
+                                                              // txt_contraseña.Clear();
+                                                              //txt_usuario.Clear();
                 }
+                else // usuario incorrecto
+                {
+                    MessageBox.Show("Usuario incorrecto");
+                }
+
+                // }
+                //catch
+                //{
+                //    txt_contraseña.Clear();
+                //    txt_usuario.Clear();
+                //    txt_usuario.Focus();
+                //    MessageBox.Show("Usuario no existe");
+                //}
                 con.Close();
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            */
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
         
 
         private void Login_Load(object sender, EventArgs e)
         {
-           // seguridad.Conexion.DSN = "prueba2";
+            seguridad.Conexion.DSN = "prueba2";
 
 
 

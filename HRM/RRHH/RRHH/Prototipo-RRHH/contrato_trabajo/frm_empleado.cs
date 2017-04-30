@@ -31,7 +31,7 @@ namespace contrato_trabajo
             this.dg = dgv;
             this.Editar1 = Editar;
             InitializeComponent();
-            atributo = "id_empleado_pk";
+            //atributo = "id_empleado_pk";
             this.Codigo = id_empleado_pk;
             string tabla = "empleado";
             this.accion1 = tipo_accion;
@@ -49,14 +49,13 @@ namespace contrato_trabajo
         //programador:Javier Figueroa Pereira
         string imgLoc;
         string imgname;
-        String Codigo;
         Boolean Editar1;
         Boolean accion1;
         Boolean entrar;
-        String atributo;
-        MySqlCommand comand;
-        CapaNegocio fn = new CapaNegocio();
+        String Codigo, Codigo1;
+        String atributo, atributo2;
         DataGridView dg;
+        CapaNegocio fn = new CapaNegocio();
         #endregion
 
         #region Insertar en las Tablas
@@ -70,34 +69,123 @@ namespace contrato_trabajo
             {
                 try
                 {
-                    Conexionmysql.ObtenerConexion();
-                    String Query = "INSERT INTO `empleado` (`id_empleado_pk`, `id_empleado_pk`, `dpi_emp`, `no_afiliacionIGSS_emp`, `estadolaboral`, `fecha_de_alta_emp`, `fecha_de_baja_emp`, `nombre_emp`, `apellido_emp`, `telefono_hogar_emp`, `telefono_movil_emp`, `fotografia_emp`, `direccion_emp`, `nacionalidad_emp`, `periodo_pago`, `estado`, `id_empresa_pk`) VALUES ('"+txt_codigo_emp.Text+"','" + txt_nombres_emp.Text + "', '" + txt_dpi_emp.Text + "', '" + txt_igss_emp.Text + "', '" + txt_cbo_estado_emp.Text + "', '" + txt_dtp_fecha_alta_emp.Text + "', '" + txt_dtp_fecha_baja_emp.Text + "', '" + txt_nombres_emp.Text + "', '" + txt_apellidos_emp.Text + "', '" + txt_telefono_hogar_emp.Text + "', '" + txt_tel_movil_emp.Text + "', '" + txt_nom_img.Text + "', '" + txt_domicilio_emp.Text + "', '" + txt_cbo_nacionalidad_emp.Text + "', '" + txt_cbo_forma_pago_emp.Text + "', 'ACTIVO', '"+txt_cbo_empresa_asig.Text+"');";
-                    Conexionmysql.EjecutarMySql(Query);
-                    Conexionmysql.Desconectar();
-
-
+                    
+                    txt_estado.Text = "ACTIVO";
+                    TextBox[] textbox = { txt_codigo_emp, txt_dpi_emp, txt_igss_emp, txt_estado, txt_nombres_emp, txt_apellidos_emp, txt_cbo_estado_emp, txt_dtp_fecha_alta_emp, txt_dtp_fecha_baja_emp, txt_domicilio_emp, txt_cbo_nacionalidad_emp, txt_cbo_forma_pago_emp, txt_cbo_empresa_asig, txt_nom_img };
+                    DataTable datos = fn.construirDataTable(textbox);
+                    if (datos.Rows.Count == 0)
+                    {
+                        string tabla = "empleado";
+                        if (Editar1)
+                        {
+                            fn.modificar(datos, tabla, atributo, Codigo);
+                        }
+                        else
+                        {
+                            fn.insertar(datos, tabla);
+                            Conexionmysql.ObtenerConexion();
+                        }
+                    }
+                    else
+                    {
+                        string tabla = "empleado";
+                        if (Editar1)
+                        {
+                            fn.modificar(datos, tabla, atributo, Codigo);
+                        }
+                        else
+                        {
+                            fn.insertar(datos, tabla);
+                            Conexionmysql.ObtenerConexion();
+                        }
+                    }
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
                 }
+
             }
             if (tbc_datos_emp.SelectedTab == Personal)
             {
                 try
                 {
-                    Conexionmysql.ObtenerConexion();
-                    String Query2 = "INSERT INTO `emp_datopersonal` (`fecha_nacimiento`, `nombre_del_padre`, `nombre_de_madre`, `genero_empleado`, `estado_civil`, `documentacion_del_trabajador`, `observaciones_emp`, `id_empleado_pk`) VALUES ('" + txt_dtp_fecha_nacimiento_emp.Text + "', '" + txt_nombre_padre_emp.Text + "', '" + txt_nombre_madre_emp.Text + "', '" + txt_cbo_genero_emp.Text + "', '" + txt_cbo_estado_civil_emp.Text + "', '" + txt_folder_empleado.Text + "', '" + txt_observaciones_emp.Text + "', '" + Codigo + "');";
-                    Conexionmysql.EjecutarMySql(Query2);
-                    Conexionmysql.Desconectar();
 
-
+                    txt_estado.Text = "ACTIVO";    
+                    TextBox[] textbox1 = { txt_estado, txt_dtp_fecha_nacimiento_emp, txt_nombre_padre_emp, txt_nombre_madre_emp, txt_cbo_genero_emp, txt_cbo_estado_civil_emp, txt_folder_empleado, txt_id_empleado_P, txt_observaciones_emp };
+                    DataTable datos1 = fn.construirDataTable(textbox1);
+                    if (datos1.Rows.Count == 0)
+                    {
+                        string tabla2 = "emp_datopersonal";
+                        if (Editar1)
+                        {
+                            fn.modificar(datos1, tabla2, atributo2, Codigo1);
+                        }
+                        else
+                        {
+                            fn.insertar(datos1, tabla2);
+                            Conexionmysql.ObtenerConexion();
+                        }
+                    }
+                    else
+                    {
+                        string tabla2 = "emp_datopersonal";
+                        if (Editar1)
+                        {
+                            fn.modificar(datos1, tabla2, atributo2, Codigo1);
+                        }
+                        else
+                        {
+                            fn.insertar(datos1, tabla2);
+                            Conexionmysql.ObtenerConexion();
+                        }
+                    }
                 }
-                catch
+                catch (Exception ex)
                 {
-                    MessageBox.Show("Llene todos los campos por favor", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show(ex.Message);
                 }
 
+
+            }
+            if (tbc_datos_emp.SelectedTab == Situacion)
+            {
+                try
+                {
+                    txt_estado.Text = "ACTIVO";
+                    TextBox[] textbox = { txt_cbo_puesto_laboral, txt_cbo_area_laboral, txt_cbo_jornadas_trabajo };
+                    DataTable datos = fn.construirDataTable(textbox);
+                    if (datos.Rows.Count == 0)
+                    {
+                        string tabla = "empleado";
+                        if (Editar1)
+                        {
+                            fn.modificar(datos, tabla, atributo, Codigo);
+                        }
+                        else
+                        {
+                            fn.insertar(datos, tabla);
+                            Conexionmysql.ObtenerConexion();
+                        }
+                    }
+                    else
+                    {
+                        string tabla = "empleado";
+                        if (Editar1)
+                        {
+                            fn.modificar(datos, tabla, atributo, Codigo);
+                        }
+                        else
+                        {
+                            fn.insertar(datos, tabla);
+                            Conexionmysql.ObtenerConexion();
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
 
             }
 
@@ -115,7 +203,8 @@ namespace contrato_trabajo
             //{
                 try
                 {
-                    txt_codigo_emp.Text = this.dgv_datos_generales_emp.CurrentRow.Cells[0].Value.ToString();
+                    txt_id_empleado_P.Text =  this.dgv_datos_generales_emp.CurrentRow.Cells[0].Value.ToString();
+                txt_codigo_emp.Text = this.dgv_datos_generales_emp.CurrentRow.Cells[0].Value.ToString();
                     txt_dpi_emp.Text = this.dgv_datos_generales_emp.CurrentRow.Cells[1].Value.ToString();
                     txt_igss_emp.Text = this.dgv_datos_generales_emp.CurrentRow.Cells[2].Value.ToString();
                     txt_cbo_estado_emp.Text = this.dgv_datos_generales_emp.CurrentRow.Cells[3].Value.ToString(); cbo_estado_emp.Text = txt_cbo_estado_emp.Text;
@@ -123,8 +212,8 @@ namespace contrato_trabajo
                     txt_dtp_fecha_baja_emp.Text = this.dgv_datos_generales_emp.CurrentRow.Cells[5].Value.ToString(); dtp_fecha_baja_emp.Text = txt_dtp_fecha_baja_emp.Text;
                     txt_nombres_emp.Text = this.dgv_datos_generales_emp.CurrentRow.Cells[6].Value.ToString();
                     txt_apellidos_emp.Text = this.dgv_datos_generales_emp.CurrentRow.Cells[7].Value.ToString();
-                    txt_telefono_hogar_emp.Text = this.dgv_datos_generales_emp.CurrentRow.Cells[8].Value.ToString();
-                    txt_tel_movil_emp.Text = this.dgv_datos_generales_emp.CurrentRow.Cells[9].Value.ToString();
+                    //txt_telefono_hogar_emp.Text = this.dgv_datos_generales_emp.CurrentRow.Cells[8].Value.ToString();
+                    //txt_tel_movil_emp.Text = this.dgv_datos_generales_emp.CurrentRow.Cells[9].Value.ToString();
                     txt_nom_img.Text = this.dgv_datos_generales_emp.CurrentRow.Cells[10].Value.ToString();
                     txt_domicilio_emp.Text = this.dgv_datos_generales_emp.CurrentRow.Cells[11].Value.ToString();
                     txt_cbo_nacionalidad_emp.Text = this.dgv_datos_generales_emp.CurrentRow.Cells[12].Value.ToString(); cbo_nacionalidad_emp.Text = txt_cbo_nacionalidad_emp.Text;
@@ -170,9 +259,18 @@ namespace contrato_trabajo
             fn.InhabilitarComponentes(Personal);
             fn.InhabilitarComponentes(Situacion);
             fn.InhabilitarComponentes(this);
+            dtp_fecha_alta_emp.Format = DateTimePickerFormat.Custom;
+            dtp_fecha_alta_emp.CustomFormat = "yyyy-MM-dd";
+            dtp_fecha_baja_emp.Format = DateTimePickerFormat.Custom;
+            dtp_fecha_baja_emp.CustomFormat = "yyyy-MM-dd";
+            dtp_fecha_nacimiento_emp.Format = DateTimePickerFormat.Custom;
+            dtp_fecha_nacimiento_emp.CustomFormat = "yyyy-MM-dd";
             entrar = true;
             cargarDatos();
             llenaridempresa();
+            llenarJornada();
+            llenarPuesto();
+            llenarAreaEmpres();
         }
         #endregion
 
@@ -228,7 +326,6 @@ namespace contrato_trabajo
                 fn.ActivarControles(General);
                 dtp_fecha_baja_emp.Enabled = false;
                 fn.ActivarControles(Personal);
-                fn.ActivarControles(Situacion);
                 fn.ActivarControles(this);
                 fn.LimpiarComponentes(gpb_datos_emp);
                 fn.LimpiarComponentes(General);
@@ -298,7 +395,10 @@ namespace contrato_trabajo
                 if (entrar == true)
                 {
                     InsertarDatosEmpleado();
-                    
+                    fn.InhabilitarComponentes(General);
+                    fn.InhabilitarComponentes(Personal);
+                    fn.InhabilitarComponentes(Situacion);
+
                 }
                 if (entrar == false)
                 {
@@ -456,6 +556,45 @@ namespace contrato_trabajo
             Conexionmysql.Desconectar();
         }
 
+        public void llenarJornada()
+        {
+            Conexionmysql.ObtenerConexion();
+            DataSet ds = new DataSet();
+            String Query = "SELECT id_jornadatrabajo_pk, forma_cobro FROM emp_jornadatrabajo WHERE estado ='ACTIVO'";
+            OdbcDataAdapter dad = new OdbcDataAdapter(Query, Conexionmysql.ObtenerConexion());
+            dad.Fill(ds, "emp_jornadatrabajo");
+            cbo_jornadas_trabajo.DataSource = ds.Tables[0].DefaultView;
+            cbo_jornadas_trabajo.ValueMember = ("id_jornadatrabajo_pk");
+            cbo_jornadas_trabajo.DisplayMember = ("forma_cobro");
+            Conexionmysql.Desconectar();
+        }
+
+        public void llenarPuesto()
+        {
+            Conexionmysql.ObtenerConexion();
+            DataSet ds = new DataSet();
+            String Query = "SELECT id_puesto_laboral_pk, nombre_puesto FROM puesto_laboral WHERE estado ='ACTIVO'";
+            OdbcDataAdapter dad = new OdbcDataAdapter(Query, Conexionmysql.ObtenerConexion());
+            dad.Fill(ds, "puesto_laboral");
+            cbo_puesto_laboral.DataSource = ds.Tables[0].DefaultView;
+            cbo_puesto_laboral.ValueMember = ("id_puesto_laboral_pk");
+            cbo_puesto_laboral.DisplayMember = ("nombre_puesto");
+            Conexionmysql.Desconectar();
+        }
+
+        public void llenarAreaEmpres()
+        {
+            Conexionmysql.ObtenerConexion();
+            DataSet ds = new DataSet();
+            String Query = "SELECT id_area_trabajo_pk, puesto FROM area_trabajo WHERE estado ='ACTIVO'";
+            OdbcDataAdapter dad = new OdbcDataAdapter(Query, Conexionmysql.ObtenerConexion());
+            dad.Fill(ds, "area_trabajo");
+            cbo_area_laboral.DataSource = ds.Tables[0].DefaultView;
+            cbo_area_laboral.ValueMember = ("id_area_trabajo_pk");
+            cbo_area_laboral.DisplayMember = ("puesto");
+            Conexionmysql.Desconectar();
+        }
+
         #endregion
 
         private void btn_agragar_telefonos_Click(object sender, EventArgs e)
@@ -474,13 +613,85 @@ namespace contrato_trabajo
             }
         }
 
+        private void cbo_puesto_laboral_SelectedValueChanged(object sender, EventArgs e)
+        {
+            txt_cbo_puesto_laboral.Text = cbo_puesto_laboral.SelectedValue.ToString();
+        }
+
+        private void cbo_area_laboral_SelectedValueChanged(object sender, EventArgs e)
+        {
+            txt_cbo_area_laboral.Text = cbo_area_laboral.SelectedValue.ToString();
+        }
+
+        private void cbo_jornadas_trabajo_SelectedValueChanged(object sender, EventArgs e)
+        {
+            txt_cbo_jornadas_trabajo.Text = cbo_jornadas_trabajo.SelectedValue.ToString();
+        }
+
+        private void txt_cbo_jornadas_trabajo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbo_puesto_laboral_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txt_cbo_jornadas_trabajo.Text = cbo_jornadas_trabajo.Text;
+            if (cbo_jornadas_trabajo.SelectedItem.ToString() == "VENDEDOR" || cbo_jornadas_trabajo.SelectedItem.ToString() == "Vendedor")
+            {
+                txt_cbo_jornadas_trabajo.Enabled = true;
+            }
+        }
+
         private void btn_editar_Click(object sender, EventArgs e)
         {
-            fn.ActivarControles(gpb_datos_emp);
-            fn.ActivarControles(General);
-            dtp_fecha_baja_emp.Enabled = false;
-            fn.ActivarControles(Personal);
-            fn.ActivarControles(Situacion);
+            if (tbc_datos_emp.SelectedTab == General)
+            {
+                Editar1 = true;
+                atributo = "id_empleado_pk";
+
+                fn.ActivarControles(gpb_datos_emp);
+                fn.ActivarControles(General);
+                dtp_fecha_baja_emp.Enabled = false;
+
+            }
+            if (tbc_datos_emp.SelectedTab == Personal)
+            {
+                if (string.IsNullOrEmpty(txt_folder_empleado.Text.Trim()))
+                {
+                    Editar1 = false;
+                    Codigo1 = "Id_datopersonal";
+                    atributo2 = "Id_datopersonal";
+                    fn.ActivarControles(gpb_datos_emp);
+                    txt_estado.Text = "ACTIVO";
+                    dtp_fecha_baja_emp.Enabled = false;
+                    fn.ActivarControles(Personal);
+                }
+                else
+                {
+                    Editar1 = true;
+                    atributo2 = "Id_datopersonal";
+                    Codigo1 = "Id_datopersonal";
+                    fn.ActivarControles(gpb_datos_emp);
+                    txt_estado.Text = "ACTIVO";
+                    dtp_fecha_baja_emp.Enabled = false;
+                    fn.ActivarControles(Personal);
+                }
+
+            }
+            if (tbc_datos_emp.SelectedTab == Situacion)
+            {
+                Editar1 = true;
+                atributo = "id_empleado_pk";
+                
+                //Codigo1 = "Id_datopersonal";
+                    fn.ActivarControles(gpb_datos_emp);
+                    txt_estado.Text = "ACTIVO";
+                    fn.ActivarControles(Situacion);
+                txt_cbo_jornadas_trabajo.Enabled = false;
+
+            }
+
+
         }
 
         private void btn_agregar_correos_Click(object sender, EventArgs e)
@@ -498,5 +709,7 @@ namespace contrato_trabajo
                 MessageBox.Show(ex.Message);
             }
         }
+
+
     }
 }

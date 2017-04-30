@@ -48,9 +48,12 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\Debug\MySql.Data.dll</HintPath>
     </Reference>
+    <Reference Include="seguridad, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Documents\GitHub\IS-2017\Objeto_Comun\seguridad\seguridad\bin\Debug\seguridad.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -64,7 +67,23 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Ayuda.cs" />
+    <Compile Include="capa_datos.cs" />
+    <Compile Include="Capa_de_datos2.cs" />
+    <Compile Include="capa_negocio.cs" />
+    <Compile Include="conexion.cs" />
     <Compile Include="Conexionmysql.cs" />
+    <Compile Include="examen_evaluacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="examen_evaluacion.designer.cs">
+      <DependentUpon>examen_evaluacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="examen_evaluacion_grid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="examen_evaluacion_grid.designer.cs">
+      <DependentUpon>examen_evaluacion_grid.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_activos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,6 +101,18 @@
     </Compile>
     <Compile Include="frm_aguinaldo.Designer.cs">
       <DependentUpon>frm_aguinaldo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_area.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_area.Designer.cs">
+      <DependentUpon>frm_area.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_area_grid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_area_grid.Designer.cs">
+      <DependentUpon>frm_area_grid.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_bono_14.cs">
       <SubType>Form</SubType>
@@ -161,6 +192,12 @@
     <Compile Include="frm_contrato_grid.Designer.cs">
       <DependentUpon>frm_contrato_grid.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_contrato_trabajo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_contrato_trabajo.Designer.cs">
+      <DependentUpon>frm_contrato_trabajo.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_desempeno_laboral.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -170,13 +207,13 @@
     <Compile Include="frm_desglosar_nombre.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_desglosar_nombre.Designer.cs">
+    <Compile Include="frm_desglosar_nombre.designer.cs">
       <DependentUpon>frm_desglosar_nombre.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_empleado.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_empleado.Designer.cs">
+    <Compile Include="frm_empleado.designer.cs">
       <DependentUpon>frm_empleado.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_empleado_grid.cs">
@@ -239,11 +276,53 @@
     <Compile Include="frm_grid_medio_distribucion.Designer.cs">
       <DependentUpon>frm_grid_medio_distribucion.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_horas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_horas.Designer.cs">
+      <DependentUpon>frm_horas.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_horas_extras.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frm_horas_extras.Designer.cs">
       <DependentUpon>frm_horas_extras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_hora_extras_grid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_hora_extras_grid.Designer.cs">
+      <DependentUpon>frm_hora_extras_grid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_impuesto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_impuesto.Designer.cs">
+      <DependentUpon>frm_impuesto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_impuesto_grid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_impuesto_grid.Designer.cs">
+      <DependentUpon>frm_impuesto_grid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_indemnizacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_indemnizacion.designer.cs">
+      <DependentUpon>frm_indemnizacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_jornada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_jornada.Designer.cs">
+      <DependentUpon>frm_jornada.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_jornada_grid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_jornada_grid.Designer.cs">
+      <DependentUpon>frm_jornada_grid.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_medio_distribucion.cs">
       <SubType>Form</SubType>
@@ -251,23 +330,17 @@
     <Compile Include="frm_medio_distribucion.Designer.cs">
       <DependentUpon>frm_medio_distribucion.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_municipio_emp.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frm_municipio_emp.Designer.cs">
-      <DependentUpon>frm_municipio_emp.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frm_municipio_emp_grid.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frm_municipio_emp_grid.Designer.cs">
-      <DependentUpon>frm_municipio_emp_grid.cs</DependentUpon>
-    </Compile>
     <Compile Include="frm_nomina_grid.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frm_nomina_grid.Designer.cs">
       <DependentUpon>frm_nomina_grid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_progreso_reclutamiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_progreso_reclutamiento.Designer.cs">
+      <DependentUpon>frm_progreso_reclutamiento.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_perfil_reclutamiento.cs">
       <SubType>Form</SubType>
@@ -281,11 +354,17 @@
     <Compile Include="frm_perfil_reclutamiento_grid.Designer.cs">
       <DependentUpon>frm_perfil_reclutamiento_grid.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_progreso_reclutamiento.cs">
+    <Compile Include="frm_puesto_lab.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_progreso_reclutamiento.Designer.cs">
-      <DependentUpon>frm_progreso_reclutamiento.cs</DependentUpon>
+    <Compile Include="frm_puesto_lab.Designer.cs">
+      <DependentUpon>frm_puesto_lab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_puesto_lab_grid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_puesto_lab_grid.Designer.cs">
+      <DependentUpon>frm_puesto_lab_grid.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_reclutamiento.cs">
       <SubType>Form</SubType>
@@ -299,17 +378,34 @@
     <Compile Include="frm_reclutamiento_grid.Designer.cs">
       <DependentUpon>frm_reclutamiento_grid.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_zona_emp.cs">
+    <Compile Include="frm_seguro_social.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_zona_emp.Designer.cs">
-      <DependentUpon>frm_zona_emp.cs</DependentUpon>
+    <Compile Include="frm_seguro_social.designer.cs">
+      <DependentUpon>frm_seguro_social.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_zona_emp_grid.cs">
+    <Compile Include="frm_seguro_social_grid.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_zona_emp_grid.Designer.cs">
-      <DependentUpon>frm_zona_emp_grid.cs</DependentUpon>
+    <Compile Include="frm_seguro_social_grid.designer.cs">
+      <DependentUpon>frm_seguro_social_grid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ubicacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ubicacion.Designer.cs">
+      <DependentUpon>frm_ubicacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_vacaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_vacaciones.designer.cs">
+      <DependentUpon>frm_vacaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ISR.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ISR.resx</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -365,6 +461,18 @@
     <Compile Include="Modulo Recursos Humanos.designer.cs">
       <DependentUpon>Modulo Recursos Humanos.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_Otros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Otros.Designer.cs">
+      <DependentUpon>frm_Otros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="nomina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="nomina.Designer.cs">
+      <DependentUpon>nomina.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="frm_reporte_espefico.cs">
@@ -379,6 +487,13 @@
     <Compile Include="frm_reportes_de_empleado.Designer.cs">
       <DependentUpon>frm_reportes_de_empleado.cs</DependentUpon>
     </Compile>
+    <Compile Include="Validar.cs" />
+    <EmbeddedResource Include="examen_evaluacion.resx">
+      <DependentUpon>examen_evaluacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="examen_evaluacion_grid.resx">
+      <DependentUpon>examen_evaluacion_grid.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_activos.resx">
       <DependentUpon>frm_activos.cs</DependentUpon>
     </EmbeddedResource>
@@ -387,6 +502,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_aguinaldo.resx">
       <DependentUpon>frm_aguinaldo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_area.resx">
+      <DependentUpon>frm_area.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_area_grid.resx">
+      <DependentUpon>frm_area_grid.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_bono_14.resx">
       <DependentUpon>frm_bono_14.cs</DependentUpon>
@@ -431,6 +552,9 @@
     <EmbeddedResource Include="frm_contrato_grid.resx">
       <DependentUpon>frm_contrato_grid.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_contrato_trabajo.resx">
+      <DependentUpon>frm_contrato_trabajo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_desempeno_laboral.resx">
       <DependentUpon>frm_desempeno_laboral.cs</DependentUpon>
     </EmbeddedResource>
@@ -470,23 +594,44 @@
     <EmbeddedResource Include="frm_grid_medio_distribucion.resx">
       <DependentUpon>frm_grid_medio_distribucion.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_horas.resx">
+      <DependentUpon>frm_horas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_horas_extras.resx">
       <DependentUpon>frm_horas_extras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_hora_extras_grid.resx">
+      <DependentUpon>frm_hora_extras_grid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_impuesto.resx">
+      <DependentUpon>frm_impuesto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_impuesto_grid.resx">
+      <DependentUpon>frm_impuesto_grid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_indemnizacion.resx">
+      <DependentUpon>frm_indemnizacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_jornada.resx">
+      <DependentUpon>frm_jornada.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_jornada_grid.resx">
+      <DependentUpon>frm_jornada_grid.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_medio_distribucion.resx">
       <DependentUpon>frm_medio_distribucion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_municipio_emp.resx">
-      <DependentUpon>frm_municipio_emp.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frm_municipio_emp_grid.resx">
-      <DependentUpon>frm_municipio_emp_grid.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frm_nomina_grid.resx">
       <DependentUpon>frm_nomina_grid.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_Otros.resx">
+      <DependentUpon>frm_Otros.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_pago_impuestos.resx">
       <DependentUpon>frm_pago_impuestos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_progreso_reclutamiento.resx">
+      <DependentUpon>frm_progreso_reclutamiento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_perfil_reclutamiento.resx">
       <DependentUpon>frm_perfil_reclutamiento.cs</DependentUpon>
@@ -494,8 +639,11 @@
     <EmbeddedResource Include="frm_perfil_reclutamiento_grid.resx">
       <DependentUpon>frm_perfil_reclutamiento_grid.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_progreso_reclutamiento.resx">
-      <DependentUpon>frm_progreso_reclutamiento.cs</DependentUpon>
+    <EmbeddedResource Include="frm_puesto_lab.resx">
+      <DependentUpon>frm_puesto_lab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_puesto_lab_grid.resx">
+      <DependentUpon>frm_puesto_lab_grid.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_reclutamiento.resx">
       <DependentUpon>frm_reclutamiento.cs</DependentUpon>
@@ -503,11 +651,21 @@
     <EmbeddedResource Include="frm_reclutamiento_grid.resx">
       <DependentUpon>frm_reclutamiento_grid.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_zona_emp.resx">
-      <DependentUpon>frm_zona_emp.cs</DependentUpon>
+    <EmbeddedResource Include="frm_seguro_social.resx">
+      <DependentUpon>frm_seguro_social.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_zona_emp_grid.resx">
-      <DependentUpon>frm_zona_emp_grid.cs</DependentUpon>
+    <EmbeddedResource Include="frm_seguro_social_grid.resx">
+      <DependentUpon>frm_seguro_social_grid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ubicacion.resx">
+      <DependentUpon>frm_ubicacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_vacaciones.resx">
+      <DependentUpon>frm_vacaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ISR.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ISR.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -529,6 +687,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Modulo Recursos Humanos.resx">
       <DependentUpon>Modulo Recursos Humanos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="nomina.resx">
+      <DependentUpon>nomina.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
