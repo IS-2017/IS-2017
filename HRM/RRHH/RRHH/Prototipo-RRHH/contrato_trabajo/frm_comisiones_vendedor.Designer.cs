@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_comisiones_vendedor));
             this.lbl_form_comision_vent = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.gpb_nav = new System.Windows.Forms.GroupBox();
             this.btn_nuevo = new System.Windows.Forms.Button();
             this.btn_ultimo = new System.Windows.Forms.Button();
             this.btn_guardar = new System.Windows.Forms.Button();
@@ -43,22 +44,23 @@
             this.btn_actualizar = new System.Windows.Forms.Button();
             this.btn_cancelar = new System.Windows.Forms.Button();
             this.gpb_com_ven = new System.Windows.Forms.GroupBox();
+            this.txt_id_puesto_lb = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.rdb_factura = new System.Windows.Forms.RadioButton();
+            this.txt_comsx = new System.Windows.Forms.TextBox();
+            this.txt_mar_c = new System.Windows.Forms.TextBox();
+            this.txt_dev = new System.Windows.Forms.TextBox();
+            this.txt_tc = new System.Windows.Forms.TextBox();
             this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_tv = new System.Windows.Forms.TextBox();
+            this.txt_vnd = new System.Windows.Forms.TextBox();
+            this.txt_porc_c = new System.Windows.Forms.TextBox();
+            this.txt_fecax = new System.Windows.Forms.TextBox();
+            this.txt_id_fac_d = new System.Windows.Forms.TextBox();
+            this.txt_empsx = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.cbo_empres = new System.Windows.Forms.ComboBox();
             this.lbl_ved = new System.Windows.Forms.Label();
@@ -69,47 +71,48 @@
             this.lbl_total_com = new System.Windows.Forms.Label();
             this.txt_total_com = new System.Windows.Forms.TextBox();
             this.lbl_nom_ved = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btn_generar = new System.Windows.Forms.Button();
+            this.dgv_comisiones = new System.Windows.Forms.DataGridView();
             this.ID_FACTURA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TOTAL_FACTURA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PORCENTAJE_COMISION = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TOTAL_COMISION = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.groupBox1.SuspendLayout();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.gpb_nav.SuspendLayout();
             this.gpb_com_ven.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_comisiones)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_form_comision_vent
             // 
             this.lbl_form_comision_vent.AutoSize = true;
             this.lbl_form_comision_vent.Font = new System.Drawing.Font("Microsoft Sans Serif", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_form_comision_vent.Location = new System.Drawing.Point(161, 11);
+            this.lbl_form_comision_vent.Location = new System.Drawing.Point(181, 117);
             this.lbl_form_comision_vent.Name = "lbl_form_comision_vent";
             this.lbl_form_comision_vent.Size = new System.Drawing.Size(469, 32);
             this.lbl_form_comision_vent.TabIndex = 173;
             this.lbl_form_comision_vent.Text = "Comisiones Sobre Vendedor Global";
             // 
-            // groupBox1
+            // gpb_nav
             // 
-            this.groupBox1.Controls.Add(this.btn_nuevo);
-            this.groupBox1.Controls.Add(this.btn_ultimo);
-            this.groupBox1.Controls.Add(this.btn_guardar);
-            this.groupBox1.Controls.Add(this.btn_primero);
-            this.groupBox1.Controls.Add(this.btn_editar);
-            this.groupBox1.Controls.Add(this.btn_siguiente);
-            this.groupBox1.Controls.Add(this.btn_eliminar);
-            this.groupBox1.Controls.Add(this.btn_anterior);
-            this.groupBox1.Controls.Add(this.btn_buscar);
-            this.groupBox1.Controls.Add(this.btn_actualizar);
-            this.groupBox1.Controls.Add(this.btn_cancelar);
-            this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(8, 46);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(636, 100);
-            this.groupBox1.TabIndex = 171;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Navegador";
+            this.gpb_nav.Controls.Add(this.btn_nuevo);
+            this.gpb_nav.Controls.Add(this.btn_ultimo);
+            this.gpb_nav.Controls.Add(this.btn_guardar);
+            this.gpb_nav.Controls.Add(this.btn_primero);
+            this.gpb_nav.Controls.Add(this.btn_editar);
+            this.gpb_nav.Controls.Add(this.btn_siguiente);
+            this.gpb_nav.Controls.Add(this.btn_eliminar);
+            this.gpb_nav.Controls.Add(this.btn_anterior);
+            this.gpb_nav.Controls.Add(this.btn_buscar);
+            this.gpb_nav.Controls.Add(this.btn_actualizar);
+            this.gpb_nav.Controls.Add(this.btn_cancelar);
+            this.gpb_nav.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gpb_nav.Location = new System.Drawing.Point(99, 12);
+            this.gpb_nav.Name = "gpb_nav";
+            this.gpb_nav.Size = new System.Drawing.Size(636, 100);
+            this.gpb_nav.TabIndex = 171;
+            this.gpb_nav.TabStop = false;
+            this.gpb_nav.Text = "Navegador";
             // 
             // btn_nuevo
             // 
@@ -124,7 +127,9 @@
             this.btn_nuevo.Name = "btn_nuevo";
             this.btn_nuevo.Size = new System.Drawing.Size(65, 65);
             this.btn_nuevo.TabIndex = 0;
+            this.toolTip1.SetToolTip(this.btn_nuevo, "Creacion de la comision");
             this.btn_nuevo.UseVisualStyleBackColor = true;
+            this.btn_nuevo.Click += new System.EventHandler(this.btn_nuevo_Click);
             // 
             // btn_ultimo
             // 
@@ -154,7 +159,9 @@
             this.btn_guardar.Name = "btn_guardar";
             this.btn_guardar.Size = new System.Drawing.Size(65, 65);
             this.btn_guardar.TabIndex = 1;
+            this.toolTip1.SetToolTip(this.btn_guardar, "Guardar comision");
             this.btn_guardar.UseVisualStyleBackColor = true;
+            this.btn_guardar.Click += new System.EventHandler(this.btn_guardar_Click);
             // 
             // btn_primero
             // 
@@ -274,26 +281,29 @@
             this.btn_cancelar.Name = "btn_cancelar";
             this.btn_cancelar.Size = new System.Drawing.Size(65, 65);
             this.btn_cancelar.TabIndex = 5;
+            this.toolTip1.SetToolTip(this.btn_cancelar, "Cancelar comision");
             this.btn_cancelar.UseVisualStyleBackColor = true;
+            this.btn_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
             // 
             // gpb_com_ven
             // 
+            this.gpb_com_ven.Controls.Add(this.txt_id_puesto_lb);
             this.gpb_com_ven.Controls.Add(this.label5);
             this.gpb_com_ven.Controls.Add(this.label4);
             this.gpb_com_ven.Controls.Add(this.dateTimePicker3);
             this.gpb_com_ven.Controls.Add(this.dateTimePicker2);
-            this.gpb_com_ven.Controls.Add(this.radioButton1);
-            this.gpb_com_ven.Controls.Add(this.textBox11);
-            this.gpb_com_ven.Controls.Add(this.textBox10);
-            this.gpb_com_ven.Controls.Add(this.textBox9);
-            this.gpb_com_ven.Controls.Add(this.textBox6);
+            this.gpb_com_ven.Controls.Add(this.rdb_factura);
+            this.gpb_com_ven.Controls.Add(this.txt_comsx);
+            this.gpb_com_ven.Controls.Add(this.txt_mar_c);
+            this.gpb_com_ven.Controls.Add(this.txt_dev);
+            this.gpb_com_ven.Controls.Add(this.txt_tc);
             this.gpb_com_ven.Controls.Add(this.textBox8);
-            this.gpb_com_ven.Controls.Add(this.textBox4);
-            this.gpb_com_ven.Controls.Add(this.textBox7);
-            this.gpb_com_ven.Controls.Add(this.textBox3);
-            this.gpb_com_ven.Controls.Add(this.textBox5);
-            this.gpb_com_ven.Controls.Add(this.textBox2);
-            this.gpb_com_ven.Controls.Add(this.textBox1);
+            this.gpb_com_ven.Controls.Add(this.txt_tv);
+            this.gpb_com_ven.Controls.Add(this.txt_vnd);
+            this.gpb_com_ven.Controls.Add(this.txt_porc_c);
+            this.gpb_com_ven.Controls.Add(this.txt_fecax);
+            this.gpb_com_ven.Controls.Add(this.txt_id_fac_d);
+            this.gpb_com_ven.Controls.Add(this.txt_empsx);
             this.gpb_com_ven.Controls.Add(this.label1);
             this.gpb_com_ven.Controls.Add(this.cbo_empres);
             this.gpb_com_ven.Controls.Add(this.lbl_ved);
@@ -304,8 +314,8 @@
             this.gpb_com_ven.Controls.Add(this.lbl_total_com);
             this.gpb_com_ven.Controls.Add(this.txt_total_com);
             this.gpb_com_ven.Controls.Add(this.lbl_nom_ved);
-            this.gpb_com_ven.Controls.Add(this.button1);
-            this.gpb_com_ven.Controls.Add(this.dataGridView1);
+            this.gpb_com_ven.Controls.Add(this.btn_generar);
+            this.gpb_com_ven.Controls.Add(this.dgv_comisiones);
             this.gpb_com_ven.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gpb_com_ven.Location = new System.Drawing.Point(8, 152);
             this.gpb_com_ven.Name = "gpb_com_ven";
@@ -313,6 +323,14 @@
             this.gpb_com_ven.TabIndex = 172;
             this.gpb_com_ven.TabStop = false;
             this.gpb_com_ven.Text = "Datos";
+            // 
+            // txt_id_puesto_lb
+            // 
+            this.txt_id_puesto_lb.Location = new System.Drawing.Point(479, 52);
+            this.txt_id_puesto_lb.Name = "txt_id_puesto_lb";
+            this.txt_id_puesto_lb.Size = new System.Drawing.Size(10, 27);
+            this.txt_id_puesto_lb.TabIndex = 218;
+            this.txt_id_puesto_lb.Visible = false;
             // 
             // label5
             // 
@@ -346,51 +364,52 @@
             this.dateTimePicker2.Size = new System.Drawing.Size(200, 27);
             this.dateTimePicker2.TabIndex = 214;
             // 
-            // radioButton1
+            // rdb_factura
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(581, 26);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(159, 25);
-            this.radioButton1.TabIndex = 213;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Fechas  Facturas";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rdb_factura.AutoSize = true;
+            this.rdb_factura.Location = new System.Drawing.Point(581, 26);
+            this.rdb_factura.Name = "rdb_factura";
+            this.rdb_factura.Size = new System.Drawing.Size(159, 25);
+            this.rdb_factura.TabIndex = 213;
+            this.rdb_factura.TabStop = true;
+            this.rdb_factura.Text = "Fechas  Facturas";
+            this.rdb_factura.UseVisualStyleBackColor = true;
+            this.rdb_factura.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
-            // textBox11
+            // txt_comsx
             // 
-            this.textBox11.Location = new System.Drawing.Point(352, 87);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(8, 27);
-            this.textBox11.TabIndex = 212;
-            this.textBox11.Visible = false;
+            this.txt_comsx.Location = new System.Drawing.Point(352, 87);
+            this.txt_comsx.Name = "txt_comsx";
+            this.txt_comsx.Size = new System.Drawing.Size(8, 27);
+            this.txt_comsx.TabIndex = 212;
+            this.txt_comsx.Visible = false;
             // 
-            // textBox10
+            // txt_mar_c
             // 
-            this.textBox10.Location = new System.Drawing.Point(6, 269);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(10, 27);
-            this.textBox10.TabIndex = 202;
-            this.textBox10.Tag = "marca_comision";
-            this.textBox10.Visible = false;
+            this.txt_mar_c.Location = new System.Drawing.Point(6, 269);
+            this.txt_mar_c.Name = "txt_mar_c";
+            this.txt_mar_c.Size = new System.Drawing.Size(10, 27);
+            this.txt_mar_c.TabIndex = 202;
+            this.txt_mar_c.Tag = "marca_comision";
+            this.txt_mar_c.Visible = false;
             // 
-            // textBox9
+            // txt_dev
             // 
-            this.textBox9.Location = new System.Drawing.Point(394, 21);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(10, 27);
-            this.textBox9.TabIndex = 211;
-            this.textBox9.Tag = "id_devengos_pk";
-            this.textBox9.Visible = false;
+            this.txt_dev.Location = new System.Drawing.Point(394, 21);
+            this.txt_dev.Name = "txt_dev";
+            this.txt_dev.Size = new System.Drawing.Size(10, 27);
+            this.txt_dev.TabIndex = 211;
+            this.txt_dev.Tag = "id_devengos_pk";
+            this.txt_dev.Visible = false;
             // 
-            // textBox6
+            // txt_tc
             // 
-            this.textBox6.Location = new System.Drawing.Point(6, 236);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(10, 27);
-            this.textBox6.TabIndex = 201;
-            this.textBox6.Tag = "total_comision";
-            this.textBox6.Visible = false;
+            this.txt_tc.Location = new System.Drawing.Point(6, 236);
+            this.txt_tc.Name = "txt_tc";
+            this.txt_tc.Size = new System.Drawing.Size(10, 27);
+            this.txt_tc.TabIndex = 201;
+            this.txt_tc.Tag = "total_comision";
+            this.txt_tc.Visible = false;
             // 
             // textBox8
             // 
@@ -401,64 +420,64 @@
             this.textBox8.Tag = "id_com_venta_pk";
             this.textBox8.Visible = false;
             // 
-            // textBox4
+            // txt_tv
             // 
-            this.textBox4.Location = new System.Drawing.Point(6, 203);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(10, 27);
-            this.textBox4.TabIndex = 200;
-            this.textBox4.Tag = "total_venta";
-            this.textBox4.Visible = false;
+            this.txt_tv.Location = new System.Drawing.Point(6, 203);
+            this.txt_tv.Name = "txt_tv";
+            this.txt_tv.Size = new System.Drawing.Size(10, 27);
+            this.txt_tv.TabIndex = 200;
+            this.txt_tv.Tag = "total_venta";
+            this.txt_tv.Visible = false;
             // 
-            // textBox7
+            // txt_vnd
             // 
-            this.textBox7.Location = new System.Drawing.Point(338, 55);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(10, 27);
-            this.textBox7.TabIndex = 209;
-            this.textBox7.Tag = "id_empleados_pk";
-            this.textBox7.Visible = false;
+            this.txt_vnd.Location = new System.Drawing.Point(338, 55);
+            this.txt_vnd.Name = "txt_vnd";
+            this.txt_vnd.Size = new System.Drawing.Size(10, 27);
+            this.txt_vnd.TabIndex = 209;
+            this.txt_vnd.Tag = "id_empleado_pk";
+            this.txt_vnd.Visible = false;
             // 
-            // textBox3
+            // txt_porc_c
             // 
-            this.textBox3.Location = new System.Drawing.Point(6, 170);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(10, 27);
-            this.textBox3.TabIndex = 199;
-            this.textBox3.Tag = "porsentaje_comision";
-            this.textBox3.Visible = false;
+            this.txt_porc_c.Location = new System.Drawing.Point(6, 170);
+            this.txt_porc_c.Name = "txt_porc_c";
+            this.txt_porc_c.Size = new System.Drawing.Size(10, 27);
+            this.txt_porc_c.TabIndex = 199;
+            this.txt_porc_c.Tag = "porsentaje_comision";
+            this.txt_porc_c.Visible = false;
             // 
-            // textBox5
+            // txt_fecax
             // 
-            this.textBox5.Location = new System.Drawing.Point(102, 21);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(10, 27);
-            this.textBox5.TabIndex = 208;
-            this.textBox5.Tag = "fecha";
-            this.textBox5.Visible = false;
+            this.txt_fecax.Location = new System.Drawing.Point(102, 21);
+            this.txt_fecax.Name = "txt_fecax";
+            this.txt_fecax.Size = new System.Drawing.Size(10, 27);
+            this.txt_fecax.TabIndex = 208;
+            this.txt_fecax.Tag = "fecha";
+            this.txt_fecax.Visible = false;
             // 
-            // textBox2
+            // txt_id_fac_d
             // 
-            this.textBox2.Location = new System.Drawing.Point(6, 137);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(10, 27);
-            this.textBox2.TabIndex = 198;
-            this.textBox2.Tag = "id_fac_empresa_pk";
-            this.textBox2.Visible = false;
+            this.txt_id_fac_d.Location = new System.Drawing.Point(6, 137);
+            this.txt_id_fac_d.Name = "txt_id_fac_d";
+            this.txt_id_fac_d.Size = new System.Drawing.Size(10, 27);
+            this.txt_id_fac_d.TabIndex = 198;
+            this.txt_id_fac_d.Tag = "id_fac_empresa_pk";
+            this.txt_id_fac_d.Visible = false;
             // 
-            // textBox1
+            // txt_empsx
             // 
-            this.textBox1.Location = new System.Drawing.Point(102, 52);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(10, 27);
-            this.textBox1.TabIndex = 207;
-            this.textBox1.Tag = "id_empresa_pk";
-            this.textBox1.Visible = false;
+            this.txt_empsx.Location = new System.Drawing.Point(102, 54);
+            this.txt_empsx.Name = "txt_empsx";
+            this.txt_empsx.Size = new System.Drawing.Size(10, 27);
+            this.txt_empsx.TabIndex = 207;
+            this.txt_empsx.Tag = "id_empresa_pk";
+            this.txt_empsx.Visible = false;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(19, 55);
+            this.label1.Location = new System.Drawing.Point(19, 59);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(77, 21);
             this.label1.TabIndex = 206;
@@ -466,11 +485,14 @@
             // 
             // cbo_empres
             // 
+            this.cbo_empres.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_empres.FormattingEnabled = true;
             this.cbo_empres.Location = new System.Drawing.Point(117, 52);
             this.cbo_empres.Name = "cbo_empres";
             this.cbo_empres.Size = new System.Drawing.Size(121, 29);
             this.cbo_empres.TabIndex = 205;
+            this.cbo_empres.SelectedIndexChanged += new System.EventHandler(this.cbo_empres_SelectedIndexChanged);
+            this.cbo_empres.Click += new System.EventHandler(this.cbo_empres_Click);
             // 
             // lbl_ved
             // 
@@ -483,11 +505,13 @@
             // 
             // cbo_empleado
             // 
+            this.cbo_empleado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_empleado.FormattingEnabled = true;
             this.cbo_empleado.Location = new System.Drawing.Point(352, 52);
             this.cbo_empleado.Name = "cbo_empleado";
             this.cbo_empleado.Size = new System.Drawing.Size(121, 29);
             this.cbo_empleado.TabIndex = 203;
+            this.cbo_empleado.SelectedIndexChanged += new System.EventHandler(this.cbo_empleado_SelectedIndexChanged);
             // 
             // dateTimePicker1
             // 
@@ -512,7 +536,7 @@
             this.txt_venta.Name = "txt_venta";
             this.txt_venta.Size = new System.Drawing.Size(70, 27);
             this.txt_venta.TabIndex = 200;
-            this.txt_venta.Tag = "total_ventas";
+            this.txt_venta.Tag = "total_venta";
             // 
             // lbl_total_com
             // 
@@ -540,27 +564,28 @@
             this.lbl_nom_ved.TabIndex = 197;
             this.lbl_nom_ved.Text = "Total ventas:";
             // 
-            // button1
+            // btn_generar
             // 
-            this.button1.Location = new System.Drawing.Point(339, 293);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(114, 29);
-            this.button1.TabIndex = 175;
-            this.button1.Text = "GENERAR";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_generar.Location = new System.Drawing.Point(339, 293);
+            this.btn_generar.Name = "btn_generar";
+            this.btn_generar.Size = new System.Drawing.Size(114, 29);
+            this.btn_generar.TabIndex = 175;
+            this.btn_generar.Text = "GENERAR";
+            this.btn_generar.UseVisualStyleBackColor = true;
+            this.btn_generar.Click += new System.EventHandler(this.button1_Click);
             // 
-            // dataGridView1
+            // dgv_comisiones
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgv_comisiones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_comisiones.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID_FACTURA,
             this.TOTAL_FACTURA,
             this.PORCENTAJE_COMISION,
             this.TOTAL_COMISION});
-            this.dataGridView1.Location = new System.Drawing.Point(17, 137);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(745, 150);
-            this.dataGridView1.TabIndex = 174;
+            this.dgv_comisiones.Location = new System.Drawing.Point(22, 137);
+            this.dgv_comisiones.Name = "dgv_comisiones";
+            this.dgv_comisiones.Size = new System.Drawing.Size(745, 150);
+            this.dgv_comisiones.TabIndex = 174;
             // 
             // ID_FACTURA
             // 
@@ -586,22 +611,27 @@
             this.TOTAL_COMISION.Name = "TOTAL_COMISION";
             this.TOTAL_COMISION.Width = 175;
             // 
-            // Comisiones_vendedor
+            // frm_comisiones_vendedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
+            this.AutoScroll = true;
+            this.AutoSize = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 490);
             this.Controls.Add(this.lbl_form_comision_vent);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.gpb_nav);
             this.Controls.Add(this.gpb_com_ven);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Comisiones_vendedor";
+            this.MaximizeBox = false;
+            this.Name = "frm_comisiones_vendedor";
             this.Text = "Comisiones_vendedor";
-            this.groupBox1.ResumeLayout(false);
+            this.Load += new System.EventHandler(this.frm_comisiones_vendedor_Load);
+            this.gpb_nav.ResumeLayout(false);
             this.gpb_com_ven.ResumeLayout(false);
             this.gpb_com_ven.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_comisiones)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -610,7 +640,7 @@
         #endregion
 
         private System.Windows.Forms.Label lbl_form_comision_vent;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox gpb_nav;
         private System.Windows.Forms.Button btn_nuevo;
         private System.Windows.Forms.Button btn_ultimo;
         private System.Windows.Forms.Button btn_guardar;
@@ -627,18 +657,18 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DateTimePicker dateTimePicker3;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.RadioButton rdb_factura;
+        private System.Windows.Forms.TextBox txt_comsx;
+        private System.Windows.Forms.TextBox txt_mar_c;
+        private System.Windows.Forms.TextBox txt_dev;
+        private System.Windows.Forms.TextBox txt_tc;
         private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_tv;
+        private System.Windows.Forms.TextBox txt_vnd;
+        private System.Windows.Forms.TextBox txt_porc_c;
+        private System.Windows.Forms.TextBox txt_fecax;
+        private System.Windows.Forms.TextBox txt_id_fac_d;
+        private System.Windows.Forms.TextBox txt_empsx;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cbo_empres;
         private System.Windows.Forms.Label lbl_ved;
@@ -649,11 +679,13 @@
         private System.Windows.Forms.Label lbl_total_com;
         private System.Windows.Forms.TextBox txt_total_com;
         private System.Windows.Forms.Label lbl_nom_ved;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button btn_generar;
+        private System.Windows.Forms.DataGridView dgv_comisiones;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID_FACTURA;
         private System.Windows.Forms.DataGridViewTextBoxColumn TOTAL_FACTURA;
         private System.Windows.Forms.DataGridViewTextBoxColumn PORCENTAJE_COMISION;
         private System.Windows.Forms.DataGridViewTextBoxColumn TOTAL_COMISION;
+        private System.Windows.Forms.TextBox txt_id_puesto_lb;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

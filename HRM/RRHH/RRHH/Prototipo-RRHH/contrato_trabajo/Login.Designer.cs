@@ -44,9 +44,10 @@
             // btn_logear
             // 
             this.btn_logear.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_logear.Location = new System.Drawing.Point(137, 349);
+            this.btn_logear.Location = new System.Drawing.Point(183, 430);
+            this.btn_logear.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_logear.Name = "btn_logear";
-            this.btn_logear.Size = new System.Drawing.Size(146, 36);
+            this.btn_logear.Size = new System.Drawing.Size(195, 44);
             this.btn_logear.TabIndex = 9;
             this.btn_logear.Text = "Iniciar Sesion";
             this.btn_logear.UseVisualStyleBackColor = true;
@@ -56,9 +57,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(37, 301);
+            this.label2.Location = new System.Drawing.Point(49, 370);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(102, 19);
+            this.label2.Size = new System.Drawing.Size(129, 23);
             this.label2.TabIndex = 8;
             this.label2.Text = "Contraseña:";
             // 
@@ -66,34 +68,38 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(37, 226);
+            this.label1.Location = new System.Drawing.Point(49, 278);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(69, 19);
+            this.label1.Size = new System.Drawing.Size(87, 23);
             this.label1.TabIndex = 7;
             this.label1.Text = "Usuario:";
             // 
             // txt_contraseña
             // 
-            this.txt_contraseña.Location = new System.Drawing.Point(41, 323);
+            this.txt_contraseña.Location = new System.Drawing.Point(55, 398);
+            this.txt_contraseña.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_contraseña.Name = "txt_contraseña";
-            this.txt_contraseña.Size = new System.Drawing.Size(242, 20);
+            this.txt_contraseña.Size = new System.Drawing.Size(321, 22);
             this.txt_contraseña.TabIndex = 6;
             this.txt_contraseña.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_contraseña_KeyPress_1);
             // 
             // txt_usuario
             // 
-            this.txt_usuario.Location = new System.Drawing.Point(41, 248);
+            this.txt_usuario.Location = new System.Drawing.Point(55, 305);
+            this.txt_usuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_usuario.Name = "txt_usuario";
-            this.txt_usuario.Size = new System.Drawing.Size(242, 20);
+            this.txt_usuario.Size = new System.Drawing.Size(321, 22);
             this.txt_usuario.TabIndex = 5;
             // 
             // pb_hsc
             // 
             this.pb_hsc.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pb_hsc.BackgroundImage")));
             this.pb_hsc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pb_hsc.Location = new System.Drawing.Point(12, 51);
+            this.pb_hsc.Location = new System.Drawing.Point(16, 63);
+            this.pb_hsc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pb_hsc.Name = "pb_hsc";
-            this.pb_hsc.Size = new System.Drawing.Size(312, 158);
+            this.pb_hsc.Size = new System.Drawing.Size(416, 194);
             this.pb_hsc.TabIndex = 10;
             this.pb_hsc.TabStop = false;
             this.pb_hsc.Click += new System.EventHandler(this.pb_hsc_Click);
@@ -104,9 +110,10 @@
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(288, 0);
+            this.button1.Location = new System.Drawing.Point(384, 0);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(45, 45);
+            this.button1.Size = new System.Drawing.Size(60, 55);
             this.button1.TabIndex = 14;
             this.button1.UseVisualStyleBackColor = true;
             // 
@@ -117,9 +124,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(87, 9);
+            this.label3.Location = new System.Drawing.Point(116, 11);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(169, 34);
+            this.label3.Size = new System.Drawing.Size(208, 42);
             this.label3.TabIndex = 15;
             this.label3.Text = "Bienvenido";
             // 
@@ -131,18 +139,19 @@
             this.Lbl_ejemplo.AutoSize = true;
             this.Lbl_ejemplo.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_ejemplo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Lbl_ejemplo.Location = new System.Drawing.Point(37, 271);
+            this.Lbl_ejemplo.Location = new System.Drawing.Point(49, 334);
+            this.Lbl_ejemplo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Lbl_ejemplo.Name = "Lbl_ejemplo";
-            this.Lbl_ejemplo.Size = new System.Drawing.Size(153, 20);
+            this.Lbl_ejemplo.Size = new System.Drawing.Size(189, 22);
             this.Lbl_ejemplo.TabIndex = 16;
             this.Lbl_ejemplo.Text = "Ejemplo: tgonzalesc";
             // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(172)))), ((int)(((byte)(172)))));
-            this.ClientSize = new System.Drawing.Size(336, 464);
+            this.ClientSize = new System.Drawing.Size(448, 571);
             this.Controls.Add(this.Lbl_ejemplo);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button1);
@@ -153,7 +162,7 @@
             this.Controls.Add(this.txt_contraseña);
             this.Controls.Add(this.txt_usuario);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login Modulo RRHH";

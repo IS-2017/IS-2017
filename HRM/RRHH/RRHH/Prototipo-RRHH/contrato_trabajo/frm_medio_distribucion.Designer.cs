@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_medio_distribucion));
             this.gpb_medio_distribucion = new System.Windows.Forms.GroupBox();
             this.txt_estado_medio = new System.Windows.Forms.TextBox();
@@ -53,6 +54,7 @@
             this.btn_buscar = new System.Windows.Forms.Button();
             this.btn_actualizar = new System.Windows.Forms.Button();
             this.btn_cancelar = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.gpb_medio_distribucion.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -68,7 +70,8 @@
             this.gpb_medio_distribucion.Controls.Add(this.txt_telefono_medio);
             this.gpb_medio_distribucion.Controls.Add(this.lbl_telefono_medio);
             this.gpb_medio_distribucion.Controls.Add(this.lbl_correo_medio);
-            this.gpb_medio_distribucion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gpb_medio_distribucion.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gpb_medio_distribucion.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.gpb_medio_distribucion.Location = new System.Drawing.Point(7, 164);
             this.gpb_medio_distribucion.Name = "gpb_medio_distribucion";
             this.gpb_medio_distribucion.Size = new System.Drawing.Size(747, 122);
@@ -80,8 +83,9 @@
             // 
             this.txt_estado_medio.Location = new System.Drawing.Point(6, 88);
             this.txt_estado_medio.Name = "txt_estado_medio";
-            this.txt_estado_medio.Size = new System.Drawing.Size(29, 24);
+            this.txt_estado_medio.Size = new System.Drawing.Size(29, 26);
             this.txt_estado_medio.TabIndex = 19;
+            this.txt_estado_medio.TabStop = false;
             this.txt_estado_medio.Tag = "estado";
             this.txt_estado_medio.Text = "ACTIVO";
             this.txt_estado_medio.Visible = false;
@@ -89,27 +93,30 @@
             // txt_nombre_medio
             // 
             this.txt_nombre_medio.Location = new System.Drawing.Point(125, 23);
+            this.txt_nombre_medio.MaxLength = 150;
             this.txt_nombre_medio.Name = "txt_nombre_medio";
-            this.txt_nombre_medio.Size = new System.Drawing.Size(288, 24);
-            this.txt_nombre_medio.TabIndex = 18;
+            this.txt_nombre_medio.Size = new System.Drawing.Size(288, 26);
+            this.txt_nombre_medio.TabIndex = 12;
             this.txt_nombre_medio.Tag = "nombre_medio";
+            this.txt_nombre_medio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_nombre_medio_KeyPress);
             // 
             // lbl_nombre_medio
             // 
             this.lbl_nombre_medio.AutoSize = true;
             this.lbl_nombre_medio.Location = new System.Drawing.Point(56, 23);
             this.lbl_nombre_medio.Name = "lbl_nombre_medio";
-            this.lbl_nombre_medio.Size = new System.Drawing.Size(66, 18);
+            this.lbl_nombre_medio.Size = new System.Drawing.Size(72, 20);
             this.lbl_nombre_medio.TabIndex = 16;
             this.lbl_nombre_medio.Text = "Nombre:";
             // 
             // txt_url_medio
             // 
             this.txt_url_medio.Location = new System.Drawing.Point(509, 23);
+            this.txt_url_medio.MaxLength = 250;
             this.txt_url_medio.Multiline = true;
             this.txt_url_medio.Name = "txt_url_medio";
             this.txt_url_medio.Size = new System.Drawing.Size(223, 89);
-            this.txt_url_medio.TabIndex = 13;
+            this.txt_url_medio.TabIndex = 15;
             this.txt_url_medio.Tag = "url_medio";
             // 
             // lbl_url_medio
@@ -117,32 +124,36 @@
             this.lbl_url_medio.AutoSize = true;
             this.lbl_url_medio.Location = new System.Drawing.Point(472, 26);
             this.lbl_url_medio.Name = "lbl_url_medio";
-            this.lbl_url_medio.Size = new System.Drawing.Size(31, 18);
+            this.lbl_url_medio.Size = new System.Drawing.Size(32, 20);
             this.lbl_url_medio.TabIndex = 10;
             this.lbl_url_medio.Text = "Url:";
             // 
             // txt_correo_medio
             // 
             this.txt_correo_medio.Location = new System.Drawing.Point(125, 53);
+            this.txt_correo_medio.MaxLength = 150;
             this.txt_correo_medio.Name = "txt_correo_medio";
-            this.txt_correo_medio.Size = new System.Drawing.Size(288, 24);
-            this.txt_correo_medio.TabIndex = 9;
+            this.txt_correo_medio.Size = new System.Drawing.Size(288, 26);
+            this.txt_correo_medio.TabIndex = 13;
             this.txt_correo_medio.Tag = "correo_medio";
+            this.txt_correo_medio.Leave += new System.EventHandler(this.txt_correo_medio_Leave);
             // 
             // txt_telefono_medio
             // 
             this.txt_telefono_medio.Location = new System.Drawing.Point(125, 88);
+            this.txt_telefono_medio.MaxLength = 20;
             this.txt_telefono_medio.Name = "txt_telefono_medio";
-            this.txt_telefono_medio.Size = new System.Drawing.Size(288, 24);
-            this.txt_telefono_medio.TabIndex = 8;
+            this.txt_telefono_medio.Size = new System.Drawing.Size(288, 26);
+            this.txt_telefono_medio.TabIndex = 14;
             this.txt_telefono_medio.Tag = "telefono_medio";
+            this.txt_telefono_medio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_telefono_medio_KeyPress);
             // 
             // lbl_telefono_medio
             // 
             this.lbl_telefono_medio.AutoSize = true;
             this.lbl_telefono_medio.Location = new System.Drawing.Point(51, 88);
             this.lbl_telefono_medio.Name = "lbl_telefono_medio";
-            this.lbl_telefono_medio.Size = new System.Drawing.Size(70, 18);
+            this.lbl_telefono_medio.Size = new System.Drawing.Size(75, 20);
             this.lbl_telefono_medio.TabIndex = 1;
             this.lbl_telefono_medio.Text = "Telefono:";
             // 
@@ -151,20 +162,21 @@
             this.lbl_correo_medio.AutoSize = true;
             this.lbl_correo_medio.Location = new System.Drawing.Point(63, 56);
             this.lbl_correo_medio.Name = "lbl_correo_medio";
-            this.lbl_correo_medio.Size = new System.Drawing.Size(59, 18);
+            this.lbl_correo_medio.Size = new System.Drawing.Size(65, 20);
             this.lbl_correo_medio.TabIndex = 0;
             this.lbl_correo_medio.Text = "Correo:";
             // 
             // txt_lbl
             // 
             this.txt_lbl.AutoSize = true;
-            this.txt_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_lbl.Location = new System.Drawing.Point(252, 10);
+            this.txt_lbl.Font = new System.Drawing.Font("Century Gothic", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_lbl.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txt_lbl.Location = new System.Drawing.Point(243, 10);
             this.txt_lbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.txt_lbl.Name = "txt_lbl";
-            this.txt_lbl.Size = new System.Drawing.Size(248, 29);
+            this.txt_lbl.Size = new System.Drawing.Size(262, 34);
             this.txt_lbl.TabIndex = 51;
-            this.txt_lbl.Text = "Medio de Distribucion";
+            this.txt_lbl.Text = "Medio de Difusion";
             // 
             // groupBox2
             // 
@@ -180,7 +192,8 @@
             this.groupBox2.Controls.Add(this.btn_buscar);
             this.groupBox2.Controls.Add(this.btn_actualizar);
             this.groupBox2.Controls.Add(this.btn_cancelar);
-            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.groupBox2.Location = new System.Drawing.Point(44, 41);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(695, 106);
@@ -197,10 +210,11 @@
             this.btn_reporte.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.btn_reporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_reporte.Image = global::contrato_trabajo.Properties.Resources.imprimir;
-            this.btn_reporte.Location = new System.Drawing.Point(604, 10);
+            this.btn_reporte.Location = new System.Drawing.Point(513, 10);
             this.btn_reporte.Name = "btn_reporte";
             this.btn_reporte.Size = new System.Drawing.Size(86, 89);
-            this.btn_reporte.TabIndex = 12;
+            this.btn_reporte.TabIndex = 11;
+            this.toolTip1.SetToolTip(this.btn_reporte, "Reporte");
             this.btn_reporte.UseVisualStyleBackColor = true;
             this.btn_reporte.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -217,6 +231,7 @@
             this.btn_nuevo.Name = "btn_nuevo";
             this.btn_nuevo.Size = new System.Drawing.Size(65, 69);
             this.btn_nuevo.TabIndex = 0;
+            this.toolTip1.SetToolTip(this.btn_nuevo, "Nuevo");
             this.btn_nuevo.UseVisualStyleBackColor = true;
             this.btn_nuevo.Click += new System.EventHandler(this.btn_nuevo_Click);
             // 
@@ -229,10 +244,11 @@
             this.btn_ultimo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btn_ultimo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.btn_ultimo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_ultimo.Location = new System.Drawing.Point(565, 56);
+            this.btn_ultimo.Location = new System.Drawing.Point(641, 56);
             this.btn_ultimo.Name = "btn_ultimo";
             this.btn_ultimo.Size = new System.Drawing.Size(33, 36);
             this.btn_ultimo.TabIndex = 10;
+            this.toolTip1.SetToolTip(this.btn_ultimo, "Ultimo");
             this.btn_ultimo.UseVisualStyleBackColor = true;
             this.btn_ultimo.Click += new System.EventHandler(this.btn_ultimo_Click);
             // 
@@ -249,6 +265,7 @@
             this.btn_guardar.Name = "btn_guardar";
             this.btn_guardar.Size = new System.Drawing.Size(65, 69);
             this.btn_guardar.TabIndex = 1;
+            this.toolTip1.SetToolTip(this.btn_guardar, "Guardar");
             this.btn_guardar.UseVisualStyleBackColor = true;
             this.btn_guardar.Click += new System.EventHandler(this.btn_guardar_Click);
             // 
@@ -261,10 +278,11 @@
             this.btn_primero.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btn_primero.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.btn_primero.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_primero.Location = new System.Drawing.Point(529, 56);
+            this.btn_primero.Location = new System.Drawing.Point(605, 56);
             this.btn_primero.Name = "btn_primero";
             this.btn_primero.Size = new System.Drawing.Size(33, 36);
             this.btn_primero.TabIndex = 9;
+            this.toolTip1.SetToolTip(this.btn_primero, "Primero");
             this.btn_primero.UseVisualStyleBackColor = true;
             this.btn_primero.Click += new System.EventHandler(this.btn_primero_Click);
             // 
@@ -281,6 +299,7 @@
             this.btn_editar.Name = "btn_editar";
             this.btn_editar.Size = new System.Drawing.Size(65, 69);
             this.btn_editar.TabIndex = 2;
+            this.toolTip1.SetToolTip(this.btn_editar, "Modificar");
             this.btn_editar.UseVisualStyleBackColor = true;
             this.btn_editar.Click += new System.EventHandler(this.btn_editar_Click);
             // 
@@ -293,10 +312,11 @@
             this.btn_siguiente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btn_siguiente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.btn_siguiente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_siguiente.Location = new System.Drawing.Point(565, 19);
+            this.btn_siguiente.Location = new System.Drawing.Point(641, 19);
             this.btn_siguiente.Name = "btn_siguiente";
             this.btn_siguiente.Size = new System.Drawing.Size(33, 36);
             this.btn_siguiente.TabIndex = 8;
+            this.toolTip1.SetToolTip(this.btn_siguiente, "Siguiente");
             this.btn_siguiente.UseVisualStyleBackColor = true;
             this.btn_siguiente.Click += new System.EventHandler(this.btn_siguiente_Click);
             // 
@@ -313,6 +333,7 @@
             this.btn_eliminar.Name = "btn_eliminar";
             this.btn_eliminar.Size = new System.Drawing.Size(65, 69);
             this.btn_eliminar.TabIndex = 3;
+            this.toolTip1.SetToolTip(this.btn_eliminar, "Eliminar");
             this.btn_eliminar.UseVisualStyleBackColor = true;
             this.btn_eliminar.Click += new System.EventHandler(this.btn_eliminar_Click);
             // 
@@ -325,10 +346,11 @@
             this.btn_anterior.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btn_anterior.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.btn_anterior.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_anterior.Location = new System.Drawing.Point(529, 19);
+            this.btn_anterior.Location = new System.Drawing.Point(605, 19);
             this.btn_anterior.Name = "btn_anterior";
             this.btn_anterior.Size = new System.Drawing.Size(33, 36);
             this.btn_anterior.TabIndex = 7;
+            this.toolTip1.SetToolTip(this.btn_anterior, "Anterior");
             this.btn_anterior.UseVisualStyleBackColor = true;
             this.btn_anterior.Click += new System.EventHandler(this.btn_anterior_Click);
             // 
@@ -345,6 +367,7 @@
             this.btn_buscar.Name = "btn_buscar";
             this.btn_buscar.Size = new System.Drawing.Size(65, 69);
             this.btn_buscar.TabIndex = 4;
+            this.toolTip1.SetToolTip(this.btn_buscar, "Buscar");
             this.btn_buscar.UseVisualStyleBackColor = true;
             this.btn_buscar.Click += new System.EventHandler(this.btn_buscar_Click);
             // 
@@ -361,6 +384,7 @@
             this.btn_actualizar.Name = "btn_actualizar";
             this.btn_actualizar.Size = new System.Drawing.Size(65, 69);
             this.btn_actualizar.TabIndex = 6;
+            this.toolTip1.SetToolTip(this.btn_actualizar, "Actualizar");
             this.btn_actualizar.UseVisualStyleBackColor = true;
             this.btn_actualizar.Click += new System.EventHandler(this.btn_actualizar_Click);
             // 
@@ -377,6 +401,7 @@
             this.btn_cancelar.Name = "btn_cancelar";
             this.btn_cancelar.Size = new System.Drawing.Size(65, 69);
             this.btn_cancelar.TabIndex = 5;
+            this.toolTip1.SetToolTip(this.btn_cancelar, "Cancelar");
             this.btn_cancelar.UseVisualStyleBackColor = true;
             this.btn_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
             // 
@@ -384,15 +409,19 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
+            this.AutoSize = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(762, 298);
             this.Controls.Add(this.gpb_medio_distribucion);
             this.Controls.Add(this.txt_lbl);
             this.Controls.Add(this.groupBox2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "frm_medio_distribucion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Medio de Distribucion";
+            this.Text = "Medio de Difusion";
             this.Load += new System.EventHandler(this.frm_medio_distribucion_Load);
             this.gpb_medio_distribucion.ResumeLayout(false);
             this.gpb_medio_distribucion.PerformLayout();
@@ -428,5 +457,6 @@
         private System.Windows.Forms.Button btn_actualizar;
         private System.Windows.Forms.Button btn_cancelar;
         private System.Windows.Forms.TextBox txt_estado_medio;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

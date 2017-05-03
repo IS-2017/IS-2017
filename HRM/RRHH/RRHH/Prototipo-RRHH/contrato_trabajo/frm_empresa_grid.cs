@@ -18,7 +18,7 @@ namespace contrato_trabajo
         private void btn_actualizar_Click(object sender, EventArgs e)
         {
             string tabla = "empresa";
-            fn.ActualizarGrid(this.dgv_empresa, "Select * from empresa WHERE estado <> 'INACTIVO' ", tabla);
+            fn.ActualizarGrid(this.dgv_empresa, "Select * from empresa WHERE estado_empresa <> 'INACTIVO' ", tabla);
         }
 
         private void btn_anterior_Click(object sender, EventArgs e)
@@ -44,7 +44,7 @@ namespace contrato_trabajo
         private void frm_empresa_grid_Load(object sender, EventArgs e)
         {
             string tabla = "empresa";
-            fn.ActualizarGrid(this.dgv_empresa, "Select * from empresa WHERE estado <> 'INACTIVO' ", tabla);
+            fn.ActualizarGrid(this.dgv_empresa, "Select * from empresa WHERE estado_empresa <> 'INACTIVO' ", tabla);
         }
 
         private void dgv_empresa_CellDoubleClick(object sender, DataGridViewCellEventArgs e)

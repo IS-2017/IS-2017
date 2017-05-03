@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -43,6 +44,13 @@
             this.btn_anterior = new System.Windows.Forms.Button();
             this.btn_buscar = new System.Windows.Forms.Button();
             this.btn_actualizar = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTip3 = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTip4 = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTip5 = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTip6 = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTip7 = new System.Windows.Forms.ToolTip(this.components);
             this.gpb_activos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_activos)).BeginInit();
             this.gpb_navegador.SuspendLayout();
@@ -52,11 +60,11 @@
             // 
             this.gpb_activos.Controls.Add(this.dgv_activos);
             this.gpb_activos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gpb_activos.Location = new System.Drawing.Point(11, 150);
+            this.gpb_activos.Location = new System.Drawing.Point(12, 150);
             this.gpb_activos.Margin = new System.Windows.Forms.Padding(2);
             this.gpb_activos.Name = "gpb_activos";
             this.gpb_activos.Padding = new System.Windows.Forms.Padding(2);
-            this.gpb_activos.Size = new System.Drawing.Size(955, 395);
+            this.gpb_activos.Size = new System.Drawing.Size(954, 395);
             this.gpb_activos.TabIndex = 193;
             this.gpb_activos.TabStop = false;
             this.gpb_activos.Text = "Lista de Activos";
@@ -95,7 +103,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgv_activos.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_activos.RowTemplate.Height = 24;
-            this.dgv_activos.Size = new System.Drawing.Size(947, 373);
+            this.dgv_activos.Size = new System.Drawing.Size(946, 373);
             this.dgv_activos.TabIndex = 24;
             this.dgv_activos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_activos_CellDoubleClick);
             // 
@@ -139,7 +147,8 @@
             this.btn_nuevo.Location = new System.Drawing.Point(17, 21);
             this.btn_nuevo.Name = "btn_nuevo";
             this.btn_nuevo.Size = new System.Drawing.Size(65, 65);
-            this.btn_nuevo.TabIndex = 0;
+            this.btn_nuevo.TabIndex = 1;
+            this.toolTip1.SetToolTip(this.btn_nuevo, "Nuevo");
             this.btn_nuevo.UseVisualStyleBackColor = true;
             this.btn_nuevo.Click += new System.EventHandler(this.btn_nuevo_Click);
             // 
@@ -155,7 +164,8 @@
             this.btn_ultimo.Location = new System.Drawing.Point(281, 55);
             this.btn_ultimo.Name = "btn_ultimo";
             this.btn_ultimo.Size = new System.Drawing.Size(33, 33);
-            this.btn_ultimo.TabIndex = 10;
+            this.btn_ultimo.TabIndex = 7;
+            this.toolTip7.SetToolTip(this.btn_ultimo, "Ultimo");
             this.btn_ultimo.UseVisualStyleBackColor = true;
             this.btn_ultimo.Click += new System.EventHandler(this.btn_ultimo_Click);
             // 
@@ -171,7 +181,8 @@
             this.btn_primero.Location = new System.Drawing.Point(245, 55);
             this.btn_primero.Name = "btn_primero";
             this.btn_primero.Size = new System.Drawing.Size(33, 33);
-            this.btn_primero.TabIndex = 9;
+            this.btn_primero.TabIndex = 6;
+            this.toolTip6.SetToolTip(this.btn_primero, "Primero");
             this.btn_primero.UseVisualStyleBackColor = true;
             this.btn_primero.Click += new System.EventHandler(this.btn_primero_Click);
             // 
@@ -187,7 +198,8 @@
             this.btn_siguiente.Location = new System.Drawing.Point(281, 20);
             this.btn_siguiente.Name = "btn_siguiente";
             this.btn_siguiente.Size = new System.Drawing.Size(33, 33);
-            this.btn_siguiente.TabIndex = 8;
+            this.btn_siguiente.TabIndex = 5;
+            this.toolTip5.SetToolTip(this.btn_siguiente, "Siguiente");
             this.btn_siguiente.UseVisualStyleBackColor = true;
             this.btn_siguiente.Click += new System.EventHandler(this.btn_siguiente_Click);
             // 
@@ -203,7 +215,8 @@
             this.btn_anterior.Location = new System.Drawing.Point(245, 20);
             this.btn_anterior.Name = "btn_anterior";
             this.btn_anterior.Size = new System.Drawing.Size(33, 33);
-            this.btn_anterior.TabIndex = 7;
+            this.btn_anterior.TabIndex = 4;
+            this.toolTip4.SetToolTip(this.btn_anterior, "Anterior");
             this.btn_anterior.UseVisualStyleBackColor = true;
             this.btn_anterior.Click += new System.EventHandler(this.btn_anterior_Click);
             // 
@@ -219,7 +232,8 @@
             this.btn_buscar.Location = new System.Drawing.Point(88, 21);
             this.btn_buscar.Name = "btn_buscar";
             this.btn_buscar.Size = new System.Drawing.Size(65, 65);
-            this.btn_buscar.TabIndex = 4;
+            this.btn_buscar.TabIndex = 2;
+            this.toolTip2.SetToolTip(this.btn_buscar, "Buscar");
             this.btn_buscar.UseVisualStyleBackColor = true;
             this.btn_buscar.Click += new System.EventHandler(this.btn_buscar_Click);
             // 
@@ -235,7 +249,8 @@
             this.btn_actualizar.Location = new System.Drawing.Point(159, 21);
             this.btn_actualizar.Name = "btn_actualizar";
             this.btn_actualizar.Size = new System.Drawing.Size(65, 65);
-            this.btn_actualizar.TabIndex = 6;
+            this.btn_actualizar.TabIndex = 3;
+            this.toolTip3.SetToolTip(this.btn_actualizar, "Actualizar");
             this.btn_actualizar.UseVisualStyleBackColor = true;
             this.btn_actualizar.Click += new System.EventHandler(this.btn_actualizar_Click);
             // 
@@ -243,7 +258,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
+            this.AutoScroll = true;
+            this.AutoSize = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(977, 555);
             this.Controls.Add(this.gpb_activos);
             this.Controls.Add(this.lbl_form_activos);
@@ -276,5 +294,12 @@
         private System.Windows.Forms.Button btn_anterior;
         private System.Windows.Forms.Button btn_buscar;
         private System.Windows.Forms.Button btn_actualizar;
+        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.ToolTip toolTip7;
+        private System.Windows.Forms.ToolTip toolTip6;
+        private System.Windows.Forms.ToolTip toolTip5;
+        private System.Windows.Forms.ToolTip toolTip4;
+        private System.Windows.Forms.ToolTip toolTip2;
+        private System.Windows.Forms.ToolTip toolTip3;
     }
 }

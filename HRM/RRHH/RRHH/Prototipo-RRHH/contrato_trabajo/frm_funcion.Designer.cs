@@ -28,8 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_funcion));
             this.gpb_funciones = new System.Windows.Forms.GroupBox();
+            this.cbo_perfil_reclutamiento_funcion = new System.Windows.Forms.ComboBox();
             this.txt_estado_funcion = new System.Windows.Forms.TextBox();
             this.txt_nombre_funcion = new System.Windows.Forms.TextBox();
             this.lbl_nombre_funcion = new System.Windows.Forms.Label();
@@ -53,7 +55,7 @@
             this.btn_buscar = new System.Windows.Forms.Button();
             this.btn_actualizar = new System.Windows.Forms.Button();
             this.btn_cancelar = new System.Windows.Forms.Button();
-            this.cbo_perfil_reclutamiento_funcion = new System.Windows.Forms.ComboBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.gpb_funciones.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -70,7 +72,8 @@
             this.gpb_funciones.Controls.Add(this.txt_id_perfil_reclutamiento_pk_funcion);
             this.gpb_funciones.Controls.Add(this.lbl_id_perfil_reclutamiento_pk_funcion);
             this.gpb_funciones.Controls.Add(this.lbl_sueldo_funcion);
-            this.gpb_funciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gpb_funciones.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gpb_funciones.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.gpb_funciones.Location = new System.Drawing.Point(4, 160);
             this.gpb_funciones.Name = "gpb_funciones";
             this.gpb_funciones.Size = new System.Drawing.Size(747, 122);
@@ -78,12 +81,22 @@
             this.gpb_funciones.TabStop = false;
             this.gpb_funciones.Text = "Datos generales";
             // 
+            // cbo_perfil_reclutamiento_funcion
+            // 
+            this.cbo_perfil_reclutamiento_funcion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbo_perfil_reclutamiento_funcion.FormattingEnabled = true;
+            this.cbo_perfil_reclutamiento_funcion.Location = new System.Drawing.Point(221, 86);
+            this.cbo_perfil_reclutamiento_funcion.Name = "cbo_perfil_reclutamiento_funcion";
+            this.cbo_perfil_reclutamiento_funcion.Size = new System.Drawing.Size(192, 28);
+            this.cbo_perfil_reclutamiento_funcion.TabIndex = 14;
+            // 
             // txt_estado_funcion
             // 
             this.txt_estado_funcion.Location = new System.Drawing.Point(6, 88);
             this.txt_estado_funcion.Name = "txt_estado_funcion";
-            this.txt_estado_funcion.Size = new System.Drawing.Size(29, 24);
+            this.txt_estado_funcion.Size = new System.Drawing.Size(29, 26);
             this.txt_estado_funcion.TabIndex = 19;
+            this.txt_estado_funcion.TabStop = false;
             this.txt_estado_funcion.Tag = "estado";
             this.txt_estado_funcion.Text = "ACTIVO";
             this.txt_estado_funcion.Visible = false;
@@ -91,61 +104,69 @@
             // txt_nombre_funcion
             // 
             this.txt_nombre_funcion.Location = new System.Drawing.Point(125, 23);
+            this.txt_nombre_funcion.MaxLength = 150;
             this.txt_nombre_funcion.Name = "txt_nombre_funcion";
-            this.txt_nombre_funcion.Size = new System.Drawing.Size(288, 24);
-            this.txt_nombre_funcion.TabIndex = 18;
+            this.txt_nombre_funcion.Size = new System.Drawing.Size(288, 26);
+            this.txt_nombre_funcion.TabIndex = 12;
             this.txt_nombre_funcion.Tag = "nombre_funcion";
+            this.txt_nombre_funcion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_nombre_funcion_KeyPress);
             // 
             // lbl_nombre_funcion
             // 
             this.lbl_nombre_funcion.AutoSize = true;
             this.lbl_nombre_funcion.Location = new System.Drawing.Point(56, 23);
             this.lbl_nombre_funcion.Name = "lbl_nombre_funcion";
-            this.lbl_nombre_funcion.Size = new System.Drawing.Size(66, 18);
+            this.lbl_nombre_funcion.Size = new System.Drawing.Size(72, 20);
             this.lbl_nombre_funcion.TabIndex = 16;
             this.lbl_nombre_funcion.Text = "Nombre:";
             // 
             // txt_descripcion_funcion
             // 
             this.txt_descripcion_funcion.Location = new System.Drawing.Point(529, 23);
+            this.txt_descripcion_funcion.MaxLength = 250;
             this.txt_descripcion_funcion.Multiline = true;
             this.txt_descripcion_funcion.Name = "txt_descripcion_funcion";
             this.txt_descripcion_funcion.Size = new System.Drawing.Size(203, 89);
-            this.txt_descripcion_funcion.TabIndex = 13;
+            this.txt_descripcion_funcion.TabIndex = 15;
             this.txt_descripcion_funcion.Tag = "descripcion_funcion";
+            this.txt_descripcion_funcion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_descripcion_funcion_KeyPress);
             // 
             // lbl_descripcion_funcion
             // 
             this.lbl_descripcion_funcion.AutoSize = true;
-            this.lbl_descripcion_funcion.Location = new System.Drawing.Point(440, 26);
+            this.lbl_descripcion_funcion.Location = new System.Drawing.Point(430, 26);
             this.lbl_descripcion_funcion.Name = "lbl_descripcion_funcion";
-            this.lbl_descripcion_funcion.Size = new System.Drawing.Size(91, 18);
+            this.lbl_descripcion_funcion.Size = new System.Drawing.Size(100, 20);
             this.lbl_descripcion_funcion.TabIndex = 10;
             this.lbl_descripcion_funcion.Text = "Descripcion:";
             // 
             // txt_sueldo_funcion
             // 
             this.txt_sueldo_funcion.Location = new System.Drawing.Point(125, 53);
+            this.txt_sueldo_funcion.MaxLength = 150;
             this.txt_sueldo_funcion.Name = "txt_sueldo_funcion";
-            this.txt_sueldo_funcion.Size = new System.Drawing.Size(288, 24);
-            this.txt_sueldo_funcion.TabIndex = 9;
+            this.txt_sueldo_funcion.Size = new System.Drawing.Size(288, 26);
+            this.txt_sueldo_funcion.TabIndex = 13;
             this.txt_sueldo_funcion.Tag = "sueldo_funcion";
+            this.txt_sueldo_funcion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_sueldo_funcion_KeyPress);
             // 
             // txt_id_perfil_reclutamiento_pk_funcion
             // 
             this.txt_id_perfil_reclutamiento_pk_funcion.Location = new System.Drawing.Point(425, 88);
+            this.txt_id_perfil_reclutamiento_pk_funcion.MaxLength = 11;
             this.txt_id_perfil_reclutamiento_pk_funcion.Name = "txt_id_perfil_reclutamiento_pk_funcion";
-            this.txt_id_perfil_reclutamiento_pk_funcion.Size = new System.Drawing.Size(43, 24);
+            this.txt_id_perfil_reclutamiento_pk_funcion.Size = new System.Drawing.Size(43, 26);
             this.txt_id_perfil_reclutamiento_pk_funcion.TabIndex = 8;
+            this.txt_id_perfil_reclutamiento_pk_funcion.TabStop = false;
             this.txt_id_perfil_reclutamiento_pk_funcion.Tag = "id_perfil_reclutamiento_pk";
             this.txt_id_perfil_reclutamiento_pk_funcion.Visible = false;
             // 
             // lbl_id_perfil_reclutamiento_pk_funcion
             // 
             this.lbl_id_perfil_reclutamiento_pk_funcion.AutoSize = true;
-            this.lbl_id_perfil_reclutamiento_pk_funcion.Location = new System.Drawing.Point(51, 87);
+            this.lbl_id_perfil_reclutamiento_pk_funcion.Location = new System.Drawing.Point(41, 87);
             this.lbl_id_perfil_reclutamiento_pk_funcion.Name = "lbl_id_perfil_reclutamiento_pk_funcion";
-            this.lbl_id_perfil_reclutamiento_pk_funcion.Size = new System.Drawing.Size(164, 18);
+            this.lbl_id_perfil_reclutamiento_pk_funcion.Size = new System.Drawing.Size(182, 20);
             this.lbl_id_perfil_reclutamiento_pk_funcion.TabIndex = 1;
             this.lbl_id_perfil_reclutamiento_pk_funcion.Text = "Perfil de Reclutamiento:";
             // 
@@ -154,18 +175,19 @@
             this.lbl_sueldo_funcion.AutoSize = true;
             this.lbl_sueldo_funcion.Location = new System.Drawing.Point(64, 54);
             this.lbl_sueldo_funcion.Name = "lbl_sueldo_funcion";
-            this.lbl_sueldo_funcion.Size = new System.Drawing.Size(58, 18);
+            this.lbl_sueldo_funcion.Size = new System.Drawing.Size(62, 20);
             this.lbl_sueldo_funcion.TabIndex = 0;
             this.lbl_sueldo_funcion.Text = "Sueldo:";
             // 
             // lbl_funciones
             // 
             this.lbl_funciones.AutoSize = true;
-            this.lbl_funciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_funciones.Font = new System.Drawing.Font("Century Gothic", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_funciones.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lbl_funciones.Location = new System.Drawing.Point(310, 8);
             this.lbl_funciones.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_funciones.Name = "lbl_funciones";
-            this.lbl_funciones.Size = new System.Drawing.Size(125, 29);
+            this.lbl_funciones.Size = new System.Drawing.Size(152, 34);
             this.lbl_funciones.TabIndex = 54;
             this.lbl_funciones.Text = "Funciones";
             // 
@@ -183,7 +205,8 @@
             this.groupBox2.Controls.Add(this.btn_buscar);
             this.groupBox2.Controls.Add(this.btn_actualizar);
             this.groupBox2.Controls.Add(this.btn_cancelar);
-            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.groupBox2.Location = new System.Drawing.Point(41, 37);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(695, 106);
@@ -203,7 +226,8 @@
             this.btn_reporte.Location = new System.Drawing.Point(604, 10);
             this.btn_reporte.Name = "btn_reporte";
             this.btn_reporte.Size = new System.Drawing.Size(86, 89);
-            this.btn_reporte.TabIndex = 12;
+            this.btn_reporte.TabIndex = 11;
+            this.toolTip1.SetToolTip(this.btn_reporte, "Reporte");
             this.btn_reporte.UseVisualStyleBackColor = true;
             this.btn_reporte.Click += new System.EventHandler(this.btn_reporte_Click);
             // 
@@ -220,6 +244,7 @@
             this.btn_nuevo.Name = "btn_nuevo";
             this.btn_nuevo.Size = new System.Drawing.Size(65, 69);
             this.btn_nuevo.TabIndex = 0;
+            this.toolTip1.SetToolTip(this.btn_nuevo, "Nuevo");
             this.btn_nuevo.UseVisualStyleBackColor = true;
             this.btn_nuevo.Click += new System.EventHandler(this.btn_nuevo_Click);
             // 
@@ -236,6 +261,7 @@
             this.btn_ultimo.Name = "btn_ultimo";
             this.btn_ultimo.Size = new System.Drawing.Size(33, 36);
             this.btn_ultimo.TabIndex = 10;
+            this.toolTip1.SetToolTip(this.btn_ultimo, "Ultimo");
             this.btn_ultimo.UseVisualStyleBackColor = true;
             this.btn_ultimo.Click += new System.EventHandler(this.btn_ultimo_Click);
             // 
@@ -252,6 +278,7 @@
             this.btn_guardar.Name = "btn_guardar";
             this.btn_guardar.Size = new System.Drawing.Size(65, 69);
             this.btn_guardar.TabIndex = 1;
+            this.toolTip1.SetToolTip(this.btn_guardar, "Guardar");
             this.btn_guardar.UseVisualStyleBackColor = true;
             this.btn_guardar.Click += new System.EventHandler(this.btn_guardar_Click);
             // 
@@ -268,6 +295,7 @@
             this.btn_primero.Name = "btn_primero";
             this.btn_primero.Size = new System.Drawing.Size(33, 36);
             this.btn_primero.TabIndex = 9;
+            this.toolTip1.SetToolTip(this.btn_primero, "Primero");
             this.btn_primero.UseVisualStyleBackColor = true;
             this.btn_primero.Click += new System.EventHandler(this.btn_primero_Click);
             // 
@@ -284,6 +312,7 @@
             this.btn_editar.Name = "btn_editar";
             this.btn_editar.Size = new System.Drawing.Size(65, 69);
             this.btn_editar.TabIndex = 2;
+            this.toolTip1.SetToolTip(this.btn_editar, "Modificar");
             this.btn_editar.UseVisualStyleBackColor = true;
             this.btn_editar.Click += new System.EventHandler(this.btn_editar_Click);
             // 
@@ -300,6 +329,7 @@
             this.btn_siguiente.Name = "btn_siguiente";
             this.btn_siguiente.Size = new System.Drawing.Size(33, 36);
             this.btn_siguiente.TabIndex = 8;
+            this.toolTip1.SetToolTip(this.btn_siguiente, "Siguiente");
             this.btn_siguiente.UseVisualStyleBackColor = true;
             this.btn_siguiente.Click += new System.EventHandler(this.btn_siguiente_Click);
             // 
@@ -316,6 +346,7 @@
             this.btn_eliminar.Name = "btn_eliminar";
             this.btn_eliminar.Size = new System.Drawing.Size(65, 69);
             this.btn_eliminar.TabIndex = 3;
+            this.toolTip1.SetToolTip(this.btn_eliminar, "Eliminar");
             this.btn_eliminar.UseVisualStyleBackColor = true;
             this.btn_eliminar.Click += new System.EventHandler(this.btn_eliminar_Click);
             // 
@@ -332,6 +363,7 @@
             this.btn_anterior.Name = "btn_anterior";
             this.btn_anterior.Size = new System.Drawing.Size(33, 36);
             this.btn_anterior.TabIndex = 7;
+            this.toolTip1.SetToolTip(this.btn_anterior, "Anterior");
             this.btn_anterior.UseVisualStyleBackColor = true;
             this.btn_anterior.Click += new System.EventHandler(this.btn_anterior_Click);
             // 
@@ -348,6 +380,7 @@
             this.btn_buscar.Name = "btn_buscar";
             this.btn_buscar.Size = new System.Drawing.Size(65, 69);
             this.btn_buscar.TabIndex = 4;
+            this.toolTip1.SetToolTip(this.btn_buscar, "Buscar");
             this.btn_buscar.UseVisualStyleBackColor = true;
             this.btn_buscar.Click += new System.EventHandler(this.btn_buscar_Click);
             // 
@@ -364,6 +397,7 @@
             this.btn_actualizar.Name = "btn_actualizar";
             this.btn_actualizar.Size = new System.Drawing.Size(65, 69);
             this.btn_actualizar.TabIndex = 6;
+            this.toolTip1.SetToolTip(this.btn_actualizar, "Actualizar");
             this.btn_actualizar.UseVisualStyleBackColor = true;
             this.btn_actualizar.Click += new System.EventHandler(this.btn_actualizar_Click);
             // 
@@ -380,26 +414,26 @@
             this.btn_cancelar.Name = "btn_cancelar";
             this.btn_cancelar.Size = new System.Drawing.Size(65, 69);
             this.btn_cancelar.TabIndex = 5;
+            this.toolTip1.SetToolTip(this.btn_cancelar, "Cancelar");
             this.btn_cancelar.UseVisualStyleBackColor = true;
             this.btn_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
-            // 
-            // cbo_perfil_reclutamiento_funcion
-            // 
-            this.cbo_perfil_reclutamiento_funcion.FormattingEnabled = true;
-            this.cbo_perfil_reclutamiento_funcion.Location = new System.Drawing.Point(221, 86);
-            this.cbo_perfil_reclutamiento_funcion.Name = "cbo_perfil_reclutamiento_funcion";
-            this.cbo_perfil_reclutamiento_funcion.Size = new System.Drawing.Size(192, 26);
-            this.cbo_perfil_reclutamiento_funcion.TabIndex = 20;
             // 
             // frm_funcion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
+            this.AutoSize = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(760, 288);
             this.Controls.Add(this.gpb_funciones);
             this.Controls.Add(this.lbl_funciones);
             this.Controls.Add(this.groupBox2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "frm_funcion";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Funciones";
             this.Load += new System.EventHandler(this.frm_funcion_Load);
             this.gpb_funciones.ResumeLayout(false);
@@ -437,5 +471,6 @@
         private System.Windows.Forms.Button btn_actualizar;
         private System.Windows.Forms.Button btn_cancelar;
         private System.Windows.Forms.ComboBox cbo_perfil_reclutamiento_funcion;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

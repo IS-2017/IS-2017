@@ -40,7 +40,7 @@ namespace contrato_trabajo
             try
             {
                 string tabla = "empleado";
-                fn.ActualizarGrid(this.dgv_lista_emps, "Select `id_empleado_pk`, `nombre_emp`, `telefono_movil_emp`, `no_afiliacionIGSS_emp`, `dpi_emp` from empleado WHERE estado = 'ACTIVO' AND estadolaboral LIKE '%alta%' ", tabla);
+                fn.ActualizarGrid(this.dgv_lista_emps, "Select `id_empleado_pk`, `nombre_emp`, `apellido_emp`, `no_afiliacionIGSS_emp`, `dpi_emp` from empleado WHERE estado = 'ACTIVO' AND estadolaboral LIKE '%alta%' ", tabla);
             }
             catch (Exception ex)
             {
@@ -53,7 +53,7 @@ namespace contrato_trabajo
             try
             {
                 string tabla = "empleado";
-                fn.ActualizarGrid(this.dgv_lista_emps, "Select `id_empleado_pk`, `nombre_emp`, `telefono_movil_emp`, `no_afiliacionIGSS_emp`, `dpi_emp` from empleado WHERE estado = 'ACTIVO' ", tabla);
+                fn.ActualizarGrid(this.dgv_lista_emps, "Select `id_empleado_pk`, `nombre_emp`, `apellido_emp`, `no_afiliacionIGSS_emp`, `dpi_emp` from empleado WHERE estado = 'ACTIVO' ", tabla);
             }
             catch (Exception ex)
             {
@@ -66,7 +66,7 @@ namespace contrato_trabajo
             try
             {
                 string tabla = "empleado";
-                fn.ActualizarGrid(this.dgv_lista_emps, "Select `id_empleado_pk`, `nombre_emp`, `telefono_movil_emp`, `no_afiliacionIGSS_emp`, `dpi_emp` from empleado WHERE estado = 'ACTIVO' AND (estadolaboral LIKE '%baja%' OR estadolaboral LIKE '%suspens%') ", tabla);
+                fn.ActualizarGrid(this.dgv_lista_emps, "Select `id_empleado_pk`, `nombre_emp`, `apellido_emp`, `no_afiliacionIGSS_emp`, `dpi_emp` from empleado WHERE estado = 'ACTIVO' AND (estadolaboral LIKE '%baja%' OR estadolaboral LIKE '%suspens%') ", tabla);
             }
             catch (Exception ex)
             {
@@ -91,7 +91,7 @@ namespace contrato_trabajo
             try
             {
                 string tabla = "nomina";
-                fn.ActualizarGrid(this.dgv_lista_emps, "Select `id_empleado_pk`, `nombre_emp`, `telefono_movil_emp`, `no_afiliacionIGSS_emp`, `dpi_emp` from empleado WHERE estado = 'ACTIVO' and id_empresa_pk = '" + cbo_empres.SelectedValue + "' ", tabla);
+                fn.ActualizarGrid(this.dgv_lista_emps, "Select `id_empleado_pk`, `nombre_emp`, `apellido_emp`, `no_afiliacionIGSS_emp`, `dpi_emp` from empleado WHERE estado = 'ACTIVO' and id_empresa_pk = '" + cbo_empres.SelectedValue + "' ", tabla);
             }
             catch (Exception ex)
             {
@@ -169,7 +169,7 @@ namespace contrato_trabajo
             try
             {
                 string tabla = "empleado";
-                fn.ActualizarGrid(this.dgv_lista_emps, "Select `id_empleado_pk`, `nombre_emp`, `telefono_movil_emp`, `no_afiliacionIGSS_emp`, `dpi_emp` from empleado WHERE estado = 'ACTIVO' ", tabla);
+                fn.ActualizarGrid(this.dgv_lista_emps, "Select `id_empleado_pk`, `nombre_emp`, `apellido_emp`, `no_afiliacionIGSS_emp`, `dpi_emp` from empleado WHERE estado = 'ACTIVO' ", tabla);
 
             }
             catch (Exception ex)
@@ -200,7 +200,7 @@ namespace contrato_trabajo
             try
             {
                 string tabla = "empleado";
-                fn.ActualizarGrid(this.dgv_lista_emps, "Select `id_empleado_pk`, `nombre_emp`, `telefono_movil_emp`, `no_afiliacionIGSS_emp`, `dpi_emp` from empleado WHERE estado = 'ACTIVO' ", tabla);
+                fn.ActualizarGrid(this.dgv_lista_emps, "Select `id_empleado_pk`, `nombre_emp`, `apellido_emp`, `no_afiliacionIGSS_emp`, `dpi_emp` from empleado WHERE estado = 'ACTIVO' ", tabla);
                 llenaridempresa();
             }
             catch (Exception ex)

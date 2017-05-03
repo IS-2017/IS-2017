@@ -58,10 +58,6 @@
             this.txt_cbo_estado_emp = new System.Windows.Forms.TextBox();
             this.txt_igss_emp = new System.Windows.Forms.TextBox();
             this.lbl_igss_emp = new System.Windows.Forms.Label();
-            this.txt_tel_movil_emp = new System.Windows.Forms.TextBox();
-            this.lbl_tel_movil_emp = new System.Windows.Forms.Label();
-            this.txt_telefono_hogar_emp = new System.Windows.Forms.TextBox();
-            this.lbl_telefono_emp = new System.Windows.Forms.Label();
             this.cbo_nacionalidad_emp = new System.Windows.Forms.ComboBox();
             this.lbl_nacionalidad_emp = new System.Windows.Forms.Label();
             this.txt_domicilio_emp = new System.Windows.Forms.TextBox();
@@ -83,6 +79,7 @@
             this.lbl_nombre_emp = new System.Windows.Forms.Label();
             this.lbl_codigo_emp = new System.Windows.Forms.Label();
             this.Personal = new System.Windows.Forms.TabPage();
+            this.txt_id_empleado_P = new System.Windows.Forms.TextBox();
             this.lbl_agregar_correors = new System.Windows.Forms.Label();
             this.lbl_agregar_telefonos = new System.Windows.Forms.Label();
             this.btn_agregar_correos = new System.Windows.Forms.Button();
@@ -108,15 +105,19 @@
             this.lbl_fecha_nacimiento_emp = new System.Windows.Forms.Label();
             this.lbl_datos_personales_emp = new System.Windows.Forms.Label();
             this.Situacion = new System.Windows.Forms.TabPage();
+            this.txt_cbo_jornadas_trabajo = new System.Windows.Forms.TextBox();
+            this.cbo_jornadas_trabajo = new System.Windows.Forms.ComboBox();
+            this.lbl_jornada_trabajo = new System.Windows.Forms.Label();
+            this.txt_porcentaje_ventas = new System.Windows.Forms.TextBox();
+            this.lbl_porcentaje_ventas = new System.Windows.Forms.Label();
+            this.txt_cbo_area_laboral = new System.Windows.Forms.TextBox();
+            this.cbo_area_laboral = new System.Windows.Forms.ComboBox();
+            this.lbl_area_trabajo = new System.Windows.Forms.Label();
+            this.txt_cbo_puesto_laboral = new System.Windows.Forms.TextBox();
+            this.cbo_puesto_laboral = new System.Windows.Forms.ComboBox();
+            this.lbl_puesto_laboral = new System.Windows.Forms.Label();
+            this.lbl_situacion_laboral = new System.Windows.Forms.Label();
             this.lbl_jornada_tiempos = new System.Windows.Forms.Label();
-            this.lbl_puesto_trabaj_emp = new System.Windows.Forms.Label();
-            this.txt_puesto_trabaj_emp = new System.Windows.Forms.TextBox();
-            this.btn_puesto_trabaj_emp = new System.Windows.Forms.Button();
-            this.lbl_centro_trabajo_emp = new System.Windows.Forms.Label();
-            this.txt_centro_trabajo_emp = new System.Windows.Forms.TextBox();
-            this.txt_descrip_trabajo_emp = new System.Windows.Forms.TextBox();
-            this.btn_centro_trabajo_emp = new System.Windows.Forms.Button();
-            this.lbl_descripcion_trabajo_emp = new System.Windows.Forms.Label();
             this.txt_img_final = new System.Windows.Forms.TextBox();
             this.txt_nom_img = new System.Windows.Forms.TextBox();
             this.txt_direc_img = new System.Windows.Forms.TextBox();
@@ -125,6 +126,7 @@
             this.dgv_datos_generales_emp = new System.Windows.Forms.DataGridView();
             this.dgv_datos_personales = new System.Windows.Forms.DataGridView();
             this.pic_empleado = new System.Windows.Forms.PictureBox();
+            this.txt_estado = new System.Windows.Forms.TextBox();
             this.groupBox2.SuspendLayout();
             this.gpb_datos_emp.SuspendLayout();
             this.tbc_datos_emp.SuspendLayout();
@@ -347,6 +349,7 @@
             // gpb_datos_emp
             // 
             this.gpb_datos_emp.Controls.Add(this.tbc_datos_emp);
+            this.gpb_datos_emp.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gpb_datos_emp.Location = new System.Drawing.Point(12, 185);
             this.gpb_datos_emp.Margin = new System.Windows.Forms.Padding(2);
             this.gpb_datos_emp.Name = "gpb_datos_emp";
@@ -361,7 +364,7 @@
             this.tbc_datos_emp.Controls.Add(this.General);
             this.tbc_datos_emp.Controls.Add(this.Personal);
             this.tbc_datos_emp.Controls.Add(this.Situacion);
-            this.tbc_datos_emp.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbc_datos_emp.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbc_datos_emp.Location = new System.Drawing.Point(7, 18);
             this.tbc_datos_emp.Name = "tbc_datos_emp";
             this.tbc_datos_emp.SelectedIndex = 0;
@@ -370,7 +373,7 @@
             // 
             // General
             // 
-            this.General.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
+            this.General.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.General.Controls.Add(this.btn_empresa_emp);
             this.General.Controls.Add(this.txt_cbo_empresa_asig);
             this.General.Controls.Add(this.cbo_empresa_asig);
@@ -384,10 +387,6 @@
             this.General.Controls.Add(this.txt_cbo_estado_emp);
             this.General.Controls.Add(this.txt_igss_emp);
             this.General.Controls.Add(this.lbl_igss_emp);
-            this.General.Controls.Add(this.txt_tel_movil_emp);
-            this.General.Controls.Add(this.lbl_tel_movil_emp);
-            this.General.Controls.Add(this.txt_telefono_hogar_emp);
-            this.General.Controls.Add(this.lbl_telefono_emp);
             this.General.Controls.Add(this.cbo_nacionalidad_emp);
             this.General.Controls.Add(this.lbl_nacionalidad_emp);
             this.General.Controls.Add(this.txt_domicilio_emp);
@@ -409,17 +408,17 @@
             this.General.Controls.Add(this.lbl_nombre_emp);
             this.General.Controls.Add(this.lbl_codigo_emp);
             this.General.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.General.Location = new System.Drawing.Point(4, 27);
+            this.General.Location = new System.Drawing.Point(4, 29);
             this.General.Name = "General";
             this.General.Padding = new System.Windows.Forms.Padding(3);
-            this.General.Size = new System.Drawing.Size(903, 300);
+            this.General.Size = new System.Drawing.Size(903, 298);
             this.General.TabIndex = 1;
             this.General.Text = "General";
             // 
             // btn_empresa_emp
             // 
             this.btn_empresa_emp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_empresa_emp.Location = new System.Drawing.Point(782, 242);
+            this.btn_empresa_emp.Location = new System.Drawing.Point(782, 216);
             this.btn_empresa_emp.Name = "btn_empresa_emp";
             this.btn_empresa_emp.Size = new System.Drawing.Size(87, 23);
             this.btn_empresa_emp.TabIndex = 191;
@@ -429,10 +428,11 @@
             // 
             // txt_cbo_empresa_asig
             // 
-            this.txt_cbo_empresa_asig.Location = new System.Drawing.Point(764, 240);
+            this.txt_cbo_empresa_asig.Location = new System.Drawing.Point(764, 214);
             this.txt_cbo_empresa_asig.Name = "txt_cbo_empresa_asig";
             this.txt_cbo_empresa_asig.Size = new System.Drawing.Size(12, 23);
             this.txt_cbo_empresa_asig.TabIndex = 190;
+            this.txt_cbo_empresa_asig.Tag = "id_empresa_pk";
             this.txt_cbo_empresa_asig.Visible = false;
             // 
             // cbo_empresa_asig
@@ -445,7 +445,7 @@
             "Quincenal",
             "Semanal",
             "Diario"});
-            this.cbo_empresa_asig.Location = new System.Drawing.Point(509, 242);
+            this.cbo_empresa_asig.Location = new System.Drawing.Point(509, 216);
             this.cbo_empresa_asig.Name = "cbo_empresa_asig";
             this.cbo_empresa_asig.Size = new System.Drawing.Size(252, 21);
             this.cbo_empresa_asig.TabIndex = 189;
@@ -455,7 +455,7 @@
             // 
             this.lbl_empresa_asignar.AutoSize = true;
             this.lbl_empresa_asignar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_empresa_asignar.Location = new System.Drawing.Point(435, 246);
+            this.lbl_empresa_asignar.Location = new System.Drawing.Point(435, 220);
             this.lbl_empresa_asignar.Name = "lbl_empresa_asignar";
             this.lbl_empresa_asignar.Size = new System.Drawing.Size(68, 17);
             this.lbl_empresa_asignar.TabIndex = 188;
@@ -463,10 +463,11 @@
             // 
             // txt_cbo_forma_pago_emp
             // 
-            this.txt_cbo_forma_pago_emp.Location = new System.Drawing.Point(401, 240);
+            this.txt_cbo_forma_pago_emp.Location = new System.Drawing.Point(401, 214);
             this.txt_cbo_forma_pago_emp.Name = "txt_cbo_forma_pago_emp";
             this.txt_cbo_forma_pago_emp.Size = new System.Drawing.Size(10, 23);
             this.txt_cbo_forma_pago_emp.TabIndex = 187;
+            this.txt_cbo_forma_pago_emp.Tag = "periodo_pago";
             this.txt_cbo_forma_pago_emp.Visible = false;
             // 
             // cbo_forma_pago_emp
@@ -479,7 +480,7 @@
             "Quincenal",
             "Semanal",
             "Diario"});
-            this.cbo_forma_pago_emp.Location = new System.Drawing.Point(143, 242);
+            this.cbo_forma_pago_emp.Location = new System.Drawing.Point(143, 216);
             this.cbo_forma_pago_emp.Name = "cbo_forma_pago_emp";
             this.cbo_forma_pago_emp.Size = new System.Drawing.Size(252, 21);
             this.cbo_forma_pago_emp.TabIndex = 186;
@@ -489,7 +490,7 @@
             // 
             this.lbl_forma_de_pago_emp.AutoSize = true;
             this.lbl_forma_de_pago_emp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_forma_de_pago_emp.Location = new System.Drawing.Point(3, 246);
+            this.lbl_forma_de_pago_emp.Location = new System.Drawing.Point(3, 220);
             this.lbl_forma_de_pago_emp.Name = "lbl_forma_de_pago_emp";
             this.lbl_forma_de_pago_emp.Size = new System.Drawing.Size(108, 17);
             this.lbl_forma_de_pago_emp.TabIndex = 185;
@@ -501,6 +502,7 @@
             this.txt_cbo_nacionalidad_emp.Name = "txt_cbo_nacionalidad_emp";
             this.txt_cbo_nacionalidad_emp.Size = new System.Drawing.Size(10, 23);
             this.txt_cbo_nacionalidad_emp.TabIndex = 184;
+            this.txt_cbo_nacionalidad_emp.Tag = "nacionalidad_emp";
             this.txt_cbo_nacionalidad_emp.Visible = false;
             // 
             // txt_dtp_fecha_baja_emp
@@ -509,14 +511,16 @@
             this.txt_dtp_fecha_baja_emp.Name = "txt_dtp_fecha_baja_emp";
             this.txt_dtp_fecha_baja_emp.Size = new System.Drawing.Size(15, 23);
             this.txt_dtp_fecha_baja_emp.TabIndex = 183;
+            this.txt_dtp_fecha_baja_emp.Tag = "fecha_de_baja_emp";
             this.txt_dtp_fecha_baja_emp.Visible = false;
             // 
             // txt_dtp_fecha_alta_emp
             // 
-            this.txt_dtp_fecha_alta_emp.Location = new System.Drawing.Point(532, 58);
+            this.txt_dtp_fecha_alta_emp.Location = new System.Drawing.Point(534, 58);
             this.txt_dtp_fecha_alta_emp.Name = "txt_dtp_fecha_alta_emp";
             this.txt_dtp_fecha_alta_emp.Size = new System.Drawing.Size(10, 23);
             this.txt_dtp_fecha_alta_emp.TabIndex = 182;
+            this.txt_dtp_fecha_alta_emp.Tag = "fecha_de_alta_emp";
             this.txt_dtp_fecha_alta_emp.Visible = false;
             // 
             // txt_cbo_estado_emp
@@ -525,6 +529,7 @@
             this.txt_cbo_estado_emp.Name = "txt_cbo_estado_emp";
             this.txt_cbo_estado_emp.Size = new System.Drawing.Size(10, 23);
             this.txt_cbo_estado_emp.TabIndex = 181;
+            this.txt_cbo_estado_emp.Tag = "estadolaboral";
             this.txt_cbo_estado_emp.Visible = false;
             // 
             // txt_igss_emp
@@ -534,6 +539,7 @@
             this.txt_igss_emp.Name = "txt_igss_emp";
             this.txt_igss_emp.Size = new System.Drawing.Size(201, 20);
             this.txt_igss_emp.TabIndex = 44;
+            this.txt_igss_emp.Tag = "no_afiliacionIGSS_emp";
             // 
             // lbl_igss_emp
             // 
@@ -544,42 +550,6 @@
             this.lbl_igss_emp.Size = new System.Drawing.Size(60, 17);
             this.lbl_igss_emp.TabIndex = 43;
             this.lbl_igss_emp.Text = "I.G.S.S.:";
-            // 
-            // txt_tel_movil_emp
-            // 
-            this.txt_tel_movil_emp.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.txt_tel_movil_emp.Location = new System.Drawing.Point(523, 216);
-            this.txt_tel_movil_emp.Name = "txt_tel_movil_emp";
-            this.txt_tel_movil_emp.Size = new System.Drawing.Size(210, 20);
-            this.txt_tel_movil_emp.TabIndex = 40;
-            // 
-            // lbl_tel_movil_emp
-            // 
-            this.lbl_tel_movil_emp.AutoSize = true;
-            this.lbl_tel_movil_emp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_tel_movil_emp.Location = new System.Drawing.Point(446, 219);
-            this.lbl_tel_movil_emp.Name = "lbl_tel_movil_emp";
-            this.lbl_tel_movil_emp.Size = new System.Drawing.Size(44, 17);
-            this.lbl_tel_movil_emp.TabIndex = 39;
-            this.lbl_tel_movil_emp.Text = "Móvil:";
-            // 
-            // txt_telefono_hogar_emp
-            // 
-            this.txt_telefono_hogar_emp.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.txt_telefono_hogar_emp.Location = new System.Drawing.Point(143, 216);
-            this.txt_telefono_hogar_emp.Name = "txt_telefono_hogar_emp";
-            this.txt_telefono_hogar_emp.Size = new System.Drawing.Size(210, 20);
-            this.txt_telefono_hogar_emp.TabIndex = 38;
-            // 
-            // lbl_telefono_emp
-            // 
-            this.lbl_telefono_emp.AutoSize = true;
-            this.lbl_telefono_emp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_telefono_emp.Location = new System.Drawing.Point(3, 219);
-            this.lbl_telefono_emp.Name = "lbl_telefono_emp";
-            this.lbl_telefono_emp.Size = new System.Drawing.Size(68, 17);
-            this.lbl_telefono_emp.TabIndex = 36;
-            this.lbl_telefono_emp.Text = "Teléfono:";
             // 
             // cbo_nacionalidad_emp
             // 
@@ -867,6 +837,7 @@
             this.txt_domicilio_emp.Name = "txt_domicilio_emp";
             this.txt_domicilio_emp.Size = new System.Drawing.Size(526, 51);
             this.txt_domicilio_emp.TabIndex = 20;
+            this.txt_domicilio_emp.Tag = "direccion_emp";
             // 
             // lbl_domicilio_emp
             // 
@@ -885,6 +856,7 @@
             this.txt_dpi_emp.Name = "txt_dpi_emp";
             this.txt_dpi_emp.Size = new System.Drawing.Size(201, 20);
             this.txt_dpi_emp.TabIndex = 17;
+            this.txt_dpi_emp.Tag = "dpi_emp";
             // 
             // lbl_dpi_emp
             // 
@@ -984,6 +956,7 @@
             this.txt_apellidos_emp.Name = "txt_apellidos_emp";
             this.txt_apellidos_emp.Size = new System.Drawing.Size(290, 20);
             this.txt_apellidos_emp.TabIndex = 6;
+            this.txt_apellidos_emp.Tag = "apellido_emp";
             // 
             // txt_nombres_emp
             // 
@@ -992,6 +965,7 @@
             this.txt_nombres_emp.Name = "txt_nombres_emp";
             this.txt_nombres_emp.Size = new System.Drawing.Size(278, 20);
             this.txt_nombres_emp.TabIndex = 5;
+            this.txt_nombres_emp.Tag = "nombre_emp";
             // 
             // txt_codigo_emp
             // 
@@ -1001,6 +975,7 @@
             this.txt_codigo_emp.Name = "txt_codigo_emp";
             this.txt_codigo_emp.Size = new System.Drawing.Size(50, 20);
             this.txt_codigo_emp.TabIndex = 4;
+            this.txt_codigo_emp.Tag = "id_empleado_pk";
             // 
             // lbl_estado_emp
             // 
@@ -1044,7 +1019,8 @@
             // 
             // Personal
             // 
-            this.Personal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
+            this.Personal.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.Personal.Controls.Add(this.txt_id_empleado_P);
             this.Personal.Controls.Add(this.lbl_agregar_correors);
             this.Personal.Controls.Add(this.lbl_agregar_telefonos);
             this.Personal.Controls.Add(this.btn_agregar_correos);
@@ -1069,12 +1045,21 @@
             this.Personal.Controls.Add(this.lbl_nombre_padre_emp);
             this.Personal.Controls.Add(this.lbl_fecha_nacimiento_emp);
             this.Personal.Controls.Add(this.lbl_datos_personales_emp);
-            this.Personal.Location = new System.Drawing.Point(4, 27);
+            this.Personal.Location = new System.Drawing.Point(4, 29);
             this.Personal.Name = "Personal";
             this.Personal.Padding = new System.Windows.Forms.Padding(3);
-            this.Personal.Size = new System.Drawing.Size(903, 300);
+            this.Personal.Size = new System.Drawing.Size(903, 298);
             this.Personal.TabIndex = 2;
             this.Personal.Text = "Personal";
+            // 
+            // txt_id_empleado_P
+            // 
+            this.txt_id_empleado_P.Location = new System.Drawing.Point(519, 247);
+            this.txt_id_empleado_P.Name = "txt_id_empleado_P";
+            this.txt_id_empleado_P.Size = new System.Drawing.Size(10, 26);
+            this.txt_id_empleado_P.TabIndex = 23;
+            this.txt_id_empleado_P.Tag = "id_empleado_pk";
+            this.txt_id_empleado_P.Visible = false;
             // 
             // lbl_agregar_correors
             // 
@@ -1122,25 +1107,27 @@
             // 
             this.txt_cbo_estado_civil_emp.Location = new System.Drawing.Point(503, 110);
             this.txt_cbo_estado_civil_emp.Name = "txt_cbo_estado_civil_emp";
-            this.txt_cbo_estado_civil_emp.Size = new System.Drawing.Size(10, 24);
+            this.txt_cbo_estado_civil_emp.Size = new System.Drawing.Size(24, 26);
             this.txt_cbo_estado_civil_emp.TabIndex = 18;
+            this.txt_cbo_estado_civil_emp.Tag = "estado_civil";
             this.txt_cbo_estado_civil_emp.Visible = false;
             // 
             // txt_cbo_genero_emp
             // 
             this.txt_cbo_genero_emp.Location = new System.Drawing.Point(187, 112);
             this.txt_cbo_genero_emp.Name = "txt_cbo_genero_emp";
-            this.txt_cbo_genero_emp.Size = new System.Drawing.Size(10, 24);
+            this.txt_cbo_genero_emp.Size = new System.Drawing.Size(10, 26);
             this.txt_cbo_genero_emp.TabIndex = 17;
+            this.txt_cbo_genero_emp.Tag = "genero_empleado";
             this.txt_cbo_genero_emp.Visible = false;
             // 
             // txt_dtp_fecha_nacimiento_emp
             // 
             this.txt_dtp_fecha_nacimiento_emp.Location = new System.Drawing.Point(306, 31);
             this.txt_dtp_fecha_nacimiento_emp.Name = "txt_dtp_fecha_nacimiento_emp";
-            this.txt_dtp_fecha_nacimiento_emp.Size = new System.Drawing.Size(11, 24);
+            this.txt_dtp_fecha_nacimiento_emp.Size = new System.Drawing.Size(84, 26);
             this.txt_dtp_fecha_nacimiento_emp.TabIndex = 16;
-            this.txt_dtp_fecha_nacimiento_emp.Visible = false;
+            this.txt_dtp_fecha_nacimiento_emp.Tag = "fecha_nacimiento";
             // 
             // txt_observaciones_emp
             // 
@@ -1151,6 +1138,7 @@
             this.txt_observaciones_emp.Name = "txt_observaciones_emp";
             this.txt_observaciones_emp.Size = new System.Drawing.Size(360, 187);
             this.txt_observaciones_emp.TabIndex = 15;
+            this.txt_observaciones_emp.Tag = "observaciones_emp";
             // 
             // lbl_observaciones_emp
             // 
@@ -1182,6 +1170,7 @@
             this.txt_folder_empleado.Name = "txt_folder_empleado";
             this.txt_folder_empleado.Size = new System.Drawing.Size(398, 46);
             this.txt_folder_empleado.TabIndex = 12;
+            this.txt_folder_empleado.Tag = "documentacion_del_trabajador";
             // 
             // lbl_documentacion_emp
             // 
@@ -1238,15 +1227,17 @@
             this.txt_nombre_madre_emp.Name = "txt_nombre_madre_emp";
             this.txt_nombre_madre_emp.Size = new System.Drawing.Size(295, 20);
             this.txt_nombre_madre_emp.TabIndex = 8;
+            this.txt_nombre_madre_emp.Tag = "nombre_de_madre";
             // 
             // dtp_fecha_nacimiento_emp
             // 
             this.dtp_fecha_nacimiento_emp.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtp_fecha_nacimiento_emp.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtp_fecha_nacimiento_emp.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtp_fecha_nacimiento_emp.Location = new System.Drawing.Point(203, 34);
             this.dtp_fecha_nacimiento_emp.Name = "dtp_fecha_nacimiento_emp";
             this.dtp_fecha_nacimiento_emp.Size = new System.Drawing.Size(97, 20);
             this.dtp_fecha_nacimiento_emp.TabIndex = 7;
+            this.dtp_fecha_nacimiento_emp.Value = new System.DateTime(2017, 4, 20, 0, 0, 0, 0);
             this.dtp_fecha_nacimiento_emp.ValueChanged += new System.EventHandler(this.dtp_fecha_nacimiento_emp_ValueChanged);
             // 
             // txt_nombre_padre_emp
@@ -1256,6 +1247,7 @@
             this.txt_nombre_padre_emp.Name = "txt_nombre_padre_emp";
             this.txt_nombre_padre_emp.Size = new System.Drawing.Size(295, 20);
             this.txt_nombre_padre_emp.TabIndex = 6;
+            this.txt_nombre_padre_emp.Tag = "nombre_del_padre";
             // 
             // lbl_estado_civil_emp
             // 
@@ -1319,135 +1311,183 @@
             // 
             // Situacion
             // 
-            this.Situacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
+            this.Situacion.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.Situacion.Controls.Add(this.txt_cbo_jornadas_trabajo);
+            this.Situacion.Controls.Add(this.cbo_jornadas_trabajo);
+            this.Situacion.Controls.Add(this.lbl_jornada_trabajo);
+            this.Situacion.Controls.Add(this.txt_porcentaje_ventas);
+            this.Situacion.Controls.Add(this.lbl_porcentaje_ventas);
+            this.Situacion.Controls.Add(this.txt_cbo_area_laboral);
+            this.Situacion.Controls.Add(this.cbo_area_laboral);
+            this.Situacion.Controls.Add(this.lbl_area_trabajo);
+            this.Situacion.Controls.Add(this.txt_cbo_puesto_laboral);
+            this.Situacion.Controls.Add(this.cbo_puesto_laboral);
+            this.Situacion.Controls.Add(this.lbl_puesto_laboral);
+            this.Situacion.Controls.Add(this.lbl_situacion_laboral);
             this.Situacion.Controls.Add(this.lbl_jornada_tiempos);
-            this.Situacion.Controls.Add(this.lbl_puesto_trabaj_emp);
-            this.Situacion.Controls.Add(this.txt_puesto_trabaj_emp);
-            this.Situacion.Controls.Add(this.btn_puesto_trabaj_emp);
-            this.Situacion.Controls.Add(this.lbl_centro_trabajo_emp);
-            this.Situacion.Controls.Add(this.txt_centro_trabajo_emp);
-            this.Situacion.Controls.Add(this.txt_descrip_trabajo_emp);
-            this.Situacion.Controls.Add(this.btn_centro_trabajo_emp);
-            this.Situacion.Controls.Add(this.lbl_descripcion_trabajo_emp);
-            this.Situacion.Location = new System.Drawing.Point(4, 27);
+            this.Situacion.Location = new System.Drawing.Point(4, 29);
             this.Situacion.Name = "Situacion";
             this.Situacion.Padding = new System.Windows.Forms.Padding(3);
-            this.Situacion.Size = new System.Drawing.Size(903, 300);
+            this.Situacion.Size = new System.Drawing.Size(903, 298);
             this.Situacion.TabIndex = 3;
             this.Situacion.Text = "Situación";
+            // 
+            // txt_cbo_jornadas_trabajo
+            // 
+            this.txt_cbo_jornadas_trabajo.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_cbo_jornadas_trabajo.Location = new System.Drawing.Point(387, 193);
+            this.txt_cbo_jornadas_trabajo.Name = "txt_cbo_jornadas_trabajo";
+            this.txt_cbo_jornadas_trabajo.Size = new System.Drawing.Size(100, 22);
+            this.txt_cbo_jornadas_trabajo.TabIndex = 21;
+            this.txt_cbo_jornadas_trabajo.Tag = "id_jornadatrabajo_pk";
+            this.txt_cbo_jornadas_trabajo.Visible = false;
+            this.txt_cbo_jornadas_trabajo.TextChanged += new System.EventHandler(this.txt_cbo_jornadas_trabajo_TextChanged);
+            // 
+            // cbo_jornadas_trabajo
+            // 
+            this.cbo_jornadas_trabajo.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbo_jornadas_trabajo.FormattingEnabled = true;
+            this.cbo_jornadas_trabajo.Location = new System.Drawing.Point(182, 191);
+            this.cbo_jornadas_trabajo.Name = "cbo_jornadas_trabajo";
+            this.cbo_jornadas_trabajo.Size = new System.Drawing.Size(199, 24);
+            this.cbo_jornadas_trabajo.TabIndex = 20;
+            this.cbo_jornadas_trabajo.SelectedValueChanged += new System.EventHandler(this.cbo_jornadas_trabajo_SelectedValueChanged);
+            // 
+            // lbl_jornada_trabajo
+            // 
+            this.lbl_jornada_trabajo.AutoSize = true;
+            this.lbl_jornada_trabajo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_jornada_trabajo.Location = new System.Drawing.Point(6, 200);
+            this.lbl_jornada_trabajo.Name = "lbl_jornada_trabajo";
+            this.lbl_jornada_trabajo.Size = new System.Drawing.Size(109, 15);
+            this.lbl_jornada_trabajo.TabIndex = 19;
+            this.lbl_jornada_trabajo.Text = "Jornada a Asignar:";
+            // 
+            // txt_porcentaje_ventas
+            // 
+            this.txt_porcentaje_ventas.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_porcentaje_ventas.Location = new System.Drawing.Point(691, 30);
+            this.txt_porcentaje_ventas.Name = "txt_porcentaje_ventas";
+            this.txt_porcentaje_ventas.Size = new System.Drawing.Size(86, 22);
+            this.txt_porcentaje_ventas.TabIndex = 18;
+            // 
+            // lbl_porcentaje_ventas
+            // 
+            this.lbl_porcentaje_ventas.AutoSize = true;
+            this.lbl_porcentaje_ventas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_porcentaje_ventas.Location = new System.Drawing.Point(515, 33);
+            this.lbl_porcentaje_ventas.Name = "lbl_porcentaje_ventas";
+            this.lbl_porcentaje_ventas.Size = new System.Drawing.Size(107, 15);
+            this.lbl_porcentaje_ventas.TabIndex = 16;
+            this.lbl_porcentaje_ventas.Text = "Porcentaje ventas:";
+            // 
+            // txt_cbo_area_laboral
+            // 
+            this.txt_cbo_area_laboral.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_cbo_area_laboral.Location = new System.Drawing.Point(387, 65);
+            this.txt_cbo_area_laboral.Name = "txt_cbo_area_laboral";
+            this.txt_cbo_area_laboral.Size = new System.Drawing.Size(100, 22);
+            this.txt_cbo_area_laboral.TabIndex = 15;
+            this.txt_cbo_area_laboral.Tag = "id_area_trabajo_pk";
+            this.txt_cbo_area_laboral.Visible = false;
+            // 
+            // cbo_area_laboral
+            // 
+            this.cbo_area_laboral.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbo_area_laboral.FormattingEnabled = true;
+            this.cbo_area_laboral.Location = new System.Drawing.Point(182, 63);
+            this.cbo_area_laboral.Name = "cbo_area_laboral";
+            this.cbo_area_laboral.Size = new System.Drawing.Size(199, 24);
+            this.cbo_area_laboral.TabIndex = 14;
+            this.cbo_area_laboral.SelectedValueChanged += new System.EventHandler(this.cbo_area_laboral_SelectedValueChanged);
+            // 
+            // lbl_area_trabajo
+            // 
+            this.lbl_area_trabajo.AutoSize = true;
+            this.lbl_area_trabajo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_area_trabajo.Location = new System.Drawing.Point(6, 72);
+            this.lbl_area_trabajo.Name = "lbl_area_trabajo";
+            this.lbl_area_trabajo.Size = new System.Drawing.Size(117, 15);
+            this.lbl_area_trabajo.TabIndex = 13;
+            this.lbl_area_trabajo.Text = "Area de la empresa:";
+            // 
+            // txt_cbo_puesto_laboral
+            // 
+            this.txt_cbo_puesto_laboral.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_cbo_puesto_laboral.Location = new System.Drawing.Point(387, 26);
+            this.txt_cbo_puesto_laboral.Name = "txt_cbo_puesto_laboral";
+            this.txt_cbo_puesto_laboral.Size = new System.Drawing.Size(100, 22);
+            this.txt_cbo_puesto_laboral.TabIndex = 12;
+            this.txt_cbo_puesto_laboral.Tag = "id_puesto_laboral_pk";
+            this.txt_cbo_puesto_laboral.Visible = false;
+            // 
+            // cbo_puesto_laboral
+            // 
+            this.cbo_puesto_laboral.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbo_puesto_laboral.FormattingEnabled = true;
+            this.cbo_puesto_laboral.Location = new System.Drawing.Point(182, 24);
+            this.cbo_puesto_laboral.Name = "cbo_puesto_laboral";
+            this.cbo_puesto_laboral.Size = new System.Drawing.Size(199, 24);
+            this.cbo_puesto_laboral.TabIndex = 11;
+            this.cbo_puesto_laboral.SelectedIndexChanged += new System.EventHandler(this.cbo_puesto_laboral_SelectedIndexChanged);
+            this.cbo_puesto_laboral.SelectedValueChanged += new System.EventHandler(this.cbo_puesto_laboral_SelectedValueChanged);
+            // 
+            // lbl_puesto_laboral
+            // 
+            this.lbl_puesto_laboral.AutoSize = true;
+            this.lbl_puesto_laboral.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_puesto_laboral.Location = new System.Drawing.Point(6, 33);
+            this.lbl_puesto_laboral.Name = "lbl_puesto_laboral";
+            this.lbl_puesto_laboral.Size = new System.Drawing.Size(131, 15);
+            this.lbl_puesto_laboral.TabIndex = 10;
+            this.lbl_puesto_laboral.Text = "Puesto a desempeñar:";
+            // 
+            // lbl_situacion_laboral
+            // 
+            this.lbl_situacion_laboral.AutoSize = true;
+            this.lbl_situacion_laboral.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_situacion_laboral.Location = new System.Drawing.Point(3, 3);
+            this.lbl_situacion_laboral.Name = "lbl_situacion_laboral";
+            this.lbl_situacion_laboral.Size = new System.Drawing.Size(205, 17);
+            this.lbl_situacion_laboral.TabIndex = 9;
+            this.lbl_situacion_laboral.Text = "Asignacion de Puesto y Activos";
             // 
             // lbl_jornada_tiempos
             // 
             this.lbl_jornada_tiempos.AutoSize = true;
             this.lbl_jornada_tiempos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_jornada_tiempos.Location = new System.Drawing.Point(7, 110);
+            this.lbl_jornada_tiempos.Location = new System.Drawing.Point(6, 153);
             this.lbl_jornada_tiempos.Name = "lbl_jornada_tiempos";
             this.lbl_jornada_tiempos.Size = new System.Drawing.Size(262, 17);
             this.lbl_jornada_tiempos.TabIndex = 8;
             this.lbl_jornada_tiempos.Text = "Jornada de trabajo / Horarios de trabajo";
             // 
-            // lbl_puesto_trabaj_emp
-            // 
-            this.lbl_puesto_trabaj_emp.AutoSize = true;
-            this.lbl_puesto_trabaj_emp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_puesto_trabaj_emp.Location = new System.Drawing.Point(717, 51);
-            this.lbl_puesto_trabaj_emp.Name = "lbl_puesto_trabaj_emp";
-            this.lbl_puesto_trabaj_emp.Size = new System.Drawing.Size(26, 15);
-            this.lbl_puesto_trabaj_emp.TabIndex = 7;
-            this.lbl_puesto_trabaj_emp.Text = "test";
-            // 
-            // txt_puesto_trabaj_emp
-            // 
-            this.txt_puesto_trabaj_emp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_puesto_trabaj_emp.Location = new System.Drawing.Point(651, 45);
-            this.txt_puesto_trabaj_emp.Name = "txt_puesto_trabaj_emp";
-            this.txt_puesto_trabaj_emp.Size = new System.Drawing.Size(60, 21);
-            this.txt_puesto_trabaj_emp.TabIndex = 6;
-            // 
-            // btn_puesto_trabaj_emp
-            // 
-            this.btn_puesto_trabaj_emp.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_puesto_trabaj_emp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_puesto_trabaj_emp.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_puesto_trabaj_emp.Location = new System.Drawing.Point(569, 43);
-            this.btn_puesto_trabaj_emp.Name = "btn_puesto_trabaj_emp";
-            this.btn_puesto_trabaj_emp.Size = new System.Drawing.Size(76, 23);
-            this.btn_puesto_trabaj_emp.TabIndex = 5;
-            this.btn_puesto_trabaj_emp.Text = "Puesto:";
-            this.btn_puesto_trabaj_emp.UseVisualStyleBackColor = true;
-            // 
-            // lbl_centro_trabajo_emp
-            // 
-            this.lbl_centro_trabajo_emp.AutoSize = true;
-            this.lbl_centro_trabajo_emp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_centro_trabajo_emp.Location = new System.Drawing.Point(251, 47);
-            this.lbl_centro_trabajo_emp.Name = "lbl_centro_trabajo_emp";
-            this.lbl_centro_trabajo_emp.Size = new System.Drawing.Size(26, 15);
-            this.lbl_centro_trabajo_emp.TabIndex = 4;
-            this.lbl_centro_trabajo_emp.Text = "test";
-            // 
-            // txt_centro_trabajo_emp
-            // 
-            this.txt_centro_trabajo_emp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_centro_trabajo_emp.Location = new System.Drawing.Point(185, 43);
-            this.txt_centro_trabajo_emp.Name = "txt_centro_trabajo_emp";
-            this.txt_centro_trabajo_emp.Size = new System.Drawing.Size(60, 21);
-            this.txt_centro_trabajo_emp.TabIndex = 3;
-            // 
-            // txt_descrip_trabajo_emp
-            // 
-            this.txt_descrip_trabajo_emp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_descrip_trabajo_emp.Location = new System.Drawing.Point(185, 16);
-            this.txt_descrip_trabajo_emp.Name = "txt_descrip_trabajo_emp";
-            this.txt_descrip_trabajo_emp.Size = new System.Drawing.Size(712, 21);
-            this.txt_descrip_trabajo_emp.TabIndex = 2;
-            // 
-            // btn_centro_trabajo_emp
-            // 
-            this.btn_centro_trabajo_emp.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_centro_trabajo_emp.FlatAppearance.BorderSize = 0;
-            this.btn_centro_trabajo_emp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_centro_trabajo_emp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_centro_trabajo_emp.Location = new System.Drawing.Point(7, 43);
-            this.btn_centro_trabajo_emp.Name = "btn_centro_trabajo_emp";
-            this.btn_centro_trabajo_emp.Size = new System.Drawing.Size(113, 23);
-            this.btn_centro_trabajo_emp.TabIndex = 1;
-            this.btn_centro_trabajo_emp.Text = "Centro de trabajo:";
-            this.btn_centro_trabajo_emp.UseVisualStyleBackColor = true;
-            // 
-            // lbl_descripcion_trabajo_emp
-            // 
-            this.lbl_descripcion_trabajo_emp.AutoSize = true;
-            this.lbl_descripcion_trabajo_emp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_descripcion_trabajo_emp.Location = new System.Drawing.Point(7, 19);
-            this.lbl_descripcion_trabajo_emp.Name = "lbl_descripcion_trabajo_emp";
-            this.lbl_descripcion_trabajo_emp.Size = new System.Drawing.Size(140, 15);
-            this.lbl_descripcion_trabajo_emp.TabIndex = 0;
-            this.lbl_descripcion_trabajo_emp.Text = "Descripción del Trabajo:";
-            // 
             // txt_img_final
             // 
-            this.txt_img_final.Location = new System.Drawing.Point(116, 340);
+            this.txt_img_final.Location = new System.Drawing.Point(785, 16);
             this.txt_img_final.Name = "txt_img_final";
             this.txt_img_final.Size = new System.Drawing.Size(10, 20);
             this.txt_img_final.TabIndex = 176;
             this.txt_img_final.Tag = "";
+            this.txt_img_final.Visible = false;
             // 
             // txt_nom_img
             // 
-            this.txt_nom_img.Location = new System.Drawing.Point(100, 340);
+            this.txt_nom_img.Location = new System.Drawing.Point(769, 16);
             this.txt_nom_img.Name = "txt_nom_img";
             this.txt_nom_img.Size = new System.Drawing.Size(10, 20);
             this.txt_nom_img.TabIndex = 177;
-            this.txt_nom_img.Tag = "foto_empleado";
+            this.txt_nom_img.Tag = "fotografia_emp";
+            this.txt_nom_img.Visible = false;
             // 
             // txt_direc_img
             // 
-            this.txt_direc_img.Location = new System.Drawing.Point(84, 340);
+            this.txt_direc_img.Location = new System.Drawing.Point(753, 16);
             this.txt_direc_img.Name = "txt_direc_img";
             this.txt_direc_img.Size = new System.Drawing.Size(10, 20);
             this.txt_direc_img.TabIndex = 178;
             this.txt_direc_img.Tag = "";
+            this.txt_direc_img.Visible = false;
             // 
             // label35
             // 
@@ -1476,9 +1516,9 @@
             // dgv_datos_generales_emp
             // 
             this.dgv_datos_generales_emp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_datos_generales_emp.Location = new System.Drawing.Point(81, 366);
+            this.dgv_datos_generales_emp.Location = new System.Drawing.Point(132, 315);
             this.dgv_datos_generales_emp.Name = "dgv_datos_generales_emp";
-            this.dgv_datos_generales_emp.Size = new System.Drawing.Size(45, 90);
+            this.dgv_datos_generales_emp.Size = new System.Drawing.Size(27, 45);
             this.dgv_datos_generales_emp.TabIndex = 179;
             // 
             // dgv_datos_personales
@@ -1501,12 +1541,22 @@
             this.pic_empleado.TabIndex = 168;
             this.pic_empleado.TabStop = false;
             // 
+            // txt_estado
+            // 
+            this.txt_estado.Location = new System.Drawing.Point(741, 38);
+            this.txt_estado.Name = "txt_estado";
+            this.txt_estado.Size = new System.Drawing.Size(54, 20);
+            this.txt_estado.TabIndex = 13;
+            this.txt_estado.Tag = "estado";
+            this.txt_estado.Visible = false;
+            // 
             // frm_empleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
-            this.ClientSize = new System.Drawing.Size(941, 548);
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.ClientSize = new System.Drawing.Size(941, 556);
+            this.Controls.Add(this.txt_estado);
             this.Controls.Add(this.btn_examinar_pic_emp);
             this.Controls.Add(this.pic_empleado);
             this.Controls.Add(this.groupBox2);
@@ -1515,8 +1565,8 @@
             this.Controls.Add(this.txt_img_final);
             this.Controls.Add(this.txt_direc_img);
             this.Controls.Add(this.txt_nom_img);
-            this.Controls.Add(this.dgv_datos_generales_emp);
             this.Controls.Add(this.dgv_datos_personales);
+            this.Controls.Add(this.dgv_datos_generales_emp);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
@@ -1565,10 +1615,6 @@
         public System.Windows.Forms.Button btn_examinar_pic_emp;
         private System.Windows.Forms.TabPage Situacion;
         public System.Windows.Forms.GroupBox gpb_datos_emp;
-        public System.Windows.Forms.TextBox txt_tel_movil_emp;
-        public System.Windows.Forms.Label lbl_tel_movil_emp;
-        public System.Windows.Forms.TextBox txt_telefono_hogar_emp;
-        public System.Windows.Forms.Label lbl_telefono_emp;
         public System.Windows.Forms.ComboBox cbo_nacionalidad_emp;
         public System.Windows.Forms.Label lbl_nacionalidad_emp;
         public System.Windows.Forms.TextBox txt_domicilio_emp;
@@ -1608,14 +1654,6 @@
         public System.Windows.Forms.TextBox txt_nombre_madre_emp;
         public System.Windows.Forms.DateTimePicker dtp_fecha_nacimiento_emp;
         public System.Windows.Forms.TextBox txt_nombre_padre_emp;
-        public System.Windows.Forms.Label lbl_centro_trabajo_emp;
-        public System.Windows.Forms.TextBox txt_centro_trabajo_emp;
-        public System.Windows.Forms.TextBox txt_descrip_trabajo_emp;
-        public System.Windows.Forms.Button btn_centro_trabajo_emp;
-        public System.Windows.Forms.Label lbl_descripcion_trabajo_emp;
-        public System.Windows.Forms.Label lbl_puesto_trabaj_emp;
-        public System.Windows.Forms.TextBox txt_puesto_trabaj_emp;
-        public System.Windows.Forms.Button btn_puesto_trabaj_emp;
         public System.Windows.Forms.TextBox txt_img_final;
         public System.Windows.Forms.TextBox txt_nom_img;
         public System.Windows.Forms.TextBox txt_direc_img;
@@ -1640,5 +1678,19 @@
         public System.Windows.Forms.Label lbl_agregar_telefonos;
         private System.Windows.Forms.Button btn_agregar_correos;
         private System.Windows.Forms.Button btn_agragar_telefonos;
+        private System.Windows.Forms.TextBox txt_estado;
+        private System.Windows.Forms.TextBox txt_id_empleado_P;
+        private System.Windows.Forms.TextBox txt_cbo_jornadas_trabajo;
+        private System.Windows.Forms.ComboBox cbo_jornadas_trabajo;
+        private System.Windows.Forms.Label lbl_jornada_trabajo;
+        private System.Windows.Forms.TextBox txt_porcentaje_ventas;
+        private System.Windows.Forms.Label lbl_porcentaje_ventas;
+        private System.Windows.Forms.TextBox txt_cbo_area_laboral;
+        private System.Windows.Forms.ComboBox cbo_area_laboral;
+        private System.Windows.Forms.Label lbl_area_trabajo;
+        private System.Windows.Forms.TextBox txt_cbo_puesto_laboral;
+        private System.Windows.Forms.ComboBox cbo_puesto_laboral;
+        private System.Windows.Forms.Label lbl_puesto_laboral;
+        public System.Windows.Forms.Label lbl_situacion_laboral;
     }
 }
