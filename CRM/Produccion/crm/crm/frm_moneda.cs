@@ -18,7 +18,7 @@ namespace crm
         {
             InitializeComponent();
         }
-
+        string id_form = "109";
         CapaDatosPersonas moneda = new CapaDatosPersonas();
         string simbolo = "";
         string id_mone = "";

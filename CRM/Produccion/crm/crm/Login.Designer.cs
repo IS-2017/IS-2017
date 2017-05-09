@@ -71,6 +71,7 @@
             this.txt_contraseña.PasswordChar = '*';
             this.txt_contraseña.Size = new System.Drawing.Size(146, 20);
             this.txt_contraseña.TabIndex = 13;
+            this.txt_contraseña.Text = "hola";
             this.txt_contraseña.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_contraseña_KeyPress);
             // 
             // txt_usuario
@@ -79,6 +80,7 @@
             this.txt_usuario.Name = "txt_usuario";
             this.txt_usuario.Size = new System.Drawing.Size(146, 20);
             this.txt_usuario.TabIndex = 12;
+            this.txt_usuario.Text = "Marvin";
             // 
             // btn_logear
             // 

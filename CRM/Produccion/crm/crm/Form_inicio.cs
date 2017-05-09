@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using seguridad;
 
 namespace crm
 {
@@ -39,51 +40,118 @@ namespace crm
             item_productos.BackgroundImage = Image.FromFile("productos.png");
             //ITEM VENTAS
             item_ventas.BackgroundImage = Image.FromFile("ventas.png");
+            //ITEM CASOS
+            itemcasos.BackgroundImage = Image.FromFile("casos.png");
+            //ITEM COBROS
+            item_cobros.BackgroundImage = Image.FromFile("cobros.png");
+
+            //**********************************************************
+
+            //string tipo = OpBD.VerificarTipoUsuario();
+            //if (tipo != "administrador")
+            //{
+            //   // item_calendario.Enabled = false;
+            //    //item_clientes.Enabled = false;
+            //    //item_personal.Enabled = false;
+            //    //item_pronosticos.Enabled = false;
+            //}
         }
 
         private void item_negocios_ItemClick(object sender, DevExpress.XtraEditors.TileItemEventArgs e)
         {
-            FormNegociaciones f = new FormNegociaciones();
-            f.MdiParent = this.MdiParent;
-            f.Show();
+            DataTable dt = ObtenerPermisos.Permisos(seguridad.Conexion.User, "104");
+            if (dt.Rows.Count > 0)
+            {
+                FormNegociaciones f = new FormNegociaciones();
+                f.MdiParent = this.MdiParent;
+                f.Show();
+            }
+            else { MessageBox.Show("No posee los permisos necesarios para acceder al modulo"); }
         }
 
         private void item_contactos_ItemClick(object sender, DevExpress.XtraEditors.TileItemEventArgs e)
         {
-            FormContactos f = new FormContactos();
-            f.MdiParent = this.MdiParent;
-            f.Show();
+            DataTable dt = ObtenerPermisos.Permisos(seguridad.Conexion.User, "103");
+            if (dt.Rows.Count > 0)
+            {
+                FormContactos f = new FormContactos();
+                f.MdiParent = this.MdiParent;
+                f.Show();
+            }
+            else { MessageBox.Show("No posee los permisos necesarios para acceder al modulo"); }
         }
 
         private void item_calendario_ItemClick(object sender, DevExpress.XtraEditors.TileItemEventArgs e)
         {
-            FormActividadesCalendario f = new FormActividadesCalendario();
-            f.MdiParent = this.MdiParent;
-            f.Show();
+            DataTable dt = ObtenerPermisos.Permisos(seguridad.Conexion.User, "104");
+            if (dt.Rows.Count > 0)
+            {
+                FormActividadesCalendario f = new FormActividadesCalendario();
+                f.MdiParent = this.MdiParent;
+                f.Show();
+            }
+            else { MessageBox.Show("No posee los permisos necesarios para acceder al modulo"); }
         }
 
         private void item_clientes_ItemClick(object sender, DevExpress.XtraEditors.TileItemEventArgs e)
         {
-            frm_estadistica_empresa f = new frm_estadistica_empresa();
-            f.MdiParent = this.MdiParent;
-            f.Show();
+            DataTable dt = ObtenerPermisos.Permisos(seguridad.Conexion.User, "112");
+            if (dt.Rows.Count > 0)
+            {
+                frm_estadistica_empresa f = new frm_estadistica_empresa();
+                f.MdiParent = this.MdiParent;
+                f.Show();
+            }
+            else { MessageBox.Show("No posee los permisos necesarios para acceder al modulo"); }
         }
 
         private void item_personal_ItemClick(object sender, DevExpress.XtraEditors.TileItemEventArgs e)
         {
-            frm_estadistica_personal f = new frm_estadistica_personal();
-            f.MdiParent = this.MdiParent;
-            f.Show();
+            DataTable dt = ObtenerPermisos.Permisos(seguridad.Conexion.User, "113");
+            if (dt.Rows.Count > 0)
+            {
+                frm_estadistica_personal f = new frm_estadistica_personal();
+                f.MdiParent = this.MdiParent;
+                f.Show();
+            }
+            else { MessageBox.Show("No posee los permisos necesarios para acceder al modulo"); }
         }
 
         private void item_pronosticos_ItemClick(object sender, DevExpress.XtraEditors.TileItemEventArgs e)
         {
-            frm_pronostico f = new frm_pronostico();
-            f.MdiParent = this.MdiParent;
-            f.Show();
+            DataTable dt = ObtenerPermisos.Permisos(seguridad.Conexion.User, "114");
+            if (dt.Rows.Count > 0)
+            {
+                frm_pronostico f = new frm_pronostico();
+                f.MdiParent = this.MdiParent;
+                f.Show();
+            }
+            else { MessageBox.Show("No posee los permisos necesarios para acceder al modulo"); }
         }
 
         private void item_productos_ItemClick(object sender, DevExpress.XtraEditors.TileItemEventArgs e)
+        {
+
+        }
+
+        private void itemcasos_ItemClick(object sender, DevExpress.XtraEditors.TileItemEventArgs e)
+        {
+            DataTable dt = ObtenerPermisos.Permisos(seguridad.Conexion.User, "102");
+            if (dt.Rows.Count > 0)
+            {
+                Form_Casos f = new Form_Casos();
+                f.MdiParent = this.MdiParent;
+                f.Show();
+            }
+            else { MessageBox.Show("No posee los permisos necesarios para acceder al modulo"); }
+        }
+
+        private void item_ventas_ItemClick(object sender, DevExpress.XtraEditors.TileItemEventArgs e)
+        {
+
+        }
+
+        private void item_cobros_ItemClick(object sender, DevExpress.XtraEditors.TileItemEventArgs e)
         {
 
         }

@@ -32,5 +32,26 @@ namespace crm.Properties {
                 return ((string)(this["ConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("server=localhost;user id=root;password=1234;database=crmbd")]
+        public string conexioncrmbd {
+            get {
+                return ((string)(this["conexioncrmbd"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\BaseDatosCale" +
+            "ndario.mdf;Integrated Security=True;Connect Timeout=30")]
+        public string BaseDatosCalendarioConnectionString {
+            get {
+                return ((string)(this["BaseDatosCalendarioConnectionString"]));
+            }
+        }
     }
 }

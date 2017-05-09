@@ -504,7 +504,7 @@
         AAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="button1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btn_cancelar.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAYAAABccqhmAAAABGdBTUEAALGPC/xhBQAARixJREFUeF7t
         nX3MfdlV12emL8QWwjADEjoWfymloNPW2hYM0jZDixo6DP6akmookEI1BhEZWtFIrdFM+ocUoknRxLb8
@@ -1542,7 +1542,7 @@
         HwUaLD+w9b0cAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="btn_save.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btn_guardar.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAYAAABccqhmAAAABGdBTUEAALGPC/xhBQAASOlJREFUeF7t
         vX2sbdtZ3ncshbRCVLEClfin6ZWqVpGqVE4bqJOoqanUpB+UojZVlZBErtSi5gNhJUIxTUtQHKhpjGNk
@@ -3384,7 +3384,7 @@
         HvOY/x9iU4Ste1ixOQAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="button3.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btn_eliminar.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAYAAABccqhmAAAABGdBTUEAALGPC/xhBQAAWUVJREFUeF7t
         vXusdd1V3mcwpOkfBSIBjtq6RW1jm6hOSQDbqaAhCAIGB/oBBlSTSNxkU9ymJqmxKYReKC12rSgoQGOK
