@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraGrid.Views.Grid;
+using FuncionesNavegador;
 
 namespace crm
 {
@@ -19,7 +20,7 @@ namespace crm
         }
         CapaDatosPersonas moneda = new CapaDatosPersonas();
         string identificador = "";
-
+        string id_form = "109";
         // boton guardar moneda
         private void button7_Click(object sender, EventArgs e)
         {
@@ -55,6 +56,19 @@ namespace crm
         {
             try
             {
+
+                CapaNegocio fn = new CapaNegocio();
+                DataTable seg = seguridad.ObtenerPermisos.Permisos(seguridad.Conexion.User, id_form);
+                if (seg.Rows.Count > 0)
+                {
+                    fn.desactivarPermiso(seg, btn_guardar, btn_eliminar, btn_editar, btn_nuevo, btn_cancelar, btn_actualizar, btn_buscar, btn_anterior, btn_siguiente, btn_primero, btn_ultimo);
+                }
+                else
+                {
+                    btn_guardar.Enabled = false; btn_eliminar.Enabled = false; btn_editar.Enabled = false; btn_nuevo.Enabled = false; btn_actualizar.Enabled = false; btn_cancelar.Enabled = false; btn_buscar.Enabled = false;
+                }
+
+
                 pcb_moneda.Image = Image.FromFile("tipomoneda.jpg");
                 DataTable almacen = new DataTable();
                 almacen = moneda.Consulta_moneda();

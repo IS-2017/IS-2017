@@ -51,21 +51,20 @@
             this.btn_nuevo_perem = new DevExpress.XtraEditors.SimpleButton();
             this.btn_refresh_perem = new DevExpress.XtraEditors.SimpleButton();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.cbo_monedas = new System.Windows.Forms.ComboBox();
+            this.btn_guardar = new DevExpress.XtraEditors.SimpleButton();
             this.cbo_empleado = new System.Windows.Forms.ComboBox();
             this.cbo_cat = new System.Windows.Forms.ComboBox();
             this.btn_actualizar_mon = new DevExpress.XtraEditors.SimpleButton();
             this.btn_nueva_mon = new DevExpress.XtraEditors.SimpleButton();
             this.cbo_perem = new System.Windows.Forms.ComboBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.cbo_moneda = new DevExpress.XtraEditors.LookUpEdit();
             this.label6 = new System.Windows.Forms.Label();
             this.tb_etapa = new DevExpress.XtraEditors.TrackBarControl();
-            this.btn_guardar = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.dtp_fecha_cierre.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtp_fecha_cierre.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cbo_moneda.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tb_etapa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tb_etapa.Properties)).BeginInit();
             this.SuspendLayout();
@@ -138,6 +137,8 @@
             this.txt_valor.Name = "txt_valor";
             this.txt_valor.Size = new System.Drawing.Size(188, 21);
             this.txt_valor.TabIndex = 10;
+            this.txt_valor.TextChanged += new System.EventHandler(this.txt_valor_TextChanged);
+            this.txt_valor.Leave += new System.EventHandler(this.txt_valor_Leave);
             // 
             // label3
             // 
@@ -238,6 +239,7 @@
             // 
             this.groupControl1.CaptionImage = ((System.Drawing.Image)(resources.GetObject("groupControl1.CaptionImage")));
             this.groupControl1.CaptionLocation = DevExpress.Utils.Locations.Top;
+            this.groupControl1.Controls.Add(this.cbo_monedas);
             this.groupControl1.Controls.Add(this.btn_guardar);
             this.groupControl1.Controls.Add(this.cbo_empleado);
             this.groupControl1.Controls.Add(this.cbo_cat);
@@ -245,7 +247,6 @@
             this.groupControl1.Controls.Add(this.btn_nueva_mon);
             this.groupControl1.Controls.Add(this.cbo_perem);
             this.groupControl1.Controls.Add(this.comboBox1);
-            this.groupControl1.Controls.Add(this.cbo_moneda);
             this.groupControl1.Controls.Add(this.label6);
             this.groupControl1.Controls.Add(this.tb_etapa);
             this.groupControl1.Controls.Add(this.btn_actualizar_emp);
@@ -272,6 +273,25 @@
             this.groupControl1.TabIndex = 22;
             this.groupControl1.Text = "Datos del negocio:";
             this.groupControl1.Paint += new System.Windows.Forms.PaintEventHandler(this.groupControl1_Paint);
+            // 
+            // cbo_monedas
+            // 
+            this.cbo_monedas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbo_monedas.FormattingEnabled = true;
+            this.cbo_monedas.Location = new System.Drawing.Point(360, 238);
+            this.cbo_monedas.Name = "cbo_monedas";
+            this.cbo_monedas.Size = new System.Drawing.Size(96, 21);
+            this.cbo_monedas.TabIndex = 37;
+            // 
+            // btn_guardar
+            // 
+            this.btn_guardar.Image = ((System.Drawing.Image)(resources.GetObject("btn_guardar.Image")));
+            this.btn_guardar.Location = new System.Drawing.Point(475, 479);
+            this.btn_guardar.Name = "btn_guardar";
+            this.btn_guardar.Size = new System.Drawing.Size(154, 41);
+            this.btn_guardar.TabIndex = 36;
+            this.btn_guardar.Text = "Guardar";
+            this.btn_guardar.Click += new System.EventHandler(this.btn_guardar_Click);
             // 
             // cbo_empleado
             // 
@@ -336,16 +356,6 @@
             this.comboBox1.TabIndex = 30;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // cbo_moneda
-            // 
-            this.cbo_moneda.EditValue = "Moneda";
-            this.cbo_moneda.Location = new System.Drawing.Point(360, 239);
-            this.cbo_moneda.Name = "cbo_moneda";
-            this.cbo_moneda.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cbo_moneda.Size = new System.Drawing.Size(95, 20);
-            this.cbo_moneda.TabIndex = 27;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -364,6 +374,8 @@
             this.tb_etapa.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
             this.tb_etapa.Properties.Appearance.BackColor2 = System.Drawing.SystemColors.Control;
             this.tb_etapa.Properties.Appearance.Options.UseBackColor = true;
+            this.tb_etapa.Properties.LabelAppearance.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.tb_etapa.Properties.LabelAppearance.Options.UseForeColor = true;
             this.tb_etapa.Properties.LabelAppearance.Options.UseTextOptions = true;
             this.tb_etapa.Properties.LabelAppearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             trackBarLabel1.Label = "Preparación o análisis";
@@ -383,16 +395,6 @@
             this.tb_etapa.Size = new System.Drawing.Size(535, 72);
             this.tb_etapa.TabIndex = 22;
             // 
-            // btn_guardar
-            // 
-            this.btn_guardar.Image = ((System.Drawing.Image)(resources.GetObject("btn_guardar.Image")));
-            this.btn_guardar.Location = new System.Drawing.Point(475, 479);
-            this.btn_guardar.Name = "btn_guardar";
-            this.btn_guardar.Size = new System.Drawing.Size(154, 41);
-            this.btn_guardar.TabIndex = 36;
-            this.btn_guardar.Text = "Guardar";
-            this.btn_guardar.Click += new System.EventHandler(this.btn_guardar_Click);
-            // 
             // FormNuevoNegocio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -407,7 +409,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cbo_moneda.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tb_etapa.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tb_etapa)).EndInit();
             this.ResumeLayout(false);
@@ -436,13 +437,13 @@
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private DevExpress.XtraEditors.TrackBarControl tb_etapa;
         private System.Windows.Forms.Label label6;
-        private DevExpress.XtraEditors.LookUpEdit cbo_moneda;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox cbo_perem;
         private DevExpress.XtraEditors.SimpleButton btn_actualizar_mon;
         private DevExpress.XtraEditors.SimpleButton btn_nueva_mon;
         private System.Windows.Forms.ComboBox cbo_empleado;
         private System.Windows.Forms.ComboBox cbo_cat;
-        private DevExpress.XtraEditors.SimpleButton btn_guardar;
+        private System.Windows.Forms.ComboBox cbo_monedas;
+        public DevExpress.XtraEditors.SimpleButton btn_guardar;
     }
 }

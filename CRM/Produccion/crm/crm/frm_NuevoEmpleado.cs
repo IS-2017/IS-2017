@@ -11,7 +11,7 @@ using System.Data.Odbc;
 using System.IO;
 using System.Drawing.Imaging;
 using DevExpress.XtraGrid.Views.Grid;
-
+using FuncionesNavegador;
 
 namespace crm
 {
@@ -26,7 +26,7 @@ namespace crm
         String direccionima ;
         String codigoemp = "";
         CapaDatosPersonas empleados = new CapaDatosPersonas();
-
+        string id_form = "111";
 
         private void btn_eliminar_Click(object sender, EventArgs e)
         {
@@ -120,6 +120,17 @@ namespace crm
         {
             try
             {
+                CapaNegocio fn = new CapaNegocio();
+                DataTable seg = seguridad.ObtenerPermisos.Permisos(seguridad.Conexion.User, id_form);
+                if (seg.Rows.Count > 0)
+                {
+                    fn.desactivarPermiso(seg, btn_guardar, btn_eliminar, btn_editar, btn_nuevo, btn_cancelar, btn_actualizar, btn_buscar, btn_anterior, btn_siguiente, btn_primero, btn_ultimo);
+                }
+                else
+                {
+                    btn_guardar.Enabled = false; btn_eliminar.Enabled = false; btn_editar.Enabled = false; btn_nuevo.Enabled = false; btn_actualizar.Enabled = false; btn_cancelar.Enabled = false; btn_buscar.Enabled = false;
+                }
+
 
                 DataTable almacen = new DataTable();
                 almacen = empleados.ConsultarEmpleados();
@@ -251,6 +262,13 @@ namespace crm
         {
             frm_moneda moneda = new frm_moneda();
             moneda.Show();
+        }
+
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frm_estadistica_personal personal = new frm_estadistica_personal();
+            personal.Show();
         }
     }
 }

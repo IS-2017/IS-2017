@@ -32,48 +32,48 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.btn_nuevo = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btn_cancelar = new System.Windows.Forms.Button();
+            this.btn_ultimo = new System.Windows.Forms.Button();
+            this.btn_actualizar = new System.Windows.Forms.Button();
             this.btn_guardar = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.btn_modificar = new System.Windows.Forms.Button();
+            this.btn_buscar = new System.Windows.Forms.Button();
+            this.btn_primero = new System.Windows.Forms.Button();
+            this.btn_anterior = new System.Windows.Forms.Button();
+            this.btn_editar = new System.Windows.Forms.Button();
             this.btn_eliminar = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
+            this.btn_siguiente = new System.Windows.Forms.Button();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
+            this.pcb_moneda = new System.Windows.Forms.PictureBox();
+            this.txt_moneda = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.txt_simbolo = new System.Windows.Forms.TextBox();
-            this.txt_moneda = new System.Windows.Forms.TextBox();
             this.dgv_moneda_nueva = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.label8 = new System.Windows.Forms.Label();
             this.tileNavPane1 = new DevExpress.XtraBars.Navigation.TileNavPane();
-            this.pcb_moneda = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcb_moneda)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_moneda_nueva)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcb_moneda)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.btn_nuevo);
-            this.panel2.Controls.Add(this.button4);
-            this.panel2.Controls.Add(this.button5);
-            this.panel2.Controls.Add(this.button6);
+            this.panel2.Controls.Add(this.btn_cancelar);
+            this.panel2.Controls.Add(this.btn_ultimo);
+            this.panel2.Controls.Add(this.btn_actualizar);
             this.panel2.Controls.Add(this.btn_guardar);
-            this.panel2.Controls.Add(this.button8);
-            this.panel2.Controls.Add(this.button9);
-            this.panel2.Controls.Add(this.button10);
-            this.panel2.Controls.Add(this.btn_modificar);
+            this.panel2.Controls.Add(this.btn_buscar);
+            this.panel2.Controls.Add(this.btn_primero);
+            this.panel2.Controls.Add(this.btn_anterior);
+            this.panel2.Controls.Add(this.btn_editar);
             this.panel2.Controls.Add(this.btn_eliminar);
-            this.panel2.Controls.Add(this.button13);
+            this.panel2.Controls.Add(this.btn_siguiente);
             this.panel2.Location = new System.Drawing.Point(13, 47);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
@@ -113,54 +113,54 @@
             this.btn_nuevo.UseVisualStyleBackColor = true;
             this.btn_nuevo.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button4
+            // btn_cancelar
             // 
-            this.button4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button4.BackgroundImage")));
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(334, 4);
-            this.button4.Margin = new System.Windows.Forms.Padding(4);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(56, 59);
-            this.button4.TabIndex = 176;
-            this.button4.UseVisualStyleBackColor = true;
+            this.btn_cancelar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_cancelar.BackgroundImage")));
+            this.btn_cancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_cancelar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_cancelar.FlatAppearance.BorderSize = 0;
+            this.btn_cancelar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_cancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btn_cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_cancelar.Location = new System.Drawing.Point(334, 4);
+            this.btn_cancelar.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_cancelar.Name = "btn_cancelar";
+            this.btn_cancelar.Size = new System.Drawing.Size(56, 59);
+            this.btn_cancelar.TabIndex = 176;
+            this.btn_cancelar.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // btn_ultimo
             // 
-            this.button5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button5.BackgroundImage")));
-            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Location = new System.Drawing.Point(503, 37);
-            this.button5.Margin = new System.Windows.Forms.Padding(4);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(30, 26);
-            this.button5.TabIndex = 181;
-            this.button5.UseVisualStyleBackColor = true;
+            this.btn_ultimo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_ultimo.BackgroundImage")));
+            this.btn_ultimo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_ultimo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_ultimo.FlatAppearance.BorderSize = 0;
+            this.btn_ultimo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_ultimo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btn_ultimo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ultimo.Location = new System.Drawing.Point(503, 37);
+            this.btn_ultimo.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_ultimo.Name = "btn_ultimo";
+            this.btn_ultimo.Size = new System.Drawing.Size(30, 26);
+            this.btn_ultimo.TabIndex = 181;
+            this.btn_ultimo.UseVisualStyleBackColor = true;
             // 
-            // button6
+            // btn_actualizar
             // 
-            this.button6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button6.BackgroundImage")));
-            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Location = new System.Drawing.Point(391, 4);
-            this.button6.Margin = new System.Windows.Forms.Padding(4);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(56, 59);
-            this.button6.TabIndex = 177;
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.btn_actualizar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_actualizar.BackgroundImage")));
+            this.btn_actualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_actualizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_actualizar.FlatAppearance.BorderSize = 0;
+            this.btn_actualizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_actualizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btn_actualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_actualizar.Location = new System.Drawing.Point(391, 4);
+            this.btn_actualizar.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_actualizar.Name = "btn_actualizar";
+            this.btn_actualizar.Size = new System.Drawing.Size(56, 59);
+            this.btn_actualizar.TabIndex = 177;
+            this.btn_actualizar.UseVisualStyleBackColor = true;
+            this.btn_actualizar.Click += new System.EventHandler(this.button6_Click);
             // 
             // btn_guardar
             // 
@@ -179,70 +179,70 @@
             this.btn_guardar.UseVisualStyleBackColor = true;
             this.btn_guardar.Click += new System.EventHandler(this.button7_Click);
             // 
-            // button8
+            // btn_buscar
             // 
-            this.button8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button8.BackgroundImage")));
-            this.button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button8.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Location = new System.Drawing.Point(275, 4);
-            this.button8.Margin = new System.Windows.Forms.Padding(4);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(58, 59);
-            this.button8.TabIndex = 175;
-            this.button8.UseVisualStyleBackColor = true;
+            this.btn_buscar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_buscar.BackgroundImage")));
+            this.btn_buscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_buscar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_buscar.FlatAppearance.BorderSize = 0;
+            this.btn_buscar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_buscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btn_buscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_buscar.Location = new System.Drawing.Point(275, 4);
+            this.btn_buscar.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_buscar.Name = "btn_buscar";
+            this.btn_buscar.Size = new System.Drawing.Size(58, 59);
+            this.btn_buscar.TabIndex = 175;
+            this.btn_buscar.UseVisualStyleBackColor = true;
             // 
-            // button9
+            // btn_primero
             // 
-            this.button9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button9.BackgroundImage")));
-            this.button9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button9.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button9.FlatAppearance.BorderSize = 0;
-            this.button9.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Location = new System.Drawing.Point(465, 37);
-            this.button9.Margin = new System.Windows.Forms.Padding(4);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(30, 26);
-            this.button9.TabIndex = 180;
-            this.button9.UseVisualStyleBackColor = true;
+            this.btn_primero.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_primero.BackgroundImage")));
+            this.btn_primero.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_primero.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_primero.FlatAppearance.BorderSize = 0;
+            this.btn_primero.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_primero.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btn_primero.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_primero.Location = new System.Drawing.Point(465, 37);
+            this.btn_primero.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_primero.Name = "btn_primero";
+            this.btn_primero.Size = new System.Drawing.Size(30, 26);
+            this.btn_primero.TabIndex = 180;
+            this.btn_primero.UseVisualStyleBackColor = true;
             // 
-            // button10
+            // btn_anterior
             // 
-            this.button10.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button10.BackgroundImage")));
-            this.button10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button10.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button10.FlatAppearance.BorderSize = 0;
-            this.button10.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Location = new System.Drawing.Point(465, 4);
-            this.button10.Margin = new System.Windows.Forms.Padding(4);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(30, 26);
-            this.button10.TabIndex = 178;
-            this.button10.UseVisualStyleBackColor = true;
+            this.btn_anterior.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_anterior.BackgroundImage")));
+            this.btn_anterior.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_anterior.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_anterior.FlatAppearance.BorderSize = 0;
+            this.btn_anterior.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_anterior.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btn_anterior.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_anterior.Location = new System.Drawing.Point(465, 4);
+            this.btn_anterior.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_anterior.Name = "btn_anterior";
+            this.btn_anterior.Size = new System.Drawing.Size(30, 26);
+            this.btn_anterior.TabIndex = 178;
+            this.btn_anterior.UseVisualStyleBackColor = true;
             // 
-            // btn_modificar
+            // btn_editar
             // 
-            this.btn_modificar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_modificar.BackgroundImage")));
-            this.btn_modificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_modificar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_modificar.FlatAppearance.BorderSize = 0;
-            this.btn_modificar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btn_modificar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.btn_modificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_modificar.Location = new System.Drawing.Point(157, 4);
-            this.btn_modificar.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_modificar.Name = "btn_modificar";
-            this.btn_modificar.Size = new System.Drawing.Size(58, 59);
-            this.btn_modificar.TabIndex = 5;
-            this.btn_modificar.UseVisualStyleBackColor = true;
-            this.btn_modificar.Click += new System.EventHandler(this.btn_modificar_Click);
+            this.btn_editar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_editar.BackgroundImage")));
+            this.btn_editar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_editar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_editar.FlatAppearance.BorderSize = 0;
+            this.btn_editar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_editar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btn_editar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_editar.Location = new System.Drawing.Point(157, 4);
+            this.btn_editar.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_editar.Name = "btn_editar";
+            this.btn_editar.Size = new System.Drawing.Size(58, 59);
+            this.btn_editar.TabIndex = 5;
+            this.btn_editar.UseVisualStyleBackColor = true;
+            this.btn_editar.Click += new System.EventHandler(this.btn_modificar_Click);
             // 
             // btn_eliminar
             // 
@@ -261,21 +261,21 @@
             this.btn_eliminar.UseVisualStyleBackColor = true;
             this.btn_eliminar.Click += new System.EventHandler(this.btn_eliminar_Click);
             // 
-            // button13
+            // btn_siguiente
             // 
-            this.button13.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button13.BackgroundImage")));
-            this.button13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button13.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button13.FlatAppearance.BorderSize = 0;
-            this.button13.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button13.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button13.Location = new System.Drawing.Point(503, 3);
-            this.button13.Margin = new System.Windows.Forms.Padding(4);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(30, 26);
-            this.button13.TabIndex = 179;
-            this.button13.UseVisualStyleBackColor = true;
+            this.btn_siguiente.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_siguiente.BackgroundImage")));
+            this.btn_siguiente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_siguiente.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_siguiente.FlatAppearance.BorderSize = 0;
+            this.btn_siguiente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_siguiente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btn_siguiente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_siguiente.Location = new System.Drawing.Point(503, 3);
+            this.btn_siguiente.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_siguiente.Name = "btn_siguiente";
+            this.btn_siguiente.Size = new System.Drawing.Size(30, 26);
+            this.btn_siguiente.TabIndex = 179;
+            this.btn_siguiente.UseVisualStyleBackColor = true;
             // 
             // groupControl2
             // 
@@ -289,6 +289,23 @@
             this.groupControl2.Size = new System.Drawing.Size(309, 246);
             this.groupControl2.TabIndex = 185;
             this.groupControl2.Text = "Descripción ";
+            // 
+            // pcb_moneda
+            // 
+            this.pcb_moneda.Location = new System.Drawing.Point(77, 44);
+            this.pcb_moneda.Name = "pcb_moneda";
+            this.pcb_moneda.Size = new System.Drawing.Size(138, 97);
+            this.pcb_moneda.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcb_moneda.TabIndex = 3;
+            this.pcb_moneda.TabStop = false;
+            // 
+            // txt_moneda
+            // 
+            this.txt_moneda.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_moneda.Location = new System.Drawing.Point(114, 168);
+            this.txt_moneda.Name = "txt_moneda";
+            this.txt_moneda.Size = new System.Drawing.Size(132, 23);
+            this.txt_moneda.TabIndex = 1;
             // 
             // label4
             // 
@@ -317,14 +334,6 @@
             this.txt_simbolo.Name = "txt_simbolo";
             this.txt_simbolo.Size = new System.Drawing.Size(132, 23);
             this.txt_simbolo.TabIndex = 2;
-            // 
-            // txt_moneda
-            // 
-            this.txt_moneda.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_moneda.Location = new System.Drawing.Point(114, 168);
-            this.txt_moneda.Name = "txt_moneda";
-            this.txt_moneda.Size = new System.Drawing.Size(132, 23);
-            this.txt_moneda.TabIndex = 1;
             // 
             // dgv_moneda_nueva
             // 
@@ -385,15 +394,6 @@
             this.tileNavPane1.TabIndex = 188;
             this.tileNavPane1.Text = "Clientes";
             // 
-            // pcb_moneda
-            // 
-            this.pcb_moneda.Location = new System.Drawing.Point(77, 44);
-            this.pcb_moneda.Name = "pcb_moneda";
-            this.pcb_moneda.Size = new System.Drawing.Size(138, 97);
-            this.pcb_moneda.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pcb_moneda.TabIndex = 3;
-            this.pcb_moneda.TabStop = false;
-            // 
             // frm_nueva_moneda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -411,9 +411,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             this.groupControl2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcb_moneda)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_moneda_nueva)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcb_moneda)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -424,16 +424,16 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btn_nuevo;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btn_cancelar;
+        private System.Windows.Forms.Button btn_ultimo;
+        private System.Windows.Forms.Button btn_actualizar;
         private System.Windows.Forms.Button btn_guardar;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button btn_modificar;
+        private System.Windows.Forms.Button btn_buscar;
+        private System.Windows.Forms.Button btn_primero;
+        private System.Windows.Forms.Button btn_anterior;
+        private System.Windows.Forms.Button btn_editar;
         private System.Windows.Forms.Button btn_eliminar;
-        private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.Button btn_siguiente;
         private DevExpress.XtraEditors.GroupControl groupControl2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;

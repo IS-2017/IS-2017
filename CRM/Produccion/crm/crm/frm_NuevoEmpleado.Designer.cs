@@ -53,7 +53,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_reporte = new System.Windows.Forms.Button();
             this.btn_nuevo = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_cancelar = new System.Windows.Forms.Button();
             this.btn_ultimo = new System.Windows.Forms.Button();
             this.btn_actualizar = new System.Windows.Forms.Button();
             this.btn_guardar = new System.Windows.Forms.Button();
@@ -63,6 +63,7 @@
             this.btn_editar = new System.Windows.Forms.Button();
             this.btn_eliminar = new System.Windows.Forms.Button();
             this.btn_siguiente = new System.Windows.Forms.Button();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_empleado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
@@ -302,7 +303,7 @@
             // 
             this.panel1.Controls.Add(this.btn_reporte);
             this.panel1.Controls.Add(this.btn_nuevo);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btn_cancelar);
             this.panel1.Controls.Add(this.btn_ultimo);
             this.panel1.Controls.Add(this.btn_actualizar);
             this.panel1.Controls.Add(this.btn_guardar);
@@ -352,22 +353,22 @@
             this.btn_nuevo.UseVisualStyleBackColor = true;
             this.btn_nuevo.Click += new System.EventHandler(this.btn_nuevo_Click);
             // 
-            // button1
+            // btn_cancelar
             // 
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(334, 4);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(56, 59);
-            this.button1.TabIndex = 176;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btn_cancelar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_cancelar.BackgroundImage")));
+            this.btn_cancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_cancelar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_cancelar.FlatAppearance.BorderSize = 0;
+            this.btn_cancelar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_cancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btn_cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_cancelar.Location = new System.Drawing.Point(334, 4);
+            this.btn_cancelar.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_cancelar.Name = "btn_cancelar";
+            this.btn_cancelar.Size = new System.Drawing.Size(56, 59);
+            this.btn_cancelar.TabIndex = 176;
+            this.btn_cancelar.UseVisualStyleBackColor = true;
+            this.btn_cancelar.Click += new System.EventHandler(this.button1_Click);
             // 
             // btn_ultimo
             // 
@@ -517,11 +518,23 @@
             this.btn_siguiente.UseVisualStyleBackColor = true;
             this.btn_siguiente.Click += new System.EventHandler(this.btn_siguiente_Click);
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(109, 84);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(100, 13);
+            this.linkLabel1.TabIndex = 184;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "estadistica personal";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
             // frm_NuevoEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(997, 568);
+            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dgv_empleado);
             this.Controls.Add(this.groupControl1);
@@ -567,7 +580,7 @@
         private System.Windows.Forms.PictureBox pcb_empleado;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btn_nuevo;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_cancelar;
         private System.Windows.Forms.Button btn_ultimo;
         private System.Windows.Forms.Button btn_actualizar;
         private System.Windows.Forms.Button btn_guardar;
@@ -578,5 +591,6 @@
         private System.Windows.Forms.Button btn_eliminar;
         private System.Windows.Forms.Button btn_siguiente;
         private System.Windows.Forms.Button btn_reporte;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }

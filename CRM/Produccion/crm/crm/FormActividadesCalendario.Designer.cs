@@ -29,10 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraScheduler.TimeRuler timeRuler1 = new DevExpress.XtraScheduler.TimeRuler();
-            DevExpress.XtraScheduler.TimeRuler timeRuler2 = new DevExpress.XtraScheduler.TimeRuler();
-            DevExpress.XtraScheduler.TimeRuler timeRuler3 = new DevExpress.XtraScheduler.TimeRuler();
+            DevExpress.XtraScheduler.TimeRuler timeRuler4 = new DevExpress.XtraScheduler.TimeRuler();
+            DevExpress.XtraScheduler.TimeRuler timeRuler5 = new DevExpress.XtraScheduler.TimeRuler();
+            DevExpress.XtraScheduler.TimeRuler timeRuler6 = new DevExpress.XtraScheduler.TimeRuler();
             this.ContenedorCalendario = new DevExpress.XtraScheduler.SchedulerStorage(this.components);
+            this.appointmentsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.baseDatosCalendarioDataSet = new crm.BaseDatosCalendarioDataSet();
+            this.resourcesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.Calendario = new DevExpress.XtraScheduler.SchedulerControl();
             this.MenuCalendario = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.editAppointmentQueryItem1 = new DevExpress.XtraScheduler.UI.EditAppointmentQueryItem();
@@ -72,7 +75,12 @@
             this.layoutRibbonPageGroup1 = new DevExpress.XtraScheduler.UI.LayoutRibbonPageGroup();
             this.dateNavigator1 = new DevExpress.XtraScheduler.DateNavigator();
             this.schedulerBarController1 = new DevExpress.XtraScheduler.UI.SchedulerBarController();
+            this.appointmentsTableAdapter = new crm.BaseDatosCalendarioDataSetTableAdapters.AppointmentsTableAdapter();
+            this.resourcesTableAdapter = new crm.BaseDatosCalendarioDataSetTableAdapters.ResourcesTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.ContenedorCalendario)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.appointmentsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.baseDatosCalendarioDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.resourcesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Calendario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MenuCalendario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDuration1)).BeginInit();
@@ -81,6 +89,46 @@
             ((System.ComponentModel.ISupportInitialize)(this.dateNavigator1.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.schedulerBarController1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // ContenedorCalendario
+            // 
+            this.ContenedorCalendario.Appointments.DataSource = this.appointmentsBindingSource;
+            this.ContenedorCalendario.Appointments.Mappings.AllDay = "AllDay";
+            this.ContenedorCalendario.Appointments.Mappings.Description = "Description";
+            this.ContenedorCalendario.Appointments.Mappings.End = "EndDate";
+            this.ContenedorCalendario.Appointments.Mappings.Label = "Label";
+            this.ContenedorCalendario.Appointments.Mappings.Location = "Location";
+            this.ContenedorCalendario.Appointments.Mappings.RecurrenceInfo = "RecurrenceInfo";
+            this.ContenedorCalendario.Appointments.Mappings.ReminderInfo = "ReminderInfo";
+            this.ContenedorCalendario.Appointments.Mappings.ResourceId = "ResourceID";
+            this.ContenedorCalendario.Appointments.Mappings.Start = "StartDate";
+            this.ContenedorCalendario.Appointments.Mappings.Status = "Status";
+            this.ContenedorCalendario.Appointments.Mappings.Subject = "Subject";
+            this.ContenedorCalendario.Appointments.Mappings.TimeZoneId = "TimeZoneId";
+            this.ContenedorCalendario.Appointments.Mappings.Type = "Type";
+            this.ContenedorCalendario.Resources.DataSource = this.resourcesBindingSource;
+            this.ContenedorCalendario.Resources.Mappings.Caption = "ResourceName";
+            this.ContenedorCalendario.Resources.Mappings.Color = "Color";
+            this.ContenedorCalendario.Resources.Mappings.Id = "ResourceID";
+            this.ContenedorCalendario.Resources.Mappings.Image = "Image";
+            this.ContenedorCalendario.AppointmentsInserted += new DevExpress.XtraScheduler.PersistentObjectsEventHandler(this.ContenedorCalendario_AppointmentsInserted);
+            this.ContenedorCalendario.AppointmentsChanged += new DevExpress.XtraScheduler.PersistentObjectsEventHandler(this.ContenedorCalendario_AppointmentsChanged);
+            this.ContenedorCalendario.AppointmentsDeleted += new DevExpress.XtraScheduler.PersistentObjectsEventHandler(this.ContenedorCalendario_AppointmentsDeleted);
+            // 
+            // appointmentsBindingSource
+            // 
+            this.appointmentsBindingSource.DataMember = "Appointments";
+            this.appointmentsBindingSource.DataSource = this.baseDatosCalendarioDataSet;
+            // 
+            // baseDatosCalendarioDataSet
+            // 
+            this.baseDatosCalendarioDataSet.DataSetName = "BaseDatosCalendarioDataSet";
+            this.baseDatosCalendarioDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // resourcesBindingSource
+            // 
+            this.resourcesBindingSource.DataMember = "Resources";
+            this.resourcesBindingSource.DataSource = this.baseDatosCalendarioDataSet;
             // 
             // Calendario
             // 
@@ -92,11 +140,11 @@
             this.Calendario.Storage = this.ContenedorCalendario;
             this.Calendario.TabIndex = 0;
             this.Calendario.Text = "schedulerControl1";
-            this.Calendario.Views.DayView.TimeRulers.Add(timeRuler1);
+            this.Calendario.Views.DayView.TimeRulers.Add(timeRuler4);
             this.Calendario.Views.FullWeekView.Enabled = true;
-            this.Calendario.Views.FullWeekView.TimeRulers.Add(timeRuler2);
+            this.Calendario.Views.FullWeekView.TimeRulers.Add(timeRuler5);
             this.Calendario.Views.WeekView.Enabled = false;
-            this.Calendario.Views.WorkWeekView.TimeRulers.Add(timeRuler3);
+            this.Calendario.Views.WorkWeekView.TimeRulers.Add(timeRuler6);
             // 
             // MenuCalendario
             // 
@@ -382,7 +430,7 @@
             this.dateNavigator1.Location = new System.Drawing.Point(775, 54);
             this.dateNavigator1.Name = "dateNavigator1";
             this.dateNavigator1.SchedulerControl = this.Calendario;
-            this.dateNavigator1.Size = new System.Drawing.Size(213, 468);
+            this.dateNavigator1.Size = new System.Drawing.Size(213, 493);
             this.dateNavigator1.TabIndex = 1;
             // 
             // schedulerBarController1
@@ -414,6 +462,14 @@
             this.schedulerBarController1.BarItems.Add(this.changeSnapToCellsUIItem1);
             this.schedulerBarController1.Control = this.Calendario;
             // 
+            // appointmentsTableAdapter
+            // 
+            this.appointmentsTableAdapter.ClearBeforeFill = true;
+            // 
+            // resourcesTableAdapter
+            // 
+            this.resourcesTableAdapter.ClearBeforeFill = true;
+            // 
             // FormActividadesCalendario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -427,6 +483,9 @@
             this.Text = "Actividades";
             this.Load += new System.EventHandler(this.FormActividadesCalendario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ContenedorCalendario)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.appointmentsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.baseDatosCalendarioDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.resourcesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Calendario)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MenuCalendario)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDuration1)).EndInit();
@@ -482,5 +541,10 @@
         private DevExpress.XtraScheduler.UI.TimeScaleRibbonPageGroup timeScaleRibbonPageGroup1;
         private DevExpress.XtraScheduler.UI.LayoutRibbonPageGroup layoutRibbonPageGroup1;
         private DevExpress.XtraScheduler.UI.SchedulerBarController schedulerBarController1;
+        private BaseDatosCalendarioDataSet baseDatosCalendarioDataSet;
+        private System.Windows.Forms.BindingSource appointmentsBindingSource;
+        private BaseDatosCalendarioDataSetTableAdapters.AppointmentsTableAdapter appointmentsTableAdapter;
+        private System.Windows.Forms.BindingSource resourcesBindingSource;
+        private BaseDatosCalendarioDataSetTableAdapters.ResourcesTableAdapter resourcesTableAdapter;
     }
 }

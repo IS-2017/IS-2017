@@ -12,6 +12,7 @@
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publicar\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -24,7 +25,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -48,8 +48,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DevExpress.Charts.Designer.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Charts.v15.2.Core, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Data.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.ExpressApp.Chart.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.ExpressApp.Chart.Web.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.ExpressApp.Chart.Win.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Office.v15.2.Core, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Pdf.v15.2.Core, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Pdf.v15.2.Drawing, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
@@ -70,16 +74,20 @@
     <Reference Include="DevExpress.XtraScheduler.v15.2.Core, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraScheduler.v15.2.Extensions, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraVerticalGrid.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="FuncionesNavegador">
+      <HintPath>..\..\..\Users\Chrix\Desktop\8vo semestre\Dlls\DLL Navegador\FuncionesNavegador\bin\Debug\FuncionesNavegador.dll</HintPath>
+    </Reference>
     <Reference Include="MySql.Data, Version=6.3.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\Desktop\8vo semestre\MySql.Data.dll</HintPath>
     </Reference>
     <Reference Include="seguridad, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Users\Chrix\Desktop\9o semestre\IS\seguridad\seguridad\bin\Debug\seguridad.dll</HintPath>
+      <HintPath>..\..\seguridad\seguridad\seguridad\bin\Debug\seguridad.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -91,8 +99,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaseDatosCalendarioDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BaseDatosCalendarioDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="CapaDatosPersonas.cs" />
+    <Compile Include="CapaNegociod.cs" />
+    <Compile Include="cls_grafica_pie.cs" />
+    <Compile Include="cls_nombre_mes.cs" />
     <Compile Include="Conexion.cs" />
+    <Compile Include="crmbdDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crmbdDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="datos.cs" />
+    <Compile Include="entidades.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +134,18 @@
     <Compile Include="FormContactos.Designer.cs">
       <DependentUpon>FormContactos.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormDetallesCaso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDetallesCaso.Designer.cs">
+      <DependentUpon>FormDetallesCaso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDetallesNegocio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDetallesNegocio.Designer.cs">
+      <DependentUpon>FormDetallesNegocio.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormNegociaciones.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,6 +157,24 @@
     </Compile>
     <Compile Include="FormNuevoNegocio.Designer.cs">
       <DependentUpon>FormNuevoNegocio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTareasCaso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTareasCaso.Designer.cs">
+      <DependentUpon>FormTareasCaso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTareasNegocio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTareasNegocio.Designer.cs">
+      <DependentUpon>FormTareasNegocio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Casos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Casos.Designer.cs">
+      <DependentUpon>Form_Casos.cs</DependentUpon>
     </Compile>
     <Compile Include="Form_categoria_neg.cs">
       <SubType>Form</SubType>
@@ -135,11 +188,54 @@
     <Compile Include="Form_inicio.Designer.cs">
       <DependentUpon>Form_inicio.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmListadoPrecio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListadoPrecio.Designer.cs">
+      <DependentUpon>frmListadoPrecio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_abonos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_abonos.Designer.cs">
+      <DependentUpon>frm_abonos.cs</DependentUpon>
+    </Compile>
+
+    <Compile Include="frm_balance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_balance.Designer.cs">
+      <DependentUpon>frm_balance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_buscarfct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_buscarfct.Designer.cs">
+      <DependentUpon>frm_buscarfct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_busqueda_fecha_personalizada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_busqueda_fecha_personalizada.Designer.cs">
+      <DependentUpon>frm_busqueda_fecha_personalizada.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_categoria_caso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_categoria_caso.Designer.cs">
+      <DependentUpon>frm_categoria_caso.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_cliente.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frm_cliente.Designer.cs">
       <DependentUpon>frm_cliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_detalle_tareas_importantes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_detalle_tareas_importantes.Designer.cs">
+      <DependentUpon>frm_detalle_tareas_importantes.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_empresa.cs">
       <SubType>Form</SubType>
@@ -153,11 +249,23 @@
     <Compile Include="frm_estadistica_empresa.Designer.cs">
       <DependentUpon>frm_estadistica_empresa.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_estadistica_negocio_descripcion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_estadistica_negocio_descripcion.Designer.cs">
+      <DependentUpon>frm_estadistica_negocio_descripcion.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_estadistica_personal.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frm_estadistica_personal.Designer.cs">
       <DependentUpon>frm_estadistica_personal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_meta_mantenimiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_meta_mantenimiento.Designer.cs">
+      <DependentUpon>frm_meta_mantenimiento.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_moneda.cs">
       <SubType>Form</SubType>
@@ -171,6 +279,12 @@
     <Compile Include="frm_nueva_moneda.Designer.cs">
       <DependentUpon>frm_nueva_moneda.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_NuevoCaso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_NuevoCaso.Designer.cs">
+      <DependentUpon>frm_NuevoCaso.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_NuevoEmpleado.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -183,15 +297,40 @@
     <Compile Include="frm_pronostico.Designer.cs">
       <DependentUpon>frm_pronostico.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_pronostico_ventas_secundario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_pronostico_ventas_secundario.Designer.cs">
+      <DependentUpon>frm_pronostico_ventas_secundario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="inventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="inventario.Designer.cs">
+      <DependentUpon>inventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="inventario_bodega.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="inventario_bodega.Designer.cs">
+      <DependentUpon>inventario_bodega.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="negocio.cs" />
     <Compile Include="OpBD.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="prueba.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="prueba.Designer.cs">
+      <DependentUpon>prueba.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -201,11 +340,26 @@
     <EmbeddedResource Include="FormContactos.resx">
       <DependentUpon>FormContactos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormDetallesCaso.resx">
+      <DependentUpon>FormDetallesCaso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDetallesNegocio.resx">
+      <DependentUpon>FormDetallesNegocio.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormNegociaciones.resx">
       <DependentUpon>FormNegociaciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormNuevoNegocio.resx">
       <DependentUpon>FormNuevoNegocio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTareasCaso.resx">
+      <DependentUpon>FormTareasCaso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTareasNegocio.resx">
+      <DependentUpon>FormTareasNegocio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Casos.resx">
+      <DependentUpon>Form_Casos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_categoria_neg.resx">
       <DependentUpon>Form_categoria_neg.cs</DependentUpon>
@@ -213,8 +367,29 @@
     <EmbeddedResource Include="Form_inicio.resx">
       <DependentUpon>Form_inicio.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmListadoPrecio.resx">
+      <DependentUpon>frmListadoPrecio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_abonos.resx">
+      <DependentUpon>frm_abonos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_balance.resx">
+      <DependentUpon>frm_balance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_buscarfct.resx">
+      <DependentUpon>frm_buscarfct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_busqueda_fecha_personalizada.resx">
+      <DependentUpon>frm_busqueda_fecha_personalizada.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_categoria_caso.resx">
+      <DependentUpon>frm_categoria_caso.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_cliente.resx">
       <DependentUpon>frm_cliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_detalle_tareas_importantes.resx">
+      <DependentUpon>frm_detalle_tareas_importantes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_empresa.resx">
       <DependentUpon>frm_empresa.cs</DependentUpon>
@@ -222,8 +397,14 @@
     <EmbeddedResource Include="frm_estadistica_empresa.resx">
       <DependentUpon>frm_estadistica_empresa.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_estadistica_negocio_descripcion.resx">
+      <DependentUpon>frm_estadistica_negocio_descripcion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_estadistica_personal.resx">
       <DependentUpon>frm_estadistica_personal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_meta_mantenimiento.resx">
+      <DependentUpon>frm_meta_mantenimiento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_moneda.resx">
       <DependentUpon>frm_moneda.cs</DependentUpon>
@@ -231,11 +412,23 @@
     <EmbeddedResource Include="frm_nueva_moneda.resx">
       <DependentUpon>frm_nueva_moneda.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_NuevoCaso.resx">
+      <DependentUpon>frm_NuevoCaso.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_NuevoEmpleado.resx">
       <DependentUpon>frm_NuevoEmpleado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_pronostico.resx">
       <DependentUpon>frm_pronostico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_pronostico_ventas_secundario.resx">
+      <DependentUpon>frm_pronostico_ventas_secundario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="inventario.resx">
+      <DependentUpon>inventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="inventario_bodega.resx">
+      <DependentUpon>inventario_bodega.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -251,6 +444,31 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="prueba.resx">
+      <DependentUpon>prueba.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="BaseDatosCalendarioDataSet.xsc">
+      <DependentUpon>BaseDatosCalendarioDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BaseDatosCalendarioDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BaseDatosCalendarioDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BaseDatosCalendarioDataSet.xss">
+      <DependentUpon>BaseDatosCalendarioDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="crmbdDataSet.xsc">
+      <DependentUpon>crmbdDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="crmbdDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>crmbdDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="crmbdDataSet.xss">
+      <DependentUpon>crmbdDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -278,6 +496,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="bin\Debug\imprimir1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BaseDatosCalendario.mdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="BaseDatosCalendario_log.ldf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <DependentUpon>BaseDatosCalendario.mdf</DependentUpon>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
