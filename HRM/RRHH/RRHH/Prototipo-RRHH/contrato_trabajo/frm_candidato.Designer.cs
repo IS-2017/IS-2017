@@ -126,7 +126,6 @@
             this.txt_cv_candidato.Location = new System.Drawing.Point(432, 78);
             this.txt_cv_candidato.MaxLength = 500;
             this.txt_cv_candidato.Name = "txt_cv_candidato";
-            this.txt_cv_candidato.ReadOnly = true;
             this.txt_cv_candidato.Size = new System.Drawing.Size(165, 26);
             this.txt_cv_candidato.TabIndex = 16;
             this.txt_cv_candidato.Tag = "cv_candidato";
@@ -194,12 +193,12 @@
             this.txt_lbl.AutoSize = true;
             this.txt_lbl.Font = new System.Drawing.Font("Century Gothic", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_lbl.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txt_lbl.Location = new System.Drawing.Point(295, 18);
+            this.txt_lbl.Location = new System.Drawing.Point(288, 18);
             this.txt_lbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.txt_lbl.Name = "txt_lbl";
-            this.txt_lbl.Size = new System.Drawing.Size(184, 34);
+            this.txt_lbl.Size = new System.Drawing.Size(166, 34);
             this.txt_lbl.TabIndex = 51;
-            this.txt_lbl.Text = "CANDIDATO";
+            this.txt_lbl.Text = "Candidato";
             // 
             // groupBox2
             // 

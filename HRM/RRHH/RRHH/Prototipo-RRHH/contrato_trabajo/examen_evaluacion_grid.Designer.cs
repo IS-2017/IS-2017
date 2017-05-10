@@ -243,6 +243,7 @@
             this.Controls.Add(this.lbl_busq_ex_ev);
             this.Controls.Add(this.gpb_navegador);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "examen_evaluacion_grid";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "examen_evaluacion_grid";

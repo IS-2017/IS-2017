@@ -97,6 +97,7 @@
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
+            this.calificaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
@@ -317,7 +318,8 @@
             this.asistenciaCapacitaciónToolStripMenuItem,
             this.indemnizaciónToolStripMenuItem,
             this.nominaToolStripMenuItem1,
-            this.vacacionesToolStripMenuItem});
+            this.vacacionesToolStripMenuItem,
+            this.calificaToolStripMenuItem});
             resources.ApplyResources(this.nominasToolStripMenuItem1, "nominasToolStripMenuItem1");
             this.nominasToolStripMenuItem1.Name = "nominasToolStripMenuItem1";
             this.nominasToolStripMenuItem1.Tag = "13200";
@@ -623,6 +625,13 @@
             this.toolStripProgressBar1.Name = "toolStripProgressBar1";
             resources.ApplyResources(this.toolStripProgressBar1, "toolStripProgressBar1");
             // 
+            // calificaToolStripMenuItem
+            // 
+            this.calificaToolStripMenuItem.Name = "calificaToolStripMenuItem";
+            resources.ApplyResources(this.calificaToolStripMenuItem, "calificaToolStripMenuItem");
+            this.calificaToolStripMenuItem.Tag = "13209";
+            this.calificaToolStripMenuItem.Click += new System.EventHandler(this.calificaToolStripMenuItem_Click);
+            // 
             // mdi_contenedor
             // 
             this.AllowDrop = true;
@@ -718,6 +727,7 @@
         private System.Windows.Forms.ToolStripMenuItem indemnizaciónToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nominaToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem vacacionesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem calificaToolStripMenuItem;
     }
 }
 

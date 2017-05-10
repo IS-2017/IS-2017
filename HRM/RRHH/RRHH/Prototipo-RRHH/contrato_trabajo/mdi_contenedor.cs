@@ -70,6 +70,7 @@ namespace contrato_trabajo
         frm_hora_extras_grid horas_grid;
         frm_impuesto_grid impuesto_grid;
         examen_evaluacion_grid frm_examenes;
+        frm_calificacion_evaluacion_grid frm_cal_ex;
 
         String usuario;
 
@@ -766,6 +767,22 @@ namespace contrato_trabajo
         public void vacaciones_FormClosed(object sender, FormClosedEventArgs e)
         {
             frm_vacas = null;
+        }
+
+        private void calificaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (frm_cal_ex == null)
+            {
+                frm_cal_ex = new frm_calificacion_evaluacion_grid();
+                frm_cal_ex.MdiParent = this;
+                frm_cal_ex.FormClosed += new FormClosedEventHandler(frm_cal_ex_FormClosed);
+                frm_cal_ex.Show();
+            }
+        }
+
+        void frm_cal_ex_FormClosed(object sender, EventArgs e)
+        {
+            frm_cal_ex = null;
         }
     }
 }
