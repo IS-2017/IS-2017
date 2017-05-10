@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using FuncionesNavegador;
+using System.Text.RegularExpressions;
 
 namespace contrato_trabajo
 {
@@ -308,7 +309,68 @@ namespace contrato_trabajo
             }
         }
         #endregion
-    
+
+        #region Validaciones
+        //=======================================================================================================================
+        //--------------------------------------------- Validacion --------------------------------------------------------------
+        //=======================================================================================================================
+        //programador:Javier Figueroa Pereira
+        private void txt_correo_1_Leave(object sender, EventArgs e)
+        {
+            try
+            {
+                string patron = "\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*";
+                if(Regex.IsMatch(txt_correo_1.Text, patron))
+                {
+                    btn_guardar.Enabled = true;
+                    btn_editar.Enabled = true;
+                    errorProvider1.Clear();
+                }
+                else
+                {
+                    btn_guardar.Enabled = false;
+                    btn_editar.Enabled = false;
+                    errorProvider1.SetError(this.txt_correo_1, "Correo ingresado no valido");
+                    return;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void txt_correo_1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validacion_LetrasNumeros(e);
+        }
+
+        private void txt_detalle_correo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validacion_LetrasNumeros(e);
+        }
+
+        public void Validacion_LetrasNumeros(KeyPressEventArgs e)
+        {
+            try
+            {
+                if (Char.IsLetterOrDigit(e.KeyChar) || e.KeyChar == '@' || Char.IsSeparator(e.KeyChar) || e.KeyChar == '-' || e.KeyChar == '_' || Char.IsControl(e.KeyChar))
+                {
+                    e.Handled = false;
+                }
+                else
+                {
+                    e.Handled = true;
+                    MessageBox.Show("Llene el campo con caracteres permitidos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        #endregion
 
     }
 }

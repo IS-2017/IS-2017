@@ -340,5 +340,44 @@ namespace contrato_trabajo
             }
         }
         #endregion
+
+        #region Validaciones
+        //=======================================================================================================================
+        //--------------------------------------Navegacion--------------------------------------------------------------
+        //=======================================================================================================================
+        //programador:Javier Figueroa Pereira
+        public void Validacion_LetrasNumeros(KeyPressEventArgs e)
+        {
+            try
+            {
+                if (Char.IsLetterOrDigit(e.KeyChar) || Char.IsControl(e.KeyChar) || Char.IsSeparator(e.KeyChar) || e.KeyChar == '-' || e.KeyChar == '_')
+                {
+                    e.Handled = false;
+                }
+                else
+                {
+                    e.Handled = true;
+                    MessageBox.Show("Llene el campo con caracteres permitidos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void txt_nombre_puesto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validacion_LetrasNumeros(e);
+        }
+
+        private void txt_descripcion_puesto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validacion_LetrasNumeros(e);
+        }
+
+        #endregion
+
+
     }
 }

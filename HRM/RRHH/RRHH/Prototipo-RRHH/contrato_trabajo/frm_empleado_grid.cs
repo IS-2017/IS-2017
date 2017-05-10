@@ -17,24 +17,36 @@ namespace contrato_trabajo
 {
     public partial class frm_empleado_grid : Form
     {
+        #region Cargar Form de Vista de Empleados
+        //=======================================================================================================================
+        //--------------------------------------Form Empleados--------------------------------------------------------------
+        //=======================================================================================================================
+        //programador:Javier Figueroa Pereira
         public frm_empleado_grid()
         {
             InitializeComponent();
             //string tabla = "empleado";
             //fn.ActualizarGrid(this.dgv_lista_emps, "Select `id_empleado_pk`, `nombre_emp`, `telefono_movil_emp`, `no_afiliacionIGSS_emp`, `dpi_emp` from empleado WHERE estado = 'ACTIVO' ", tabla);
         }
+        #endregion
 
+        #region Variables del Form
+        //=======================================================================================================================
+        //------------------------------------------- Variables --------------------------------------------------------------
+        //=======================================================================================================================
+        //programador:Javier Figueroa Pereira
         CapaNegocio fn = new CapaNegocio();
         operaciones op = new operaciones();
         Boolean Editar;
         Boolean tipo_accion;
         String id_empleado_pk, nombre_emp, apellido_emp, dpi_emp, telefono_hogar_emp, telefono_movil_emp, no_afiliacionIGSS_emp, fecha_de_alta_emp, fecha_de_baja_emp, estadolaboral;
+        #endregion
 
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
+        #region Funciones de radioButtons
+        //=======================================================================================================================
+        //---------------------------------------------- radioButtons -----------------------------------------------------------
+        //=======================================================================================================================
+        //programador:Javier Figueroa Pereira
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
             try
@@ -73,25 +85,18 @@ namespace contrato_trabajo
                 MessageBox.Show(ex.Message);
             }
         }
+        #endregion
 
+        #region Botones de Navegacion
+        //=======================================================================================================================
+        //---------------------------------------------- Navegacion --------------------------------------------------------------
+        //=======================================================================================================================
+        //programador:Javier Figueroa Pereira
         private void btn_ultimo_Click(object sender, EventArgs e)
         {
             try
             {
                 fn.Ultimo(dgv_lista_emps);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-
-        private void cbo_empres_SelectedValueChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                string tabla = "nomina";
-                fn.ActualizarGrid(this.dgv_lista_emps, "Select `id_empleado_pk`, `nombre_emp`, `apellido_emp`, `no_afiliacionIGSS_emp`, `dpi_emp` from empleado WHERE estado = 'ACTIVO' and id_empresa_pk = '" + cbo_empres.SelectedValue + "' ", tabla);
             }
             catch (Exception ex)
             {
@@ -134,6 +139,13 @@ namespace contrato_trabajo
                 MessageBox.Show(ex.Message);
             }
         }
+        #endregion
+
+        #region Boton de Busqueda
+        //=======================================================================================================================
+        //---------------------------------------------- Buscar --------------------------------------------------------------
+        //=======================================================================================================================
+        //programador:Javier Figueroa Pereira
 
         private void btn_buscar_Click(object sender, EventArgs e)
         {
@@ -147,7 +159,13 @@ namespace contrato_trabajo
                 MessageBox.Show(ex.Message);
             }
         }
+        #endregion
 
+        #region Boton de Nuevo
+        //=======================================================================================================================
+        //---------------------------------------------- Nuevo --------------------------------------------------------------
+        //=======================================================================================================================
+        //programador:Javier Figueroa Pereira
         private void btn_nuevo_Click(object sender, EventArgs e)
         {
             try
@@ -163,7 +181,13 @@ namespace contrato_trabajo
                 MessageBox.Show(ex.Message);
             }
         }
+        #endregion
 
+        #region Boton Actualizar
+        //=======================================================================================================================
+        //---------------------------------------------- Actualizar --------------------------------------------------------------
+        //=======================================================================================================================
+        //programador:Javier Figueroa Pereira
         private void btn_actualizar_Click(object sender, EventArgs e)
         {
             try
@@ -177,7 +201,13 @@ namespace contrato_trabajo
                 MessageBox.Show(ex.Message);
             }
         }
+        #endregion
 
+        #region Funciones a Realizar
+        //=======================================================================================================================
+        //---------------------------------------------- Funciones --------------------------------------------------------------
+        //=======================================================================================================================
+        //programador:Javier Figueroa Pereira
         private void dgv_lista_emps_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             try
@@ -194,7 +224,25 @@ namespace contrato_trabajo
                 MessageBox.Show(ex.Message);
             } 
         }
+        private void cbo_empres_SelectedValueChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                string tabla = "nomina";
+                fn.ActualizarGrid(this.dgv_lista_emps, "Select `id_empleado_pk`, `nombre_emp`, `apellido_emp`, `no_afiliacionIGSS_emp`, `dpi_emp` from empleado WHERE estado = 'ACTIVO' and id_empresa_pk = '" + cbo_empres.SelectedValue + "' ", tabla);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        #endregion
 
+        #region Carga del Form
+        //=======================================================================================================================
+        //---------------------------------------------- Form Load --------------------------------------------------------------
+        //=======================================================================================================================
+        //programador:Javier Figueroa Pereira
         private void frm_empleado_grid_Load(object sender, EventArgs e)
         {       
             try
@@ -208,7 +256,13 @@ namespace contrato_trabajo
                 MessageBox.Show(ex.Message);
             }
         }
+        #endregion
 
+        #region Cargar comboBox
+        //=======================================================================================================================
+        //---------------------------------------------- ComboBox Load --------------------------------------------------------------
+        //=======================================================================================================================
+        //programador:Javier Figueroa Pereira
         public void llenaridempresa()
         {    
             //se realiza la conexión a la base de datos
@@ -227,5 +281,6 @@ namespace contrato_trabajo
             cbo_empres.DisplayMember = ("nombre_empresa");
             Conexionmysql.Desconectar();
         }
+        #endregion
     }
 }

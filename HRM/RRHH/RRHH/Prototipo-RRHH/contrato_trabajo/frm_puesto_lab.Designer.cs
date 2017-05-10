@@ -124,19 +124,23 @@
             // txt_descripcion_puesto
             // 
             this.txt_descripcion_puesto.Location = new System.Drawing.Point(124, 45);
+            this.txt_descripcion_puesto.MaxLength = 200;
             this.txt_descripcion_puesto.Multiline = true;
             this.txt_descripcion_puesto.Name = "txt_descripcion_puesto";
             this.txt_descripcion_puesto.Size = new System.Drawing.Size(384, 114);
             this.txt_descripcion_puesto.TabIndex = 2;
             this.txt_descripcion_puesto.Tag = "descripcion";
+            this.txt_descripcion_puesto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_descripcion_puesto_KeyPress);
             // 
             // txt_nombre_puesto
             // 
             this.txt_nombre_puesto.Location = new System.Drawing.Point(124, 19);
+            this.txt_nombre_puesto.MaxLength = 50;
             this.txt_nombre_puesto.Name = "txt_nombre_puesto";
             this.txt_nombre_puesto.Size = new System.Drawing.Size(384, 20);
             this.txt_nombre_puesto.TabIndex = 1;
             this.txt_nombre_puesto.Tag = "nombre_puesto";
+            this.txt_nombre_puesto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_nombre_puesto_KeyPress);
             // 
             // lbl_descripcion_activo
             // 

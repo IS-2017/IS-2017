@@ -41,17 +41,15 @@
             this.txt_segundo_nombre = new System.Windows.Forms.TextBox();
             this.txt_primer_apellido = new System.Windows.Forms.TextBox();
             this.txt_segundo_apellido = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btn_guardar = new System.Windows.Forms.Button();
             this.btn_cancelar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label35
             // 
             this.label35.AutoSize = true;
             this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label35.Location = new System.Drawing.Point(178, 9);
+            this.label35.Location = new System.Drawing.Point(104, 9);
             this.label35.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(370, 26);
@@ -129,6 +127,7 @@
             // txt_primer_nombre
             // 
             this.txt_primer_nombre.Location = new System.Drawing.Point(192, 132);
+            this.txt_primer_nombre.MaxLength = 11;
             this.txt_primer_nombre.Name = "txt_primer_nombre";
             this.txt_primer_nombre.Size = new System.Drawing.Size(404, 20);
             this.txt_primer_nombre.TabIndex = 49;
@@ -138,36 +137,32 @@
             // txt_segundo_nombre
             // 
             this.txt_segundo_nombre.Location = new System.Drawing.Point(192, 158);
+            this.txt_segundo_nombre.MaxLength = 11;
             this.txt_segundo_nombre.Name = "txt_segundo_nombre";
             this.txt_segundo_nombre.Size = new System.Drawing.Size(404, 20);
             this.txt_segundo_nombre.TabIndex = 50;
             this.txt_segundo_nombre.TextChanged += new System.EventHandler(this.txt_segundo_nombre_TextChanged);
+            this.txt_segundo_nombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_segundo_nombre_KeyPress);
             // 
             // txt_primer_apellido
             // 
             this.txt_primer_apellido.Location = new System.Drawing.Point(192, 184);
+            this.txt_primer_apellido.MaxLength = 23;
             this.txt_primer_apellido.Name = "txt_primer_apellido";
             this.txt_primer_apellido.Size = new System.Drawing.Size(404, 20);
             this.txt_primer_apellido.TabIndex = 51;
             this.txt_primer_apellido.TextChanged += new System.EventHandler(this.txt_primer_apellido_TextChanged);
+            this.txt_primer_apellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_primer_apellido_KeyPress);
             // 
             // txt_segundo_apellido
             // 
             this.txt_segundo_apellido.Location = new System.Drawing.Point(192, 210);
+            this.txt_segundo_apellido.MaxLength = 23;
             this.txt_segundo_apellido.Name = "txt_segundo_apellido";
             this.txt_segundo_apellido.Size = new System.Drawing.Size(404, 20);
             this.txt_segundo_apellido.TabIndex = 52;
             this.txt_segundo_apellido.TextChanged += new System.EventHandler(this.txt_segundo_apellido_TextChanged);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(-1, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(147, 60);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 53;
-            this.pictureBox1.TabStop = false;
+            this.txt_segundo_apellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_segundo_apellido_KeyPress);
             // 
             // btn_guardar
             // 
@@ -204,11 +199,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(609, 327);
             this.Controls.Add(this.btn_guardar);
             this.Controls.Add(this.btn_cancelar);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txt_segundo_apellido);
             this.Controls.Add(this.txt_primer_apellido);
             this.Controls.Add(this.txt_segundo_nombre);
@@ -228,7 +222,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Desglosar nombre del Empleado";
             this.Load += new System.EventHandler(this.frm_desglosar_nombre_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -247,7 +240,6 @@
         private System.Windows.Forms.TextBox txt_segundo_nombre;
         private System.Windows.Forms.TextBox txt_primer_apellido;
         private System.Windows.Forms.TextBox txt_segundo_apellido;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btn_guardar;
         private System.Windows.Forms.Button btn_cancelar;
     }

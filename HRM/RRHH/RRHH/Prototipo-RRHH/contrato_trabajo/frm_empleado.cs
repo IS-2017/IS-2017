@@ -11,8 +11,6 @@ using FuncionesNavegador;
 using dllconsultas;
 using System.Data.Odbc;
 using MySql.Data.MySqlClient;
-using System.Drawing;
-using System.Data;
 using System.Threading;
 using System.IO;
 
@@ -194,7 +192,7 @@ namespace contrato_trabajo
 
         #region Llenar Informacion del Empleado
         //=======================================================================================================================
-        //--------------------------------------INSERTAR TABLAS--------------------------------------------------------------
+        //--------------------------------------Llenar Informacion--------------------------------------------------------------
         //=======================================================================================================================
         //programador:Javier Figueroa Pereira
         public void cargarDatos()
@@ -416,7 +414,7 @@ namespace contrato_trabajo
 
         #region Boton Detalle del Nombre del Empleado
         //=======================================================================================================================
-        //--------------------------------------Nombre--------------------------------------------------------------
+        //--------------------------------------Nombre Detallado--------------------------------------------------------------
         //=======================================================================================================================
         //programador:Javier Figueroa Pereira
         public void btn_detalle_nombre_emp_Click(object sender, EventArgs e)
@@ -436,7 +434,7 @@ namespace contrato_trabajo
 
         #region Asignacion del Nombre del empleado - Ayuda
         //=======================================================================================================================
-        //--------------------------------------Nombre--------------------------------------------------------------
+        //--------------------------------------Asignacion Nombre--------------------------------------------------------------
         //=======================================================================================================================
         //programador:Javier Figueroa Pereira
         public void PassNombre(string strValue)
@@ -452,7 +450,7 @@ namespace contrato_trabajo
 
         #region Acciones a realizar
         //=======================================================================================================================
-        //----------------------------------------------------------------------------------------------------
+        //-------------------------------------Funciones a Realizar---------------------------------------------------------------
         //=======================================================================================================================
         //programador:Javier Figueroa Pereira
         private void cbo_estado_emp_SelectedIndexChanged(object sender, EventArgs e)
@@ -500,11 +498,40 @@ namespace contrato_trabajo
         {
             txt_cbo_empresa_asig.Text = cbo_empresa_asig.SelectedValue.ToString();
         }
+
+        private void cbo_puesto_laboral_SelectedValueChanged(object sender, EventArgs e)
+        {
+            txt_cbo_puesto_laboral.Text = cbo_puesto_laboral.SelectedValue.ToString();
+        }
+
+        private void cbo_area_laboral_SelectedValueChanged(object sender, EventArgs e)
+        {
+            txt_cbo_area_laboral.Text = cbo_area_laboral.SelectedValue.ToString();
+        }
+
+        private void cbo_jornadas_trabajo_SelectedValueChanged(object sender, EventArgs e)
+        {
+            txt_cbo_jornadas_trabajo.Text = cbo_jornadas_trabajo.SelectedValue.ToString();
+        }
+
+        private void txt_cbo_jornadas_trabajo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbo_puesto_laboral_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txt_cbo_jornadas_trabajo.Text = cbo_jornadas_trabajo.Text;
+            if (cbo_jornadas_trabajo.SelectedItem.ToString() == "VENDEDOR" || cbo_jornadas_trabajo.SelectedItem.ToString() == "Vendedor")
+            {
+                txt_cbo_jornadas_trabajo.Enabled = true;
+            }
+        }
         #endregion
 
         #region Boton Examinar carpeta del empleado
         //=======================================================================================================================
-        //--------------------------------------Nombre--------------------------------------------------------------
+        //--------------------------------------Examinar Carpeta--------------------------------------------------------------
         //=======================================================================================================================
         //programador:Javier Figueroa Pereira
         private void btn_examinar_documentacion_emp_Click(object sender, EventArgs e)
@@ -520,7 +547,7 @@ namespace contrato_trabajo
 
         #region Boton para mostrar Empresas
         //=======================================================================================================================
-        //--------------------------------------Nombre--------------------------------------------------------------
+        //--------------------------------------Mostrar Empresa--------------------------------------------------------------
         //=======================================================================================================================
         //programador:Javier Figueroa Pereira
         private void btn_empresa_emp_Click(object sender, EventArgs e)
@@ -540,7 +567,7 @@ namespace contrato_trabajo
 
         #region Cargar Informacion en ComboBox
         //=======================================================================================================================
-        //--------------------------------------Nombre--------------------------------------------------------------
+        //--------------------------------------Cargar ComboBox--------------------------------------------------------------
         //=======================================================================================================================
         //programador:Javier Figueroa Pereira
         public void llenaridempresa()
@@ -597,6 +624,11 @@ namespace contrato_trabajo
 
         #endregion
 
+        #region Boton Agregar Telefono
+        //=======================================================================================================================
+        //--------------------------------------Telefono Empleado--------------------------------------------------------------
+        //=======================================================================================================================
+        //programador:Javier Figueroa Pereira
         private void btn_agragar_telefonos_Click(object sender, EventArgs e)
         {
             try
@@ -612,36 +644,13 @@ namespace contrato_trabajo
                 MessageBox.Show(ex.Message);
             }
         }
+        #endregion
 
-        private void cbo_puesto_laboral_SelectedValueChanged(object sender, EventArgs e)
-        {
-            txt_cbo_puesto_laboral.Text = cbo_puesto_laboral.SelectedValue.ToString();
-        }
-
-        private void cbo_area_laboral_SelectedValueChanged(object sender, EventArgs e)
-        {
-            txt_cbo_area_laboral.Text = cbo_area_laboral.SelectedValue.ToString();
-        }
-
-        private void cbo_jornadas_trabajo_SelectedValueChanged(object sender, EventArgs e)
-        {
-            txt_cbo_jornadas_trabajo.Text = cbo_jornadas_trabajo.SelectedValue.ToString();
-        }
-
-        private void txt_cbo_jornadas_trabajo_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cbo_puesto_laboral_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            txt_cbo_jornadas_trabajo.Text = cbo_jornadas_trabajo.Text;
-            if (cbo_jornadas_trabajo.SelectedItem.ToString() == "VENDEDOR" || cbo_jornadas_trabajo.SelectedItem.ToString() == "Vendedor")
-            {
-                txt_cbo_jornadas_trabajo.Enabled = true;
-            }
-        }
-
+        #region Boton Editar
+        //=======================================================================================================================
+        //------------------------------------------------- Editar --------------------------------------------------------------
+        //=======================================================================================================================
+        //programador:Javier Figueroa Pereira
         private void btn_editar_Click(object sender, EventArgs e)
         {
             if (tbc_datos_emp.SelectedTab == General)
@@ -690,10 +699,14 @@ namespace contrato_trabajo
                 txt_cbo_jornadas_trabajo.Enabled = false;
 
             }
-
-
         }
+        #endregion
 
+        #region Boton Agregar Correo
+        //=======================================================================================================================
+        //------------------------------------------Correo Empleado--------------------------------------------------------------
+        //=======================================================================================================================
+        //programador:Javier Figueroa Pereira
         private void btn_agregar_correos_Click(object sender, EventArgs e)
         {
             try
@@ -709,7 +722,7 @@ namespace contrato_trabajo
                 MessageBox.Show(ex.Message);
             }
         }
-
+        #endregion
 
     }
 }

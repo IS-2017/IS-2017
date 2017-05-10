@@ -25,10 +25,7 @@ namespace contrato_trabajo
             txt_nom_completo.Text = txt_primer_nombre.Text.Trim() + txt_segundo_nombre.Text.Trim() + txt_primer_apellido.Text.Trim() + txt_segundo_apellido.Text.Trim();
         }
 
-        public void txt_primer_nombre_KeyPress(object sender, KeyPressEventArgs e)
-        {
-           
-        }
+        
 
         public void txt_primer_nombre_TextChanged(object sender, EventArgs e)
         {
@@ -56,5 +53,54 @@ namespace contrato_trabajo
             this.ownerForm.PassApellido(txt_primer_apellido.Text + " " + txt_segundo_apellido.Text);
             this.Close();
         }
+
+        #region Validaciones
+        //=======================================================================================================================
+        //--------------------------------------Navegacion--------------------------------------------------------------
+        //=======================================================================================================================
+        //programador:Javier Figueroa Pereira
+        public void Validacion_LetrasNumeros(KeyPressEventArgs e)
+        {
+            try
+            {
+                if (Char.IsLetter(e.KeyChar) || Char.IsControl(e.KeyChar))
+                {
+                    e.Handled = false;
+                }
+                else
+                {
+                    e.Handled = true;
+                    MessageBox.Show("Llene el campo con caracteres permitidos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        public void txt_primer_nombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validacion_LetrasNumeros(e);
+        }
+
+        private void txt_segundo_nombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validacion_LetrasNumeros(e);
+        }
+
+        private void txt_primer_apellido_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validacion_LetrasNumeros(e);
+        }
+
+        private void txt_segundo_apellido_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validacion_LetrasNumeros(e);
+        }
+
+        #endregion
+
+
     }
 }
