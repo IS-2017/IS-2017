@@ -38,7 +38,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lbl_ex_ev = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.btn_reporte = new System.Windows.Forms.Button();
             this.btn_nuevo = new System.Windows.Forms.Button();
             this.btn_ultimo = new System.Windows.Forms.Button();
@@ -51,12 +50,19 @@
             this.btn_buscar = new System.Windows.Forms.Button();
             this.btn_actualizar = new System.Windows.Forms.Button();
             this.btn_cancelar = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.cbo_are_trabajo_pk_examen_evaluacion = new System.Windows.Forms.ComboBox();
+            this.lbl_area_trabajo_examen_evaluacion = new System.Windows.Forms.Label();
+            this.txt_id_area_trabajo_pk_examen_evaluacion = new System.Windows.Forms.TextBox();
             this.gpb_ex_ev.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // gpb_ex_ev
             // 
+            this.gpb_ex_ev.Controls.Add(this.txt_id_area_trabajo_pk_examen_evaluacion);
+            this.gpb_ex_ev.Controls.Add(this.lbl_area_trabajo_examen_evaluacion);
+            this.gpb_ex_ev.Controls.Add(this.cbo_are_trabajo_pk_examen_evaluacion);
             this.gpb_ex_ev.Controls.Add(this.txt_estado_ex_ev);
             this.gpb_ex_ev.Controls.Add(this.txt_nombre_ex_ev);
             this.gpb_ex_ev.Controls.Add(this.txt_nota_maxima_ex_ev);
@@ -66,14 +72,15 @@
             this.gpb_ex_ev.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.gpb_ex_ev.Location = new System.Drawing.Point(10, 156);
             this.gpb_ex_ev.Name = "gpb_ex_ev";
-            this.gpb_ex_ev.Size = new System.Drawing.Size(695, 74);
+            this.gpb_ex_ev.Size = new System.Drawing.Size(695, 118);
             this.gpb_ex_ev.TabIndex = 55;
             this.gpb_ex_ev.TabStop = false;
             this.gpb_ex_ev.Text = "Datos generales";
+            this.gpb_ex_ev.Enter += new System.EventHandler(this.gpb_ex_ev_Enter);
             // 
             // txt_estado_ex_ev
             // 
-            this.txt_estado_ex_ev.Location = new System.Drawing.Point(144, 11);
+            this.txt_estado_ex_ev.Location = new System.Drawing.Point(144, 12);
             this.txt_estado_ex_ev.Name = "txt_estado_ex_ev";
             this.txt_estado_ex_ev.Size = new System.Drawing.Size(34, 26);
             this.txt_estado_ex_ev.TabIndex = 16;
@@ -359,6 +366,35 @@
             this.btn_cancelar.UseVisualStyleBackColor = true;
             this.btn_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
             // 
+            // cbo_are_trabajo_pk_examen_evaluacion
+            // 
+            this.cbo_are_trabajo_pk_examen_evaluacion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbo_are_trabajo_pk_examen_evaluacion.FormattingEnabled = true;
+            this.cbo_are_trabajo_pk_examen_evaluacion.Location = new System.Drawing.Point(144, 81);
+            this.cbo_are_trabajo_pk_examen_evaluacion.Name = "cbo_are_trabajo_pk_examen_evaluacion";
+            this.cbo_are_trabajo_pk_examen_evaluacion.Size = new System.Drawing.Size(178, 28);
+            this.cbo_are_trabajo_pk_examen_evaluacion.TabIndex = 17;
+            // 
+            // lbl_area_trabajo_examen_evaluacion
+            // 
+            this.lbl_area_trabajo_examen_evaluacion.AutoSize = true;
+            this.lbl_area_trabajo_examen_evaluacion.Location = new System.Drawing.Point(8, 84);
+            this.lbl_area_trabajo_examen_evaluacion.Name = "lbl_area_trabajo_examen_evaluacion";
+            this.lbl_area_trabajo_examen_evaluacion.Size = new System.Drawing.Size(130, 20);
+            this.lbl_area_trabajo_examen_evaluacion.TabIndex = 18;
+            this.lbl_area_trabajo_examen_evaluacion.Text = "Area de trabajo:";
+            // 
+            // txt_id_area_trabajo_pk_examen_evaluacion
+            // 
+            this.txt_id_area_trabajo_pk_examen_evaluacion.Location = new System.Drawing.Point(328, 81);
+            this.txt_id_area_trabajo_pk_examen_evaluacion.MaxLength = 11;
+            this.txt_id_area_trabajo_pk_examen_evaluacion.Name = "txt_id_area_trabajo_pk_examen_evaluacion";
+            this.txt_id_area_trabajo_pk_examen_evaluacion.Size = new System.Drawing.Size(10, 26);
+            this.txt_id_area_trabajo_pk_examen_evaluacion.TabIndex = 19;
+            this.txt_id_area_trabajo_pk_examen_evaluacion.TabStop = false;
+            this.txt_id_area_trabajo_pk_examen_evaluacion.Tag = "id_area_trabajo_pk";
+            this.txt_id_area_trabajo_pk_examen_evaluacion.Visible = false;
+            // 
             // examen_evaluacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -367,7 +403,7 @@
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(711, 242);
+            this.ClientSize = new System.Drawing.Size(711, 286);
             this.Controls.Add(this.gpb_ex_ev);
             this.Controls.Add(this.lbl_ex_ev);
             this.Controls.Add(this.groupBox2);
@@ -408,5 +444,8 @@
         private System.Windows.Forms.Button btn_buscar;
         private System.Windows.Forms.Button btn_actualizar;
         private System.Windows.Forms.Button btn_cancelar;
+        private System.Windows.Forms.Label lbl_area_trabajo_examen_evaluacion;
+        private System.Windows.Forms.ComboBox cbo_are_trabajo_pk_examen_evaluacion;
+        private System.Windows.Forms.TextBox txt_id_area_trabajo_pk_examen_evaluacion;
     }
 }

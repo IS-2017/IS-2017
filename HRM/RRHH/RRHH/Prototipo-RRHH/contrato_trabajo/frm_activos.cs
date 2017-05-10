@@ -26,8 +26,10 @@ namespace contrato_trabajo
         String Codigo;
         Boolean Editar;
         String atributo;
+        int contador_letras;
         CapaNegocio fn = new CapaNegocio();
         DataGridView dg;
+        
         #endregion
 
         #region Inicio del Form
@@ -338,5 +340,49 @@ namespace contrato_trabajo
             }
         }
         #endregion
+
+        #region Validaciones
+        //=======================================================================================================================
+        //--------------------------------------Navegacion--------------------------------------------------------------
+        //=======================================================================================================================
+        //programador:Javier Figueroa Pereira
+        public void Validacion_LetrasNumeros(KeyPressEventArgs e)
+        {
+            try
+            {
+                if (Char.IsLetterOrDigit(e.KeyChar) || Char.IsControl(e.KeyChar) || Char.IsSeparator(e.KeyChar) || e.KeyChar == '-' || e.KeyChar == '_' )
+                {
+                    e.Handled = false;
+                }
+                else
+                {
+                    e.Handled = true;
+                    MessageBox.Show("Llene el campo con caracteres permitidos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void txt_nombre_activo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validacion_LetrasNumeros(e);
+        }
+
+        private void txt_serie_activo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validacion_LetrasNumeros(e);
+        }
+
+        private void txt_descripcion_activo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validacion_LetrasNumeros(e);
+        }
+
+        #endregion
+
+
     }
 }

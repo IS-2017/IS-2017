@@ -53,7 +53,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.gpb_datos_empresa = new System.Windows.Forms.GroupBox();
+            this.txt_estado = new System.Windows.Forms.TextBox();
             this.groupBox2.SuspendLayout();
+            this.gpb_datos_empresa.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox2
@@ -70,8 +73,8 @@
             this.groupBox2.Controls.Add(this.btn_buscar);
             this.groupBox2.Controls.Add(this.btn_actualizar);
             this.groupBox2.Controls.Add(this.btn_cancelar);
-            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(58, 12);
+            this.groupBox2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Location = new System.Drawing.Point(32, 38);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(695, 106);
             this.groupBox2.TabIndex = 14;
@@ -274,7 +277,7 @@
             // 
             this.label35.AutoSize = true;
             this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label35.Location = new System.Drawing.Point(212, 145);
+            this.label35.Location = new System.Drawing.Point(208, 9);
             this.label35.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(378, 26);
@@ -283,108 +286,140 @@
             // 
             // txt_nit_empresa
             // 
-            this.txt_nit_empresa.Location = new System.Drawing.Point(501, 185);
+            this.txt_nit_empresa.Location = new System.Drawing.Point(449, 23);
+            this.txt_nit_empresa.MaxLength = 15;
             this.txt_nit_empresa.Name = "txt_nit_empresa";
-            this.txt_nit_empresa.Size = new System.Drawing.Size(246, 20);
+            this.txt_nit_empresa.Size = new System.Drawing.Size(246, 26);
             this.txt_nit_empresa.TabIndex = 12;
             this.txt_nit_empresa.Tag = "NIT_empresa";
+            this.txt_nit_empresa.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_nombre_empresa_KeyPress);
             // 
             // txt_email_empresa
             // 
-            this.txt_email_empresa.Location = new System.Drawing.Point(502, 218);
+            this.txt_email_empresa.Location = new System.Drawing.Point(450, 56);
+            this.txt_email_empresa.MaxLength = 50;
             this.txt_email_empresa.Name = "txt_email_empresa";
-            this.txt_email_empresa.Size = new System.Drawing.Size(245, 20);
+            this.txt_email_empresa.Size = new System.Drawing.Size(245, 26);
             this.txt_email_empresa.TabIndex = 10;
             this.txt_email_empresa.Tag = "correo_empresa";
+            this.txt_email_empresa.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_nombre_empresa_KeyPress);
             // 
             // txt_telefono_empresa
             // 
-            this.txt_telefono_empresa.Location = new System.Drawing.Point(502, 248);
+            this.txt_telefono_empresa.Location = new System.Drawing.Point(450, 86);
+            this.txt_telefono_empresa.MaxLength = 15;
             this.txt_telefono_empresa.Name = "txt_telefono_empresa";
-            this.txt_telefono_empresa.Size = new System.Drawing.Size(245, 20);
+            this.txt_telefono_empresa.Size = new System.Drawing.Size(245, 26);
             this.txt_telefono_empresa.TabIndex = 9;
             this.txt_telefono_empresa.Tag = "telefono_empresa";
+            this.txt_telefono_empresa.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_nombre_empresa_KeyPress);
             // 
             // txt_direccion_empresa
             // 
-            this.txt_direccion_empresa.Location = new System.Drawing.Point(116, 221);
+            this.txt_direccion_empresa.Location = new System.Drawing.Point(85, 59);
+            this.txt_direccion_empresa.MaxLength = 150;
             this.txt_direccion_empresa.Multiline = true;
             this.txt_direccion_empresa.Name = "txt_direccion_empresa";
             this.txt_direccion_empresa.Size = new System.Drawing.Size(226, 47);
             this.txt_direccion_empresa.TabIndex = 8;
             this.txt_direccion_empresa.Tag = "direccion_empresa";
+            this.txt_direccion_empresa.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_nombre_empresa_KeyPress);
             // 
             // txt_nombre_empresa
             // 
-            this.txt_nombre_empresa.Location = new System.Drawing.Point(115, 188);
+            this.txt_nombre_empresa.Location = new System.Drawing.Point(85, 26);
+            this.txt_nombre_empresa.MaxLength = 100;
             this.txt_nombre_empresa.Name = "txt_nombre_empresa";
-            this.txt_nombre_empresa.Size = new System.Drawing.Size(226, 20);
+            this.txt_nombre_empresa.Size = new System.Drawing.Size(226, 26);
             this.txt_nombre_empresa.TabIndex = 7;
             this.txt_nombre_empresa.Tag = "nombre_empresa";
+            this.txt_nombre_empresa.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_nombre_empresa_KeyPress);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(462, 222);
+            this.label5.Location = new System.Drawing.Point(401, 60);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(32, 13);
+            this.label5.Size = new System.Drawing.Size(46, 20);
             this.label5.TabIndex = 4;
             this.label5.Text = "Email";
             // 
             // lbl_nit
             // 
             this.lbl_nit.AutoSize = true;
-            this.lbl_nit.Location = new System.Drawing.Point(475, 191);
+            this.lbl_nit.Location = new System.Drawing.Point(418, 26);
             this.lbl_nit.Name = "lbl_nit";
-            this.lbl_nit.Size = new System.Drawing.Size(20, 13);
+            this.lbl_nit.Size = new System.Drawing.Size(28, 20);
             this.lbl_nit.TabIndex = 3;
             this.lbl_nit.Text = "Nit";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(446, 252);
+            this.label3.Location = new System.Drawing.Point(379, 90);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(49, 13);
+            this.label3.Size = new System.Drawing.Size(71, 20);
             this.label3.TabIndex = 2;
             this.label3.Text = "Telefono";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(55, 225);
+            this.label2.Location = new System.Drawing.Point(4, 63);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 13);
+            this.label2.Size = new System.Drawing.Size(80, 20);
             this.label2.TabIndex = 1;
             this.label2.Text = "Direccion";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(57, 192);
+            this.label1.Location = new System.Drawing.Point(15, 30);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 13);
+            this.label1.Size = new System.Drawing.Size(68, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nombre";
+            // 
+            // gpb_datos_empresa
+            // 
+            this.gpb_datos_empresa.Controls.Add(this.txt_estado);
+            this.gpb_datos_empresa.Controls.Add(this.txt_telefono_empresa);
+            this.gpb_datos_empresa.Controls.Add(this.txt_nit_empresa);
+            this.gpb_datos_empresa.Controls.Add(this.label5);
+            this.gpb_datos_empresa.Controls.Add(this.lbl_nit);
+            this.gpb_datos_empresa.Controls.Add(this.label3);
+            this.gpb_datos_empresa.Controls.Add(this.txt_email_empresa);
+            this.gpb_datos_empresa.Controls.Add(this.label2);
+            this.gpb_datos_empresa.Controls.Add(this.txt_nombre_empresa);
+            this.gpb_datos_empresa.Controls.Add(this.txt_direccion_empresa);
+            this.gpb_datos_empresa.Controls.Add(this.label1);
+            this.gpb_datos_empresa.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gpb_datos_empresa.Location = new System.Drawing.Point(30, 150);
+            this.gpb_datos_empresa.Name = "gpb_datos_empresa";
+            this.gpb_datos_empresa.Size = new System.Drawing.Size(712, 126);
+            this.gpb_datos_empresa.TabIndex = 42;
+            this.gpb_datos_empresa.TabStop = false;
+            this.gpb_datos_empresa.Text = "Datos de Empresa";
+            // 
+            // txt_estado
+            // 
+            this.txt_estado.Location = new System.Drawing.Point(342, 27);
+            this.txt_estado.Name = "txt_estado";
+            this.txt_estado.Size = new System.Drawing.Size(11, 26);
+            this.txt_estado.TabIndex = 13;
+            this.txt_estado.Tag = "estado";
+            this.txt_estado.Text = "ACTIVO";
+            this.txt_estado.Visible = false;
             // 
             // frm_empresa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(776, 292);
-            this.Controls.Add(this.txt_nit_empresa);
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.ClientSize = new System.Drawing.Size(757, 288);
+            this.Controls.Add(this.gpb_datos_empresa);
             this.Controls.Add(this.label35);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.txt_email_empresa);
-            this.Controls.Add(this.txt_nombre_empresa);
-            this.Controls.Add(this.txt_telefono_empresa);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.txt_direccion_empresa);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.lbl_nit);
-            this.Controls.Add(this.label5);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
@@ -394,6 +429,8 @@
             this.Text = "Empresa";
             this.Load += new System.EventHandler(this.frm_empresa_Load);
             this.groupBox2.ResumeLayout(false);
+            this.gpb_datos_empresa.ResumeLayout(false);
+            this.gpb_datos_empresa.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -425,5 +462,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.GroupBox gpb_datos_empresa;
+        private System.Windows.Forms.TextBox txt_estado;
     }
 }

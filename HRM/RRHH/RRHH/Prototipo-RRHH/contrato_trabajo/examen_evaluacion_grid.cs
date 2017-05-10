@@ -14,7 +14,7 @@ namespace contrato_trabajo
     public partial class examen_evaluacion_grid : Form
     {
         #region Variables - Otto Hernandez
-        String id_examen_evaluacion_pk, nombre_examen_evaluacion, nota_maxima_examen_evaluacion;
+        String id_examen_evaluacion_pk, nombre_examen_evaluacion, nota_maxima_examen_evaluacion, id_area_trabajo_pk;
         Boolean Editar1;
         CapaNegocio fn = new CapaNegocio();
         #endregion
@@ -45,7 +45,7 @@ namespace contrato_trabajo
             try
             {
                 Editar1 = false;
-                examen_evaluacion a = new examen_evaluacion(dgv_examen_busq, id_examen_evaluacion_pk, nombre_examen_evaluacion, nota_maxima_examen_evaluacion, Editar1);
+                examen_evaluacion a = new examen_evaluacion(dgv_examen_busq, id_examen_evaluacion_pk, nombre_examen_evaluacion, nota_maxima_examen_evaluacion, id_area_trabajo_pk,Editar1);
                 a.MdiParent = this.ParentForm;
                 a.Show();
             }
@@ -152,7 +152,8 @@ namespace contrato_trabajo
                 id_examen_evaluacion_pk = this.dgv_examen_busq.CurrentRow.Cells[0].Value.ToString();
                 nombre_examen_evaluacion = this.dgv_examen_busq.CurrentRow.Cells[1].Value.ToString();
                 nota_maxima_examen_evaluacion = this.dgv_examen_busq.CurrentRow.Cells[2].Value.ToString();
-                examen_evaluacion a = new examen_evaluacion(dgv_examen_busq, id_examen_evaluacion_pk, nombre_examen_evaluacion, nota_maxima_examen_evaluacion, Editar1);
+                id_area_trabajo_pk = this.dgv_examen_busq.CurrentRow.Cells[4].Value.ToString();
+                examen_evaluacion a = new examen_evaluacion(dgv_examen_busq, id_examen_evaluacion_pk, nombre_examen_evaluacion, nota_maxima_examen_evaluacion, id_area_trabajo_pk,Editar1);
                 a.MdiParent = this.ParentForm;
                 a.Show();
             }

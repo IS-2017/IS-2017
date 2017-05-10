@@ -338,10 +338,12 @@
             // txt_serie_activo
             // 
             this.txt_serie_activo.Location = new System.Drawing.Point(124, 41);
+            this.txt_serie_activo.MaxLength = 50;
             this.txt_serie_activo.Name = "txt_serie_activo";
             this.txt_serie_activo.Size = new System.Drawing.Size(384, 20);
             this.txt_serie_activo.TabIndex = 2;
             this.txt_serie_activo.Tag = "num_serie_activo";
+            this.txt_serie_activo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_serie_activo_KeyPress);
             // 
             // lbl_serie_activo
             // 
@@ -368,7 +370,7 @@
             this.nmup_cantidad_activo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nmup_cantidad_activo.Location = new System.Drawing.Point(124, 67);
             this.nmup_cantidad_activo.Maximum = new decimal(new int[] {
-            100000,
+            1000000,
             0,
             0,
             0});
@@ -381,11 +383,13 @@
             // txt_descripcion_activo
             // 
             this.txt_descripcion_activo.Location = new System.Drawing.Point(124, 96);
+            this.txt_descripcion_activo.MaxLength = 150;
             this.txt_descripcion_activo.Multiline = true;
             this.txt_descripcion_activo.Name = "txt_descripcion_activo";
             this.txt_descripcion_activo.Size = new System.Drawing.Size(550, 114);
             this.txt_descripcion_activo.TabIndex = 4;
             this.txt_descripcion_activo.Tag = "descripcion_activo";
+            this.txt_descripcion_activo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_descripcion_activo_KeyPress);
             // 
             // txt_nombre_activo
             // 
@@ -394,6 +398,7 @@
             this.txt_nombre_activo.Size = new System.Drawing.Size(550, 20);
             this.txt_nombre_activo.TabIndex = 1;
             this.txt_nombre_activo.Tag = "nombre_activo";
+            this.txt_nombre_activo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_nombre_activo_KeyPress);
             // 
             // lbl_descripcion_activo
             // 

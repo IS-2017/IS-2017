@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.Odbc;
 
 namespace contrato_trabajo
 {
@@ -27,7 +28,7 @@ namespace contrato_trabajo
             InitializeComponent();
         }
 
-        public examen_evaluacion(DataGridView gb, String id_examen_evaluacion_pk, String nombre_examen_evaluacion, String nota_maxima_examen_evaluacion, Boolean Editar1)
+        public examen_evaluacion(DataGridView gb, String id_examen_evaluacion_pk, String nombre_examen_evaluacion, String nota_maxima_examen_evaluacion, String id_area_trabajo_pk, Boolean Editar1)
         {
             try
             {
@@ -40,6 +41,7 @@ namespace contrato_trabajo
                 {
                     this.txt_nombre_ex_ev.Text = nombre_examen_evaluacion;
                     this.txt_nota_maxima_ex_ev.Text = nota_maxima_examen_evaluacion;
+                    this.txt_id_area_trabajo_pk_examen_evaluacion.Text = id_area_trabajo_pk;
                 }
             }
             catch (Exception ex)
@@ -55,6 +57,7 @@ namespace contrato_trabajo
             try
             {
                 fn.InhabilitarComponentes(gpb_ex_ev);
+                llenarCboAreaTrabajo();
             }
             catch (Exception ex)
             {
@@ -71,8 +74,8 @@ namespace contrato_trabajo
             try
             {
                 Editar = false;
-                txt_nombre_ex_ev.Enabled = true; txt_nota_maxima_ex_ev.Enabled = true;
-                txt_nota_maxima_ex_ev.Text = ""; txt_nombre_ex_ev.Text = "";
+                txt_nombre_ex_ev.Enabled = true; txt_nota_maxima_ex_ev.Enabled = true; cbo_are_trabajo_pk_examen_evaluacion.Enabled = true;
+                txt_nota_maxima_ex_ev.Text = ""; txt_nombre_ex_ev.Text = ""; txt_id_area_trabajo_pk_examen_evaluacion.Text = "";
             }
             catch (Exception ex)
             {
@@ -87,7 +90,8 @@ namespace contrato_trabajo
         {
             try
             {
-                TextBox[] textbox = { txt_estado_ex_ev, txt_nombre_ex_ev, txt_nota_maxima_ex_ev};
+                txt_id_area_trabajo_pk_examen_evaluacion.Text = cbo_are_trabajo_pk_examen_evaluacion.Text;
+                TextBox[] textbox = { txt_estado_ex_ev, txt_nombre_ex_ev, txt_nota_maxima_ex_ev, txt_id_area_trabajo_pk_examen_evaluacion};
                 DataTable datos = fn.construirDataTable(textbox);
                 if (datos.Rows.Count == 0)
                 {
@@ -106,16 +110,16 @@ namespace contrato_trabajo
                             btn_guardar.Enabled = false;
                         }*/
                         fn.ActualizarGrid(this.dg, "Select * from examen_evaluacion WHERE estado <> 'INACTIVO' ", tabla);
-                        txt_nombre_ex_ev.Text = ""; txt_nota_maxima_ex_ev.Text = "";
-                        txt_nombre_ex_ev.Enabled = false; txt_nota_maxima_ex_ev.Enabled = false;
+                        txt_nombre_ex_ev.Text = ""; txt_nota_maxima_ex_ev.Text = ""; txt_id_area_trabajo_pk_examen_evaluacion.Text = "";
+                        txt_nombre_ex_ev.Enabled = false; txt_nota_maxima_ex_ev.Enabled = false; cbo_are_trabajo_pk_examen_evaluacion.Enabled = false;
                     }
                     else
                     {
                         fn.insertar(datos, tabla);
                         //MessageBox.Show("Se Inserto el registro", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         fn.ActualizarGrid(this.dg, "Select * from examen_evaluacion WHERE estado <> 'INACTIVO' ", tabla);
-                        txt_nombre_ex_ev.Text = ""; txt_nota_maxima_ex_ev.Text = "";
-                        txt_nombre_ex_ev.Enabled = false; txt_nota_maxima_ex_ev.Enabled = false;
+                        txt_nombre_ex_ev.Text = ""; txt_nota_maxima_ex_ev.Text = ""; txt_id_area_trabajo_pk_examen_evaluacion.Text = "";
+                        txt_nombre_ex_ev.Enabled = false; txt_nota_maxima_ex_ev.Enabled = false; cbo_are_trabajo_pk_examen_evaluacion.Enabled = false;
                     }
                 }
             }
@@ -133,12 +137,13 @@ namespace contrato_trabajo
         {
             try
             {
-                txt_nombre_ex_ev.Enabled = true; txt_nota_maxima_ex_ev.Enabled = true;
+                txt_nombre_ex_ev.Enabled = true; txt_nota_maxima_ex_ev.Enabled = true; cbo_are_trabajo_pk_examen_evaluacion.Enabled = true;
                 Editar = true;
                 atributo = "id_examen_evaluacion_pk";
                 this.Codigo = this.dg.CurrentRow.Cells[0].Value.ToString();
                 this.txt_nombre_ex_ev.Text = this.dg.CurrentRow.Cells[1].Value.ToString();
                 this.txt_nota_maxima_ex_ev.Text = this.dg.CurrentRow.Cells[2].Value.ToString();
+                this.txt_id_area_trabajo_pk_examen_evaluacion.Text = this.dg.CurrentRow.Cells[4].Value.ToString();
             }
             catch
             {
@@ -196,8 +201,8 @@ namespace contrato_trabajo
             try
             {
                 Editar = false;
-                txt_nombre_ex_ev.Enabled = false; txt_nota_maxima_ex_ev.Enabled = false;
-                txt_nombre_ex_ev.Text = ""; txt_nota_maxima_ex_ev.Text = "";
+                txt_nombre_ex_ev.Enabled = false; txt_nota_maxima_ex_ev.Enabled = false; cbo_are_trabajo_pk_examen_evaluacion.Enabled = false;
+                txt_nombre_ex_ev.Text = ""; txt_nota_maxima_ex_ev.Text = ""; txt_id_area_trabajo_pk_examen_evaluacion.Text = "";
             }
             catch (Exception ex)
             {
@@ -212,7 +217,7 @@ namespace contrato_trabajo
         {
             try
             {
-                string tabla = "candidato";
+                string tabla = "examen_evaluacion";
                 fn.ActualizarGrid(this.dg, "Select * from examen_evaluacion WHERE estado <> 'INACTIVO' ", tabla);
             }
             catch (Exception ex)
@@ -235,8 +240,9 @@ namespace contrato_trabajo
             try
             {
                 fn.Anterior(dg);
-                TextBox[] textbox = { txt_nombre_ex_ev, txt_nota_maxima_ex_ev};
+                TextBox[] textbox = { txt_nombre_ex_ev, txt_nota_maxima_ex_ev,txt_id_area_trabajo_pk_examen_evaluacion};
                 fn.llenartextbox(textbox, dg);
+                cbo_are_trabajo_pk_examen_evaluacion.Text = txt_id_area_trabajo_pk_examen_evaluacion.Text;
             }
             catch (Exception ex)
             {
@@ -249,8 +255,9 @@ namespace contrato_trabajo
             try
             {
                 fn.Siguiente(dg);
-                TextBox[] textbox = { txt_nombre_ex_ev, txt_nota_maxima_ex_ev };
+                TextBox[] textbox = { txt_nombre_ex_ev, txt_nota_maxima_ex_ev, txt_id_area_trabajo_pk_examen_evaluacion };
                 fn.llenartextbox(textbox, dg);
+                cbo_are_trabajo_pk_examen_evaluacion.Text = txt_id_area_trabajo_pk_examen_evaluacion.Text;
             }
             catch (Exception ex)
             {
@@ -264,8 +271,9 @@ namespace contrato_trabajo
             try
             {
                 fn.Ultimo(dg);
-                TextBox[] textbox = { txt_nombre_ex_ev, txt_nota_maxima_ex_ev };
+                TextBox[] textbox = { txt_nombre_ex_ev, txt_nota_maxima_ex_ev, txt_id_area_trabajo_pk_examen_evaluacion };
                 fn.llenartextbox(textbox, dg);
+                cbo_are_trabajo_pk_examen_evaluacion.Text = txt_id_area_trabajo_pk_examen_evaluacion.Text;
             }
             catch (Exception ex)
             {
@@ -278,8 +286,9 @@ namespace contrato_trabajo
             try
             {
                 fn.Primero(dg);
-                TextBox[] textbox = { txt_nombre_ex_ev, txt_nota_maxima_ex_ev };
+                TextBox[] textbox = { txt_nombre_ex_ev, txt_nota_maxima_ex_ev, txt_id_area_trabajo_pk_examen_evaluacion };
                 fn.llenartextbox(textbox, dg);
+                cbo_are_trabajo_pk_examen_evaluacion.Text = txt_id_area_trabajo_pk_examen_evaluacion.Text;
             }
             catch (Exception ex)
             {
@@ -378,6 +387,45 @@ namespace contrato_trabajo
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        #region llenar combobox - Otto Hernandez
+        public void llenarCboAreaTrabajo()
+        {
+            try
+            {
+                //se realiza la conexión a la base de datos
+                Ayuda.ObtenerConexion();
+                //se inicia un DataSet
+                DataSet ds = new DataSet();
+                //se indica la consulta en sql
+                String Query = "select id_area_trabajo_pk, puesto from area_trabajo";
+                OdbcDataAdapter dad = new OdbcDataAdapter(Query, Ayuda.ObtenerConexion());
+                //se indica con quu tabla se llena
+                dad.Fill(ds, "area_trabajo");
+                cbo_are_trabajo_pk_examen_evaluacion.DataSource = ds.Tables[0].DefaultView;
+                //indicamos el valor de los miembros
+                cbo_are_trabajo_pk_examen_evaluacion.ValueMember = ("id_area_trabajo_pk");
+                //se indica el valor a desplegar en el combobox
+                DataTable dt = ds.Tables[0];
+                dt.Columns.Add("NewColumn", typeof(string));
+                foreach (DataRow dr in dt.Rows)
+                {
+                    dr["puesto"] = dr["id_area_trabajo_pk"].ToString() + "|" + dr["puesto"].ToString();
+                }
+                cbo_are_trabajo_pk_examen_evaluacion.DataSource = dt;
+                cbo_are_trabajo_pk_examen_evaluacion.DisplayMember = "puesto";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        #endregion
+
+        private void gpb_ex_ev_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -62,7 +62,9 @@
             this.toolTip10 = new System.Windows.Forms.ToolTip(this.components);
             this.toolTip11 = new System.Windows.Forms.ToolTip(this.components);
             this.toolTip12 = new System.Windows.Forms.ToolTip(this.components);
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.gpb_navegador.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_correo_1
@@ -89,10 +91,13 @@
             // txt_correo_1
             // 
             this.txt_correo_1.Location = new System.Drawing.Point(109, 161);
+            this.txt_correo_1.MaxLength = 50;
             this.txt_correo_1.Name = "txt_correo_1";
             this.txt_correo_1.Size = new System.Drawing.Size(452, 20);
             this.txt_correo_1.TabIndex = 0;
             this.txt_correo_1.Tag = "correo_electronico1_emp";
+            this.txt_correo_1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_correo_1_KeyPress);
+            this.txt_correo_1.Leave += new System.EventHandler(this.txt_correo_1_Leave);
             // 
             // gpb_navegador
             // 
@@ -343,11 +348,13 @@
             // txt_detalle_correo
             // 
             this.txt_detalle_correo.Location = new System.Drawing.Point(109, 187);
+            this.txt_detalle_correo.MaxLength = 100;
             this.txt_detalle_correo.Multiline = true;
             this.txt_detalle_correo.Name = "txt_detalle_correo";
             this.txt_detalle_correo.Size = new System.Drawing.Size(452, 65);
             this.txt_detalle_correo.TabIndex = 1;
             this.txt_detalle_correo.Tag = "descripcion_correo";
+            this.txt_detalle_correo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_detalle_correo_KeyPress);
             // 
             // lbl_detalle_correo
             // 
@@ -358,6 +365,10 @@
             this.lbl_detalle_correo.Size = new System.Drawing.Size(56, 17);
             this.lbl_detalle_correo.TabIndex = 65;
             this.lbl_detalle_correo.Text = "Detalle:";
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // frm_emp_correos
             // 
@@ -383,6 +394,7 @@
             this.Load += new System.EventHandler(this.frm_emp_correos_Load);
             this.gpb_navegador.ResumeLayout(false);
             this.gpb_navegador.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -421,5 +433,6 @@
         private System.Windows.Forms.ToolTip toolTip11;
         public System.Windows.Forms.Button button1;
         private System.Windows.Forms.ToolTip toolTip12;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

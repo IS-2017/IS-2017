@@ -50,7 +50,6 @@
             this.btn_cancelar = new System.Windows.Forms.Button();
             this.txt_detalle_telefono = new System.Windows.Forms.TextBox();
             this.lbl_detalle_telefono = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
             this.toolTip3 = new System.Windows.Forms.ToolTip(this.components);
@@ -63,7 +62,10 @@
             this.toolTip10 = new System.Windows.Forms.ToolTip(this.components);
             this.toolTip11 = new System.Windows.Forms.ToolTip(this.components);
             this.toolTip12 = new System.Windows.Forms.ToolTip(this.components);
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.lbl_formato_numero = new System.Windows.Forms.Label();
             this.gpb_navegador.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_telefonos
@@ -90,10 +92,13 @@
             // txt_telefono_1
             // 
             this.txt_telefono_1.Location = new System.Drawing.Point(119, 161);
+            this.txt_telefono_1.MaxLength = 15;
             this.txt_telefono_1.Name = "txt_telefono_1";
             this.txt_telefono_1.Size = new System.Drawing.Size(327, 20);
             this.txt_telefono_1.TabIndex = 0;
             this.txt_telefono_1.Tag = "numero_telefono1_emp";
+            this.txt_telefono_1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_telefono_1_KeyPress);
+            this.txt_telefono_1.Leave += new System.EventHandler(this.txt_telefono_1_Leave);
             // 
             // txt_id_emp
             // 
@@ -343,32 +348,38 @@
             // 
             // txt_detalle_telefono
             // 
-            this.txt_detalle_telefono.Location = new System.Drawing.Point(119, 188);
+            this.txt_detalle_telefono.Location = new System.Drawing.Point(119, 208);
+            this.txt_detalle_telefono.MaxLength = 150;
             this.txt_detalle_telefono.Multiline = true;
             this.txt_detalle_telefono.Name = "txt_detalle_telefono";
             this.txt_detalle_telefono.Size = new System.Drawing.Size(442, 78);
             this.txt_detalle_telefono.TabIndex = 1;
             this.txt_detalle_telefono.Tag = "descripcion_tel";
+            this.txt_detalle_telefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_detalle_telefono_KeyPress);
             // 
             // lbl_detalle_telefono
             // 
             this.lbl_detalle_telefono.AutoSize = true;
             this.lbl_detalle_telefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_detalle_telefono.Location = new System.Drawing.Point(3, 189);
+            this.lbl_detalle_telefono.Location = new System.Drawing.Point(3, 209);
             this.lbl_detalle_telefono.Name = "lbl_detalle_telefono";
             this.lbl_detalle_telefono.Size = new System.Drawing.Size(56, 17);
             this.lbl_detalle_telefono.TabIndex = 53;
             this.lbl_detalle_telefono.Text = "Detalle:";
             // 
-            // textBox1
+            // errorProvider1
             // 
-            this.textBox1.Location = new System.Drawing.Point(455, 162);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(10, 20);
-            this.textBox1.TabIndex = 55;
-            this.textBox1.Tag = "";
-            this.textBox1.Text = " ";
-            this.textBox1.Visible = false;
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // lbl_formato_numero
+            // 
+            this.lbl_formato_numero.AutoSize = true;
+            this.lbl_formato_numero.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.lbl_formato_numero.Location = new System.Drawing.Point(117, 184);
+            this.lbl_formato_numero.Name = "lbl_formato_numero";
+            this.lbl_formato_numero.Size = new System.Drawing.Size(159, 13);
+            this.lbl_formato_numero.TabIndex = 54;
+            this.lbl_formato_numero.Text = "Formato del Numero: 0000 0000";
             // 
             // frm_emp_telefonos
             // 
@@ -378,8 +389,8 @@
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(682, 282);
-            this.Controls.Add(this.textBox1);
+            this.ClientSize = new System.Drawing.Size(682, 316);
+            this.Controls.Add(this.lbl_formato_numero);
             this.Controls.Add(this.txt_detalle_telefono);
             this.Controls.Add(this.lbl_detalle_telefono);
             this.Controls.Add(this.gpb_navegador);
@@ -395,6 +406,7 @@
             this.Load += new System.EventHandler(this.frm_emp_telefonos_Load);
             this.gpb_navegador.ResumeLayout(false);
             this.gpb_navegador.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -421,7 +433,6 @@
         private System.Windows.Forms.TextBox txt_detalle_telefono;
         private System.Windows.Forms.Label lbl_detalle_telefono;
         private System.Windows.Forms.TextBox txt_estado;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.ToolTip toolTip2;
         private System.Windows.Forms.ToolTip toolTip3;
@@ -435,5 +446,7 @@
         private System.Windows.Forms.ToolTip toolTip11;
         public System.Windows.Forms.Button button1;
         private System.Windows.Forms.ToolTip toolTip12;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Label lbl_formato_numero;
     }
 }
