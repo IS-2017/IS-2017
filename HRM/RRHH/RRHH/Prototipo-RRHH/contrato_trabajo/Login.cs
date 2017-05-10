@@ -47,15 +47,15 @@ namespace contrato_trabajo
                 {
                     // seguridad.LlegarSeguridad.EstablecerUsuario(usuario);
                     seguridad.Conexion.User = usuario;
-                    seguridad.Conexion.PassWord = contraseña;
-
+                    seguridad.Conexion.PassWord = contraseña;             
                     MessageBox.Show("¡Bienvenido!: " + usuario);
-                    mdi_contenedor men_seg = new mdi_contenedor();
-                    men_seg.Show();
+                    this.Hide();
+                    mdi_contenedor men_seg = new mdi_contenedor(usuario);
+                    men_seg.ShowDialog();
                     txt_contraseña.Clear();
                     txt_usuario.Clear();
-
-                    this.Hide();
+                    
+                    this.Close();
                 }
                 else if (Convert.ToInt16(resultado) == 0)// contraseña incorrecta
                 {
@@ -91,12 +91,7 @@ namespace contrato_trabajo
             txt_contraseña.PasswordChar = '*';
         }
 
-        void mdi_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            
-            this.Close();
-            Application.Exit();
-        }
+
 
         private void txt_contraseña_KeyPress_1(object sender, KeyPressEventArgs e)
         {

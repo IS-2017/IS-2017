@@ -71,14 +71,19 @@ namespace contrato_trabajo
         frm_impuesto_grid impuesto_grid;
         examen_evaluacion_grid frm_examenes;
 
-        public mdi_contenedor()
+        String usuario;
+
+        public mdi_contenedor(String user)
         {
+            usuario = user;
             InitializeComponent();
         }
 
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            String espacio = "                                                                                                                   ";
+            ActiveForm.Text = "Modulo Recursos Humanos"+ espacio + "Usuario: " +usuario;
             BloquearMDI();
             Bloqueo.DesbloquearMDI(menuStrip1);
             MdiClient Chld;
@@ -211,7 +216,12 @@ namespace contrato_trabajo
 
         private void cerrarSesionToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            Login log = new Login();
+            log.ShowDialog();
+            
             this.Close();
+            
         }
 
 
