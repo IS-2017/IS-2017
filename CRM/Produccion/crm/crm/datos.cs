@@ -210,7 +210,7 @@ namespace crm
             {
                 mySqlComando = new OdbcCommand(
                 string.Format("Insert into abonos (id_factura, id_cliente, forma_pago, abono, fecha) values ('{0}','{1}','{2}','{3}','{4}')", id_factura, id_cliente, forma_pago, abono, fecha),
-                Conexion.ObtenerConexion()
+                seguridad.Conexion.ObtenerConexionODBC()
                 );                                              //se realiza el query con los datos que ser recibieron del objeto persona
                 mySqlComando.ExecuteNonQuery();                 //se ejecuta el query
                 MessageBox.Show("Se inserto con exito");        //si el try-catch no encontro algun error se muestra el mensaje de transaccion exitosa

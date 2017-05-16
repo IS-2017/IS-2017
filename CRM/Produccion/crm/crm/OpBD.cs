@@ -10,8 +10,15 @@ using System.Windows.Forms;
 
 namespace crm
 {
-    class OpBD
+    public class OpBD
     {
+
+
+        public static bool CambioIdioma { get; set; }
+        public static string Idioma { get; set; }
+
+
+
         seguridad.bitacora bita = new seguridad.bitacora();
         
 

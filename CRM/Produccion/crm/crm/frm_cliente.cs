@@ -43,7 +43,12 @@ namespace crm
                 }
 
 
-
+                CapaDatosPersonas capadadatos = new CapaDatosPersonas();
+                DataTable puestos = new DataTable();
+                puestos = capadadatos.SeleccionarPuestos();
+                txt_puesto.DataSource = puestos;
+                txt_puesto.ValueMember = "id_puesto";
+                txt_puesto.DisplayMember = "puesto";
                // CapaDatosPersonas inserta = new CapaDatosPersonas();
                // DataTable contenedor = inserta.SeleccionarListaClientes();
                 //dgv_clientes.DataSource = contenedor;
@@ -339,6 +344,28 @@ namespace crm
         private void cmb_empresa_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_actualizar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_nuevo_puesto_Click(object sender, EventArgs e)
+        {
+            frm_puesto_nuevo puesto = new frm_puesto_nuevo();
+            puesto.Show();
+
+        }
+
+        private void btn_actualizar_puesto_Click(object sender, EventArgs e)
+        {
+            CapaDatosPersonas capadadatos = new CapaDatosPersonas();
+            DataTable puestos = new DataTable();
+            puestos = capadadatos.SeleccionarPuestos();
+            txt_puesto.DataSource = puestos;
+            txt_puesto.ValueMember = "id_puesto";
+            txt_puesto.DisplayMember = "puesto";
         }
     }
 }

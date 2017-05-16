@@ -757,6 +757,10 @@ namespace crm
         }
 
 
+        // COMENTE AQUI!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+
         // boton que servira para establecer, modificar la meta del mes
         private void btn_meta_acceso_Click(object sender, EventArgs e)
         {
@@ -980,222 +984,223 @@ namespace crm
 
 
             }
-            else if (res == DialogResult.Cancel)
-            {
-                meta_mes = metas.meta;
-                //MessageBox.Show(meta_mes.ToString());
-                lbl_meta.Text = meta_mes.ToString();
+            //else if (res == DialogResult.Cancel)
+            //if (res == DialogResult.Cancel)
+            //{
+            //    meta_mes = metas.meta;
+            //    //MessageBox.Show(meta_mes.ToString());
+            //    lbl_meta.Text = meta_mes.ToString();
 
-                // ***********************************************    INICIO DE AREA DE TRABAJO PARA GRAFICA DE NEGOCIOS ******************************************
+            //    // ***********************************************    INICIO DE AREA DE TRABAJO PARA GRAFICA DE NEGOCIOS ******************************************
 
-                grafica_principal.Series.Clear();
-                grafica_principal.Titles.Clear();
-                control = 0;
-                control_gana = 0;
-                control_perd = 0;
-                // Formato de grafico:
-                grafica_principal.BackColor = Color.Transparent;
-                grafica_principal.BorderOptions.Color = Color.Transparent;
-                grafica_principal.Legend.BackColor = Color.Transparent;
-                grafica_principal.Legend.Border.Color = Color.Transparent;
+            //    grafica_principal.Series.Clear();
+            //    grafica_principal.Titles.Clear();
+            //    control = 0;
+            //    control_gana = 0;
+            //    control_perd = 0;
+            //    // Formato de grafico:
+            //    grafica_principal.BackColor = Color.Transparent;
+            //    grafica_principal.BorderOptions.Color = Color.Transparent;
+            //    grafica_principal.Legend.BackColor = Color.Transparent;
+            //    grafica_principal.Legend.Border.Color = Color.Transparent;
 
 
 
-                // Asiganacion de series:
-                Series series1 = new Series("Negocios Proceso", ViewType.Line);
-                Series series2 = new Series("Negocios Ganados", ViewType.Line);
-                Series series3 = new Series("Negocios Perdidos", ViewType.Line);
-                Series meta = new Series("Meta", ViewType.Line);
+            //    // Asiganacion de series:
+            //    Series series1 = new Series("Negocios Proceso", ViewType.Line);
+            //    Series series2 = new Series("Negocios Ganados", ViewType.Line);
+            //    Series series3 = new Series("Negocios Perdidos", ViewType.Line);
+            //    Series meta = new Series("Meta", ViewType.Line);
 
 
-                // -------------------------------- negocios en proceso -------------------------
-                foreach (DataRow row in dt_negos_mes.Rows) // for each para negocios que estan en proceso
-                {
-                    if (row["status"].ToString() == "proceso" || row["status"].ToString() == "Proceso")
-                    {
-                        DataRow rows = dt_nego_pro.NewRow();
+            //    // -------------------------------- negocios en proceso -------------------------
+            //    foreach (DataRow row in dt_negos_mes.Rows) // for each para negocios que estan en proceso
+            //    {
+            //        if (row["status"].ToString() == "proceso" || row["status"].ToString() == "Proceso")
+            //        {
+            //            DataRow rows = dt_nego_pro.NewRow();
 
-                        rows["fecha"] = row["fecha_est_cierre"].ToString();
-                        rows["valor"] = row["valor"].ToString();
+            //            rows["fecha"] = row["fecha_est_cierre"].ToString();
+            //            rows["valor"] = row["valor"].ToString();
 
 
-                        if (control == 0)
-                        {
-                            rows["acumulativa"] = rows["valor"].ToString();
-                        }
-                        else
-                        {
+            //            if (control == 0)
+            //            {
+            //                rows["acumulativa"] = rows["valor"].ToString();
+            //            }
+            //            else
+            //            {
 
-                            //int resp = control - 1;
-                            //int res = resp;
-                            double ant = Convert.ToDouble(dt_nego_pro.Rows[control - 1]["acumulativa"]);
-                            double izq = Convert.ToDouble(rows["valor"]);
-                            total_negocios = ant + izq;
-                            rows["acumulativa"] = total_negocios.ToString("N2");
+            //                //int resp = control - 1;
+            //                //int res = resp;
+            //                double ant = Convert.ToDouble(dt_nego_pro.Rows[control - 1]["acumulativa"]);
+            //                double izq = Convert.ToDouble(rows["valor"]);
+            //                total_negocios = ant + izq;
+            //                rows["acumulativa"] = total_negocios.ToString("N2");
 
-                        }
+            //            }
 
-                        dt_nego_pro.Rows.Add(rows);
-                        control = control + 1;
+            //            dt_nego_pro.Rows.Add(rows);
+            //            control = control + 1;
 
-                    }
+            //        }
 
-                }
-                // asignacion de total de negocios en proceso a etiqueta
-                lbl_total_proceso.Text = total_negocios.ToString("N2");
+            //    }
+            //    // asignacion de total de negocios en proceso a etiqueta
+            //    lbl_total_proceso.Text = total_negocios.ToString("N2");
 
-                foreach (DataRow row_per in dt_nego_pro.Rows) // Insercion de negocios en la grafica, que estan en proceso 
-                {
-                    series1.Points.Add(new SeriesPoint(row_per["fecha"].ToString(), row_per["acumulativa"].ToString()));
-                    meta.Points.Add(new SeriesPoint(row_per["fecha"].ToString(), meta_mes));
-                }
-                grafica_principal.Series.Add(series1);
+            //    foreach (DataRow row_per in dt_nego_pro.Rows) // Insercion de negocios en la grafica, que estan en proceso 
+            //    {
+            //        series1.Points.Add(new SeriesPoint(row_per["fecha"].ToString(), row_per["acumulativa"].ToString()));
+            //        meta.Points.Add(new SeriesPoint(row_per["fecha"].ToString(), meta_mes));
+            //    }
+            //    grafica_principal.Series.Add(series1);
 
-                // -------------------------------- negocios en ganados -------------------------
-                foreach (DataRow row in dt_negos_mes.Rows) // for each para negocios que estan en proceso
-                {
-                    if (row["status"].ToString() == "ganado" || row["status"].ToString() == "Ganado")
-                    {
-                        DataRow rows = dt_nego_gana.NewRow();
+            //    // -------------------------------- negocios en ganados -------------------------
+            //    foreach (DataRow row in dt_negos_mes.Rows) // for each para negocios que estan en proceso
+            //    {
+            //        if (row["status"].ToString() == "ganado" || row["status"].ToString() == "Ganado")
+            //        {
+            //            DataRow rows = dt_nego_gana.NewRow();
 
-                        rows["fecha"] = row["fecha_est_cierre"].ToString();
-                        rows["valor"] = row["valor"].ToString();
+            //            rows["fecha"] = row["fecha_est_cierre"].ToString();
+            //            rows["valor"] = row["valor"].ToString();
 
-                        if (control_gana == 0)
-                        {
-                            rows["acumulativa"] = rows["valor"].ToString();
-                        }
-                        else
-                        {
+            //            if (control_gana == 0)
+            //            {
+            //                rows["acumulativa"] = rows["valor"].ToString();
+            //            }
+            //            else
+            //            {
 
 
-                            double ant = Convert.ToDouble(dt_nego_gana.Rows[control_gana - 1]["acumulativa"]);
-                            double izq = Convert.ToDouble(rows["valor"]);
-                            total_ganancias = ant + izq;
-                            rows["acumulativa"] = total_ganancias.ToString("N2");
+            //                double ant = Convert.ToDouble(dt_nego_gana.Rows[control_gana - 1]["acumulativa"]);
+            //                double izq = Convert.ToDouble(rows["valor"]);
+            //                total_ganancias = ant + izq;
+            //                rows["acumulativa"] = total_ganancias.ToString("N2");
 
-                        }
+            //            }
 
 
 
-                        dt_nego_gana.Rows.Add(rows);
-                        control_gana = control_gana + 1;
+            //            dt_nego_gana.Rows.Add(rows);
+            //            control_gana = control_gana + 1;
 
-                    }
+            //        }
 
 
-                }
-                // asignacion de total de negocios en proceso a etiqueta
-                lbl_total_ganado.Text = total_ganancias.ToString("N2");
+            //    }
+            //    // asignacion de total de negocios en proceso a etiqueta
+            //    lbl_total_ganado.Text = total_ganancias.ToString("N2");
 
-                foreach (DataRow row_per in dt_nego_gana.Rows) // Insercion de negocios en la grafica, que estan en proceso 
-                {
-                    series2.Points.Add(new SeriesPoint(row_per["fecha"].ToString(), row_per["acumulativa"].ToString()));
-                    meta.Points.Add(new SeriesPoint(row_per["fecha"].ToString(), meta_mes));
+            //    foreach (DataRow row_per in dt_nego_gana.Rows) // Insercion de negocios en la grafica, que estan en proceso 
+            //    {
+            //        series2.Points.Add(new SeriesPoint(row_per["fecha"].ToString(), row_per["acumulativa"].ToString()));
+            //        meta.Points.Add(new SeriesPoint(row_per["fecha"].ToString(), meta_mes));
 
 
-                }
-                grafica_principal.Series.Add(series2);
+            //    }
+            //    grafica_principal.Series.Add(series2);
 
 
-                // -------------------------------- negocios perdidos -------------------------
-                foreach (DataRow row in dt_negos_mes.Rows) // for each para negocios que estan en proceso
-                {
-                    if (row["status"].ToString() == "perdido" || row["status"].ToString() == "Perdido")
-                    {
-                        DataRow rows = dt_nego_per.NewRow();
+            //    // -------------------------------- negocios perdidos -------------------------
+            //    foreach (DataRow row in dt_negos_mes.Rows) // for each para negocios que estan en proceso
+            //    {
+            //        if (row["status"].ToString() == "perdido" || row["status"].ToString() == "Perdido")
+            //        {
+            //            DataRow rows = dt_nego_per.NewRow();
 
-                        rows["fecha"] = row["fecha_est_cierre"].ToString();
-                        rows["valor"] = row["valor"].ToString();
+            //            rows["fecha"] = row["fecha_est_cierre"].ToString();
+            //            rows["valor"] = row["valor"].ToString();
 
-                        if (control_perd == 0)
-                        {
-                            rows["acumulativa"] = rows["valor"].ToString();
-                        }
-                        else
-                        {
+            //            if (control_perd == 0)
+            //            {
+            //                rows["acumulativa"] = rows["valor"].ToString();
+            //            }
+            //            else
+            //            {
 
 
-                            double ant = Convert.ToDouble(dt_nego_per.Rows[control_perd - 1]["acumulativa"]);
-                            double izq = Convert.ToDouble(rows["valor"]);
-                            total_perdidas = ant + izq;
-                            rows["acumulativa"] = total_perdidas.ToString("N2");
+            //                double ant = Convert.ToDouble(dt_nego_per.Rows[control_perd - 1]["acumulativa"]);
+            //                double izq = Convert.ToDouble(rows["valor"]);
+            //                total_perdidas = ant + izq;
+            //                rows["acumulativa"] = total_perdidas.ToString("N2");
 
-                        }
+            //            }
 
 
 
-                        dt_nego_per.Rows.Add(rows);
-                        control_perd = control_perd = 1;
+            //            dt_nego_per.Rows.Add(rows);
+            //            control_perd = control_perd = 1;
 
-                    }
+            //        }
 
 
-                }
-                // asignacion de total de negocios en proceso a etiqueta
-                lbl_total_perdidas.Text = total_perdidas.ToString("N2");
+            //    }
+            //    // asignacion de total de negocios en proceso a etiqueta
+            //    lbl_total_perdidas.Text = total_perdidas.ToString("N2");
 
-                foreach (DataRow row_per in dt_nego_per.Rows) // Insercion de negocios en la grafica, que estan en proceso 
-                {
-                    series3.Points.Add(new SeriesPoint(row_per["fecha"].ToString(), row_per["acumulativa"].ToString()));
-                    meta.Points.Add(new SeriesPoint(row_per["fecha"].ToString(), meta_mes));
+            //    foreach (DataRow row_per in dt_nego_per.Rows) // Insercion de negocios en la grafica, que estan en proceso 
+            //    {
+            //        series3.Points.Add(new SeriesPoint(row_per["fecha"].ToString(), row_per["acumulativa"].ToString()));
+            //        meta.Points.Add(new SeriesPoint(row_per["fecha"].ToString(), meta_mes));
 
 
-                }
-                grafica_principal.Series.Add(series3);
+            //    }
+            //    grafica_principal.Series.Add(series3);
 
-                grafica_principal.Series.Add(meta);
-                //dataGridView1.DataSource = dt_nego_pro;
-                //dataGridView1.Rows.Add();
+            //    grafica_principal.Series.Add(meta);
+            //    //dataGridView1.DataSource = dt_nego_pro;
+            //    //dataGridView1.Rows.Add();
 
-                //dataGridView2.DataSource = dt_negos_mes;
+            //    //dataGridView2.DataSource = dt_negos_mes;
 
 
-                series1.ArgumentScaleType = ScaleType.Auto;
-                series2.ArgumentScaleType = ScaleType.Auto;
-                series3.ArgumentScaleType = ScaleType.Auto;
-                meta.ArgumentScaleType = ScaleType.Auto;
+            //    series1.ArgumentScaleType = ScaleType.Auto;
+            //    series2.ArgumentScaleType = ScaleType.Auto;
+            //    series3.ArgumentScaleType = ScaleType.Auto;
+            //    meta.ArgumentScaleType = ScaleType.Auto;
 
 
 
-                // Access the view-type-specific options of the series.
-                //((LineSeriesView)series1.View).LineMarkerOptions.Kind = MarkerKind.Triangle; // marcador de triangulo
-                ((LineSeriesView)series1.View).LineMarkerOptions.Kind = MarkerKind.Circle;
-                ((LineSeriesView)series2.View).LineMarkerOptions.Kind = MarkerKind.Circle;
+            //    // Access the view-type-specific options of the series.
+            //    //((LineSeriesView)series1.View).LineMarkerOptions.Kind = MarkerKind.Triangle; // marcador de triangulo
+            //    ((LineSeriesView)series1.View).LineMarkerOptions.Kind = MarkerKind.Circle;
+            //    ((LineSeriesView)series2.View).LineMarkerOptions.Kind = MarkerKind.Circle;
 
-                ((LineSeriesView)series3.View).LineMarkerOptions.Kind = MarkerKind.Circle;
-                ((LineSeriesView)meta.View).LineMarkerOptions.Kind = MarkerKind.Star;
+            //    ((LineSeriesView)series3.View).LineMarkerOptions.Kind = MarkerKind.Circle;
+            //    ((LineSeriesView)meta.View).LineMarkerOptions.Kind = MarkerKind.Star;
 
-                //((LineSeriesView)series1.View).LineStyle.DashStyle = DashStyle.Dash; // linea punteada
-                ((LineSeriesView)series1.View).LineStyle.LineJoin = System.Drawing.Drawing2D.LineJoin.Bevel; // linea solida
-                ((LineSeriesView)series2.View).LineStyle.LineJoin = System.Drawing.Drawing2D.LineJoin.Bevel; // linea solida
-                                                                                                             //((LineSeriesView)series3.View).LineStyle.LineJoin = System.Drawing.Drawing2D.LineJoin.Bevel; // linea solida
-                ((LineSeriesView)series3.View).LineStyle.LineJoin = System.Drawing.Drawing2D.LineJoin.Bevel; // linea solida
-                ((LineSeriesView)meta.View).LineStyle.DashStyle = DashStyle.Dash; // linea punteada
+            //    //((LineSeriesView)series1.View).LineStyle.DashStyle = DashStyle.Dash; // linea punteada
+            //    ((LineSeriesView)series1.View).LineStyle.LineJoin = System.Drawing.Drawing2D.LineJoin.Bevel; // linea solida
+            //    ((LineSeriesView)series2.View).LineStyle.LineJoin = System.Drawing.Drawing2D.LineJoin.Bevel; // linea solida
+            //                                                                                                 //((LineSeriesView)series3.View).LineStyle.LineJoin = System.Drawing.Drawing2D.LineJoin.Bevel; // linea solida
+            //    ((LineSeriesView)series3.View).LineStyle.LineJoin = System.Drawing.Drawing2D.LineJoin.Bevel; // linea solida
+            //    ((LineSeriesView)meta.View).LineStyle.DashStyle = DashStyle.Dash; // linea punteada
 
-                ((LineSeriesView)meta.View).Color = Color.Gold; // linea solida perdida
-                ((LineSeriesView)series3.View).Color = Color.Red; // linea solida perdida
-                ((LineSeriesView)series2.View).Color = Color.CadetBlue; // linea solida ganada
-                ((LineSeriesView)series1.View).Color = Color.YellowGreen; // linea solida proceso
+            //    ((LineSeriesView)meta.View).Color = Color.Gold; // linea solida perdida
+            //    ((LineSeriesView)series3.View).Color = Color.Red; // linea solida perdida
+            //    ((LineSeriesView)series2.View).Color = Color.CadetBlue; // linea solida ganada
+            //    ((LineSeriesView)series1.View).Color = Color.YellowGreen; // linea solida proceso
 
-                //((XYDiagram)lineChart.Diagram).EnableAxisXZooming = true;
-                ((XYDiagram)grafica_principal.Diagram).EnableAxisXZooming = false; // para que sirve ?
+            //    //((XYDiagram)lineChart.Diagram).EnableAxisXZooming = true;
+            //    ((XYDiagram)grafica_principal.Diagram).EnableAxisXZooming = false; // para que sirve ?
 
-                //lineChart.CalcHitInfo(e.X,e.Y);
+            //    //lineChart.CalcHitInfo(e.X,e.Y);
 
 
-                // Hide the legend (if necessary).
-                grafica_principal.Legend.Visible = true;
+            //    // Hide the legend (if necessary).
+            //    grafica_principal.Legend.Visible = true;
 
-                //// Add a title to the chart (if necessary).
-                grafica_principal.Titles.Add(new ChartTitle());
-                grafica_principal.Titles[0].Text = "Rendimiento Mensual";
+            //    //// Add a title to the chart (if necessary).
+            //    grafica_principal.Titles.Add(new ChartTitle());
+            //    grafica_principal.Titles[0].Text = "Rendimiento Mensual";
 
-                // Add the chart to the form.
-                grafica_principal.Dock = DockStyle.Fill;
-                ctc_metas_negocios.Controls.Add(grafica_principal);
+            //    // Add the chart to the form.
+            //    grafica_principal.Dock = DockStyle.Fill;
+            //    ctc_metas_negocios.Controls.Add(grafica_principal);
 
-            }
+            //}
         }
 
 

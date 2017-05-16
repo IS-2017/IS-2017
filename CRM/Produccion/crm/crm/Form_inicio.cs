@@ -44,6 +44,10 @@ namespace crm
             itemcasos.BackgroundImage = Image.FromFile("casos.png");
             //ITEM COBROS
             item_cobros.BackgroundImage = Image.FromFile("cobros.png");
+            //ITEM Cotizacion
+            item_cotizacion.BackgroundImage = Image.FromFile("calculadora.png");
+            //ITEM Balance
+            item_balance.BackgroundImage = Image.FromFile("balance.png");
 
             //**********************************************************
 
@@ -55,7 +59,33 @@ namespace crm
             //    //item_personal.Enabled = false;
             //    //item_pronosticos.Enabled = false;
             //}
+
+            BloquearMenuInicio();
         }
+
+        private void BloquearMenuInicio()
+            {
+
+            foreach (DevExpress.XtraEditors.TileGroup grupo in tile.Groups)
+            {
+                foreach (DevExpress.XtraEditors.TileItem item in grupo.Items)
+                {
+                    string tag=""; 
+                    if (item.Tag != null)
+                    { 
+                    tag = item.Tag.ToString();
+                    }
+                    DataTable dt = ObtenerPermisos.Permisos(seguridad.Conexion.User, tag);
+                  
+                    if (dt.Rows.Count > 0)
+                    {
+                        item.Enabled = true;
+                    }
+                    else { item.Enabled = false; }
+                }
+            }
+
+            }
 
         private void item_negocios_ItemClick(object sender, DevExpress.XtraEditors.TileItemEventArgs e)
         {
@@ -131,7 +161,9 @@ namespace crm
 
         private void item_productos_ItemClick(object sender, DevExpress.XtraEditors.TileItemEventArgs e)
         {
-
+           inventario inven = new inventario();
+            inven.MdiParent = this.MdiParent;
+            inven.Show();
         }
 
         private void itemcasos_ItemClick(object sender, DevExpress.XtraEditors.TileItemEventArgs e)
@@ -148,12 +180,81 @@ namespace crm
 
         private void item_ventas_ItemClick(object sender, DevExpress.XtraEditors.TileItemEventArgs e)
         {
+            try
+            {
+                
+                proyectoUOne.Factura fac = new proyectoUOne.Factura();
+                proyectoUOne.BuscarCliente nuevo = new proyectoUOne.BuscarCliente();
+                fac.Hide();
+                nuevo.ShowDialog();
+                if (!String.IsNullOrEmpty(nuevo.codigoC) && !String.IsNullOrEmpty(nuevo.nitC) && !String.IsNullOrEmpty(nuevo.nombreC) &&
+                        !String.IsNullOrEmpty(nuevo.apellidoC) && !String.IsNullOrEmpty(nuevo.direccionC) && !String.IsNullOrEmpty(nuevo.telefonoC))
+                {
+                    fac.txt_temporal.Text = nuevo.codigoC;
+                    fac.txt_nit.Text = nuevo.nitC;
+                    fac.txt_nombre.Text = nuevo.nombreC;
+                    fac.txt_apellido.Text = nuevo.apellidoC;
+                    fac.txt_direccion.Text = nuevo.direccionC;
+                    fac.txt_telefono.Text = nuevo.telefonoC;
 
+                    fac.MdiParent = this;
+                    fac.AutoSize = true;
+                    fac.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Para facturar necesita seleccionar un cliente");
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Error de llamada");
+            }
         }
 
         private void item_cobros_ItemClick(object sender, DevExpress.XtraEditors.TileItemEventArgs e)
         {
+            frm_abonos f = new frm_abonos();
+            f.MdiParent = this.MdiParent;
+            f.Show();
+        }
 
+        private void item_cotizacion_ItemClick(object sender, DevExpress.XtraEditors.TileItemEventArgs e)
+        {
+            try
+            {
+                
+                proyectoUOne.Cotizacion coti = new proyectoUOne.Cotizacion();
+                proyectoUOne.BuscarCliente nuevo = new proyectoUOne.BuscarCliente();
+                coti.Hide();
+                nuevo.ShowDialog();
+                if (!String.IsNullOrEmpty(nuevo.codigoC) && !String.IsNullOrEmpty(nuevo.nitC) && !String.IsNullOrEmpty(nuevo.nombreC) &&
+                        !String.IsNullOrEmpty(nuevo.apellidoC) && !String.IsNullOrEmpty(nuevo.direccionC) && !String.IsNullOrEmpty(nuevo.telefonoC))
+                {
+                    coti.txtCliente.Text = nuevo.nombreC;
+                    coti.txtTelefono.Text = nuevo.telefonoC;
+                    coti.MdiParent = this;
+                    coti.AutoSize = true;
+                    coti.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Para cotizar necesita seleccionar un cliente");
+                }
+
+
+            }
+            catch
+            {
+                MessageBox.Show("Para facturar necesita seleccionar un cliente");
+            }
+        }
+
+        private void item_balance_ItemClick(object sender, DevExpress.XtraEditors.TileItemEventArgs e)
+        {
+           BALANCE balance = new BALANCE();
+            balance.MdiParent = this.MdiParent;
+            balance.Show();
         }
     }
 }

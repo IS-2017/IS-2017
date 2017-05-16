@@ -24,6 +24,21 @@ namespace crm
             {
                 WindowState = FormWindowState.Maximized;
 
+
+                //------------------------------
+                if(OpBD.Idioma == "ingles")
+                {
+                    pag_estado.Caption = "Phases";
+                    pag_lista.Caption = "List";
+                }else
+                   {
+                    pag_estado.Caption = "Etapa";
+                    pag_lista.Caption = "Lista";
+                   }
+
+
+                //------------------------------
+
                 CapaNegocio fn = new CapaNegocio();
                 DataTable seg = seguridad.ObtenerPermisos.Permisos(seguridad.Conexion.User, id_form);
                 if (seg.Rows.Count > 0)
@@ -41,14 +56,27 @@ namespace crm
                 dgv_negocios.DataSource = OpBD.SeleccionarNegocios();
                 if (dgv_negocios.DataSource != null)
                 {
-                    dgv_neg.Columns[0].Caption = "No.";
-                    dgv_neg.Columns[1].Caption = "Titulo";
-                    dgv_neg.Columns[2].Caption = "Persona";
-                    dgv_neg.Columns[3].Caption = "Organización";
-                    dgv_neg.Columns[4].Caption = "Moneda";
-                    dgv_neg.Columns[5].Caption = "Valor";
-                    dgv_neg.Columns[6].Caption = "Fecha de cierre estimada";
-                    dgv_neg.Columns[7].Caption = "Categoría";
+                    if (OpBD.Idioma == "ingles")
+                    {
+                        dgv_neg.Columns[0].Caption = "No.";
+                        dgv_neg.Columns[1].Caption = "Title";
+                        dgv_neg.Columns[2].Caption = "Person";
+                        dgv_neg.Columns[3].Caption = "Company";
+                        dgv_neg.Columns[4].Caption = "Currency";
+                        dgv_neg.Columns[5].Caption = "Amount";
+                        dgv_neg.Columns[6].Caption = "Deadline";
+                        dgv_neg.Columns[7].Caption = "Category";
+                    } else
+                       {
+                        dgv_neg.Columns[0].Caption = "No.";
+                        dgv_neg.Columns[1].Caption = "Titulo";
+                        dgv_neg.Columns[2].Caption = "Persona";
+                        dgv_neg.Columns[3].Caption = "Organización";
+                        dgv_neg.Columns[4].Caption = "Moneda";
+                        dgv_neg.Columns[5].Caption = "Valor";
+                        dgv_neg.Columns[6].Caption = "Fecha de cierre estimada";
+                        dgv_neg.Columns[7].Caption = "Categoría";
+                      }
 
                     dgv_neg.Columns[5].DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
                     dgv_neg.Columns[5].DisplayFormat.FormatString = "n2";
