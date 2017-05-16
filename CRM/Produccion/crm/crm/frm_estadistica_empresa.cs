@@ -25,6 +25,7 @@ namespace crm
         DateTime fecha_inicio; // usada para determinar el inicio del rango de fechas
         DateTime fecha_fin_semana; // variable usada para calcular los valores de la semana anterior
 
+        String titulo = "Rendimiento empresarial";
 
         //// ----------------------------- Variables para cuantificar los negocios
         double monto_proceso = 0; int cont_proceso = 0;
@@ -213,7 +214,7 @@ namespace crm
                 }
             }
             // ------------------------- ENVIO DE DATOS (NEGOCIOS GANADOS,PERDIDOS,EN PROCESO) PARA SER GRAFICADOS EN FORMA DE PIE ------------------
-            ctc_negocios.Controls.Add(grafica_pie.grafica_pie(cont_ganado.ToString(), cont_perdido.ToString(), cont_proceso.ToString()));
+            ctc_negocios.Controls.Add(grafica_pie.grafica_pie(cont_ganado.ToString(), cont_perdido.ToString(), cont_proceso.ToString(),titulo.ToString()));
             // ---------------------------------------
 
             // grid con los negocios ganados
@@ -594,7 +595,7 @@ namespace crm
             }
 
             // ------------------------- ENVIO DE DATOS (NEGOCIOS GANADOS,PERDIDOS,EN PROCESO) PARA SER GRAFICADOS EN FORMA DE PIE ------------------
-            ctc_negocios.Controls.Add(grafica_pie.grafica_pie(cont_ganado.ToString(),cont_perdido.ToString(),cont_proceso.ToString()));
+            ctc_negocios.Controls.Add(grafica_pie.grafica_pie(cont_ganado.ToString(),cont_perdido.ToString(),cont_proceso.ToString(), titulo.ToString()));
             // ---------------------------------------
 
             // grid de negocios ganados
@@ -909,7 +910,7 @@ namespace crm
             } //foreach (DataRow columna in negocios.Rows)
 
               // ------------------------- ENVIO DE DATOS (NEGOCIOS GANADOS,PERDIDOS,EN PROCESO) PARA SER GRAFICADOS EN FORMA DE PIE ------------------
-            ctc_negocios.Controls.Add(grafica_pie.grafica_pie(cont_ganado.ToString(), cont_perdido.ToString(), cont_proceso.ToString()));
+            ctc_negocios.Controls.Add(grafica_pie.grafica_pie(cont_ganado.ToString(), cont_perdido.ToString(), cont_proceso.ToString(), titulo.ToString()));
             // ---------------------------------------
 
 
@@ -1132,7 +1133,7 @@ namespace crm
                 }
             }
             // ------------------------- ENVIO DE DATOS (NEGOCIOS GANADOS,PERDIDOS,EN PROCESO) PARA SER GRAFICADOS EN FORMA DE PIE ------------------
-            ctc_negocios.Controls.Add(grafica_pie.grafica_pie(cont_ganado.ToString(), cont_perdido.ToString(), cont_proceso.ToString()));
+            ctc_negocios.Controls.Add(grafica_pie.grafica_pie(cont_ganado.ToString(), cont_perdido.ToString(), cont_proceso.ToString(), titulo.ToString()));
             // ---------------------------------------
 
             // etiquetas de procesos iniciados:
@@ -1351,7 +1352,7 @@ namespace crm
             }
 
             // ------------------------- ENVIO DE DATOS (NEGOCIOS GANADOS,PERDIDOS,EN PROCESO) PARA SER GRAFICADOS EN FORMA DE PIE ------------------
-            ctc_negocios.Controls.Add(grafica_pie.grafica_pie(cont_ganado.ToString(), cont_perdido.ToString(), cont_proceso.ToString()));
+            ctc_negocios.Controls.Add(grafica_pie.grafica_pie(cont_ganado.ToString(), cont_perdido.ToString(), cont_proceso.ToString(), titulo.ToString()));
             // ---------------------------------------
 
 
@@ -1569,7 +1570,7 @@ namespace crm
             }
 
              // ------------------------- ENVIO DE DATOS (NEGOCIOS GANADOS,PERDIDOS,EN PROCESO) PARA SER GRAFICADOS EN FORMA DE PIE ------------------
-            ctc_negocios.Controls.Add(grafica_pie.grafica_pie(cont_ganado.ToString(),cont_perdido.ToString(),cont_proceso.ToString()));
+            ctc_negocios.Controls.Add(grafica_pie.grafica_pie(cont_ganado.ToString(),cont_perdido.ToString(),cont_proceso.ToString(), titulo.ToString()));
             // ---------------------------------------
             // etiquetas de procesos iniciados:
             lbl_neg_ini1.Text = cont_proceso.ToString();
@@ -1790,7 +1791,7 @@ namespace crm
                 }
 
                 // ------------------------- ENVIO DE DATOS (NEGOCIOS GANADOS,PERDIDOS,EN PROCESO) PARA SER GRAFICADOS EN FORMA DE PIE ------------------
-                ctc_negocios.Controls.Add(grafica_pie.grafica_pie(cont_ganado.ToString(), cont_perdido.ToString(), cont_proceso.ToString()));
+                ctc_negocios.Controls.Add(grafica_pie.grafica_pie(cont_ganado.ToString(), cont_perdido.ToString(), cont_proceso.ToString(), titulo.ToString()));
                 // ---------------------------------------
 
                 // etiquetas de procesos iniciados:

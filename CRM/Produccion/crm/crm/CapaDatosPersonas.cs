@@ -67,10 +67,33 @@ namespace crm
             cmd.ExecuteNonQuery();
             con.Close();
         }
+        // ----------------------------------------------- frm_puesto_nuevo
+        public void InsertarNuevoPuesto(string puesto, string descripcion)
+        {
+
+            String cadena = "insert into tbl_puesto(puesto,descripcion,estado)values('" + puesto + "','" + descripcion + "','activo')";
+            OdbcConnection con = seguridad.Conexion.ObtenerConexionODBC();
+            OdbcCommand cmd = new OdbcCommand(cadena, seguridad.Conexion.ObtenerConexionODBC());
+            cmd.ExecuteNonQuery();
+            con.Close();
+        }
+
+        //2.  seleccionar puestos
+        public DataTable SeleccionarPuestos()
+        {
+            String cadena = "select id_puesto,puesto from tbl_puesto where estado = 'activo' ";
+            DataTable contenedor = new DataTable();
+            OdbcCommand cmd = new OdbcCommand(cadena, seguridad.Conexion.ObtenerConexionODBC());
+            OdbcDataAdapter adap = new OdbcDataAdapter(cmd);
+            adap.Fill(contenedor);
+            return contenedor;
+
+        }
+
 
         // ---------------------------------------------- frm_NuevoEmpleado
 
-            // 1. Insertar nuevo empleado:
+        // 1. Insertar nuevo empleado:
         public void InsertarEmpleado(string nombres,string apellidos,string puesto,string telefono1, string movil, string direccion, string correo, string foto)
         {
             String cadena = "insert into tbl_empleado (nombres,apellidos,puesto,telefono1,movil,direccion,correo,foto,estado) values ('"+nombres+"','"+apellidos+"','"+puesto+"','"+telefono1+"','"+movil+"','"+direccion+"','"+correo+"','"+foto+"','activo')";

@@ -37,9 +37,14 @@ namespace crm
         CapaDatosPersonas CapaDatos = new CapaDatosPersonas();
         // -------------------------------------AREA DE VARIABLES GLOBALES
 
-            // grafica de pie para desempeño del usuario
-        ChartControl pie = new ChartControl();
+        // titulo de grafico
+        string titulo = "";
 
+
+        // grafica de pie para desempeño del usuario
+        ChartControl pie = new ChartControl();
+        // llamada a la clase de graficacion
+        cls_grafica_pie grafica_pie = new cls_grafica_pie();
 
 
         string var_id_usuario = ""; // id de usuario para consultar en la base de datos, tomado del combobox
@@ -487,6 +492,12 @@ namespace crm
                     dt_nego_ganado.Rows.Add(row);
                 }
             }
+
+            titulo = "Rendimiento de " + cmb_usuarios.Text;
+            // ------------------------- ENVIO DE DATOS (NEGOCIOS GANADOS,PERDIDOS,EN PROCESO) PARA SER GRAFICADOS EN FORMA DE PIE ------------------
+            ctc_negocios_emp.Controls.Add(grafica_pie.grafica_pie(cont_ganado.ToString(), cont_perdido.ToString(), cont_proceso.ToString(), titulo.ToString()));
+            // ---------------------------------------
+
             // grid de negocios ganados
             dgv_prueba.DataSource = dt_nego_ganado;
             // etiquetas de procesos iniciados:
@@ -706,6 +717,13 @@ namespace crm
                     dt_nego_ganado.Rows.Add(row);
                 }
             }
+
+            titulo = "Rendimiento de " + cmb_usuarios.Text;
+            // ------------------------- ENVIO DE DATOS (NEGOCIOS GANADOS,PERDIDOS,EN PROCESO) PARA SER GRAFICADOS EN FORMA DE PIE ------------------
+            ctc_negocios_emp.Controls.Add(grafica_pie.grafica_pie(cont_ganado.ToString(), cont_perdido.ToString(), cont_proceso.ToString(), titulo.ToString()));
+            // ---------------------------------------
+
+
             // etiquetas de procesos iniciados:
             lbl_neg_ini1.Text = cont_proceso.ToString();
             lbl_neg_ini2.Text = cont_proceso.ToString();
@@ -963,6 +981,12 @@ namespace crm
 
                 }
             }
+
+            titulo = "Rendimiento de " + cmb_usuarios.Text;
+            // ------------------------- ENVIO DE DATOS (NEGOCIOS GANADOS,PERDIDOS,EN PROCESO) PARA SER GRAFICADOS EN FORMA DE PIE ------------------
+            ctc_negocios_emp.Controls.Add(grafica_pie.grafica_pie(cont_ganado.ToString(), cont_perdido.ToString(), cont_proceso.ToString(), titulo.ToString()));
+            // ---------------------------------------
+
             // grid con los negocios ganados
             dgv_negocios_ganados.DataSource = dt_nego_ganado;
             dgv_nego_perdidos.DataSource = dt_nego_perdido;
@@ -1229,6 +1253,12 @@ namespace crm
                     dt_nego_ganado.Rows.Add(row);
                 }
             }
+
+            titulo = "Rendimiento de " + cmb_usuarios.Text;
+            // ------------------------- ENVIO DE DATOS (NEGOCIOS GANADOS,PERDIDOS,EN PROCESO) PARA SER GRAFICADOS EN FORMA DE PIE ------------------
+            ctc_negocios_emp.Controls.Add(grafica_pie.grafica_pie(cont_ganado.ToString(), cont_perdido.ToString(), cont_proceso.ToString(), titulo.ToString()));
+            // ---------------------------------------
+
             // etiquetas de procesos iniciados:
             lbl_neg_ini1.Text = cont_proceso.ToString();
             lbl_neg_ini2.Text = cont_proceso.ToString();
@@ -1442,6 +1472,12 @@ namespace crm
                     dt_nego_ganado.Rows.Add(row);
                 }
             }
+
+            titulo = "Rendimiento de " + cmb_usuarios.Text;
+            // ------------------------- ENVIO DE DATOS (NEGOCIOS GANADOS,PERDIDOS,EN PROCESO) PARA SER GRAFICADOS EN FORMA DE PIE ------------------
+            ctc_negocios_emp.Controls.Add(grafica_pie.grafica_pie(cont_ganado.ToString(), cont_perdido.ToString(), cont_proceso.ToString(), titulo.ToString()));
+            // ---------------------------------------
+
             // etiquetas de procesos iniciados:
             lbl_neg_ini1.Text = cont_proceso.ToString();
             lbl_neg_ini2.Text = cont_proceso.ToString();
@@ -1650,6 +1686,13 @@ namespace crm
                     dt_nego_ganado.Rows.Add(row);
                 }
             }
+
+            titulo = "Rendimiento de " +cmb_usuarios.Text;
+            // ------------------------- ENVIO DE DATOS (NEGOCIOS GANADOS,PERDIDOS,EN PROCESO) PARA SER GRAFICADOS EN FORMA DE PIE ------------------
+            ctc_negocios_emp.Controls.Add(grafica_pie.grafica_pie(cont_ganado.ToString(), cont_perdido.ToString(), cont_proceso.ToString(), titulo.ToString()));
+            // ---------------------------------------
+
+
             // etiquetas de procesos iniciados:
             lbl_neg_ini1.Text = cont_proceso.ToString();
             lbl_neg_ini2.Text = cont_proceso.ToString();
@@ -1860,6 +1903,12 @@ namespace crm
                         dt_nego_ganado.Rows.Add(row);
                     }
                 }
+
+                titulo = "Rendimiento de " + cmb_usuarios.Text;
+                // ------------------------- ENVIO DE DATOS (NEGOCIOS GANADOS,PERDIDOS,EN PROCESO) PARA SER GRAFICADOS EN FORMA DE PIE ------------------
+                ctc_negocios_emp.Controls.Add(grafica_pie.grafica_pie(cont_ganado.ToString(), cont_perdido.ToString(), cont_proceso.ToString(), titulo.ToString()));
+                // ---------------------------------------
+
                 // etiquetas de procesos iniciados:
                 lbl_neg_ini1.Text = cont_proceso.ToString();
                 lbl_neg_ini2.Text = cont_proceso.ToString();

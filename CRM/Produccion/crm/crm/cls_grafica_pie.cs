@@ -39,7 +39,7 @@ namespace crm
 
 
 
-        public ChartControl grafica_pie(string nego_gana, string nego_perdido, string nego_ini)
+        public ChartControl grafica_pie(string nego_gana, string nego_perdido, string nego_ini, string titulox)
         {
 
             // inicializacion de variables de chartcontrol
@@ -84,7 +84,7 @@ namespace crm
             ((SimpleDiagram3D)pie.Diagram).ZoomPercent = 200;
 
             ChartTitle titulo = new ChartTitle();
-            titulo.Text = "Rendimiento empresarial";
+            titulo.Text = titulox;
             pie.Titles.Add(titulo);
             pie.Legend.Visible = true;
 

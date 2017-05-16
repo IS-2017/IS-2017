@@ -324,7 +324,6 @@
             this.btn_editar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_editar.BackgroundImage")));
             this.btn_editar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_editar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_editar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btn_editar.FlatAppearance.BorderSize = 0;
             this.btn_editar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btn_editar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;

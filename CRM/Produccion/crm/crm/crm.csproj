@@ -104,18 +104,61 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BaseDatosCalendarioDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="BuscarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BuscarCliente.Designer.cs">
+      <DependentUpon>BuscarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BuscarProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BuscarProducto.Designer.cs">
+      <DependentUpon>BuscarProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CapaDatos.cs" />
     <Compile Include="CapaDatosPersonas.cs" />
     <Compile Include="CapaNegociod.cs" />
     <Compile Include="cls_grafica_pie.cs" />
     <Compile Include="cls_nombre_mes.cs" />
     <Compile Include="Conexion.cs" />
+    <Compile Include="Cotizacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cotizacion.Designer.cs">
+      <DependentUpon>Cotizacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CotizacionVista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CotizacionVista.Designer.cs">
+      <DependentUpon>CotizacionVista.cs</DependentUpon>
+    </Compile>
     <Compile Include="crmbdDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>crmbdDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Cuenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cuenta.Designer.cs">
+      <DependentUpon>Cuenta.cs</DependentUpon>
+    </Compile>
     <Compile Include="datos.cs" />
     <Compile Include="entidades.cs" />
+    <Compile Include="Factura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Factura.Designer.cs">
+      <DependentUpon>Factura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FacturaVista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FacturaVista.Designer.cs">
+      <DependentUpon>FacturaVista.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -200,7 +243,12 @@
     <Compile Include="frm_abonos.Designer.cs">
       <DependentUpon>frm_abonos.cs</DependentUpon>
     </Compile>
-
+    <Compile Include="frm_asignacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_asignacion.Designer.cs">
+      <DependentUpon>frm_asignacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_balance.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -230,6 +278,12 @@
     </Compile>
     <Compile Include="frm_cliente.Designer.cs">
       <DependentUpon>frm_cliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_configurar_idioma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_configurar_idioma.Designer.cs">
+      <DependentUpon>frm_configurar_idioma.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_detalle_tareas_importantes.cs">
       <SubType>Form</SubType>
@@ -273,6 +327,12 @@
     <Compile Include="frm_moneda.Designer.cs">
       <DependentUpon>frm_moneda.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_morosos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_morosos.Designer.cs">
+      <DependentUpon>frm_morosos.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_nueva_moneda.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -303,6 +363,24 @@
     <Compile Include="frm_pronostico_ventas_secundario.Designer.cs">
       <DependentUpon>frm_pronostico_ventas_secundario.cs</DependentUpon>
     </Compile>
+    <Compile Include="InsertarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InsertarCliente.Designer.cs">
+      <DependentUpon>InsertarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InsertarProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InsertarProducto.Designer.cs">
+      <DependentUpon>InsertarProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_puesto_nuevo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_puesto_nuevo.Designer.cs">
+      <DependentUpon>frm_puesto_nuevo.cs</DependentUpon>
+    </Compile>
     <Compile Include="inventario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -321,6 +399,12 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="ModificarFactura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificarFactura.Designer.cs">
+      <DependentUpon>ModificarFactura.cs</DependentUpon>
+    </Compile>
     <Compile Include="negocio.cs" />
     <Compile Include="OpBD.cs" />
     <Compile Include="Program.cs" />
@@ -331,6 +415,30 @@
     <Compile Include="prueba.Designer.cs">
       <DependentUpon>prueba.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="BuscarCliente.resx">
+      <DependentUpon>BuscarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BuscarProducto.resx">
+      <DependentUpon>BuscarProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cotizacion.resx">
+      <DependentUpon>Cotizacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CotizacionVista.resx">
+      <DependentUpon>CotizacionVista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cuenta.resx">
+      <DependentUpon>Cuenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Factura.resx">
+      <DependentUpon>Factura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FacturaVista.resx">
+      <DependentUpon>FacturaVista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.en.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -346,8 +454,14 @@
     <EmbeddedResource Include="FormDetallesNegocio.resx">
       <DependentUpon>FormDetallesNegocio.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormNegociaciones.en.resx">
+      <DependentUpon>FormNegociaciones.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormNegociaciones.resx">
       <DependentUpon>FormNegociaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNuevoNegocio.en.resx">
+      <DependentUpon>FormNuevoNegocio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormNuevoNegocio.resx">
       <DependentUpon>FormNuevoNegocio.cs</DependentUpon>
@@ -358,11 +472,17 @@
     <EmbeddedResource Include="FormTareasNegocio.resx">
       <DependentUpon>FormTareasNegocio.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form_Casos.en.resx">
+      <DependentUpon>Form_Casos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_Casos.resx">
       <DependentUpon>Form_Casos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_categoria_neg.resx">
       <DependentUpon>Form_categoria_neg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_inicio.en.resx">
+      <DependentUpon>Form_inicio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_inicio.resx">
       <DependentUpon>Form_inicio.cs</DependentUpon>
@@ -372,6 +492,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_abonos.resx">
       <DependentUpon>frm_abonos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_asignacion.resx">
+      <DependentUpon>frm_asignacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_balance.resx">
       <DependentUpon>frm_balance.cs</DependentUpon>
@@ -387,6 +510,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_cliente.resx">
       <DependentUpon>frm_cliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_configurar_idioma.en.resx">
+      <DependentUpon>frm_configurar_idioma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_configurar_idioma.resx">
+      <DependentUpon>frm_configurar_idioma.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_detalle_tareas_importantes.resx">
       <DependentUpon>frm_detalle_tareas_importantes.cs</DependentUpon>
@@ -409,8 +538,14 @@
     <EmbeddedResource Include="frm_moneda.resx">
       <DependentUpon>frm_moneda.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_morosos.resx">
+      <DependentUpon>frm_morosos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_nueva_moneda.resx">
       <DependentUpon>frm_nueva_moneda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_NuevoCaso.en.resx">
+      <DependentUpon>frm_NuevoCaso.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_NuevoCaso.resx">
       <DependentUpon>frm_NuevoCaso.cs</DependentUpon>
@@ -424,6 +559,15 @@
     <EmbeddedResource Include="frm_pronostico_ventas_secundario.resx">
       <DependentUpon>frm_pronostico_ventas_secundario.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="InsertarCliente.resx">
+      <DependentUpon>InsertarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InsertarProducto.resx">
+      <DependentUpon>InsertarProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_puesto_nuevo.resx">
+      <DependentUpon>frm_puesto_nuevo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="inventario.resx">
       <DependentUpon>inventario.cs</DependentUpon>
     </EmbeddedResource>
@@ -432,6 +576,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModificarFactura.resx">
+      <DependentUpon>ModificarFactura.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

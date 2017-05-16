@@ -18,8 +18,8 @@ namespace crm
             InitializeComponent();
         }
 
-
-        public entidades.factura FacturaActual { get; set; }
+        string id_form = "121";
+        public crm.entidades.factura FacturaActual { get; set; }
         private void frm_abonos_Load(object sender, EventArgs e)
         {
 

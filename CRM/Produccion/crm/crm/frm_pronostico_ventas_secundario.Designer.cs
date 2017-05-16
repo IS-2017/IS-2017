@@ -96,6 +96,7 @@
             // groupControl1
             // 
             this.groupControl1.Appearance.BackColor2 = System.Drawing.Color.White;
+            this.groupControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
             this.groupControl1.CaptionImage = ((System.Drawing.Image)(resources.GetObject("groupControl1.CaptionImage")));
             this.groupControl1.CaptionLocation = DevExpress.Utils.Locations.Top;
             this.groupControl1.Controls.Add(this.groupControl2);
@@ -110,7 +111,7 @@
             this.groupControl1.Location = new System.Drawing.Point(0, 0);
             this.groupControl1.Margin = new System.Windows.Forms.Padding(4);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(1243, 636);
+            this.groupControl1.Size = new System.Drawing.Size(1230, 609);
             this.groupControl1.TabIndex = 31;
             this.groupControl1.Text = "Proyecciones";
             // 
@@ -125,10 +126,10 @@
             // 
             // dgv_detalle
             // 
-            this.dgv_detalle.Location = new System.Drawing.Point(0, 19);
+            this.dgv_detalle.Location = new System.Drawing.Point(0, 20);
             this.dgv_detalle.MainView = this.gridView1;
             this.dgv_detalle.Name = "dgv_detalle";
-            this.dgv_detalle.Size = new System.Drawing.Size(467, 454);
+            this.dgv_detalle.Size = new System.Drawing.Size(467, 453);
             this.dgv_detalle.TabIndex = 29;
             this.dgv_detalle.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -506,7 +507,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1243, 636);
+            this.AutoScroll = true;
+            this.ClientSize = new System.Drawing.Size(1230, 609);
             this.Controls.Add(this.groupControl1);
             this.Name = "frm_pronostico_ventas_secundario";
             this.Text = "Proyección de ventas";

@@ -560,6 +560,7 @@ namespace crm
         // LOAD DE PRONOSTICO VENTAS-NEGOCIOS
         private void frm_pronostico_ventas_secundario_Load(object sender, EventArgs e)
         {
+            this.AutoScroll = true;
             //btn_promedio_moviles.Enabled = false;
             btn_pronosticar.Enabled = false;
             cmb_categoria.Enabled = false;

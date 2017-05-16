@@ -19,6 +19,10 @@ namespace crm
         {
             InitializeComponent();
         }
+
+        int indicador = 0; // servira para cuando el cliente va modificar un registro, el estado va a cambiar a 1 cunado de clic en modificar de esta forma va a modificar un registro y no lo va a guardar nuevo, sino a modificar
+        
+
         CapaDatosPersonas CapaDatos = new CapaDatosPersonas();
         public double meta;
         DataTable dt_meta = new DataTable();
@@ -28,22 +32,37 @@ namespace crm
 
         private void btn_guardar_Click(object sender, EventArgs e)
         {
-            meta = Convert.ToDouble( txt_meta.Text.Trim());
-            // Insercion en la tabla tbl_estadistica
-            CapaDatos.Insertar_Nueva_meta(txt_meta.Text.Trim(), fecha_referencia.ToString("yyyy-MM-dd") ,fecha_fin_mes.ToString("yyyy-MM-dd"));
+            if (indicador == 0) {
 
-            MessageBox.Show("Monto ingresado correctamente","Aviso",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                meta = Convert.ToDouble(txt_meta.Text.Trim());
+                // Insercion en la tabla tbl_estadistica
+                CapaDatos.Insertar_Nueva_meta(txt_meta.Text.Trim(), fecha_referencia.ToString("yyyy-MM-dd"), fecha_fin_mes.ToString("yyyy-MM-dd"));
+
+                MessageBox.Show("Monto ingresado correctamente", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else if (indicador == 1)
+            {
+                //Carga de monto en la grafica
+                meta = Convert.ToDouble(txt_meta.Text.Trim());
+                CapaDatos.modificar_meta_registro(id_monto, txt_meta.Text.Trim());
+                MessageBox.Show("Monto modificado correctamente", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                //dgv_metas.DataSource = dt_meta;
+            }
+
+
+
         }
 
         private void frm_meta_mantenimiento_Load(object sender, EventArgs e)
         {
-            
-            
+
+            dgv_metas.Enabled = false;
 
 
             txt_meta.Text = "";
             // BLOQUEO DE BOTONES INNECESARIOS
-            btn_editar.Enabled = false;
+            btn_editar.Enabled = true;
             btn_eliminar.Enabled = false;
             btn_buscar.Enabled = false;
             btn_cancelar.Enabled = false;
@@ -88,7 +107,7 @@ namespace crm
             btn_primero.Enabled = false;
             btn_ultimo.Enabled = false;
             btn_nuevo.Enabled = false;
-            btn_guardar.Enabled = false;
+            btn_guardar.Enabled = true;
 
 
             // Crear vector:
@@ -108,12 +127,15 @@ namespace crm
 
         private void btn_editar_Click(object sender, EventArgs e)
         {
-            //Carga de monto en la grafica
-            meta = Convert.ToDouble(txt_meta.Text.Trim());
-            CapaDatos.modificar_meta_registro(id_monto,txt_meta.Text.Trim());
-            MessageBox.Show("Monto modificado correctamente", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            ////Carga de monto en la grafica
+            //meta = Convert.ToDouble(txt_meta.Text.Trim());
+            //CapaDatos.modificar_meta_registro(id_monto, txt_meta.Text.Trim());
+            //MessageBox.Show("Monto modificado correctamente", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             //dgv_metas.DataSource = dt_meta;
+            btn_guardar.Enabled = true;
+            dgv_metas.Enabled = true;
+            indicador = 1;
         }
     }
 }
