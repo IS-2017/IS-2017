@@ -28,16 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(nomina));
             this.label35 = new System.Windows.Forms.Label();
             this.Nominas = new System.Windows.Forms.GroupBox();
+            this.txt_totaldeducciones = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.btn_otros = new System.Windows.Forms.Button();
             this.btn_horas_extra = new System.Windows.Forms.Button();
             this.Agregar = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_total = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txt_totaldevengos = new System.Windows.Forms.TextBox();
             this.cbo_empresa = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dgv_nonimas = new System.Windows.Forms.DataGridView();
@@ -48,15 +53,18 @@
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtp_hasta = new System.Windows.Forms.DateTimePicker();
             this.dtp_desde = new System.Windows.Forms.DateTimePicker();
             this.label10 = new System.Windows.Forms.Label();
@@ -83,24 +91,27 @@
             // label35
             // 
             this.label35.AutoSize = true;
-            this.label35.Font = new System.Drawing.Font("Century Gothic", 21F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label35.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label35.Location = new System.Drawing.Point(332, 97);
+            this.label35.Font = new System.Drawing.Font("Century Gothic", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label35.ForeColor = System.Drawing.Color.Black;
+            this.label35.Location = new System.Drawing.Point(335, 104);
             this.label35.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(293, 34);
+            this.label35.Size = new System.Drawing.Size(294, 34);
             this.label35.TabIndex = 43;
-            this.label35.Text = "Calculo de Nominas";
+            this.label35.Text = "Calculo de Nóminas";
+            this.label35.Click += new System.EventHandler(this.label35_Click);
             // 
             // Nominas
             // 
+            this.Nominas.Controls.Add(this.txt_totaldeducciones);
+            this.Nominas.Controls.Add(this.label4);
             this.Nominas.Controls.Add(this.btn_otros);
             this.Nominas.Controls.Add(this.btn_horas_extra);
             this.Nominas.Controls.Add(this.Agregar);
-            this.Nominas.Controls.Add(this.textBox1);
+            this.Nominas.Controls.Add(this.txt_total);
             this.Nominas.Controls.Add(this.label1);
             this.Nominas.Controls.Add(this.label3);
-            this.Nominas.Controls.Add(this.textBox2);
+            this.Nominas.Controls.Add(this.txt_totaldevengos);
             this.Nominas.Controls.Add(this.cbo_empresa);
             this.Nominas.Controls.Add(this.label2);
             this.Nominas.Controls.Add(this.dgv_nonimas);
@@ -118,6 +129,25 @@
             this.Nominas.TabStop = false;
             this.Nominas.Text = "Información sobre Nomina del Empleado:";
             this.Nominas.Enter += new System.EventHandler(this.Nominas_Enter);
+            // 
+            // txt_totaldeducciones
+            // 
+            this.txt_totaldeducciones.Location = new System.Drawing.Point(490, 63);
+            this.txt_totaldeducciones.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_totaldeducciones.Name = "txt_totaldeducciones";
+            this.txt_totaldeducciones.ReadOnly = true;
+            this.txt_totaldeducciones.Size = new System.Drawing.Size(122, 20);
+            this.txt_totaldeducciones.TabIndex = 51;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(134, 65);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(95, 16);
+            this.label4.TabIndex = 50;
+            this.label4.Text = "Total Devengos:";
             // 
             // btn_otros
             // 
@@ -155,18 +185,19 @@
             this.Agregar.UseVisualStyleBackColor = false;
             this.Agregar.Click += new System.EventHandler(this.Agregar_Click);
             // 
-            // textBox1
+            // txt_total
             // 
-            this.textBox1.Location = new System.Drawing.Point(524, 61);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(122, 20);
-            this.textBox1.TabIndex = 46;
+            this.txt_total.Location = new System.Drawing.Point(695, 59);
+            this.txt_total.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_total.Name = "txt_total";
+            this.txt_total.ReadOnly = true;
+            this.txt_total.Size = new System.Drawing.Size(122, 20);
+            this.txt_total.TabIndex = 46;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(482, 61);
+            this.label1.Location = new System.Drawing.Point(648, 63);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(37, 16);
@@ -176,25 +207,26 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(231, 64);
+            this.label3.Location = new System.Drawing.Point(380, 65);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(111, 16);
             this.label3.TabIndex = 44;
             this.label3.Text = "Total Deducciones:";
             // 
-            // textBox2
+            // txt_totaldevengos
             // 
-            this.textBox2.Location = new System.Drawing.Point(340, 61);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(122, 20);
-            this.textBox2.TabIndex = 41;
+            this.txt_totaldevengos.Location = new System.Drawing.Point(226, 65);
+            this.txt_totaldevengos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_totaldevengos.Name = "txt_totaldevengos";
+            this.txt_totaldevengos.ReadOnly = true;
+            this.txt_totaldevengos.Size = new System.Drawing.Size(122, 20);
+            this.txt_totaldevengos.TabIndex = 41;
             // 
             // cbo_empresa
             // 
             this.cbo_empresa.FormattingEnabled = true;
-            this.cbo_empresa.Location = new System.Drawing.Point(168, 22);
+            this.cbo_empresa.Location = new System.Drawing.Point(161, 26);
             this.cbo_empresa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbo_empresa.Name = "cbo_empresa";
             this.cbo_empresa.Size = new System.Drawing.Size(110, 23);
@@ -203,7 +235,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(96, 28);
+            this.label2.Location = new System.Drawing.Point(89, 32);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(57, 16);
@@ -224,16 +256,19 @@
             this.Column5,
             this.Column6,
             this.Column12,
+            this.Column13,
+            this.Column14,
+            this.Column18,
             this.Column7,
             this.Column11,
             this.Column8,
-            this.Column13,
-            this.Column9,
-            this.Column14,
             this.Column15,
+            this.Column16,
+            this.Column9,
             this.Column10,
-            this.Column16});
-            this.dgv_nonimas.Location = new System.Drawing.Point(0, 104);
+            this.Column19,
+            this.Column17});
+            this.dgv_nonimas.Location = new System.Drawing.Point(9, 106);
             this.dgv_nonimas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgv_nonimas.Name = "dgv_nonimas";
             this.dgv_nonimas.ReadOnly = true;
@@ -244,6 +279,8 @@
             // 
             // Column1
             // 
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.Column1.DefaultCellStyle = dataGridViewCellStyle1;
             this.Column1.HeaderText = "ID EMPRESA";
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
@@ -291,6 +328,29 @@
             this.Column12.ReadOnly = true;
             this.Column12.Width = 93;
             // 
+            // Column13
+            // 
+            this.Column13.HeaderText = "HORAS EXTRA";
+            this.Column13.Name = "Column13";
+            this.Column13.ReadOnly = true;
+            this.Column13.Width = 97;
+            // 
+            // Column14
+            // 
+            this.Column14.HeaderText = "DEVENGO EXTRA";
+            this.Column14.Name = "Column14";
+            this.Column14.ReadOnly = true;
+            this.Column14.Width = 113;
+            // 
+            // Column18
+            // 
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.Column18.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Column18.HeaderText = "TOTAL DEVENGOS";
+            this.Column18.Name = "Column18";
+            this.Column18.ReadOnly = true;
+            this.Column18.Width = 118;
+            // 
             // Column7
             // 
             this.Column7.HeaderText = "IGSS";
@@ -304,7 +364,7 @@
             this.Column11.Name = "Column11";
             this.Column11.ReadOnly = true;
             this.Column11.Visible = false;
-            this.Column11.Width = 159;
+            this.Column11.Width = 168;
             // 
             // Column8
             // 
@@ -313,13 +373,20 @@
             this.Column8.ReadOnly = true;
             this.Column8.Width = 49;
             // 
-            // Column13
+            // Column15
             // 
-            this.Column13.HeaderText = "HORAS EXTRA";
-            this.Column13.Name = "Column13";
-            this.Column13.ReadOnly = true;
-            this.Column13.Visible = false;
-            this.Column13.Width = 118;
+            this.Column15.HeaderText = "DESCUENTO EXTRA";
+            this.Column15.Name = "Column15";
+            this.Column15.ReadOnly = true;
+            this.Column15.Width = 123;
+            // 
+            // Column16
+            // 
+            this.Column16.HeaderText = "CANTIDAD HORAS";
+            this.Column16.Name = "Column16";
+            this.Column16.ReadOnly = true;
+            this.Column16.Visible = false;
+            this.Column16.Width = 145;
             // 
             // Column9
             // 
@@ -327,23 +394,7 @@
             this.Column9.Name = "Column9";
             this.Column9.ReadOnly = true;
             this.Column9.Visible = false;
-            this.Column9.Width = 92;
-            // 
-            // Column14
-            // 
-            this.Column14.HeaderText = "DEVENGO EXTRA";
-            this.Column14.Name = "Column14";
-            this.Column14.ReadOnly = true;
-            this.Column14.Visible = false;
-            this.Column14.Width = 138;
-            // 
-            // Column15
-            // 
-            this.Column15.HeaderText = "DESCUENTO EXTRA";
-            this.Column15.Name = "Column15";
-            this.Column15.ReadOnly = true;
-            this.Column15.Visible = false;
-            this.Column15.Width = 148;
+            this.Column9.Width = 91;
             // 
             // Column10
             // 
@@ -353,17 +404,25 @@
             this.Column10.Visible = false;
             this.Column10.Width = 118;
             // 
-            // Column16
+            // Column19
             // 
-            this.Column16.HeaderText = "CANTIDAD HORAS";
-            this.Column16.Name = "Column16";
-            this.Column16.ReadOnly = true;
-            this.Column16.Visible = false;
-            this.Column16.Width = 143;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(183)))), ((int)(((byte)(177)))));
+            this.Column19.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Column19.HeaderText = "TOTAL DEDUCCIONES";
+            this.Column19.Name = "Column19";
+            this.Column19.ReadOnly = true;
+            this.Column19.Width = 136;
+            // 
+            // Column17
+            // 
+            this.Column17.HeaderText = "TOTAL";
+            this.Column17.Name = "Column17";
+            this.Column17.ReadOnly = true;
+            this.Column17.Width = 65;
             // 
             // dtp_hasta
             // 
-            this.dtp_hasta.Location = new System.Drawing.Point(640, 25);
+            this.dtp_hasta.Location = new System.Drawing.Point(633, 29);
             this.dtp_hasta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dtp_hasta.Name = "dtp_hasta";
             this.dtp_hasta.Size = new System.Drawing.Size(234, 20);
@@ -371,7 +430,7 @@
             // 
             // dtp_desde
             // 
-            this.dtp_desde.Location = new System.Drawing.Point(338, 24);
+            this.dtp_desde.Location = new System.Drawing.Point(332, 28);
             this.dtp_desde.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dtp_desde.Name = "dtp_desde";
             this.dtp_desde.Size = new System.Drawing.Size(237, 20);
@@ -380,7 +439,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(598, 28);
+            this.label10.Location = new System.Drawing.Point(591, 32);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(43, 16);
@@ -390,7 +449,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(294, 28);
+            this.label9.Location = new System.Drawing.Point(287, 32);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(45, 16);
@@ -616,7 +675,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(765, 557);
+            this.ClientSize = new System.Drawing.Size(974, 557);
             this.Controls.Add(this.label35);
             this.Controls.Add(this.Nominas);
             this.Controls.Add(this.groupBox2);
@@ -660,12 +719,10 @@
         private System.Windows.Forms.Button btn_actualizar;
         private System.Windows.Forms.Button btn_cancelar;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_totaldevengos;
+        private System.Windows.Forms.TextBox txt_total;
         private System.Windows.Forms.Label label1;
         public System.Windows.Forms.Button Agregar;
-        private System.Windows.Forms.Button btn_otros;
-        private System.Windows.Forms.Button btn_horas_extra;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
@@ -673,14 +730,21 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column14;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column18;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column14;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column15;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column16;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column19;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column17;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txt_totaldeducciones;
+        private System.Windows.Forms.Button btn_otros;
+        private System.Windows.Forms.Button btn_horas_extra;
     }
 }

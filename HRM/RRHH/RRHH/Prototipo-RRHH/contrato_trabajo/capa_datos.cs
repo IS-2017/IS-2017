@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data.Odbc;
 using System.Data;
 using System.Windows.Forms;
+using seguridad;
 
 namespace contrato_trabajo
 {
@@ -16,7 +17,7 @@ namespace contrato_trabajo
 
             try
             {
-                OdbcConnection con = conexion.ObtenerConexion();
+                OdbcConnection con = seguridad.Conexion.ObtenerConexionODBC();
                 OdbcCommand cmd;
                 DataTable dt = new DataTable();
 
@@ -27,10 +28,35 @@ namespace contrato_trabajo
                 cb.DataSource = dt;
                 cb.DisplayMember = "nombre_empresa";
                 cb.ValueMember = "id_empresa_pk";
-                conexion.DesconectarConexion();
+                seguridad.Conexion.DesconectarODBC();
             }
 
             catch (Exception ex )
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        public void llenar_id_empleado(ComboBox cb)
+        {
+
+            try
+            {
+                OdbcConnection con = seguridad.Conexion.ObtenerConexionODBC();
+                OdbcCommand cmd;
+                DataTable dt = new DataTable();
+
+                cmd = new OdbcCommand("select id_empleado_pk, nombre_emp from empleado where estado='ACTIVO'", con);
+                OdbcDataAdapter adaptador = new OdbcDataAdapter(cmd);
+                adaptador.Fill(dt);
+
+                cb.DataSource = dt;
+                cb.DisplayMember = "nombre_emp";
+                cb.ValueMember = "id_empleado_pk";
+                seguridad.Conexion.DesconectarODBC();
+            }
+
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
@@ -40,7 +66,7 @@ namespace contrato_trabajo
             try
             {
                 DataTable dt = new DataTable();
-                OdbcCommand cmd = new OdbcCommand("select id_empresa_pk, nombre_empresa from empresa where estado='ACTIVO'", conexion.ObtenerConexion());
+                OdbcCommand cmd = new OdbcCommand("select id_empresa_pk, nombre_empresa from empresa where estado='ACTIVO'", seguridad.Conexion.ObtenerConexionODBC());
                 OdbcDataAdapter adap = new OdbcDataAdapter(cmd);
                 adap.Fill(dt);
 
@@ -64,10 +90,10 @@ namespace contrato_trabajo
             DataTable dt = new DataTable();
             try
             {
-                OdbcCommand cmd = new OdbcCommand(query, conexion.ObtenerConexion());
+                OdbcCommand cmd = new OdbcCommand(query, seguridad.Conexion.ObtenerConexionODBC());
                 OdbcDataAdapter adap = new OdbcDataAdapter(cmd);
                 adap.Fill(dt);
-                conexion.DesconectarConexion();
+                seguridad.Conexion.DesconectarODBC();
             }
             catch
             {
@@ -85,14 +111,14 @@ namespace contrato_trabajo
             {
                 DataTable dt = new DataTable();
                 String query = "select id_puesto_laboral_pk from empleado where id_empleado_pk='" + id_empleado + "'";
-                OdbcCommand cmd = new OdbcCommand(query, conexion.ObtenerConexion());
+                OdbcCommand cmd = new OdbcCommand(query, seguridad.Conexion.ObtenerConexionODBC());
                 OdbcDataAdapter adap = new OdbcDataAdapter(cmd);
                 adap.Fill(dt);
                 string id_laboral = Convert.ToString(dt.Rows[0][0]);
 
 
                 String query2 = "select salario_base from puesto_laboral where id_puesto_laboral_pk ='" + id_laboral + "'";
-                OdbcCommand cmd2 = new OdbcCommand(query2, conexion.ObtenerConexion());
+                OdbcCommand cmd2 = new OdbcCommand(query2, seguridad.Conexion.ObtenerConexionODBC());
                 OdbcDataAdapter adap2 = new OdbcDataAdapter(cmd2);
                 adap2.Fill(dt2);
                 sal = Convert.ToDouble(dt2.Rows[0][0]);
@@ -105,14 +131,14 @@ namespace contrato_trabajo
                 sal = 0.00;
             }
             return sal;
-            conexion.DesconectarConexion();
+            seguridad.Conexion.DesconectarODBC();
         }
         public int Validar_IGSS(String empresa)
         {
             try
             {
                 DataTable dt = new DataTable();
-                OdbcCommand cmd = new OdbcCommand("select count(id_empleado_pk) from empleado where id_empresa_pk='" + empresa + "'", conexion.ObtenerConexion());
+                OdbcCommand cmd = new OdbcCommand("select count(id_empleado_pk) from empleado where id_empresa_pk='" + empresa + "'", seguridad.Conexion.ObtenerConexionODBC());
                 OdbcDataAdapter adap = new OdbcDataAdapter(cmd);
                 adap.Fill(dt);
                 int numero = Convert.ToInt32(dt.Rows[0][0]);
@@ -122,17 +148,17 @@ namespace contrato_trabajo
             {
                 return 0;
             }
-            conexion.DesconectarConexion();
+            seguridad.Conexion.DesconectarODBC();
         }
 
         public int Ejecutar_Mysql(string Query)
         {
             try
             {
-                OdbcCommand MiComando = new OdbcCommand(Query, conexion.ObtenerConexion());
+                OdbcCommand MiComando = new OdbcCommand(Query, seguridad.Conexion.ObtenerConexionODBC());
                 int FilasAfectadas = MiComando.ExecuteNonQuery();
                 return 1;
-                
+             
 
             }
             catch (Exception ex)
@@ -140,7 +166,7 @@ namespace contrato_trabajo
                 MessageBox.Show(ex.Message);
                 return 0;
             }
-            conexion.DesconectarConexion();
+            seguridad.Conexion.DesconectarODBC();
         }
 
 
@@ -150,7 +176,7 @@ namespace contrato_trabajo
             string nombre_jornada2;
             try
             {
-                OdbcCommand cmd = new OdbcCommand("select id_jornadatrabajo_pk from empleado where id_empleado_pk = '" + id_empleado_pk + "'", conexion.ObtenerConexion());
+                OdbcCommand cmd = new OdbcCommand("select id_jornadatrabajo_pk from empleado where id_empleado_pk = '" + id_empleado_pk + "'", seguridad.Conexion.ObtenerConexionODBC());
                 cmd.CommandType = CommandType.StoredProcedure;
                 OdbcDataAdapter da = new OdbcDataAdapter();
                 DataTable dt = new DataTable();
@@ -158,7 +184,7 @@ namespace contrato_trabajo
                 da.Fill(dt);
                 int resultado = Convert.ToInt32(dt.Rows[0][0]);
 
-                OdbcCommand cmd2 = new OdbcCommand("select nombre_jornada from emp_jornadatrabajo where id_jornadatrabajo_pk= '" + resultado + "'", conexion.ObtenerConexion());
+                OdbcCommand cmd2 = new OdbcCommand("select nombre_jornada from emp_jornadatrabajo where id_jornadatrabajo_pk= '" + resultado + "'", seguridad.Conexion.ObtenerConexionODBC());
                 cmd2.CommandType = CommandType.StoredProcedure;
                 OdbcDataAdapter dat = new OdbcDataAdapter();
                 DataTable dtt = new DataTable();
@@ -173,7 +199,7 @@ namespace contrato_trabajo
                 nombre_jornada2 = null;
             }
             return nombre_jornada2;
-            conexion.DesconectarConexion();
+            seguridad.Conexion.DesconectarODBC();
         }
 
 
@@ -186,7 +212,7 @@ namespace contrato_trabajo
             try
             {
                 DataTable por = new DataTable();
-                OdbcCommand Porcentajes = new OdbcCommand("select porcentaje_igss_laboral,porcentaje_igss_patronal from planilla_igss where id_planilla_igss_pk='1';", conexion.ObtenerConexion());
+                OdbcCommand Porcentajes = new OdbcCommand("select porcentaje_igss_laboral,porcentaje_igss_patronal from planilla_igss where id_planilla_igss_pk='1';", seguridad.Conexion.ObtenerConexionODBC());
                 OdbcDataAdapter ad = new OdbcDataAdapter(Porcentajes);
                 ad.Fill(por);
                 Double labo = Convert.ToDouble(por.Rows[0][0]);
@@ -205,7 +231,7 @@ namespace contrato_trabajo
                 // laboral = "";
             }
             return op;
-            conexion.DesconectarConexion();
+            seguridad.Conexion.DesconectarODBC();
         }
 
         public string fecha_inicial_empleados(string id_empleado)
@@ -215,7 +241,7 @@ namespace contrato_trabajo
             {
                 DataTable dt = new DataTable();
                 String query = "select fecha_de_alta_emp from empleado where id_empleado_pk='" + id_empleado + "'";
-                OdbcCommand cmd = new OdbcCommand(query, conexion.ObtenerConexion());
+                OdbcCommand cmd = new OdbcCommand(query, seguridad.Conexion.ObtenerConexionODBC());
                 OdbcDataAdapter adap = new OdbcDataAdapter(cmd);
                 adap.Fill(dt);
                 id_emp = Convert.ToString(dt.Rows[0][0]);
@@ -227,13 +253,13 @@ namespace contrato_trabajo
                 id_emp = "error";
             }
             return id_emp;
-            conexion.DesconectarConexion();
+            seguridad.Conexion.DesconectarODBC();
         }
         public int PorcentajeSeguroSocial(int Renta_imponible)
         {
             try
             {
-                OdbcCommand cmd = new OdbcCommand("select porcentaje,minimo_sueldo,maximo_sueldo from tasa_impuesto", conexion.ObtenerConexion());
+                OdbcCommand cmd = new OdbcCommand("select porcentaje,minimo_sueldo,maximo_sueldo from tasa_impuesto", seguridad.Conexion.ObtenerConexionODBC());
                 DataTable dt = new DataTable();
                 OdbcDataAdapter adp = new OdbcDataAdapter(cmd);
                 adp.Fill(dt);
@@ -255,14 +281,14 @@ namespace contrato_trabajo
                 MessageBox.Show(ex.Message);
                 return 0;
             }
-            conexion.DesconectarConexion();
+            seguridad.Conexion.DesconectarODBC();
         }
         public void llenar_cbo_horas_extra(ComboBox cb)
         {
 
             try
             {
-                OdbcConnection con = conexion.ObtenerConexion();
+                OdbcConnection con = seguridad.Conexion.ObtenerConexionODBC();
                 OdbcCommand cmd;
                 DataTable dt = new DataTable();
 
@@ -279,7 +305,7 @@ namespace contrato_trabajo
             {
                 MessageBox.Show(ex.Message);
             }
-            conexion.DesconectarConexion();
+            seguridad.Conexion.DesconectarODBC();
         }
 
         public double comision(string fecha_inicio, string fecha_fin, string id_empleado)
@@ -287,7 +313,7 @@ namespace contrato_trabajo
             double resultado;
             try
             {
-                OdbcCommand cmd = new OdbcCommand("call comision('" + fecha_inicio + "','" + fecha_fin + "','" + id_empleado + "')", conexion.ObtenerConexion());
+                OdbcCommand cmd = new OdbcCommand("call comision('" + fecha_inicio + "','" + fecha_fin + "','" + id_empleado + "')", seguridad.Conexion.ObtenerConexionODBC());
                 cmd.CommandType = CommandType.StoredProcedure;
                 OdbcDataAdapter da = new OdbcDataAdapter();
                 DataTable dt = new DataTable();
@@ -302,15 +328,35 @@ namespace contrato_trabajo
                 resultado = 0;
             }
             return resultado;
-            conexion.DesconectarConexion();
+            seguridad.Conexion.DesconectarODBC();
         }
 
+        public double calculo_extra(string fecha_inicio, string fecha_fin, string id_empleado, string calculo_Extra)
+        {
+            double resultado;
+            try
+            {
+                OdbcCommand cmd = new OdbcCommand("select sum(cantidad_devengado) as TOTAL from devengos where id_empleado_pk= '"+id_empleado+"' and fecha between '"+fecha_inicio+"' and '"+fecha_fin+"' and nombre_devengo = '"+calculo_Extra+"'", seguridad.Conexion.ObtenerConexionODBC());
+                OdbcDataAdapter da = new OdbcDataAdapter();
+                DataTable dt = new DataTable();
+                da.SelectCommand = cmd;
+                da.Fill(dt);
+                resultado = Convert.ToDouble(dt.Rows[0][0]);
+
+            }
+            catch
+            {
+                resultado = 0;
+            }
+            return resultado;
+            seguridad.Conexion.DesconectarODBC();
+        }
         public int validar_nomina(string fecha_inicio, string fecha_fin, string id_empresa)
         {
             int resultado;
             try
             {
-                OdbcCommand cmd = new OdbcCommand("call validar_nomina('"+fecha_inicio+"','"+fecha_fin+"','"+id_empresa+"');", conexion.ObtenerConexion());
+                OdbcCommand cmd = new OdbcCommand("call validar_nomina('"+fecha_inicio+"','"+fecha_fin+"','"+id_empresa+"');", seguridad.Conexion.ObtenerConexionODBC());
                 cmd.CommandType = CommandType.StoredProcedure;
                 OdbcDataAdapter da = new OdbcDataAdapter();
                 DataTable dt = new DataTable();
@@ -325,7 +371,7 @@ namespace contrato_trabajo
                 resultado = 0;
             }
             return resultado;
-            conexion.DesconectarConexion();
+            seguridad.Conexion.DesconectarODBC();
         }
     
 
@@ -335,26 +381,25 @@ namespace contrato_trabajo
             int resultado;
             try
             {
-                OdbcCommand cmd = new OdbcCommand("call cantidad_dia('" + fecha_inicio + "','" + fecha_hoy + "')", conexion.ObtenerConexion());
-                cmd.CommandType = CommandType.StoredProcedure;
+                OdbcCommand cmd = new OdbcCommand("select timestampdiff(DAY,'"+fecha_inicio+"','"+fecha_hoy+"');", seguridad.Conexion.ObtenerConexionODBC());
                 OdbcDataAdapter da = new OdbcDataAdapter();
                 DataTable dt = new DataTable();
                 da.SelectCommand = cmd;
                 da.Fill(dt);
                 resultado = Convert.ToInt32(dt.Rows[0][0]);
-
-
+                
             }
             catch
             {
                 resultado = 0;
             }
             return resultado;
-            conexion.DesconectarConexion();
+            seguridad.Conexion.DesconectarODBC();
         }
 
      
     }
+    
   
    
    

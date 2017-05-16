@@ -34,15 +34,13 @@ namespace contrato_trabajo
             cbo_empresa.SelectedIndex = -1;
             btn_horas_extra.Enabled = false;
             btn_otros.Enabled = false;
-           
-
         }
 
         void empresa()
         {
             try
             {
-                DataTable dt = ca.cargar("select id_empleado_pk, nombre_emp, apellido_emp from empleado where id_empresa_pk = '" + cbo_empresa.SelectedValue.ToString() + "';");
+                DataTable dt = ca.cargar("select id_empleado_pk, nombre_emp, apellido_emp from empleado where fecha_de_alta_emp < '" + dtp_hasta.Value.ToString("yyyy-MM-dd") + "' and id_empresa_pk = '" + cbo_empresa.SelectedValue.ToString() + "';");
                 int cont = 0;
                 foreach (DataRow row in dt.Rows)
                 {
@@ -59,9 +57,9 @@ namespace contrato_trabajo
                 conexion.DesconectarConexion();
 
             }
-            catch (Exception ex)
+            catch
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Debe seleccionar una empresa");
             }
         }
 
@@ -78,11 +76,13 @@ namespace contrato_trabajo
                     string fecha_inicio = ca.fecha_inicial_empleados(id_empleado);
                     string fecha_fin = dtp_hasta.Value.ToString("yyyy-MM-dd");
                     int x = ca.procedimiento_dias(fecha_inicio, fecha_fin); //si es el primer mes o no 
-                    int y = ca.procedimiento_dias(dtp_desde.Value.ToString("yyyy-MM-dd"),dtp_hasta.Value.ToString("yyyy-MM-dd"));
+                    int y = ca.procedimiento_dias(dtp_desde.Value.ToString("yyyy-MM-dd"), dtp_hasta.Value.ToString("yyyy-MM-dd"));
                     double salario_base = ca.ObtenerSueldo(id_empleado);
                     double salario_diario = salario_base / 30;
                     double salario_diario_redondeado = Math.Round(salario_diario, 2);
                     //  MessageBox.Show(x + " " + salario_base + "  " + fecha_inicio + "  "+ salario_diario_redondeado);
+
+
                     if (x < y)
                     {
                         double cantidad_pago = salario_diario_redondeado * x;
@@ -145,23 +145,25 @@ namespace contrato_trabajo
         void igss()
         {
             try
-                {
-                    int cont = 0;
+            {
+                int cont = 0;
 
-                    for (int fila = 0; fila < dgv_nonimas.RowCount; fila++)
-                    {
+                for (int fila = 0; fila < dgv_nonimas.RowCount; fila++)
+                {
                     string id_empleado = Convert.ToString(dgv_nonimas.Rows[cont].Cells[1].Value);
                     double sueldo_base = Convert.ToDouble(dgv_nonimas.Rows[cont].Cells[4].Value);
                     DataTable dt = ca.CalculoIGSS(id_empleado, sueldo_base);
                     Double igss_laboral = Convert.ToDouble(dt.Rows[0][0]);
+                    Double igss_laboral_redondeado = Math.Round(igss_laboral, 2);
                     Double igss_patronal = Convert.ToDouble(dt.Rows[0][1]);
-                    dgv_nonimas.Rows[cont].Cells[7].Value = igss_laboral.ToString();
-                    dgv_nonimas.Rows[cont].Cells[8].Value = igss_patronal.ToString();
+                    Double igss_patronal_redondeado = Math.Round(igss_patronal, 2);
+                    dgv_nonimas.Rows[cont].Cells[10].Value = igss_laboral_redondeado.ToString();
+                    dgv_nonimas.Rows[cont].Cells[11].Value = igss_patronal_redondeado.ToString();
                     cont++;
-                    }
+                }
                 conexion.DesconectarConexion();
             }
-            
+
             catch
             {
 
@@ -181,7 +183,7 @@ namespace contrato_trabajo
                     double aguinaldo = salario_base;
                     double bono = salario_base;
                     double total_devengo = sal_anual + aguinaldo + bono;
-                    if ((salario_base+250) >= 6126)
+                    if ((salario_base + 250) >= 6126)
                     {
                         DataTable dt = ca.CalculoIGSS(id_empleado, salario_base);
                         double igss = Convert.ToDouble(dt.Rows[0][0]);
@@ -191,16 +193,17 @@ namespace contrato_trabajo
                         double renta_imponible = total_devengo - deduccion_total;
                         int p = ca.PorcentajeSeguroSocial(Convert.ToInt32(renta_imponible));
                         double iva = (ivaPorcentaje * total_devengo) * descuentoIva;
-                         //MessageBox.Show(renta_imponible.ToString());
+                        //MessageBox.Show(renta_imponible.ToString());
                         double calc = renta_imponible * (Convert.ToDouble(p) / 100);
                         double renta_anual = calc - iva;
                         double renta_mensual = renta_anual / 12;
+                        double renta_mensual_redondeado = Math.Round(renta_mensual, 2);
                         //MessageBox.Show("devengo=" + total_devengo.ToString() + " deduccion=" + deduccion_total.ToString()+" iva="+iva+" renta="+renta_anual.ToString()+" anual="+calc.ToString());
-                        dgv_nonimas.Rows[cont].Cells[9].Value = renta_mensual.ToString();
+                        dgv_nonimas.Rows[cont].Cells[12].Value = renta_mensual_redondeado.ToString();
                     }
                     else
                     {
-                        dgv_nonimas.Rows[cont].Cells[9].Value = 0;
+                        dgv_nonimas.Rows[cont].Cells[12].Value = 0;
                     }
                     //MessageBox.Show(total_devengo.ToString() + " " + sal_anual.ToString());
                     cont++;
@@ -211,25 +214,191 @@ namespace contrato_trabajo
             {
 
             }
+
+
+        }
+        void horas_extra()
+        {
+            try
+            {
+                int cont = 0;
+
+                for (int fila = 0; fila < dgv_nonimas.RowCount; fila++)
+                {
+                    string id_empleado = Convert.ToString(dgv_nonimas.Rows[fila].Cells[1].Value);
+                    double calculo_extra = ca.calculo_extra(dtp_desde.Value.ToString("yyyy-MM-dd"), dtp_hasta.Value.ToString("yyyy-MM-dd"), id_empleado, "horas extra");
+
+                    dgv_nonimas.Rows[cont].Cells[7].Value = calculo_extra.ToString();
+
+                    cont++;
+                }
+            }
+            catch
+            {
+
+            }
         }
 
-        
+        void devengos_extra()
+        {
+            try
+            {
+                int cont = 0;
+
+                for (int fila = 0; fila < dgv_nonimas.RowCount; fila++)
+                {
+                    string id_empleado = Convert.ToString(dgv_nonimas.Rows[fila].Cells[1].Value);
+                    double calculo_extra = ca.calculo_extra(dtp_desde.Value.ToString("yyyy-MM-dd"), dtp_hasta.Value.ToString("yyyy-MM-dd"), id_empleado, "devengo extra");
+
+                    dgv_nonimas.Rows[cont].Cells[8].Value = calculo_extra.ToString();
+               
+                cont++;
+            }
+        }
+            catch
+            {
+
+            }
+}
+        void deduccion_extra()
+        {
+            try
+            {
+                int cont = 0;
+
+                for (int fila = 0; fila < dgv_nonimas.RowCount; fila++)
+                {
+                    string id_empleado = Convert.ToString(dgv_nonimas.Rows[fila].Cells[1].Value);
+                    double deduccion_extra = ca.calculo_extra(dtp_desde.Value.ToString("yyyy-MM-dd"), dtp_hasta.Value.ToString("yyyy-MM-dd"), id_empleado, "deduccion extra");
+
+                    dgv_nonimas.Rows[cont].Cells[13].Value = deduccion_extra.ToString();
+
+                    cont++;
+                }
+            }
+            catch
+            {
+
+            }
+        }
+
+        void igss_2()
+        {
+            try
+            {
+                int cont = 0;
+
+                for (int fila = 0; fila < dgv_nonimas.RowCount; fila++)
+                {
+                   
+
+                    dgv_nonimas.Rows[cont].Cells[10].Value = 0;
+
+                    cont++;
+                }
+            }
+            catch
+            {
+
+            }
+        }
+        void sumar_devengos()
+        {
+            try
+            {
+                int cont = 0;
+                double suma_devengos = 0;
+                for (int fila = 0; fila < dgv_nonimas.RowCount; fila++)
+                {
+                    double devengos = Convert.ToDouble(dgv_nonimas.Rows[cont].Cells[4].Value) + Convert.ToDouble(dgv_nonimas.Rows[cont].Cells[5].Value) + Convert.ToDouble(dgv_nonimas.Rows[cont].Cells[6].Value) + Convert.ToDouble(dgv_nonimas.Rows[cont].Cells[7].Value)+ Convert.ToDouble(dgv_nonimas.Rows[cont].Cells[8].Value)+ Convert.ToDouble(dgv_nonimas.Rows[cont].Cells[9].Value);
+                    dgv_nonimas.Rows[cont].Cells[9].Value = devengos;
+                    suma_devengos += devengos;
+                    cont++;
+                }
+                txt_totaldevengos.Text = Convert.ToString(suma_devengos);
+            }
+            catch
+            {
+
+            }
+        }
+       
+        void sumar_deducciones()
+        {
+            try
+            {
+                int cont = 0;
+                double suma_deducciones = 0;
+                for (int fila = 0; fila < dgv_nonimas.RowCount; fila++)
+                {
+                    double deducciones = Convert.ToDouble(dgv_nonimas.Rows[cont].Cells[10].Value) + Convert.ToDouble(dgv_nonimas.Rows[cont].Cells[12].Value) + Convert.ToDouble(dgv_nonimas.Rows[cont].Cells[13].Value);
+                    dgv_nonimas.Rows[cont].Cells[17].Value = deducciones;
+                    suma_deducciones += deducciones;
+                    cont++;
+                }
+                txt_totaldeducciones.Text = suma_deducciones.ToString();
+            }
+            catch
+            {
+
+            }
+        }
+        void suma_totales()
+        {
+            try
+            {
+                int cont = 0;
+                double total_total = 0;
+                for (int fila = 0; fila < dgv_nonimas.RowCount; fila++)
+                {
+
+                    double total = Convert.ToDouble(dgv_nonimas.Rows[cont].Cells[9].Value) - Convert.ToDouble(dgv_nonimas.Rows[cont].Cells[17].Value);
+                    dgv_nonimas.Rows[cont].Cells[18].Value = total;
+                    total_total += total;
+                    cont++;
+                }
+                txt_total.Text = total_total.ToString();
+            }
+            catch
+            {
+
+            }
+        }
         private void Agregar_Click(object sender, EventArgs e)
         {
-            dgv_nonimas.Rows.Clear();
-            dgv_nonimas.Refresh();
-            empresa();
-            sueldo_base();
-            bonificacion();
-            comision();
-            int cant = ca.Validar_IGSS(cbo_empresa.SelectedValue.ToString());
-            if(cant>=3)
+            try
             {
-                igss();
+                dgv_nonimas.Rows.Clear();
+                dgv_nonimas.Refresh();
+                empresa();
+                sueldo_base();
+                bonificacion();
+                devengos_extra();
+                deduccion_extra();
+                comision();
+                horas_extra();
+                sumar_devengos();
+                int cant = ca.Validar_IGSS(cbo_empresa.SelectedValue.ToString());
+                if (cant >= 3)
+                {
+                    igss();
+                }
+                else
+                {
+
+                    igss_2();
+                }
+                CalculoSocial();
+                sumar_deducciones();
+                suma_totales();
+                btn_horas_extra.Enabled = true;
+                btn_otros.Enabled = true;
+
             }
-            CalculoSocial();
-            btn_horas_extra.Enabled = true;
-            btn_otros.Enabled = true;
+            catch
+            {
+                
+            }
         }
         FuncionesNavegador.CapaNegocio fn = new FuncionesNavegador.CapaNegocio();
         private void btn_anterior_Click(object sender, EventArgs e)
@@ -245,7 +414,6 @@ namespace contrato_trabajo
         {
             frm_horas_extras frm = new frm_horas_extras();
             string id_empleado= Convert.ToString(dgv_nonimas.CurrentRow.Cells[1].Value);
-            frm.txt_cod_empleado.Text = id_empleado;
             string nombre_jornada = ca.nombre_jornada(id_empleado);
             double sueldo =  ca.ObtenerSueldo(id_empleado);
             double precio_dia = sueldo / 30;
@@ -454,6 +622,16 @@ namespace contrato_trabajo
             {
 
             }
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+         
+        }
+
+        private void label35_Click(object sender, EventArgs e)
+        {
+
         }
     }
     }
