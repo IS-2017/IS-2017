@@ -114,6 +114,8 @@ namespace contrato_trabajo
                 MessageBox.Show(ex.Message);
             }
         }
+
+        
         #endregion
 
         #region Doble-Clic Celda GridView
@@ -197,5 +199,20 @@ namespace contrato_trabajo
             }
         }
         #endregion
+
+        private void btn_imprimir_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                frm_reporte_activos activo = new frm_reporte_activos();
+                activo.MdiParent = this.ParentForm;
+                activo.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
     }
 }
