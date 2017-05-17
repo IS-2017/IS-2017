@@ -381,8 +381,24 @@ namespace contrato_trabajo
             Validacion_LetrasNumeros(e);
         }
 
+
+
+
+
         #endregion
 
-
+        private void btn_imprimir_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                frm_reporte_activos activo = new frm_reporte_activos();
+                activo.MdiParent = this.ParentForm;
+                activo.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }

@@ -527,6 +527,12 @@
     <Compile Include="frm_reportes_de_empleado.Designer.cs">
       <DependentUpon>frm_reportes_de_empleado.cs</DependentUpon>
     </Compile>
+    <Compile Include="reporteActivos.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>reporteActivos.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Validar.cs" />
     <EmbeddedResource Include="examen_evaluacion.resx">
       <DependentUpon>examen_evaluacion.cs</DependentUpon>
@@ -756,6 +762,10 @@
     <EmbeddedResource Include="frm_reportes_de_empleado.resx">
       <DependentUpon>frm_reportes_de_empleado.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="reporteActivos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>reporteActivos.cs</LastGenOutput>
+    </EmbeddedResource>
     <None Include="dts_activos.xsc">
       <DependentUpon>dts_activos.xsd</DependentUpon>
     </None>
@@ -848,6 +858,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\klosions-seguridad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

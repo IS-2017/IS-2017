@@ -34,6 +34,7 @@
             this.cbo_reporte_empresa = new System.Windows.Forms.ComboBox();
             this.lbl_reporte_activo_empresa = new System.Windows.Forms.Label();
             this.gpb_reporte_activos = new System.Windows.Forms.GroupBox();
+            this.txt_cbo_reporte_empresa = new System.Windows.Forms.TextBox();
             this.gpb_navegador = new System.Windows.Forms.GroupBox();
             this.btn_nuevo = new System.Windows.Forms.Button();
             this.btn_ultimo = new System.Windows.Forms.Button();
@@ -42,7 +43,6 @@
             this.btn_anterior = new System.Windows.Forms.Button();
             this.btn_buscar = new System.Windows.Forms.Button();
             this.btn_actualizar = new System.Windows.Forms.Button();
-            this.txt_cbo_reporte_empresa = new System.Windows.Forms.TextBox();
             this.dgv_reporte_activo = new System.Windows.Forms.DataGridView();
             this.gpb_reporte_activos.SuspendLayout();
             this.gpb_navegador.SuspendLayout();
@@ -56,7 +56,7 @@
             this.crystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default;
             this.crystalReportViewer1.Location = new System.Drawing.Point(12, 50);
             this.crystalReportViewer1.Name = "crystalReportViewer1";
-            this.crystalReportViewer1.Size = new System.Drawing.Size(931, 311);
+            this.crystalReportViewer1.Size = new System.Drawing.Size(993, 350);
             this.crystalReportViewer1.TabIndex = 13;
             this.crystalReportViewer1.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
             // 
@@ -96,10 +96,17 @@
             this.gpb_reporte_activos.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.gpb_reporte_activos.Location = new System.Drawing.Point(12, 150);
             this.gpb_reporte_activos.Name = "gpb_reporte_activos";
-            this.gpb_reporte_activos.Size = new System.Drawing.Size(954, 367);
+            this.gpb_reporte_activos.Size = new System.Drawing.Size(1011, 406);
             this.gpb_reporte_activos.TabIndex = 196;
             this.gpb_reporte_activos.TabStop = false;
             this.gpb_reporte_activos.Text = "Activos";
+            // 
+            // txt_cbo_reporte_empresa
+            // 
+            this.txt_cbo_reporte_empresa.Location = new System.Drawing.Point(294, 19);
+            this.txt_cbo_reporte_empresa.Name = "txt_cbo_reporte_empresa";
+            this.txt_cbo_reporte_empresa.Size = new System.Drawing.Size(11, 24);
+            this.txt_cbo_reporte_empresa.TabIndex = 196;
             // 
             // gpb_navegador
             // 
@@ -226,13 +233,6 @@
             this.btn_actualizar.UseVisualStyleBackColor = true;
             this.btn_actualizar.Click += new System.EventHandler(this.btn_actualizar_Click);
             // 
-            // txt_cbo_reporte_empresa
-            // 
-            this.txt_cbo_reporte_empresa.Location = new System.Drawing.Point(294, 19);
-            this.txt_cbo_reporte_empresa.Name = "txt_cbo_reporte_empresa";
-            this.txt_cbo_reporte_empresa.Size = new System.Drawing.Size(11, 24);
-            this.txt_cbo_reporte_empresa.TabIndex = 196;
-            // 
             // dgv_reporte_activo
             // 
             this.dgv_reporte_activo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -249,7 +249,7 @@
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(970, 529);
+            this.ClientSize = new System.Drawing.Size(1028, 568);
             this.Controls.Add(this.dgv_reporte_activo);
             this.Controls.Add(this.gpb_navegador);
             this.Controls.Add(this.gpb_reporte_activos);

@@ -31,26 +31,22 @@ namespace contrato_trabajo
 
         public void GenerarReporte()
         {
-            dts_activos datosActivo = new dts_activos();
+            dts_activos Ds = new dts_activos();
             int filas = dgv_reporte_activo.Rows.Count;
             for (int i = 0; i < filas - 1; i++)
             {
-                datosActivo.Tables[0].Rows.Add(new object[]
+                Ds.Tables[0].Rows.Add(new object[]
                 {
                     dgv_reporte_activo[0,i].Value.ToString(),
                     dgv_reporte_activo[1,i].Value.ToString(),
                     dgv_reporte_activo[2,i].Value.ToString(),
                     dgv_reporte_activo[3,i].Value.ToString(),
-                    dgv_reporte_activo[4,i].Value.ToString(),
-                    dgv_reporte_activo[5,i].Value.ToString(),
-                    dgv_reporte_activo[6,i].Value.ToString(),
-                    dgv_reporte_activo[7,i].Value.ToString()
-
+                    dgv_reporte_activo[4,i].Value.ToString()
 
                 });
                 ReportDocument cRep = new ReportDocument();
-                cRep.Load("C:/ReporteNomina.rpt");
-                cRep.SetDataSource(datosActivo);
+                cRep.Load("C:/reporteActivos.rpt");
+                cRep.SetDataSource(Ds);
                 crystalReportViewer1.ReportSource = cRep;
             }
         }
