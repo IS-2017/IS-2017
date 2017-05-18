@@ -1,0 +1,313 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{45C0122C-0C09-4140-B9F8-F11DA5CE3E3B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Pre_Parcial</RootNamespace>
+    <AssemblyName>Pre-Parcial</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\SAP BusinessObjects\Crystal Reports for .NET Framework 4.0\Common\SAP BusinessObjects Enterprise XI 4.0\win32_x86\dotnet\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\SAP BusinessObjects\Crystal Reports for .NET Framework 4.0\Common\SAP BusinessObjects Enterprise XI 4.0\win32_x86\dotnet\CrystalDecisions.ReportSource.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\SAP BusinessObjects\Crystal Reports for .NET Framework 4.0\Common\SAP BusinessObjects Enterprise XI 4.0\win32_x86\dotnet\CrystalDecisions.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\SAP BusinessObjects\Crystal Reports for .NET Framework 4.0\Common\SAP BusinessObjects Enterprise XI 4.0\win32_x86\dotnet\CrystalDecisions.Windows.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="dllconsultas, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\dllconsultas.dll</HintPath>
+    </Reference>
+    <Reference Include="FuncionesNavegador, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\FuncionesNavegador.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="seguridad, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\seguridad.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Conexionmysql.cs" />
+    <Compile Include="dts_clientes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dts_clientes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dts_producto.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dts_producto.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dts_proveedor.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dts_proveedor.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frm_clientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_clientes.Designer.cs">
+      <DependentUpon>frm_clientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_clientes_grid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_clientes_grid.Designer.cs">
+      <DependentUpon>frm_clientes_grid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_inventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_inventario.Designer.cs">
+      <DependentUpon>frm_inventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_inventario_grid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_inventario_grid.Designer.cs">
+      <DependentUpon>frm_inventario_grid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_login.Designer.cs">
+      <DependentUpon>frm_login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_producto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_producto.Designer.cs">
+      <DependentUpon>frm_producto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_producto_grid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_producto_grid.Designer.cs">
+      <DependentUpon>frm_producto_grid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_proveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_proveedor.Designer.cs">
+      <DependentUpon>frm_proveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_proveedor_grid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_proveedor_grid.Designer.cs">
+      <DependentUpon>frm_proveedor_grid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_reporte_clientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_reporte_clientes.Designer.cs">
+      <DependentUpon>frm_reporte_clientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_reporte_producto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_reporte_producto.Designer.cs">
+      <DependentUpon>frm_reporte_producto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_reporte_proveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_reporte_proveedor.Designer.cs">
+      <DependentUpon>frm_reporte_proveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mdi_contenedor_Preparcial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mdi_contenedor_Preparcial.Designer.cs">
+      <DependentUpon>mdi_contenedor_Preparcial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="reporteClientes.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>reporteClientes.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reporteProducto.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>reporteProducto.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reporteProveedor.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>reporteProveedor.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <EmbeddedResource Include="frm_clientes.resx">
+      <DependentUpon>frm_clientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_clientes_grid.resx">
+      <DependentUpon>frm_clientes_grid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_inventario_grid.resx">
+      <DependentUpon>frm_inventario_grid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_login.resx">
+      <DependentUpon>frm_login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_producto.resx">
+      <DependentUpon>frm_producto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_producto_grid.resx">
+      <DependentUpon>frm_producto_grid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_proveedor.resx">
+      <DependentUpon>frm_proveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_proveedor_grid.resx">
+      <DependentUpon>frm_proveedor_grid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_reporte_clientes.resx">
+      <DependentUpon>frm_reporte_clientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_reporte_producto.resx">
+      <DependentUpon>frm_reporte_producto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_reporte_proveedor.aa.resx">
+      <DependentUpon>frm_reporte_proveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_reporte_proveedor.resx">
+      <DependentUpon>frm_reporte_proveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mdi_contenedor_Preparcial.resx">
+      <DependentUpon>mdi_contenedor_Preparcial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="reporteClientes.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>reporteClientes.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reporteProducto.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>reporteProducto.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reporteProveedor.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>reporteProveedor.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="dts_clientes.xsc">
+      <DependentUpon>dts_clientes.xsd</DependentUpon>
+    </None>
+    <None Include="dts_clientes.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dts_clientes.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dts_clientes.xss">
+      <DependentUpon>dts_clientes.xsd</DependentUpon>
+    </None>
+    <None Include="dts_producto.xsc">
+      <DependentUpon>dts_producto.xsd</DependentUpon>
+    </None>
+    <None Include="dts_producto.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dts_producto.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dts_producto.xss">
+      <DependentUpon>dts_producto.xsd</DependentUpon>
+    </None>
+    <None Include="dts_proveedor.xsc">
+      <DependentUpon>dts_proveedor.xsd</DependentUpon>
+    </None>
+    <None Include="dts_proveedor.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dts_proveedor.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dts_proveedor.xss">
+      <DependentUpon>dts_proveedor.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
