@@ -1,0 +1,5 @@
+usuario == MarioYuque
+contraseña == hola
+
+dsn=crmbd
+base de datos == crmbd
