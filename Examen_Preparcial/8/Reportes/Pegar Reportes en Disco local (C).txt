@@ -1,0 +1,1 @@
+Se deben pegar los reportes contenidos en la carpeta en el Disco Local (C:) para poder visualizar los reportes.
