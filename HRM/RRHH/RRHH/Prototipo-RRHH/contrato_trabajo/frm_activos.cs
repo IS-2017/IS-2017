@@ -392,7 +392,7 @@ namespace contrato_trabajo
             try
             {
                 frm_reporte_activos activo = new frm_reporte_activos();
-                activo.MdiParent = this.ParentForm;
+                activo.MdiParent = mdi_contenedor.ActiveForm.ParentForm;
                 activo.Show();
             }
             catch (Exception ex)

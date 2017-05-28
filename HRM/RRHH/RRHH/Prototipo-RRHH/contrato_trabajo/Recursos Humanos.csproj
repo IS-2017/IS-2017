@@ -94,6 +94,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dts_activos.xsd</DependentUpon>
     </Compile>
+    <Compile Include="dts_jornadas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dts_jornadas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dts_puestos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dts_puestos.xsd</DependentUpon>
+    </Compile>
     <Compile Include="examen_evaluacion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -418,6 +428,18 @@
     <Compile Include="frm_reporte_activos.Designer.cs">
       <DependentUpon>frm_reporte_activos.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_reporte_jornada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_reporte_jornada.Designer.cs">
+      <DependentUpon>frm_reporte_jornada.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_reporte_puestos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_reporte_puestos.Designer.cs">
+      <DependentUpon>frm_reporte_puestos.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_seguro_social.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -706,6 +728,12 @@
     <EmbeddedResource Include="frm_reporte_activos.resx">
       <DependentUpon>frm_reporte_activos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_reporte_jornada.resx">
+      <DependentUpon>frm_reporte_jornada.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_reporte_puestos.resx">
+      <DependentUpon>frm_reporte_puestos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_seguro_social.resx">
       <DependentUpon>frm_seguro_social.cs</DependentUpon>
     </EmbeddedResource>
@@ -777,6 +805,28 @@
     <None Include="dts_activos.xss">
       <DependentUpon>dts_activos.xsd</DependentUpon>
     </None>
+    <None Include="dts_jornadas.xsc">
+      <DependentUpon>dts_jornadas.xsd</DependentUpon>
+    </None>
+    <None Include="dts_jornadas.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dts_jornadas.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dts_jornadas.xss">
+      <DependentUpon>dts_jornadas.xsd</DependentUpon>
+    </None>
+    <None Include="dts_puestos.xsc">
+      <DependentUpon>dts_puestos.xsd</DependentUpon>
+    </None>
+    <None Include="dts_puestos.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dts_puestos.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dts_puestos.xss">
+      <DependentUpon>dts_puestos.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -788,7 +838,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\imprimir.png" />

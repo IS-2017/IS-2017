@@ -384,8 +384,23 @@ namespace contrato_trabajo
             this.txt_nmup_dias_trabajo.Text = this.dg.CurrentRow.Cells[4].Value.ToString(); nmup_dias_trabajo.Value = Convert.ToInt32(txt_nmup_dias_trabajo.Text);
             this.txt_nmup_hora_diario.Text = this.dg.CurrentRow.Cells[5].Value.ToString(); nmup_hora_diario.Value = Convert.ToInt32(txt_nmup_hora_diario.Text);
         }
+
+
+
         #endregion
 
-        
+        private void btn_imprimir_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                frm_reporte_jornada activo = new frm_reporte_jornada();
+                activo.MdiParent = mdi_contenedor.ActiveForm.ParentForm;
+                activo.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }

@@ -377,7 +377,10 @@ namespace contrato_trabajo
         //programador:Javier Figueroa Pereira
         private void btn_actualizar_Click(object sender, EventArgs e)
         {
-
+            llenarAreaEmpres();
+            llenaridempresa();
+            llenarJornada();
+            llenarPuesto();
         }
         #endregion
 
@@ -657,7 +660,7 @@ namespace contrato_trabajo
             {
                 Editar1 = true;
                 atributo = "id_empleado_pk";
-
+                fn.ActivarControles(this);
                 fn.ActivarControles(gpb_datos_emp);
                 fn.ActivarControles(General);
                 dtp_fecha_baja_emp.Enabled = false;

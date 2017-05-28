@@ -11,6 +11,7 @@ using FuncionesNavegador;
 using dllconsultas;
 using System.Data.Odbc;
 using MySql.Data.MySqlClient;
+using seguridad;
 
 
 namespace contrato_trabajo
@@ -22,11 +23,14 @@ namespace contrato_trabajo
         //------------------------------------------------ Variables ------------------------------------------------------------
         //=======================================================================================================================
         //programador:Javier Figueroa Pereira
+        private static string id_form = "13104";
         String Codigo;
         Boolean Editar;
         String atributo;
-        CapaNegocio fn = new CapaNegocio();
+        FuncionesNavegador.CapaNegocio fn = new FuncionesNavegador.CapaNegocio();
+        bitacora bita = new bitacora();
         DataGridView dg;
+        DataTable seg = seguridad.ObtenerPermisos.Permisos(seguridad.Conexion.User, id_form);
         #endregion
 
         #region Visualizar Form Puesto Laboral
@@ -73,6 +77,7 @@ namespace contrato_trabajo
             {
                 fn.InhabilitarComponentes(gpb_puestos);
                 fn.InhabilitarComponentes(this);
+                fn.desactivarPermiso(seg, btn_guardar, btn_eliminar, btn_editar, btn_nuevo, btn_cancelar, btn_actualizar, btn_buscar, btn_anterior, btn_siguiente, btn_primero, btn_ultimo);
             }
             catch (Exception ex)
             {
@@ -105,6 +110,7 @@ namespace contrato_trabajo
                     nmup_cantidad_puesto.Value = valor_minimo;
                     fn.LimpiarComponentes(gpb_puestos);
                     fn.InhabilitarComponentes(gpb_puestos);
+                    bita.Eliminar("Eliminacion de puesto laboral con el nombre de : " + txt_nombre_puesto, "puesto_laboral");
                 }
             }
             catch
@@ -167,6 +173,7 @@ namespace contrato_trabajo
         //programador:Javier Figueroa Pereira
         private void btn_guardar_Click(object sender, EventArgs e)
         {
+            DataRow permiso = seg.Rows[0];
             try
             {
                 txt_estado.Text = "ACTIVO";
@@ -185,6 +192,7 @@ namespace contrato_trabajo
                         //MessageBox.Show("Se modifico el registro", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         fn.InhabilitarComponentes(gpb_puestos);
                         Cargar_gridview();
+                        bita.Modificar("Modificacion de puesto laboral con el nombre: " + txt_nombre_puesto.Text, "puesto_laboral");
                     }
                     else
                     {
@@ -196,6 +204,7 @@ namespace contrato_trabajo
                         fn.LimpiarComponentes(gpb_puestos);
                         fn.InhabilitarComponentes(gpb_puestos);
                         Conexionmysql.ObtenerConexion();
+                        bita.Insertar("Insercion de puesto laboral con el nombre: " + txt_nombre_puesto.Text, "puesto_laboral");
                     }
                 }
             }
@@ -376,8 +385,21 @@ namespace contrato_trabajo
             Validacion_LetrasNumeros(e);
         }
 
+
         #endregion
 
-
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                frm_reporte_puestos puesto = new frm_reporte_puestos();
+                puesto.MdiParent = mdi_contenedor.ActiveForm.ParentForm;
+                puesto.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }

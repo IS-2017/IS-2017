@@ -37,6 +37,7 @@
             this.dgv_activos = new System.Windows.Forms.DataGridView();
             this.lbl_form_activos = new System.Windows.Forms.Label();
             this.gpb_navegador = new System.Windows.Forms.GroupBox();
+            this.btn_imprimir = new System.Windows.Forms.Button();
             this.btn_nuevo = new System.Windows.Forms.Button();
             this.btn_ultimo = new System.Windows.Forms.Button();
             this.btn_primero = new System.Windows.Forms.Button();
@@ -51,7 +52,6 @@
             this.toolTip5 = new System.Windows.Forms.ToolTip(this.components);
             this.toolTip6 = new System.Windows.Forms.ToolTip(this.components);
             this.toolTip7 = new System.Windows.Forms.ToolTip(this.components);
-            this.btn_imprimir = new System.Windows.Forms.Button();
             this.gpb_activos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_activos)).BeginInit();
             this.gpb_navegador.SuspendLayout();
@@ -137,6 +137,23 @@
             this.gpb_navegador.TabStop = false;
             this.gpb_navegador.Text = "Navegador";
             // 
+            // btn_imprimir
+            // 
+            this.btn_imprimir.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_imprimir.BackgroundImage")));
+            this.btn_imprimir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_imprimir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_imprimir.FlatAppearance.BorderSize = 0;
+            this.btn_imprimir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_imprimir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btn_imprimir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_imprimir.Location = new System.Drawing.Point(230, 21);
+            this.btn_imprimir.Name = "btn_imprimir";
+            this.btn_imprimir.Size = new System.Drawing.Size(65, 65);
+            this.btn_imprimir.TabIndex = 194;
+            this.toolTip5.SetToolTip(this.btn_imprimir, "Imprimir Reporte");
+            this.btn_imprimir.UseVisualStyleBackColor = true;
+            this.btn_imprimir.Click += new System.EventHandler(this.btn_imprimir_Click);
+            // 
             // btn_nuevo
             // 
             this.btn_nuevo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_nuevo.BackgroundImage")));
@@ -150,7 +167,7 @@
             this.btn_nuevo.Name = "btn_nuevo";
             this.btn_nuevo.Size = new System.Drawing.Size(65, 65);
             this.btn_nuevo.TabIndex = 1;
-            this.toolTip1.SetToolTip(this.btn_nuevo, "Nuevo");
+            this.toolTip1.SetToolTip(this.btn_nuevo, "Nuevo Registro");
             this.btn_nuevo.UseVisualStyleBackColor = true;
             this.btn_nuevo.Click += new System.EventHandler(this.btn_nuevo_Click);
             // 
@@ -227,6 +244,7 @@
             this.btn_buscar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_buscar.BackgroundImage")));
             this.btn_buscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_buscar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_buscar.Enabled = false;
             this.btn_buscar.FlatAppearance.BorderSize = 0;
             this.btn_buscar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btn_buscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
@@ -235,7 +253,7 @@
             this.btn_buscar.Name = "btn_buscar";
             this.btn_buscar.Size = new System.Drawing.Size(65, 65);
             this.btn_buscar.TabIndex = 2;
-            this.toolTip2.SetToolTip(this.btn_buscar, "Buscar");
+            this.toolTip2.SetToolTip(this.btn_buscar, "Buscar Registros");
             this.btn_buscar.UseVisualStyleBackColor = true;
             this.btn_buscar.Click += new System.EventHandler(this.btn_buscar_Click);
             // 
@@ -252,26 +270,9 @@
             this.btn_actualizar.Name = "btn_actualizar";
             this.btn_actualizar.Size = new System.Drawing.Size(65, 65);
             this.btn_actualizar.TabIndex = 3;
-            this.toolTip3.SetToolTip(this.btn_actualizar, "Actualizar");
+            this.toolTip3.SetToolTip(this.btn_actualizar, "Actualizar Listado");
             this.btn_actualizar.UseVisualStyleBackColor = true;
             this.btn_actualizar.Click += new System.EventHandler(this.btn_actualizar_Click);
-            // 
-            // btn_imprimir
-            // 
-            this.btn_imprimir.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_imprimir.BackgroundImage")));
-            this.btn_imprimir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_imprimir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_imprimir.FlatAppearance.BorderSize = 0;
-            this.btn_imprimir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btn_imprimir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.btn_imprimir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_imprimir.Location = new System.Drawing.Point(230, 21);
-            this.btn_imprimir.Name = "btn_imprimir";
-            this.btn_imprimir.Size = new System.Drawing.Size(65, 65);
-            this.btn_imprimir.TabIndex = 194;
-            this.toolTip5.SetToolTip(this.btn_imprimir, "Imprimir");
-            this.btn_imprimir.UseVisualStyleBackColor = true;
-            this.btn_imprimir.Click += new System.EventHandler(this.btn_imprimir_Click);
             // 
             // frm_activos_grid
             // 
