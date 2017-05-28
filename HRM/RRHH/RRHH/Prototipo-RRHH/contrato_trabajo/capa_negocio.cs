@@ -51,6 +51,88 @@ namespace contrato_trabajo
                 MessageBox.Show("Error en eliminacion");
             }
         }
+        public void InsertarHoraExtra(string f, string nom, string des,string can,string nhoras,string emp)
+        {
+            int resultado = ca.Ejecutar_Mysql("insert into devengos(id_devengo_pk,fecha,nombre_devengo,descripcion,cantidad_devengado,cantidad_horas_extra,estado,id_empleado_pk) values (null,'" + f + "','" + nom + "','" + des + "','"+can+"','"+nhoras+"','ACTIVO','"+emp+"');");
+
+            if (resultado > 0)
+            {
+                MessageBox.Show("Insertado con exito");
+
+            }
+            else
+            {
+                MessageBox.Show("Error de Insercion");
+            }
+        }
+
+        public void ModificarHoraExtra(string id, string fecha, string nom, string des,string can,string nhoras,string emp)
+        {
+            int resultado = ca.Ejecutar_Mysql("update devengos set fecha='" + fecha + "',nombre_devengo='" +nom + "',descripcion='" + des + "',cantidad_devengado='"+can+"',cantidad_horas_extra='"+nhoras+"',id_empleado_pk='"+emp+"' where id_devengo_pk='" + id + "';");
+            if (resultado > 0)
+            {
+                MessageBox.Show("Modificacion Exitosa");
+            }
+            else
+            {
+                MessageBox.Show("Error en modificacion");
+            }
+
+        }
+
+        public void eliminarHoraExtra(string id)
+        {
+            int resultado = ca.Ejecutar_Mysql("update devengos set estado='INACTIVO' where id_devengo_pk ='" + id + "';");
+            if (resultado > 0)
+            {
+                MessageBox.Show("Eliminacion Exitosa");
+            }
+            else
+            {
+                MessageBox.Show("Error en eliminacion");
+            }
+        }
+        public void InsertarHoraDec(string f, string nom, string des, string can, string nhoras, string emp)
+        {
+            int resultado = ca.Ejecutar_Mysql("insert into deducciones(id_deduccion_pk,fecha,nombre_deduccion,descripcion,cantidad_deduccion,cantidad_horas,estado,id_empleado_pk) values (null,'" + f + "','" + nom + "','" + des + "','" + can + "','" + nhoras + "','ACTIVO','" + emp + "');");
+
+            if (resultado > 0)
+            {
+                MessageBox.Show("Insertado con exito");
+
+            }
+            else
+            {
+                MessageBox.Show("Error de Insercion");
+            }
+        }
+
+        public void ModificarHoraDec(string id, string fecha, string nom, string des, string can, string nhoras, string emp)
+        {
+            int resultado = ca.Ejecutar_Mysql("update deducciones set fecha='" + fecha + "',nombre_deduccion='" + nom + "',descripcion='" + des + "',cantidad_deduccion='" + can + "',cantidad_horas='" + nhoras + "',id_empleado_pk='" + emp + "' where id_deduccion_pk='" + id + "';");
+            if (resultado > 0)
+            {
+                MessageBox.Show("Modificacion Exitosa");
+            }
+            else
+            {
+                MessageBox.Show("Error en modificacion");
+            }
+
+        }
+
+        public void eliminarHoraDec(string id)
+        {
+            int resultado = ca.Ejecutar_Mysql("update deducciones set estado='INACTIVO' where id_deduccion_pk ='" + id + "';");
+            if (resultado > 0)
+            {
+                MessageBox.Show("Eliminacion Exitosa");
+            }
+            else
+            {
+                MessageBox.Show("Error en eliminacion");
+            }
+        }
         public void InsertarHora(string des, string por)
         {
             int resultado = ca.Ejecutar_Mysql("insert into tasa_hora_extra(id_hora_pk,descripcion,porcentaje,estado) values (null,'" + des + "','" + por + "','ACTIVO');");

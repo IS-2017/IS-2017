@@ -32,8 +32,8 @@ namespace contrato_trabajo
         {
             ca.llenar_id_empresa(cbo_empresa);
             cbo_empresa.SelectedIndex = -1;
-            btn_horas_extra.Enabled = false;
-            btn_otros.Enabled = false;
+            
+
         }
 
         void empresa()
@@ -92,8 +92,8 @@ namespace contrato_trabajo
                     else
                     {
                         double cantidad_pagar = y * salario_diario_redondeado;
-                        dgv_nonimas.Rows[cont].Cells[4].Value = cantidad_pagar.ToString();
-                    }
+                        dgv_nonimas.Rows[cont].Cells[4].Value = cantidad_pagar.ToString();         ////// SUELDO BASE
+                    } 
                     cont++;
                 }
                 conexion.DesconectarConexion();
@@ -113,7 +113,7 @@ namespace contrato_trabajo
                 {
                     DataTable dt = ca.cargar("select valor from bonificacion where id_bono_pk= '1';");
                     string bono = dt.Rows[0][0].ToString();
-                    dgv_nonimas.Rows[cont].Cells[5].Value = bono;
+                    dgv_nonimas.Rows[cont].Cells[5].Value = bono;                                  //////// BONIFICACIÓN
                     cont++;
                 }
                 conexion.DesconectarConexion();
@@ -131,7 +131,7 @@ namespace contrato_trabajo
                 for (int fila = 0; fila < dgv_nonimas.RowCount; fila++)
                 {
                     string id_empleado = Convert.ToString(dgv_nonimas.Rows[fila].Cells[1].Value);
-                    double comision = ca.comision(dtp_desde.Value.ToString("yyyy-MM-dd"), dtp_hasta.Value.ToString("yyyy-MM-dd"), id_empleado);
+                    double comision = ca.comision(dtp_desde.Value.ToString("yyyy-MM-dd"), dtp_hasta.Value.ToString("yyyy-MM-dd"), id_empleado);    ///////// COMISION 
                     dgv_nonimas.Rows[cont].Cells[6].Value = comision.ToString();
                     cont++;
                 }
@@ -156,7 +156,7 @@ namespace contrato_trabajo
                     Double igss_laboral = Convert.ToDouble(dt.Rows[0][0]);
                     Double igss_laboral_redondeado = Math.Round(igss_laboral, 2);
                     Double igss_patronal = Convert.ToDouble(dt.Rows[0][1]);
-                    Double igss_patronal_redondeado = Math.Round(igss_patronal, 2);
+                    Double igss_patronal_redondeado = Math.Round(igss_patronal, 2);                                                             /////////IGSS
                     dgv_nonimas.Rows[cont].Cells[10].Value = igss_laboral_redondeado.ToString();
                     dgv_nonimas.Rows[cont].Cells[11].Value = igss_patronal_redondeado.ToString();
                     cont++;
@@ -184,7 +184,7 @@ namespace contrato_trabajo
                     double bono = salario_base;
                     double total_devengo = sal_anual + aguinaldo + bono;
                     if ((salario_base + 250) >= 6126)
-                    {
+                    {                                                                                                                        /////ISR
                         DataTable dt = ca.CalculoIGSS(id_empleado, salario_base);
                         double igss = Convert.ToDouble(dt.Rows[0][0]);
                         double igss_anual = igss * 12;
@@ -223,7 +223,7 @@ namespace contrato_trabajo
             {
                 int cont = 0;
 
-                for (int fila = 0; fila < dgv_nonimas.RowCount; fila++)
+                for (int fila = 0; fila < dgv_nonimas.RowCount; fila++)                                                         ///////  HORAS EXTRA
                 {
                     string id_empleado = Convert.ToString(dgv_nonimas.Rows[fila].Cells[1].Value);
                     double calculo_extra = ca.calculo_extra(dtp_desde.Value.ToString("yyyy-MM-dd"), dtp_hasta.Value.ToString("yyyy-MM-dd"), id_empleado, "horas extra");
@@ -245,7 +245,7 @@ namespace contrato_trabajo
             {
                 int cont = 0;
 
-                for (int fila = 0; fila < dgv_nonimas.RowCount; fila++)
+                for (int fila = 0; fila < dgv_nonimas.RowCount; fila++)                                                        /////DEVENGO EXTRA
                 {
                     string id_empleado = Convert.ToString(dgv_nonimas.Rows[fila].Cells[1].Value);
                     double calculo_extra = ca.calculo_extra(dtp_desde.Value.ToString("yyyy-MM-dd"), dtp_hasta.Value.ToString("yyyy-MM-dd"), id_empleado, "devengo extra");
@@ -265,11 +265,11 @@ namespace contrato_trabajo
             try
             {
                 int cont = 0;
-
+                                                                                            //////DEDUCCION EXTRA
                 for (int fila = 0; fila < dgv_nonimas.RowCount; fila++)
                 {
                     string id_empleado = Convert.ToString(dgv_nonimas.Rows[fila].Cells[1].Value);
-                    double deduccion_extra = ca.calculo_extra(dtp_desde.Value.ToString("yyyy-MM-dd"), dtp_hasta.Value.ToString("yyyy-MM-dd"), id_empleado, "deduccion extra");
+                    double deduccion_extra = ca.deduccion_extra(dtp_desde.Value.ToString("yyyy-MM-dd"), dtp_hasta.Value.ToString("yyyy-MM-dd"), id_empleado, "deduccion extra");
 
                     dgv_nonimas.Rows[cont].Cells[13].Value = deduccion_extra.ToString();
 
@@ -304,13 +304,13 @@ namespace contrato_trabajo
         }
         void sumar_devengos()
         {
-            try
+            try                                           ///// SUMA DEVENGOS
             {
                 int cont = 0;
                 double suma_devengos = 0;
                 for (int fila = 0; fila < dgv_nonimas.RowCount; fila++)
                 {
-                    double devengos = Convert.ToDouble(dgv_nonimas.Rows[cont].Cells[4].Value) + Convert.ToDouble(dgv_nonimas.Rows[cont].Cells[5].Value) + Convert.ToDouble(dgv_nonimas.Rows[cont].Cells[6].Value) + Convert.ToDouble(dgv_nonimas.Rows[cont].Cells[7].Value)+ Convert.ToDouble(dgv_nonimas.Rows[cont].Cells[8].Value)+ Convert.ToDouble(dgv_nonimas.Rows[cont].Cells[9].Value);
+                    double devengos = Convert.ToDouble(dgv_nonimas.Rows[cont].Cells[4].Value) + Convert.ToDouble(dgv_nonimas.Rows[cont].Cells[5].Value) + Convert.ToDouble(dgv_nonimas.Rows[cont].Cells[6].Value) + Convert.ToDouble(dgv_nonimas.Rows[cont].Cells[7].Value)+ Convert.ToDouble(dgv_nonimas.Rows[cont].Cells[8].Value);
                     dgv_nonimas.Rows[cont].Cells[9].Value = devengos;
                     suma_devengos += devengos;
                     cont++;
@@ -322,7 +322,29 @@ namespace contrato_trabajo
 
             }
         }
-       
+
+        void horas_descontadas()
+        {
+            try
+            {
+                int cont = 0;
+                //////DEDUCCION EXTRA
+                for (int fila = 0; fila < dgv_nonimas.RowCount; fila++)
+                {
+                    string id_empleado = Convert.ToString(dgv_nonimas.Rows[fila].Cells[1].Value);
+                    double deduccion_extra = ca.deduccion_extra(dtp_desde.Value.ToString("yyyy-MM-dd"), dtp_hasta.Value.ToString("yyyy-MM-dd"), id_empleado, "horas descontadas");
+
+                    dgv_nonimas.Rows[cont].Cells[14].Value = deduccion_extra.ToString();
+
+                    cont++;
+                }
+            }
+            catch
+            {
+
+            }
+        }
+
         void sumar_deducciones()
         {
             try
@@ -331,8 +353,8 @@ namespace contrato_trabajo
                 double suma_deducciones = 0;
                 for (int fila = 0; fila < dgv_nonimas.RowCount; fila++)
                 {
-                    double deducciones = Convert.ToDouble(dgv_nonimas.Rows[cont].Cells[10].Value) + Convert.ToDouble(dgv_nonimas.Rows[cont].Cells[12].Value) + Convert.ToDouble(dgv_nonimas.Rows[cont].Cells[13].Value);
-                    dgv_nonimas.Rows[cont].Cells[17].Value = deducciones;
+                    double deducciones = Convert.ToDouble(dgv_nonimas.Rows[cont].Cells[10].Value) + Convert.ToDouble(dgv_nonimas.Rows[cont].Cells[12].Value) + Convert.ToDouble(dgv_nonimas.Rows[cont].Cells[13].Value) + Convert.ToDouble(dgv_nonimas.Rows[cont].Cells[14].Value);
+                    dgv_nonimas.Rows[cont].Cells[18].Value = deducciones;
                     suma_deducciones += deducciones;
                     cont++;
                 }
@@ -352,8 +374,8 @@ namespace contrato_trabajo
                 for (int fila = 0; fila < dgv_nonimas.RowCount; fila++)
                 {
 
-                    double total = Convert.ToDouble(dgv_nonimas.Rows[cont].Cells[9].Value) - Convert.ToDouble(dgv_nonimas.Rows[cont].Cells[17].Value);
-                    dgv_nonimas.Rows[cont].Cells[18].Value = total;
+                    double total = Convert.ToDouble(dgv_nonimas.Rows[cont].Cells[9].Value) - Convert.ToDouble(dgv_nonimas.Rows[cont].Cells[18].Value);
+                    dgv_nonimas.Rows[cont].Cells[19].Value = total;
                     total_total += total;
                     cont++;
                 }
@@ -378,6 +400,7 @@ namespace contrato_trabajo
                 comision();
                 horas_extra();
                 sumar_devengos();
+                horas_descontadas();
                 int cant = ca.Validar_IGSS(cbo_empresa.SelectedValue.ToString());
                 if (cant >= 3)
                 {
@@ -391,9 +414,7 @@ namespace contrato_trabajo
                 CalculoSocial();
                 sumar_deducciones();
                 suma_totales();
-                btn_horas_extra.Enabled = true;
-                btn_otros.Enabled = true;
-
+               
             }
             catch
             {
@@ -460,7 +481,7 @@ namespace contrato_trabajo
                 string fechafin = dtp_hasta.Value.ToString("yyyy-MM-dd");
                 string fecha_hoy = DateTime.Today.ToString("yyyy-MM-dd");
                 int resultado = ca.validar_nomina(fechainicio, fechafin, cbo_empresa.SelectedValue.ToString());
-                string descripcion = "generación de nóminas";
+                string descripcion = "nóminas";
                 string estado = "procesada";
                 string nombre_bono = "bonificacion";
                 string nombre_ISR = "ISR";
@@ -502,115 +523,98 @@ namespace contrato_trabajo
                         
                         string bonificacion = Convert.ToString(dgv_nonimas.Rows[fila].Cells[5].Value);
                         string comision = Convert.ToString(dgv_nonimas.Rows[fila].Cells[6].Value);
-                        string igss = Convert.ToString(dgv_nonimas.Rows[fila].Cells[7].Value);
-                        string igss_patronal = Convert.ToString(dgv_nonimas.Rows[fila].Cells[8].Value);
-                        string ISR = Convert.ToString(dgv_nonimas.Rows[fila].Cells[9].Value);
-                        string horas_extra = Convert.ToString(dgv_nonimas.Rows[fila].Cells[10].Value);
-                        string devengo_extra = Convert.ToString(dgv_nonimas.Rows[fila].Cells[12].Value);
+                        string igss = Convert.ToString(dgv_nonimas.Rows[fila].Cells[10].Value);
+                        string igss_patronal = Convert.ToString(dgv_nonimas.Rows[fila].Cells[11].Value);
+                        string ISR = Convert.ToString(dgv_nonimas.Rows[fila].Cells[12].Value);
+                        string horas_extra = Convert.ToString(dgv_nonimas.Rows[fila].Cells[7].Value);
+                        string devengo_extra = Convert.ToString(dgv_nonimas.Rows[fila].Cells[8].Value);
                         string descuento_extra = Convert.ToString(dgv_nonimas.Rows[fila].Cells[13].Value);
-                        string can_horas_extra = Convert.ToString(dgv_nonimas.Rows[fila].Cells[15].Value); 
+                        string can_horas_extra = Convert.ToString(dgv_nonimas.Rows[fila].Cells[15].Value);
+                        string horas_descontadas = Convert.ToString(dgv_nonimas.Rows[fila].Cells[14].Value);
+                        string total_por_fila = Convert.ToString(dgv_nonimas.Rows[fila].Cells[19].Value);
 
-                        ca.Ejecutar_Mysql("insert into nomina (id_nomina_pk, descripcion, fecha_inicio_pago, fecha_fin_pago,dias_trabajados_mes, sueldo_base, estado, id_empleado_pk,id_empresa_pk,id_area_trabajo_pk ) values (null, '" + descripcion + "','" + fechainicio + "','" + fechafin + "','"+ dias_nomina+"','" + sueldo_base + "','" + estado + "','" + id_empleado + "','" + id_empresa + "','" + area + "');" );
+                        ca.Ejecutar_Mysql("insert into nomina (id_nomina_pk, descripcion, fecha_inicio_pago, fecha_fin_pago,dias_trabajados_mes, sueldo_base, total, estado, id_empleado_pk,id_empresa_pk,id_area_trabajo_pk ) values (null, '" + descripcion + "','" + fechainicio + "','" + fechafin + "','"+ dias_nomina+"','" + sueldo_base + "','"+ total_por_fila +"','"+ estado + "','" + id_empleado + "','" + id_empresa + "','" + area + "');" );
                          DataTable dtt = ca.cargar("select max(id_nomina_pk)from nomina;");
                         string ultima_nomina = dtt.Rows[0][0].ToString();
                         
 
-                        if (bonificacion == "0"|| bonificacion == null)
-                        {
-
-                        }
+                        if (bonificacion == "0"|| bonificacion == null) {  }
                         else
                         {
                             ca.Ejecutar_Mysql("insert into devengos (id_devengo_pk, fecha, nombre_devengo, cantidad_devengado, estado) values (null,'" + fecha_hoy + "','" + nombre_bono + "','" + bonificacion + "','" + nombre_estado+ "');");
                             DataTable dt_id_devengo = ca.cargar("select max(id_devengo_pk) from devengos;");
                             string ultimo_id_devengo = dt_id_devengo.Rows[0][0].ToString();
-
-                            ca.Ejecutar_Mysql("insert into detalle_nomina(id_detalle_nomina_pk, total_a_pagar, estado, id_nomina_pk,id_devengo_pk) values (null,'" + bonificacion + "','" + nombre_estado + "','" + ultima_nomina + "','" + ultimo_id_devengo + "');");
+                            string nombre = "bonificacion";
+                            ca.Ejecutar_Mysql("insert into detalle_nomina(id_detalle_nomina_pk,nombre, total_a_pagar, estado, id_nomina_pk,id_devengo_pk) values (null,'"+nombre+"','" + bonificacion + "','" + nombre_estado + "','" + ultima_nomina + "','" + ultimo_id_devengo + "');");
                             conexion.DesconectarConexion();
                         }
 
-
-                        if(comision == "0" || comision == null)
-                        {
-                      
-
-                        }
+                        if(comision == "0" || comision == null)   { }
                         else
                         {
-
                             ca.Ejecutar_Mysql("insert into devengos (id_devengo_pk, fecha, nombre_devengo, cantidad_devengado, estado) values (null,'" + fecha_hoy + "','" + nombre_comision + "','" + comision + "','" + nombre_estado + "');");
                             DataTable dt_id_devengo = ca.cargar("select max(id_devengo_pk) from devengos;");
                             string ultimo_id_devengo_comision = dt_id_devengo.Rows[0][0].ToString();
-                            ca.Ejecutar_Mysql("insert into detalle_nomina(id_detalle_nomina_pk, total_a_pagar, estado, id_nomina_pk,id_devengo_pk) values (null,'" + comision + "','" + nombre_estado + "','" + ultima_nomina + "','" + ultimo_id_devengo_comision + "');");
+                            string nombre = "comision";
+                            ca.Ejecutar_Mysql("insert into detalle_nomina(id_detalle_nomina_pk,nombre, total_a_pagar, estado, id_nomina_pk,id_devengo_pk) values (null,'" +nombre+"','"+ comision + "','" + nombre_estado + "','" + ultima_nomina + "','" + ultimo_id_devengo_comision + "');");
                             conexion.DesconectarConexion();
                         }
-                        if (igss == "0" || comision == null)
-                        {
-
-                        }
+                        if (igss == "0" || igss == null) { }
                         else
                         {
-
                             ca.Ejecutar_Mysql("insert into detalle_igss (id_detalle_igss_pk, id_empleado_pk,sueldo_base, iggs_a_pagar_laboral, iggs_a_pagar_patronal,estado , fecha) values (null,'" + id_empleado + "','" + sueldo_base + "','" + igss + "','" + igss_patronal + "','"+nombre_estado+"','"+fecha_hoy+ "');");
                             
                             DataTable dt_id_igss = ca.cargar("select max(id_detalle_igss_pk) from detalle_igss;");
                             string ultimo_id_igss = dt_id_igss.Rows[0][0].ToString();
-
+                            string nombre = "igss";
                             ca.Ejecutar_Mysql("insert into deducciones (id_deduccion_pk, fecha, nombre_deduccion, cantidad_deduccion, estado, id_empleado_pk,id_detalle_igss_pk) values (null,'" + fecha_hoy + "','" + nombre_IGSS_laboral + "','" + igss + "','" + nombre_estado + "','"+ id_empleado+ "','"+ ultimo_id_igss + "');");
                             DataTable dt_id_deduccion = ca.cargar("select max(id_deduccion_pk) from deducciones;");
                             string ultimo_id_deduccion_igss = dt_id_deduccion.Rows[0][0].ToString();
-                            ca.Ejecutar_Mysql("insert into detalle_nomina(id_detalle_nomina_pk, total_a_pagar, estado, id_nomina_pk,id_deduccion_pk) values (null,'" + igss + "','" + nombre_estado + "','" + ultima_nomina + "','" + ultimo_id_deduccion_igss + "');");
+                            ca.Ejecutar_Mysql("insert into detalle_nomina(id_detalle_nomina_pk, nombre, total_a_pagar, estado, id_nomina_pk,id_deduccion_pk) values (null,'" +nombre+"','"+ igss + "','" + nombre_estado + "','" + ultima_nomina + "','" + ultimo_id_deduccion_igss + "');");
                             conexion.DesconectarConexion();
                         }
 
-                        if (horas_extra == "0" || horas_extra == null)
-                        {
-
-                        }
+                        if (horas_extra == "0" || horas_extra == null){ }
                         else
                         {
-                         
-                            ca.Ejecutar_Mysql("insert into devengos (id_devengo_pk, fecha,nombre_devengo, cantidad_devengado, cantidad_horas_extra,estado) values (null,'" + fecha_hoy + "','" + nombre_horas_extra + "','" + horas_extra + "','" + can_horas_extra + "','" + nombre_estado + "');");
-                            DataTable dt_ultimo_devengo = ca.cargar("select max(id_devengo_pk) from devengos;");
-                            string ultimo_id_horas_extra = dt_ultimo_devengo.Rows[0][0].ToString();
-                            ca.Ejecutar_Mysql("insert into detalle_nomina(id_detalle_nomina_pk, total_a_pagar, estado, id_nomina_pk,id_devengo_pk) values (null,'" + horas_extra + "','" + nombre_estado + "','" + ultima_nomina + "','" + ultimo_id_horas_extra + "');");
+                            string nombre = "horas extra";
+                            ca.Ejecutar_Mysql("insert into detalle_nomina(id_detalle_nomina_pk, nombre, total_a_pagar, estado, id_nomina_pk) values (null,'"+nombre +"','"+ horas_extra + "','" + nombre_estado + "','" + ultima_nomina + "');");
                             conexion.DesconectarConexion();
                         }
-                        if (ISR == "0" || ISR == null)
-                        { }
+                        if (ISR == "0" || ISR == null){ }
                         else
                         {
+                            string nombre = "isr";
                             ca.Ejecutar_Mysql("insert into deducciones (id_deduccion_pk,fecha, nombre_deduccion, cantidad_deduccion, estado, id_empleado_pk) values (null,'" + fecha_hoy + "','" + nombre_ISR + "','" + ISR + "','" + nombre_estado + "','" + id_empleado + "');");
                             DataTable dt_ultimo_descuento = ca.cargar("select max(id_deduccion_pk) from deducciones;");
                             string ultimo_id_descuento = dt_ultimo_descuento.Rows[0][0].ToString();
-                            ca.Ejecutar_Mysql("insert into detalle_nomina(id_detalle_nomina_pk, total_a_pagar, estado, id_nomina_pk,id_deduccion_pk) values (null,'" + ISR + "','" + nombre_estado + "','" + ultima_nomina + "','" + ultimo_id_descuento + "');");
+                            ca.Ejecutar_Mysql("insert into detalle_nomina(id_detalle_nomina_pk,nombre, total_a_pagar, estado, id_nomina_pk,id_deduccion_pk) values (null,'" + nombre +"','"+ISR + "','" + nombre_estado + "','" + ultima_nomina + "','" + ultimo_id_descuento + "');");
                             conexion.DesconectarConexion();
                         }
 
-                        if(devengo_extra == "0" || devengo_extra == null)
-                        { }
+                        if(devengo_extra == "0" || devengo_extra == null){ }
                         else
                         {
-
-                            ca.Ejecutar_Mysql("insert into devengos (id_devengo_pk, fecha,nombre_devengo, cantidad_devengado, estado) values (null,'" + fecha_hoy + "','" + nombre_devengo_extra + "','" + devengo_extra + "','"  + nombre_estado + "');");
-                            DataTable dt_ultimo_devengo = ca.cargar("select max(id_devengo_pk) from devengos;");
-                            string ultimo_id_devengo = dt_ultimo_devengo.Rows[0][0].ToString();
-                            ca.Ejecutar_Mysql("insert into detalle_nomina(id_detalle_nomina_pk, total_a_pagar, estado, id_nomina_pk,id_devengo_pk) values (null,'" + devengo_extra + "','" + nombre_estado + "','" + ultima_nomina + "','" + ultimo_id_devengo + "');");
+                            string nombre = "devengo extra";
+                            ca.Ejecutar_Mysql("insert into detalle_nomina(id_detalle_nomina_pk,nombre, total_a_pagar, estado, id_nomina_pk) values (null,'" +nombre+"','"+ devengo_extra + "','" + nombre_estado + "','" + ultima_nomina + "');");
                             conexion.DesconectarConexion();
                         }
-                        if (descuento_extra == "0" || descuento_extra == null)
-                        { }
+                        if (descuento_extra == "0" || descuento_extra == null){ }
                         else
                         {
-                            ca.Ejecutar_Mysql("insert into deducciones (id_deduccion_pk,fecha, nombre_deduccion, cantidad_deduccion, estado, id_empleado_pk) values (null,'" + fecha_hoy + "','" + nombre_deduccion_extra + "','" + descuento_extra + "','" + nombre_estado + "','" + id_empleado + "');");
-                            DataTable dt_ultimo_descuento = ca.cargar("select max(id_deduccion_pk) from deducciones;");
-                            string ultimo_id_descuento = dt_ultimo_descuento.Rows[0][0].ToString();
-                            ca.Ejecutar_Mysql("insert into detalle_nomina(id_detalle_nomina_pk, total_a_pagar, estado, id_nomina_pk,id_deduccion_pk) values (null,'" + descuento_extra + "','" + nombre_estado + "','" + ultima_nomina + "','" + ultimo_id_descuento + "');");
+                            string nombre = "deduccion extra";
+                            ca.Ejecutar_Mysql("insert into detalle_nomina(id_detalle_nomina_pk, nombre, total_a_pagar, estado, id_nomina_pk) values (null,'" + nombre+"','"+descuento_extra + "','" + nombre_estado + "','" + ultima_nomina + "');");
+                            conexion.DesconectarConexion();
+                        }
+
+                        if (horas_descontadas== "0" || horas_descontadas == null){ }
+                        else
+                        {
+                            string nombre = "horas descontadas";
+                            ca.Ejecutar_Mysql("insert into detalle_nomina(id_detalle_nomina_pk, nombre, total_a_pagar, estado, id_nomina_pk) values (null,'" + nombre + "','" + horas_descontadas + "','" + nombre_estado + "','" + ultima_nomina + "');");
                             conexion.DesconectarConexion();
                         }
                     }
-
-
 
                     conexion.DesconectarConexion();
                     MessageBox.Show("Calculo de nomina realizada con exito");
