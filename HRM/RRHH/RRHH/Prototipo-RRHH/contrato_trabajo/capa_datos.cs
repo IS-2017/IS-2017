@@ -53,13 +53,13 @@ namespace contrato_trabajo
                 cb.DataSource = dt;
                 cb.DisplayMember = "nombre_emp";
                 cb.ValueMember = "id_empleado_pk";
-                seguridad.Conexion.DesconectarODBC();
             }
 
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+            seguridad.Conexion.DesconectarODBC();
         }
         public static AutoCompleteStringCollection LoadAutoComplete()
         {
@@ -351,6 +351,27 @@ namespace contrato_trabajo
             return resultado;
             seguridad.Conexion.DesconectarODBC();
         }
+        public double deduccion_extra(string fecha_inicio, string fecha_fin, string id_empleado, string horas_descontadas)
+        {
+            double resultado;
+            try
+            {
+                OdbcCommand cmd = new OdbcCommand("select sum(cantidad_deduccion) as TOTAL from deducciones where id_empleado_pk= '" + id_empleado + "' and fecha between '" + fecha_inicio + "' and '" + fecha_fin + "' and nombre_deduccion = '" + horas_descontadas + "'", seguridad.Conexion.ObtenerConexionODBC());
+                OdbcDataAdapter da = new OdbcDataAdapter();
+                DataTable dt = new DataTable();
+                da.SelectCommand = cmd;
+                da.Fill(dt);
+                resultado = Convert.ToDouble(dt.Rows[0][0]);
+
+            }
+            catch
+            {
+                resultado = 0;
+            }
+            return resultado;
+            seguridad.Conexion.DesconectarODBC();
+        }
+
         public int validar_nomina(string fecha_inicio, string fecha_fin, string id_empresa)
         {
             int resultado;
