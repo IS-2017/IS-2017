@@ -56,7 +56,7 @@
             this.crystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default;
             this.crystalReportViewer1.Location = new System.Drawing.Point(12, 50);
             this.crystalReportViewer1.Name = "crystalReportViewer1";
-            this.crystalReportViewer1.Size = new System.Drawing.Size(993, 350);
+            this.crystalReportViewer1.Size = new System.Drawing.Size(993, 382);
             this.crystalReportViewer1.TabIndex = 13;
             this.crystalReportViewer1.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
             // 
@@ -64,7 +64,7 @@
             // 
             this.lbl_form_activos.AutoSize = true;
             this.lbl_form_activos.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold);
-            this.lbl_form_activos.Location = new System.Drawing.Point(12, 9);
+            this.lbl_form_activos.Location = new System.Drawing.Point(389, 9);
             this.lbl_form_activos.Name = "lbl_form_activos";
             this.lbl_form_activos.Size = new System.Drawing.Size(232, 28);
             this.lbl_form_activos.TabIndex = 193;
@@ -72,6 +72,7 @@
             // 
             // cbo_reporte_empresa
             // 
+            this.cbo_reporte_empresa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_reporte_empresa.FormattingEnabled = true;
             this.cbo_reporte_empresa.Location = new System.Drawing.Point(96, 19);
             this.cbo_reporte_empresa.Name = "cbo_reporte_empresa";
@@ -94,9 +95,9 @@
             this.gpb_reporte_activos.Controls.Add(this.lbl_reporte_activo_empresa);
             this.gpb_reporte_activos.Controls.Add(this.crystalReportViewer1);
             this.gpb_reporte_activos.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.gpb_reporte_activos.Location = new System.Drawing.Point(12, 150);
+            this.gpb_reporte_activos.Location = new System.Drawing.Point(18, 118);
             this.gpb_reporte_activos.Name = "gpb_reporte_activos";
-            this.gpb_reporte_activos.Size = new System.Drawing.Size(1011, 406);
+            this.gpb_reporte_activos.Size = new System.Drawing.Size(1011, 438);
             this.gpb_reporte_activos.TabIndex = 196;
             this.gpb_reporte_activos.TabStop = false;
             this.gpb_reporte_activos.Text = "Activos";
@@ -107,6 +108,7 @@
             this.txt_cbo_reporte_empresa.Name = "txt_cbo_reporte_empresa";
             this.txt_cbo_reporte_empresa.Size = new System.Drawing.Size(11, 24);
             this.txt_cbo_reporte_empresa.TabIndex = 196;
+            this.txt_cbo_reporte_empresa.Visible = false;
             // 
             // gpb_navegador
             // 
@@ -119,7 +121,7 @@
             this.gpb_navegador.Controls.Add(this.btn_actualizar);
             this.gpb_navegador.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.gpb_navegador.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.gpb_navegador.Location = new System.Drawing.Point(18, 44);
+            this.gpb_navegador.Location = new System.Drawing.Point(18, 12);
             this.gpb_navegador.Name = "gpb_navegador";
             this.gpb_navegador.Size = new System.Drawing.Size(333, 100);
             this.gpb_navegador.TabIndex = 197;
@@ -147,6 +149,7 @@
             this.btn_ultimo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_ultimo.BackgroundImage")));
             this.btn_ultimo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_ultimo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_ultimo.Enabled = false;
             this.btn_ultimo.FlatAppearance.BorderSize = 0;
             this.btn_ultimo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btn_ultimo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
@@ -162,6 +165,7 @@
             this.btn_primero.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_primero.BackgroundImage")));
             this.btn_primero.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_primero.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_primero.Enabled = false;
             this.btn_primero.FlatAppearance.BorderSize = 0;
             this.btn_primero.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btn_primero.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
@@ -177,6 +181,7 @@
             this.btn_siguiente.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_siguiente.BackgroundImage")));
             this.btn_siguiente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_siguiente.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_siguiente.Enabled = false;
             this.btn_siguiente.FlatAppearance.BorderSize = 0;
             this.btn_siguiente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btn_siguiente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
@@ -192,6 +197,7 @@
             this.btn_anterior.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_anterior.BackgroundImage")));
             this.btn_anterior.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_anterior.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_anterior.Enabled = false;
             this.btn_anterior.FlatAppearance.BorderSize = 0;
             this.btn_anterior.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btn_anterior.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
@@ -207,6 +213,7 @@
             this.btn_buscar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_buscar.BackgroundImage")));
             this.btn_buscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_buscar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_buscar.Enabled = false;
             this.btn_buscar.FlatAppearance.BorderSize = 0;
             this.btn_buscar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btn_buscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
@@ -216,6 +223,7 @@
             this.btn_buscar.Size = new System.Drawing.Size(65, 65);
             this.btn_buscar.TabIndex = 2;
             this.btn_buscar.UseVisualStyleBackColor = true;
+            this.btn_buscar.Click += new System.EventHandler(this.btn_buscar_Click);
             // 
             // btn_actualizar
             // 
@@ -226,7 +234,7 @@
             this.btn_actualizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btn_actualizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.btn_actualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_actualizar.Location = new System.Drawing.Point(159, 21);
+            this.btn_actualizar.Location = new System.Drawing.Point(161, 21);
             this.btn_actualizar.Name = "btn_actualizar";
             this.btn_actualizar.Size = new System.Drawing.Size(65, 65);
             this.btn_actualizar.TabIndex = 3;
@@ -236,7 +244,7 @@
             // dgv_reporte_activo
             // 
             this.dgv_reporte_activo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_reporte_activo.Location = new System.Drawing.Point(357, 9);
+            this.dgv_reporte_activo.Location = new System.Drawing.Point(46, 234);
             this.dgv_reporte_activo.Name = "dgv_reporte_activo";
             this.dgv_reporte_activo.Size = new System.Drawing.Size(601, 135);
             this.dgv_reporte_activo.TabIndex = 198;
@@ -249,11 +257,11 @@
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(1028, 568);
-            this.Controls.Add(this.dgv_reporte_activo);
+            this.ClientSize = new System.Drawing.Size(1038, 568);
             this.Controls.Add(this.gpb_navegador);
             this.Controls.Add(this.gpb_reporte_activos);
             this.Controls.Add(this.lbl_form_activos);
+            this.Controls.Add(this.dgv_reporte_activo);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;

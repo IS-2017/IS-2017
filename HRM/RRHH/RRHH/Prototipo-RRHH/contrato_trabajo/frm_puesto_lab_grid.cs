@@ -153,6 +153,20 @@ namespace contrato_trabajo
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void btn_imprimir_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                frm_reporte_puestos puesto = new frm_reporte_puestos();
+                puesto.MdiParent = mdi_contenedor.ActiveForm.ParentForm;
+                puesto.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
         #endregion
 
         #region Botones de Navegacion

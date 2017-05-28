@@ -109,6 +109,8 @@ namespace contrato_trabajo
                 MessageBox.Show(ex.Message);
             }
         }
+
+        
         #endregion
 
         #region Boton Nuevo
@@ -215,6 +217,21 @@ namespace contrato_trabajo
             }
         }
         #endregion
+
+
+        private void btn_imprimir_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                frm_reporte_jornada activo = new frm_reporte_jornada();
+                activo.MdiParent = mdi_contenedor.ActiveForm.ParentForm;
+                activo.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
 
     }
 }

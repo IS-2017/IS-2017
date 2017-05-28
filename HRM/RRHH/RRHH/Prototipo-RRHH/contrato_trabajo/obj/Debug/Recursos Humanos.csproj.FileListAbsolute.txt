@@ -1024,3 +1024,8 @@ C:\Users\ottog\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_tr
 C:\Users\ottog\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\Recursos Humanos.csproj.GenerateResource.Cache
 C:\Users\ottog\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_calificacion_evaluacion.resources
 C:\Users\ottog\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_calificacion_evaluacion_grid.resources
+C:\Users\javie\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_calificacion_evaluacion.resources
+C:\Users\javie\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_calificacion_evaluacion_grid.resources
+C:\Users\javie\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_reporte_activos.resources
+C:\Users\javie\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_reporte_jornada.resources
+C:\Users\javie\Documents\GitHub\IS-2017\HRM\RRHH\RRHH\Prototipo-RRHH\contrato_trabajo\obj\Debug\contrato_trabajo.frm_reporte_puestos.resources
