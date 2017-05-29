@@ -45,6 +45,7 @@
             this.btn_actualizar = new System.Windows.Forms.Button();
             this.btn_cancelar = new System.Windows.Forms.Button();
             this.gpb_com_ven = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.txt_id_puesto_lb = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -73,7 +74,6 @@
             this.lbl_nom_ved = new System.Windows.Forms.Label();
             this.btn_generar = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.gpb_com_ven.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -335,6 +335,16 @@
             this.gpb_com_ven.TabStop = false;
             this.gpb_com_ven.Text = "Datos";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(146, 293);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(110, 29);
+            this.button1.TabIndex = 221;
+            this.button1.Text = "Sincronizar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -569,7 +579,7 @@
             // 
             // btn_generar
             // 
-            this.btn_generar.Location = new System.Drawing.Point(506, 293);
+            this.btn_generar.Location = new System.Drawing.Point(612, 293);
             this.btn_generar.Name = "btn_generar";
             this.btn_generar.Size = new System.Drawing.Size(114, 29);
             this.btn_generar.TabIndex = 175;
@@ -577,16 +587,6 @@
             this.toolTip1.SetToolTip(this.btn_generar, "Generar comision");
             this.btn_generar.UseVisualStyleBackColor = true;
             this.btn_generar.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(303, 293);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(95, 29);
-            this.button1.TabIndex = 221;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // frm_comisiones_marca
             // 

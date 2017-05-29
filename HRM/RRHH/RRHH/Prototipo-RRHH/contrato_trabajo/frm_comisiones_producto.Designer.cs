@@ -340,11 +340,11 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(362, 288);
+            this.button1.Location = new System.Drawing.Point(111, 285);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 26);
+            this.button1.Size = new System.Drawing.Size(105, 34);
             this.button1.TabIndex = 250;
-            this.button1.Text = "button1";
+            this.button1.Text = "Sincronizar";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
@@ -591,7 +591,7 @@
             // 
             // btn_generar
             // 
-            this.btn_generar.Location = new System.Drawing.Point(684, 285);
+            this.btn_generar.Location = new System.Drawing.Point(669, 290);
             this.btn_generar.Name = "btn_generar";
             this.btn_generar.Size = new System.Drawing.Size(114, 29);
             this.btn_generar.TabIndex = 175;
