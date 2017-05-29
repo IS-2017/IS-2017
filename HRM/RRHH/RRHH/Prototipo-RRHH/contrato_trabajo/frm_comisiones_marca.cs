@@ -40,10 +40,7 @@ namespace contrato_trabajo
             llenaridempresa();
             llenarcargo();
             llenarvendedor();
-            dgv_comision.Columns[2].Visible = false;
-            dgv_comision.Columns[1].Visible = false;
-            dgv_comision.Columns[6].Visible = false;
-            dgv_comision.Columns[7].Visible = false;
+            
         }
         #endregion
 
@@ -135,342 +132,53 @@ namespace contrato_trabajo
         }
         #endregion
 
-        #region Datos de factura - Cristian Estrada
-        public void factura()
-        {
-            try {
-                int cont1 = 0;
-                //dataGridView1.Columns[1].Visible = false;
-                string selectedItem = cbo_empres.SelectedValue.ToString();
-                string selectedItem2 = cbo_empleado.SelectedValue.ToString();
-                string date1 = dtp_fecha_ini.Value.ToString("yyyy-MM-dd");
-                string date2 = dtp_fecha_fin.Value.ToString("yyyy-MM-dd");
-                OdbcConnection Conexion2;
-                OdbcCommand Query2 = new OdbcCommand();
-                OdbcDataReader consultar2;
-                //string sql = "dsn=hotelsancarlos;server=localhost;user id=root;database=hotelsancarlos;password=";
-                string sql = "dsn=hotelsancarlos;server=localhost;database=hotelsancarlos;uid=root;password=";
-                //string sql = "server = 127.0.0.1; database = hotelsancarlos; uid = root; pwd =; ";
-                Conexion2 = new OdbcConnection();
-                Conexion2.ConnectionString = sql;
-                Conexion2.Open();
-                Query2.CommandText = "SELECT id_fac_empresa_pk,total From factura where id_empleado_pk = '" + selectedItem2 + "'And id_empresa_pk ='" + selectedItem + "' AND estado <> 'INACTIVO' AND marca_comision <>'S' AND fecha_emision BETWEEN '" + date1 + "' AND '" + date2 + "';";
-                Query2.Connection = Conexion2;
-                consultar2 = Query2.ExecuteReader();
-                while (consultar2.Read())
-                {
-                    dgv_comision.Rows.Add(1);
-                    if (cont1 == 0)
-                    {
-                        id_fact = consultar2.GetInt32(0);
-                        total = consultar2.GetDecimal(1);
-                        dgv_comision.Rows[0].Cells[0].Value = id_fact;
-                        dgv_comision.Rows[0].Cells[1].Value = total;
-                        // MessageBox.Show(Convert.ToString(id));
-                    }
-                    else
-                    {
 
-                        id_fact = consultar2.GetInt32(0);
-                        total = consultar2.GetDecimal(1);
-                        dgv_comision.Rows[cont1].Cells[0].Value = id_fact;
-                        dgv_comision.Rows[cont1].Cells[1].Value = total;
-                    }
-                    cont1++;
-                }
-            }
-            catch
-            {
-
-            }
-        }
-        #endregion
-
-        #region Cargar datos de factura detalle - Cristian Estrada
-        int id_precio;
-        int cantidad = 0;
-        public void factura_detalle()
-        {
-            try {
-                int cont1 = 0;
-
-                for (int fila = 0; fila < dgv_comision.RowCount; fila++)
-                {
-                    int ca = Convert.ToInt32(dgv_comision.Rows[fila].Cells[0].Value);
-                    string selectedItem = cbo_empres.SelectedValue.ToString();
-                    string selectedItem2 = cbo_empleado.SelectedValue.ToString();
-                    OdbcCommand Query = new OdbcCommand();
-                    OdbcConnection Conexion;
-                    OdbcDataReader consultar;
-                    //string sql = "dsn=hotelsancarlos;server=localhost;user id=root;database=hotelsancarlos;password=";
-                    string sql = "dsn=hotelsancarlos;server=localhost;database=hotelsancarlos;uid=root;password=";
-                    //string sql = "server = 127.0.0.1; database = hotelsancarlos; uid = root; pwd =; ";
-                    Conexion = new OdbcConnection();
-                    Conexion.ConnectionString = sql;
-                    Conexion.Open();
-                    Query.CommandText = "SELECT id_precio, cantidad From factura_detalle where id_fac_empresa_pk ='" + Convert.ToString(ca) + "';";
-                    Query.Connection = Conexion;
-                    consultar = Query.ExecuteReader();
-
-                    while (consultar.Read())
-                    {
-                        if (cont1 == 0)
-                        {
-
-                            id_precio = consultar.GetInt32(0);
-                            cantidad = consultar.GetInt32(1);
-                            //MessageBox.Show(Convert.ToString(cadena2));
-                            dgv_comision.Rows[0].Cells[2].Value = id_precio;
-                            dgv_comision.Rows[0].Cells[5].Value = cantidad;
-                        }
-                        else
-                        {
-
-                            id_precio = consultar.GetInt32(0);
-                            cantidad = consultar.GetInt32(1);
-                            //MessageBox.Show(Convert.ToString(cadena2));
-                            dgv_comision.Rows[cont1].Cells[2].Value = id_precio;
-                            dgv_comision.Rows[cont1].Cells[5].Value = cantidad;
-                        }
-                        cont1 = cont1 + 1;
-                    }
-                }
-            }
-            catch
-            {
-
-            }
-        }
-        #endregion
-
-        #region Cargar datos de precio - Cristian Estrada
-        decimal precio_pro = 0;
-        int id_bien = 0;
-        public void precio()
-        {
-            try {
-                int cont1 = 0;
-
-                for (int fila = 0; fila < dgv_comision.RowCount; fila++)
-                {
-                    int ca = Convert.ToInt32(dgv_comision.Rows[fila].Cells[2].Value);
-
-                    OdbcCommand Query = new OdbcCommand();
-                    OdbcConnection Conexion;
-                    OdbcDataReader consultar;
-                    //string sql = "dsn=hotelsancarlos;server=localhost;user id=root;database=hotelsancarlos;password=";
-                    string sql = "dsn=hotelsancarlos;server=localhost;database=hotelsancarlos;uid=root;password=";
-                    //string sql = "server = 127.0.0.1; database = hotelsancarlos; uid = root; pwd =; ";
-                    Conexion = new OdbcConnection();
-                    Conexion.ConnectionString = sql;
-                    Conexion.Open();
-                    Query.CommandText = "SELECT precio, id_bien_pk From precio where id_precio ='" + Convert.ToString(ca) + "';";
-                    Query.Connection = Conexion;
-                    consultar = Query.ExecuteReader();
-
-                    while (consultar.Read())
-                    {
-                        if (cont1 == 0)
-                        {
-
-                            precio_pro = consultar.GetDecimal(0);
-                            id_bien = consultar.GetInt32(1);
-                            //MessageBox.Show(Convert.ToString(id_bien));
-                            dgv_comision.Rows[0].Cells[4].Value = precio_pro;
-                            dgv_comision.Rows[0].Cells[6].Value = id_bien;
-                        }
-                        else
-                        {
-
-                            precio_pro = consultar.GetDecimal(0);
-                            id_bien = consultar.GetInt32(1);
-                            // MessageBox.Show(Convert.ToString(id_bien));
-                            dgv_comision.Rows[cont1].Cells[4].Value = precio_pro;
-                            dgv_comision.Rows[cont1].Cells[6].Value = id_bien;
-                        }
-                        cont1 = cont1 + 1;
-                    }
-                }
-            }
-            catch
-            {
-
-            }
-        }
-        #endregion
-
-        #region Cargar el producto - Cristian Estrada
-        string descrp;
-        int marca_pk = 0;
-        public void bien()
-        {
-            try {
-                int cont1 = 0;
-
-                for (int fila = 0; fila < dgv_comision.RowCount; fila++)
-                {
-                    int ca = Convert.ToInt32(dgv_comision.Rows[fila].Cells[6].Value);
-
-                    OdbcCommand Query = new OdbcCommand();
-                    OdbcConnection Conexion;
-                    OdbcDataReader consultar;
-                    //string sql = "dsn=hotelsancarlos;server=localhost;user id=root;database=hotelsancarlos;password=";
-                    string sql = "dsn=hotelsancarlos;server=localhost;database=hotelsancarlos;uid=root;password=";
-                    //string sql = "server = 127.0.0.1; database = hotelsancarlos; uid = root; pwd =; ";
-                    Conexion = new OdbcConnection();
-                    Conexion.ConnectionString = sql;
-                    Conexion.Open();
-                    Query.CommandText = "SELECT descripcion, id_marca_pk From bien where id_bien_pk ='" + Convert.ToString(ca) + "';";
-                    Query.Connection = Conexion;
-                    consultar = Query.ExecuteReader();
-
-                    while (consultar.Read())
-                    {
-                        if (cont1 == 0)
-                        {
-
-                            descrp = consultar.GetString(0);
-                            //proce_pro = consultar.GetDecimal(1);
-                            marca_pk = consultar.GetInt32(1);
-                            dgv_comision.Rows[0].Cells[3].Value = descrp;
-                            //MessageBox.Show(Convert.ToString(precio_pro));
-                            dgv_comision.Rows[0].Cells[7].Value = marca_pk;
-
-
-                        }
-                        else
-                        {
-                            descrp = consultar.GetString(0);
-                            marca_pk = consultar.GetInt32(1);
-                            //proce_pro = consultar.GetDecimal(1);
-                            dgv_comision.Rows[cont1].Cells[3].Value = descrp;
-                            //MessageBox.Show(Convert.ToString(precio_pro));
-                            dgv_comision.Rows[cont1].Cells[7].Value = marca_pk;
-
-                        }
-                        cont1 = cont1 + 1;
-                    }
-                }
-            }
-            catch
-            {
-
-            }
-        }
-        #endregion
-
-        #region Cargar datos de marca - Cristian Estrada
-
-        string marca_desc;
-        decimal porc_mar = 0;
-        public void marca()
-        {
-            try {
-                int cont1 = 0;
-
-                for (int fila = 0; fila < dgv_comision.RowCount; fila++)
-                {
-                    int ca = Convert.ToInt32(dgv_comision.Rows[fila].Cells[7].Value);
-
-                    OdbcCommand Query = new OdbcCommand();
-                    OdbcConnection Conexion;
-                    OdbcDataReader consultar;
-                    //string sql = "dsn=hotelsancarlos;server=localhost;user id=root;database=hotelsancarlos;password=";
-                    string sql = "dsn=hotelsancarlos;server=localhost;database=hotelsancarlos;uid=root;password=";
-                    //string sql = "server = 127.0.0.1; database = hotelsancarlos; uid = root; pwd =; ";
-                    Conexion = new OdbcConnection();
-                    Conexion.ConnectionString = sql;
-                    Conexion.Open();
-                    Query.CommandText = "SELECT nombre_marca, procentaje_comision From marca where id_marca_pk ='" + Convert.ToString(ca) + "';";
-                    Query.Connection = Conexion;
-                    consultar = Query.ExecuteReader();
-
-                    while (consultar.Read())
-                    {
-                        if (cont1 == 0)
-                        {
-
-                            marca_desc = consultar.GetString(0);
-                            //proce_pro = consultar.GetDecimal(1);
-                            porc_mar = consultar.GetDecimal(1);
-                            dgv_comision.Rows[0].Cells[8].Value = marca_desc;
-                            //MessageBox.Show(Convert.ToString(precio_pro));
-                            dgv_comision.Rows[0].Cells[9].Value = porc_mar;
-
-
-                        }
-                        else
-                        {
-                            marca_desc = consultar.GetString(0);
-                            porc_mar = consultar.GetDecimal(1);
-                            //proce_pro = consultar.GetDecimal(1);
-                            dgv_comision.Rows[cont1].Cells[8].Value = marca_desc;
-                            //MessageBox.Show(Convert.ToString(precio_pro));
-                            dgv_comision.Rows[cont1].Cells[9].Value = porc_mar;
-
-                        }
-                        cont1 = cont1 + 1;
-                    }
-                }
-            }
-            catch
-            {
-
-            }
-        }
-        #endregion
 
         #region Calculo de las comisiones - Cristian Estrada
         public void comision()
         {
-
-            decimal total_comision = 0;
-            for (int fila = 0; fila < dgv_comision.RowCount - 1; fila++)
+            decimal totalcomision = 0;
+            for (int fila = 0; fila < dataGridView1.RowCount - 1; fila++)
             {
 
-                total_comision = Convert.ToDecimal(dgv_comision.Rows[fila].Cells[10].Value) * ((Convert.ToDecimal(dgv_comision.Rows[fila].Cells[9].Value) / 100));
-                dgv_comision.Rows[fila].Cells[11].Value = total_comision;
+                totalcomision += Convert.ToDecimal(dataGridView1.Rows[fila].Cells[7].Value);
+
             }
 
+            txt_total_com.Text = Convert.ToString(totalcomision);
         }
 
         public void totales()
         {
-            decimal total_venta = 0;
-
-            for (int fila = 0; fila < dgv_comision.RowCount - 1; fila++)
+            decimal totalventa = 0;
+            for (int fila = 0; fila < dataGridView1.RowCount - 1; fila++)
             {
 
-                total_venta = Convert.ToDecimal(dgv_comision.Rows[fila].Cells[4].Value) * Convert.ToDecimal(dgv_comision.Rows[fila].Cells[5].Value);
-                dgv_comision.Rows[fila].Cells[10].Value = total_venta;
+                totalventa += Convert.ToDecimal(dataGridView1.Rows[fila].Cells[6].Value);
+
             }
-
-            //txt_total_com.Text = Convert.ToString(total_comi);
-            //txt_venta.Text = Convert.ToString(total_venta);
-
+            txt_venta.Text = Convert.ToString(totalventa);
         }
         public void comision_total()
         {
-            decimal comision_t = 0;
-            for (int fila = 0; fila < dgv_comision.RowCount - 1; fila++)
+            decimal total_c = 0;
+            for (int fila = 0; fila < dataGridView1.RowCount - 1; fila++)
             {
-
-                comision_t += Convert.ToDecimal(dgv_comision.Rows[fila].Cells[11].Value);
+                total_c = Convert.ToDecimal(dataGridView1.Rows[fila].Cells[6].Value) * (Convert.ToDecimal(dataGridView1.Rows[fila].Cells[3].Value) / 100);
+                dataGridView1.Rows[fila].Cells[7].Value = total_c;
 
             }
-            txt_total_com.Text = Convert.ToString(comision_t);
 
         }
         public void venta_total()
         {
-            decimal venta_t = 0;
-            for (int fila = 0; fila < dgv_comision.RowCount - 1; fila++)
+            decimal total_v = 0;
+            for (int fila = 0; fila < dataGridView1.RowCount - 1; fila++)
             {
-
-                venta_t += Convert.ToDecimal(dgv_comision.Rows[fila].Cells[10].Value);
+                total_v = Convert.ToDecimal(dataGridView1.Rows[fila].Cells[4].Value) * Convert.ToDecimal(dataGridView1.Rows[fila].Cells[5].Value);
+                dataGridView1.Rows[fila].Cells[6].Value = total_v;
 
             }
-            txt_venta.Text = Convert.ToString(venta_t);
         }
         #endregion
 
@@ -482,9 +190,9 @@ namespace contrato_trabajo
                 Editar = false;
                 fn.ActivarControles(gpb_com_ven);
                 fn.LimpiarComponentes(gpb_com_ven);
-                dtp_fecha_ini.Enabled = false;
+                dtp_fecha1.Enabled = false;
                 llenarcargo();
-                dtp_fecha_fin.Enabled = false;
+                dtp_fecha2.Enabled = false;
                 btn_generar.Enabled = false;
             }
             catch (Exception ex)
@@ -502,7 +210,7 @@ namespace contrato_trabajo
                 Editar = false;
                 fn.LimpiarComponentes(gpb_com_ven);
                 fn.InhabilitarComponentes(gpb_com_ven);
-                dgv_comision.Rows.Clear();
+                //dgv_comision.Rows.Clear();
             }
             catch (Exception ex)
             {
@@ -515,17 +223,12 @@ namespace contrato_trabajo
         private void button1_Click(object sender, EventArgs e)
         {
             try {
-                dgv_comision.Rows.Clear();
-                dgv_comision.Refresh();
-                factura();
-                factura_detalle();
-                precio();
-                bien();
-                marca();
-                totales();
-                comision();
+
                 venta_total();
                 comision_total();
+                totales();
+                comision();
+
             }
             catch
             {
@@ -569,8 +272,8 @@ namespace contrato_trabajo
         #region radio de fechas - Cristian Estrada
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
-            dtp_fecha_ini.Enabled = true;
-            dtp_fecha_fin.Enabled = true;
+            dtp_fecha1.Enabled = true;
+            dtp_fecha2.Enabled = true;
             btn_generar.Enabled = true;
         }
         #endregion
@@ -579,16 +282,16 @@ namespace contrato_trabajo
         private void btn_guardar_Click(object sender, EventArgs e)
         {
             try {
-                for (int fila = 0; fila < dgv_comision.RowCount - 1; fila++)
+                for (int fila = 0; fila < dataGridView1.RowCount - 1; fila++)
                 {
                     string selectedItem = cbo_empres.SelectedValue.ToString();
                     string selectedItem2 = cbo_empleado.SelectedValue.ToString();
                     txt_emps.Text = selectedItem;
-                    txt_fac_emp.Text = Convert.ToString(dgv_comision.Rows[fila].Cells[0].Value);
-                    txt_proc_com.Text = Convert.ToString(dgv_comision.Rows[fila].Cells[9].Value);
-                    txt_tv.Text = Convert.ToString(dgv_comision.Rows[fila].Cells[10].Value);
+                    txt_fac_emp.Text = Convert.ToString(dataGridView1.Rows[fila].Cells[0].Value);
+                    txt_proc_com.Text = Convert.ToString(dataGridView1.Rows[fila].Cells[3].Value);
+                    txt_tv.Text = Convert.ToString(dataGridView1.Rows[fila].Cells[6].Value);
                     txt_fechasx.Text = dateTimePicker1.Value.ToString("yyyy-MM-dd");
-                    txt_tc.Text = Convert.ToString(dgv_comision.Rows[fila].Cells[11].Value);
+                    txt_tc.Text = Convert.ToString(dataGridView1.Rows[fila].Cells[7].Value);
                     textBox7.Text = selectedItem2;
 
                     CapaNegocio fn = new CapaNegocio();
@@ -608,22 +311,16 @@ namespace contrato_trabajo
                         else
                         {
 
-                            txt_mar_co.Text = "S";
+                           
                             fn.insertar(datos, tabla);
-                            atributo = "id_fac_empresa_pk";
-                            string tabla2 = "factura";
-                            Codigo = txt_fac_emp.Text;
-                            //CapaNegocio fn = new CapaNegocio();
-                            TextBox[] textbox2 = { txt_mar_co };
-                            DataTable datos2 = fn.construirDataTable(textbox2);
-                            fn.modificar(datos2, tabla2, atributo, Codigo);
+                            
 
                         }
-                        fn.LimpiarComponentes(this);
+                       // fn.LimpiarComponentes(this);
                     }
                 }
                 guardar_detalle();
-                dgv_comision.Rows.Clear();
+                //dgv_comision.Rows.Clear();
             }
             catch
             {
@@ -647,9 +344,139 @@ namespace contrato_trabajo
 
         private void cbo_empleado_SelectedIndexChanged(object sender, EventArgs e)
         {
-            dgv_comision.Rows.Clear();
+            int Total = int.Parse(dataGridView1.ColumnCount.ToString());
+            if (contt > 1 && Total == 8)
+            {
+
+                borracolumnas();
+                llenar1();
+            }
+            contt++;
         }
         #endregion
+        public void llenar1()
+        {
+            //try
+            //{
+            //    string tabla = "factura_encabezado";
+            //    string date1 = dtp_fecha1.Value.ToString("yyyy-MM-dd");
+            //    string date2 = dtp_fecha2.Value.ToString("yyyy-MM-dd");
+            //    //MessageBox.Show(Convert.ToString(date1));
+            //    string selectedItem = cbo_empleado.SelectedValue.ToString();
+            //    fn.ActualizarGrid(this.dataGridView1, "SELECT FE.id_factura, PR.nombre, M.nombre_marca, M.porcentaje, P.precio, DF.cantidad  FROM detalle_factura DF, factura_encabezado FE, precio P, producto PR, marca M WHERE (DF.id_factura = FE.id_factura AND PR.id_producto = DF.id_producto AND P.id_bien = PR.id_producto AND M.id_marca = PR.id_marca AND FE.id_empleado_pk = '" + selectedItem + "') AND FE.fecha BETWEEN '" + date1 + "' AND '" + date2 + "';", tabla);
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show(ex.Message);
+            //}
+            try
+            {
+                string selectedItem2 = cbo_empleado.SelectedValue.ToString();
+                string fecha2 = dtp_fecha2.Value.ToString("yyyy-MM-dd");
+                string fecha1 = dtp_fecha1.Value.ToString("yyyy-MM-dd");
+                ServiceReference1.Service1Client ar = new ServiceReference1.Service1Client();
+                //ar.PruebaCristian2(selectedItem2, fecha1, fecha2);
+                DataSet ds = ar.ObtenerMarca(selectedItem2, fecha1, fecha2);
+                dataGridView1.DataSource = ds.Tables[0];
+            }
+            catch
+            {
+
+            }
+        }
+        public void columnaventa()
+        {
+
+
+            DataGridViewTextBoxColumn dgv = new DataGridViewTextBoxColumn();
+            dgv.HeaderText = "Venta";
+            dgv.Width = 100;
+            dataGridView1.Columns.Add(dgv);
+        }
+        public void columnacomision()
+        {
+
+
+            DataGridViewTextBoxColumn dgv = new DataGridViewTextBoxColumn();
+            dgv.HeaderText = "Comision";
+            dgv.Width = 100;
+            dataGridView1.Columns.Add(dgv);
+        }
+        int contt = 0;
+        public void borracolumnas()
+        {
+            //dgv_reclu.Columns.RemoveAt(4);
+            int Total = int.Parse(dataGridView1.ColumnCount.ToString());
+            //MessageBox.Show(Convert.ToString(Total));
+            //int cont = 0;
+            //for (int i = 0; i <= Total; i++)
+            //{
+            //    MessageBox.Show(Convert.ToString(i));
+            //    dataGridView1.Columns.RemoveAt(i);
+            //    cont++;
+            //}
+
+
+            if (contt > 1 && Total == 8)
+            {
+                dataGridView1.Columns.RemoveAt(7);
+                dataGridView1.Columns.RemoveAt(6);
+
+            }
+
+        }
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            //try
+            //{
+            //    string selectedItem2 = cbo_empleado.SelectedValue.ToString();
+            //    string fecha2 = dateTimePicker1.Value.ToString("yyyy-MM-dd");
+            //    string fecha1 = dtp_fecha1.Value.ToString("yyyy-MM-dd");
+            //    ServiceReference1.Service1Client ar = new ServiceReference1.Service1Client();
+            //    ar.PruebaCristian3(selectedItem2, fecha1, fecha2);
+            //    DataSet ds = ar.PruebaCristian2(selectedItem2, fecha2, fecha1);
+            //    dataGridView1.DataSource = ds.Tables[0];
+            //}
+            //catch
+            //{
+
+            //}
+            borracolumnas();
+            llenar1();
+            validar_factura();
+            columnaventa();
+            columnacomision();
+        }
+        public void validar_factura()
+        {
+            int id;
+            OdbcConnection Conexion2;
+            OdbcCommand Query2 = new OdbcCommand();
+            OdbcDataReader consultar2;
+            //string sql = "dsn=hotelsancarlos;server=localhost;user id=root;database=hotelsancarlos;password=";
+            string sql = "dsn=hotelsancarlos;server=localhost;database=hotelsancarlos;uid=root;password=";
+            //string sql = "server = 127.0.0.1; database = hotelsancarlos; uid = root; pwd =; ";
+            Conexion2 = new OdbcConnection();
+            Conexion2.ConnectionString = sql;
+            Conexion2.Open();
+            Query2.CommandText = "SELECT id_fac_empresa_pk from com_venta where estado <>'INACTIVO';";
+            Query2.Connection = Conexion2;
+            consultar2 = Query2.ExecuteReader();
+            while (consultar2.Read())
+            {
+
+                id = consultar2.GetInt32(0);
+                for (int fila = 0; fila < dataGridView1.RowCount - 1; fila++)
+                {
+                    if (Convert.ToInt32(dataGridView1.Rows[fila].Cells[0].Value) == id)
+                    {
+                        int fil = dataGridView1.CurrentRow.Index;
+                        dataGridView1.Rows.RemoveAt(fil);
+                    }
+                }
+                // MessageBox.Show(Convert.ToString(cadena_act));
+            }
+        }
     }
 
 

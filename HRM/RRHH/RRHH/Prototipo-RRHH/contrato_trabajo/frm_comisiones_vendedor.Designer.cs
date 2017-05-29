@@ -47,8 +47,8 @@
             this.txt_id_puesto_lb = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dtp_fecha2 = new System.Windows.Forms.DateTimePicker();
+            this.dtp_fecha1 = new System.Windows.Forms.DateTimePicker();
             this.rdb_factura = new System.Windows.Forms.RadioButton();
             this.txt_comsx = new System.Windows.Forms.TextBox();
             this.txt_mar_c = new System.Windows.Forms.TextBox();
@@ -72,15 +72,12 @@
             this.txt_total_com = new System.Windows.Forms.TextBox();
             this.lbl_nom_ved = new System.Windows.Forms.Label();
             this.btn_generar = new System.Windows.Forms.Button();
-            this.dgv_comisiones = new System.Windows.Forms.DataGridView();
-            this.ID_FACTURA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TOTAL_FACTURA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PORCENTAJE_COMISION = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TOTAL_COMISION = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.button1 = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.gpb_nav.SuspendLayout();
             this.gpb_com_ven.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_comisiones)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_form_comision_vent
@@ -287,11 +284,13 @@
             // 
             // gpb_com_ven
             // 
+            this.gpb_com_ven.Controls.Add(this.dataGridView1);
+            this.gpb_com_ven.Controls.Add(this.button1);
             this.gpb_com_ven.Controls.Add(this.txt_id_puesto_lb);
             this.gpb_com_ven.Controls.Add(this.label5);
             this.gpb_com_ven.Controls.Add(this.label4);
-            this.gpb_com_ven.Controls.Add(this.dateTimePicker3);
-            this.gpb_com_ven.Controls.Add(this.dateTimePicker2);
+            this.gpb_com_ven.Controls.Add(this.dtp_fecha2);
+            this.gpb_com_ven.Controls.Add(this.dtp_fecha1);
             this.gpb_com_ven.Controls.Add(this.rdb_factura);
             this.gpb_com_ven.Controls.Add(this.txt_comsx);
             this.gpb_com_ven.Controls.Add(this.txt_mar_c);
@@ -315,7 +314,6 @@
             this.gpb_com_ven.Controls.Add(this.txt_total_com);
             this.gpb_com_ven.Controls.Add(this.lbl_nom_ved);
             this.gpb_com_ven.Controls.Add(this.btn_generar);
-            this.gpb_com_ven.Controls.Add(this.dgv_comisiones);
             this.gpb_com_ven.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gpb_com_ven.Location = new System.Drawing.Point(8, 152);
             this.gpb_com_ven.Name = "gpb_com_ven";
@@ -350,19 +348,19 @@
             this.label4.TabIndex = 216;
             this.label4.Text = "DE";
             // 
-            // dateTimePicker3
+            // dtp_fecha2
             // 
-            this.dateTimePicker3.Location = new System.Drawing.Point(567, 90);
-            this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(200, 27);
-            this.dateTimePicker3.TabIndex = 215;
+            this.dtp_fecha2.Location = new System.Drawing.Point(567, 90);
+            this.dtp_fecha2.Name = "dtp_fecha2";
+            this.dtp_fecha2.Size = new System.Drawing.Size(200, 27);
+            this.dtp_fecha2.TabIndex = 215;
             // 
-            // dateTimePicker2
+            // dtp_fecha1
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(567, 54);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 27);
-            this.dateTimePicker2.TabIndex = 214;
+            this.dtp_fecha1.Location = new System.Drawing.Point(567, 54);
+            this.dtp_fecha1.Name = "dtp_fecha1";
+            this.dtp_fecha1.Size = new System.Drawing.Size(200, 27);
+            this.dtp_fecha1.TabIndex = 214;
             // 
             // rdb_factura
             // 
@@ -566,7 +564,7 @@
             // 
             // btn_generar
             // 
-            this.btn_generar.Location = new System.Drawing.Point(339, 293);
+            this.btn_generar.Location = new System.Drawing.Point(414, 293);
             this.btn_generar.Name = "btn_generar";
             this.btn_generar.Size = new System.Drawing.Size(114, 29);
             this.btn_generar.TabIndex = 175;
@@ -574,42 +572,23 @@
             this.btn_generar.UseVisualStyleBackColor = true;
             this.btn_generar.Click += new System.EventHandler(this.button1_Click);
             // 
-            // dgv_comisiones
+            // button1
             // 
-            this.dgv_comisiones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_comisiones.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ID_FACTURA,
-            this.TOTAL_FACTURA,
-            this.PORCENTAJE_COMISION,
-            this.TOTAL_COMISION});
-            this.dgv_comisiones.Location = new System.Drawing.Point(22, 137);
-            this.dgv_comisiones.Name = "dgv_comisiones";
-            this.dgv_comisiones.Size = new System.Drawing.Size(745, 150);
-            this.dgv_comisiones.TabIndex = 174;
+            this.button1.Location = new System.Drawing.Point(229, 293);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(103, 29);
+            this.button1.TabIndex = 219;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
-            // ID_FACTURA
+            // dataGridView1
             // 
-            this.ID_FACTURA.HeaderText = "ID_FACTURA";
-            this.ID_FACTURA.Name = "ID_FACTURA";
-            this.ID_FACTURA.Width = 120;
-            // 
-            // TOTAL_FACTURA
-            // 
-            this.TOTAL_FACTURA.HeaderText = "TOTAL_FACTURA";
-            this.TOTAL_FACTURA.Name = "TOTAL_FACTURA";
-            this.TOTAL_FACTURA.Width = 150;
-            // 
-            // PORCENTAJE_COMISION
-            // 
-            this.PORCENTAJE_COMISION.HeaderText = "PORCENTAJE";
-            this.PORCENTAJE_COMISION.Name = "PORCENTAJE_COMISION";
-            this.PORCENTAJE_COMISION.Width = 220;
-            // 
-            // TOTAL_COMISION
-            // 
-            this.TOTAL_COMISION.HeaderText = "TOTAL_COMISION";
-            this.TOTAL_COMISION.Name = "TOTAL_COMISION";
-            this.TOTAL_COMISION.Width = 175;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(127, 137);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(526, 150);
+            this.dataGridView1.TabIndex = 220;
             // 
             // frm_comisiones_vendedor
             // 
@@ -631,7 +610,7 @@
             this.gpb_nav.ResumeLayout(false);
             this.gpb_com_ven.ResumeLayout(false);
             this.gpb_com_ven.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_comisiones)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -655,8 +634,8 @@
         private System.Windows.Forms.GroupBox gpb_com_ven;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DateTimePicker dateTimePicker3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dtp_fecha2;
+        private System.Windows.Forms.DateTimePicker dtp_fecha1;
         private System.Windows.Forms.RadioButton rdb_factura;
         private System.Windows.Forms.TextBox txt_comsx;
         private System.Windows.Forms.TextBox txt_mar_c;
@@ -680,12 +659,9 @@
         private System.Windows.Forms.TextBox txt_total_com;
         private System.Windows.Forms.Label lbl_nom_ved;
         private System.Windows.Forms.Button btn_generar;
-        private System.Windows.Forms.DataGridView dgv_comisiones;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID_FACTURA;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TOTAL_FACTURA;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PORCENTAJE_COMISION;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TOTAL_COMISION;
         private System.Windows.Forms.TextBox txt_id_puesto_lb;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
