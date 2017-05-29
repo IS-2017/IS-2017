@@ -60,13 +60,13 @@
             this.comisionDeVendedorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.porMarcaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.porVendedorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.porLineaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.porProductoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.capacitacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.asistenciaCapacitaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.indemnizaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nominaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.vacacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.calificaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reporteDeEmpleadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.estadisticasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -97,7 +97,6 @@
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
-            this.calificaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
@@ -343,7 +342,6 @@
             this.comisionDeVendedorToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.porMarcaToolStripMenuItem,
             this.porVendedorToolStripMenuItem,
-            this.porLineaToolStripMenuItem,
             this.porProductoToolStripMenuItem});
             this.comisionDeVendedorToolStripMenuItem.Image = global::contrato_trabajo.Properties.Resources.Button_Add_icon;
             this.comisionDeVendedorToolStripMenuItem.Name = "comisionDeVendedorToolStripMenuItem";
@@ -361,12 +359,6 @@
             this.porVendedorToolStripMenuItem.Name = "porVendedorToolStripMenuItem";
             resources.ApplyResources(this.porVendedorToolStripMenuItem, "porVendedorToolStripMenuItem");
             this.porVendedorToolStripMenuItem.Click += new System.EventHandler(this.porVendedorToolStripMenuItem_Click);
-            // 
-            // porLineaToolStripMenuItem
-            // 
-            this.porLineaToolStripMenuItem.Name = "porLineaToolStripMenuItem";
-            resources.ApplyResources(this.porLineaToolStripMenuItem, "porLineaToolStripMenuItem");
-            this.porLineaToolStripMenuItem.Click += new System.EventHandler(this.porLineaToolStripMenuItem_Click);
             // 
             // porProductoToolStripMenuItem
             // 
@@ -409,6 +401,13 @@
             resources.ApplyResources(this.vacacionesToolStripMenuItem, "vacacionesToolStripMenuItem");
             this.vacacionesToolStripMenuItem.Tag = "13206";
             this.vacacionesToolStripMenuItem.Click += new System.EventHandler(this.vacacionesToolStripMenuItem_Click);
+            // 
+            // calificaToolStripMenuItem
+            // 
+            this.calificaToolStripMenuItem.Name = "calificaToolStripMenuItem";
+            resources.ApplyResources(this.calificaToolStripMenuItem, "calificaToolStripMenuItem");
+            this.calificaToolStripMenuItem.Tag = "13209";
+            this.calificaToolStripMenuItem.Click += new System.EventHandler(this.calificaToolStripMenuItem_Click);
             // 
             // reportesToolStripMenuItem
             // 
@@ -625,13 +624,6 @@
             this.toolStripProgressBar1.Name = "toolStripProgressBar1";
             resources.ApplyResources(this.toolStripProgressBar1, "toolStripProgressBar1");
             // 
-            // calificaToolStripMenuItem
-            // 
-            this.calificaToolStripMenuItem.Name = "calificaToolStripMenuItem";
-            resources.ApplyResources(this.calificaToolStripMenuItem, "calificaToolStripMenuItem");
-            this.calificaToolStripMenuItem.Tag = "13209";
-            this.calificaToolStripMenuItem.Click += new System.EventHandler(this.calificaToolStripMenuItem_Click);
-            // 
             // mdi_contenedor
             // 
             this.AllowDrop = true;
@@ -720,7 +712,6 @@
         private System.Windows.Forms.ToolStripMenuItem comisionDeVendedorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem porMarcaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem porVendedorToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem porLineaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem porProductoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem evaluaciónToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem asistenciaCapacitaciónToolStripMenuItem;

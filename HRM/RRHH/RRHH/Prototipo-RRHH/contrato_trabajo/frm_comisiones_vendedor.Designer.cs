@@ -44,6 +44,8 @@
             this.btn_actualizar = new System.Windows.Forms.Button();
             this.btn_cancelar = new System.Windows.Forms.Button();
             this.gpb_com_ven = new System.Windows.Forms.GroupBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
             this.txt_id_puesto_lb = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -73,8 +75,6 @@
             this.lbl_nom_ved = new System.Windows.Forms.Label();
             this.btn_generar = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.button1 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.gpb_nav.SuspendLayout();
             this.gpb_com_ven.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -321,6 +321,24 @@
             this.gpb_com_ven.TabIndex = 172;
             this.gpb_com_ven.TabStop = false;
             this.gpb_com_ven.Text = "Datos";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(127, 137);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(526, 150);
+            this.dataGridView1.TabIndex = 220;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(229, 293);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(103, 29);
+            this.button1.TabIndex = 219;
+            this.button1.Text = "Sincronizar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // txt_id_puesto_lb
             // 
@@ -571,24 +589,6 @@
             this.btn_generar.Text = "GENERAR";
             this.btn_generar.UseVisualStyleBackColor = true;
             this.btn_generar.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(229, 293);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(103, 29);
-            this.button1.TabIndex = 219;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(127, 137);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(526, 150);
-            this.dataGridView1.TabIndex = 220;
             // 
             // frm_comisiones_vendedor
             // 

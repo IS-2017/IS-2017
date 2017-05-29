@@ -639,12 +639,6 @@
   <data name="porVendedorToolStripMenuItem.Text" xml:space="preserve">
     <value>Por Vendedor</value>
   </data>
-  <data name="porLineaToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>186, 26</value>
-  </data>
-  <data name="porLineaToolStripMenuItem.Text" xml:space="preserve">
-    <value>Por Linea</value>
-  </data>
   <data name="porProductoToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>186, 26</value>
   </data>
@@ -968,7 +962,7 @@
     <value>Procesos</value>
   </data>
   <data name="reporteDeEmpleadosToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>156, 26</value>
+    <value>150, 26</value>
   </data>
   <data name="reporteDeEmpleadosToolStripMenuItem.Text" xml:space="preserve">
     <value>Bitacora</value>
@@ -10001,12 +9995,6 @@
   <data name="&gt;&gt;porVendedorToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;porLineaToolStripMenuItem.Name" xml:space="preserve">
-    <value>porLineaToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;porLineaToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;porProductoToolStripMenuItem.Name" xml:space="preserve">
     <value>porProductoToolStripMenuItem</value>
   </data>
@@ -10041,6 +10029,12 @@
     <value>vacacionesToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;vacacionesToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;calificaToolStripMenuItem.Name" xml:space="preserve">
+    <value>calificaToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;calificaToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;reportesToolStripMenuItem.Name" xml:space="preserve">
@@ -10216,12 +10210,6 @@
   </data>
   <data name="&gt;&gt;toolStripProgressBar1.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripProgressBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;calificaToolStripMenuItem.Name" xml:space="preserve">
-    <value>calificaToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;calificaToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>mdi_contenedor</value>
