@@ -81,6 +81,7 @@
             this.txt_fecha.Size = new System.Drawing.Size(8, 26);
             this.txt_fecha.TabIndex = 12;
             this.txt_fecha.Tag = "fecha";
+            this.txt_fecha.Visible = false;
             // 
             // dtp_fecha
             // 

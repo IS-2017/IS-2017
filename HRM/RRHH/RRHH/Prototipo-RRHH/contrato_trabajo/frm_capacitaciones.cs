@@ -410,37 +410,38 @@ namespace contrato_trabajo
 
 
                     }
-                    else if (dateTimePicker1.Value < dateTimePicker2.Value)
-                    {
-                        //MessageBox.Show("SEGUNDO MAYOR");
-                        txt_hfin.Text = cbo_hfin.Text;
-                        txt_hinicio.Text = cbo_hin.Text;
-
-                        TimeSpan first2 = TimeSpan.Parse(txt_hinicio.Text);
-                        TimeSpan second2 = TimeSpan.Parse(txt_hfin.Text);
-                        if (first2.CompareTo(second) == 1)
-                        {
-                            //   MessageBox.Show("Primero mayor");
-                        }
-                        if (first2.CompareTo(second) == -1)
-                        {
-                            //MessageBox.Show("Segundo mayor");
-                            guardar();
-                            actualizar();
-                            vaciar_tree();
-                        }
-                        if (first2.CompareTo(second) == 0)
-                        {
-                            //MessageBox.Show("Iguales");
-                        }
-
-
-                    }
-                    else if (dateTimePicker1.Value > dateTimePicker2.Value)
-                    {
-                        //MessageBox.Show("PRIMERO MAYOR");
-                    }
                 }
+                else if (dateTimePicker1.Value < dateTimePicker2.Value)
+                {
+                    //MessageBox.Show("SEGUNDO MAYOR");
+                    txt_hfin.Text = cbo_hfin.Text;
+                    txt_hinicio.Text = cbo_hin.Text;
+
+                    TimeSpan first2 = TimeSpan.Parse(txt_hinicio.Text);
+                    TimeSpan second2 = TimeSpan.Parse(txt_hfin.Text);
+                    if (first2.CompareTo(second2) == 1)
+                    {
+                        //   MessageBox.Show("Primero mayor");
+                    }
+                    if (first2.CompareTo(second2) == -1)
+                    {
+                        //MessageBox.Show("Segundo mayor");
+                        guardar();
+                        actualizar();
+                        vaciar_tree();
+                    }
+                    if (first2.CompareTo(second2) == 0)
+                    {
+                        //MessageBox.Show("Iguales");
+                    }
+
+
+                }
+                else if (dateTimePicker1.Value > dateTimePicker2.Value)
+                {
+                    //MessageBox.Show("PRIMERO MAYOR");
+                }
+                
                 vaciar_tree();
             }
             catch
