@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService1_ObtenerBodega_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerBodega" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtenerBodega_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerBodegaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtenerProductos_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerProductos" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtenerProductos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerProductosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtenerEncabezadoFactura_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerEncabezadoFactura" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtenerEncabezadoFactura_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerEncabezadoFacturaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtenerDetalleFactura_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerDetalleFactura" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtenerDetalleFactura_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerDetalleFacturaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtenerPrecio_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerPrecio" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtenerPrecio_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerPrecioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_PruebaCristian_InputMessage">
+    <wsdl:part name="parameters" element="tns:PruebaCristian" />
+  </wsdl:message>
+  <wsdl:message name="IService1_PruebaCristian_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PruebaCristianResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtenerProducto_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerProducto" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtenerProducto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerProductoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtenerMarca_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerMarca" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtenerMarca_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerMarcaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtenerVendedor_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerVendedor" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtenerVendedor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerVendedorResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService1">
+    <wsdl:operation name="ObtenerBodega">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtenerBodega" message="tns:IService1_ObtenerBodega_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtenerBodegaResponse" message="tns:IService1_ObtenerBodega_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerProductos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtenerProductos" message="tns:IService1_ObtenerProductos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtenerProductosResponse" message="tns:IService1_ObtenerProductos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerEncabezadoFactura">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtenerEncabezadoFactura" message="tns:IService1_ObtenerEncabezadoFactura_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtenerEncabezadoFacturaResponse" message="tns:IService1_ObtenerEncabezadoFactura_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerDetalleFactura">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtenerDetalleFactura" message="tns:IService1_ObtenerDetalleFactura_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtenerDetalleFacturaResponse" message="tns:IService1_ObtenerDetalleFactura_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerPrecio">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtenerPrecio" message="tns:IService1_ObtenerPrecio_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtenerPrecioResponse" message="tns:IService1_ObtenerPrecio_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PruebaCristian">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/PruebaCristian" message="tns:IService1_PruebaCristian_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/PruebaCristianResponse" message="tns:IService1_PruebaCristian_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerProducto">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtenerProducto" message="tns:IService1_ObtenerProducto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtenerProductoResponse" message="tns:IService1_ObtenerProducto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerMarca">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtenerMarca" message="tns:IService1_ObtenerMarca_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtenerMarcaResponse" message="tns:IService1_ObtenerMarca_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerVendedor">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtenerVendedor" message="tns:IService1_ObtenerVendedor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtenerVendedorResponse" message="tns:IService1_ObtenerVendedor_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ObtenerBodega">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtenerBodega" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerProductos">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtenerProductos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerEncabezadoFactura">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtenerEncabezadoFactura" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerDetalleFactura">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtenerDetalleFactura" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerPrecio">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtenerPrecio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PruebaCristian">
+      <soap:operation soapAction="http://tempuri.org/IService1/PruebaCristian" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerProducto">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtenerProducto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerMarca">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtenerMarca" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerVendedor">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtenerVendedor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="BasicHttpBinding_IService1" binding="tns:BasicHttpBinding_IService1">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/WebServiceCRM/Service1/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
