@@ -91,6 +91,24 @@
     <Compile Include="capa_negocio.cs" />
     <Compile Include="conexion.cs" />
     <Compile Include="Conexionmysql.cs" />
+    <Compile Include="DataSetNomina.cs">
+      <DependentUpon>DataSetNomina.xsd</DependentUpon>
+      <SubType>code</SubType>
+    </Compile>
+    <Compile Include="DataSetNomina.Designer.cs">
+      <DependentUpon>DataSetNomina.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet_devengos.cs">
+      <DependentUpon>DataSet_devengos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet_devengos.designer.cs">
+      <DependentUpon>DataSet_devengos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ds_deducciones.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ds_deducciones.xsd</DependentUpon>
+    </Compile>
     <Compile Include="dts_activos.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -153,6 +171,30 @@
     </Compile>
     <Compile Include="frm_bono_14.Designer.cs">
       <DependentUpon>frm_bono_14.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_calculo_horas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_calculo_horas.Designer.cs">
+      <DependentUpon>frm_calculo_horas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_calculo_horas_grid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_calculo_horas_grid.Designer.cs">
+      <DependentUpon>frm_calculo_horas_grid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_calculo_hora_descuento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_calculo_hora_descuento.Designer.cs">
+      <DependentUpon>frm_calculo_hora_descuento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_calculo_hora_descuento_grid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_calculo_hora_descuento_grid.Designer.cs">
+      <DependentUpon>frm_calculo_hora_descuento_grid.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_calculo_seguro_social.cs">
       <SubType>Form</SubType>
@@ -255,6 +297,18 @@
     </Compile>
     <Compile Include="frm_desglosar_nombre.designer.cs">
       <DependentUpon>frm_desglosar_nombre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_devengos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_devengos.Designer.cs">
+      <DependentUpon>frm_devengos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_devengos_grid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_devengos_grid.Designer.cs">
+      <DependentUpon>Frm_devengos_grid.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_empleado.cs">
       <SubType>Form</SubType>
@@ -382,6 +436,18 @@
     <Compile Include="frm_nomina_grid.Designer.cs">
       <DependentUpon>frm_nomina_grid.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm_otros_deduccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_otros_deduccion.Designer.cs">
+      <DependentUpon>Frm_otros_deduccion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_otros_deduccion_grif.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_otros_deduccion_grif.Designer.cs">
+      <DependentUpon>Frm_otros_deduccion_grif.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_progreso_reclutamiento.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -430,6 +496,18 @@
     <Compile Include="frm_reporte_activos.Designer.cs">
       <DependentUpon>frm_reporte_activos.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_reporte_deduccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_reporte_deduccion.Designer.cs">
+      <DependentUpon>frm_reporte_deduccion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_reporte_devengos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_reporte_devengos.Designer.cs">
+      <DependentUpon>Frm_reporte_devengos.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_reporte_jornada.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -465,6 +543,12 @@
     </Compile>
     <Compile Include="frm_vacaciones.designer.cs">
       <DependentUpon>frm_vacaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_viewerDeducion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_viewerDeducion.Designer.cs">
+      <DependentUpon>frm_viewerDeducion.cs</DependentUpon>
     </Compile>
     <Compile Include="ISR.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -557,6 +641,42 @@
       <DependentUpon>reporteActivos.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="reporte_devengos_halar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reporte_devengos_halar.Designer.cs">
+      <DependentUpon>reporte_devengos_halar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte_nomina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte_nomina.Designer.cs">
+      <DependentUpon>Reporte_nomina.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte_nomina_halar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte_nomina_halar.Designer.cs">
+      <DependentUpon>Reporte_nomina_halar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="rpt_deducciones.cs">
+      <SubType>Component</SubType>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_deducciones.rpt</DependentUpon>
+    </Compile>
+    <Compile Include="rpt_devengos.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_devengos.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rpt_nomina.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_nomina.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Service References\ServiceReference1\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -586,6 +706,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_bono_14.resx">
       <DependentUpon>frm_bono_14.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_calculo_horas.resx">
+      <DependentUpon>frm_calculo_horas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_calculo_horas_grid.resx">
+      <DependentUpon>frm_calculo_horas_grid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_calculo_hora_descuento.resx">
+      <DependentUpon>frm_calculo_hora_descuento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_calculo_hora_descuento_grid.resx">
+      <DependentUpon>frm_calculo_hora_descuento_grid.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_calculo_seguro_social.resx">
       <DependentUpon>frm_calculo_seguro_social.cs</DependentUpon>
@@ -641,6 +773,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_desglosar_nombre.resx">
       <DependentUpon>frm_desglosar_nombre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_devengos.resx">
+      <DependentUpon>frm_devengos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_devengos_grid.resx">
+      <DependentUpon>Frm_devengos_grid.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_empleado.resx">
       <DependentUpon>frm_empleado.cs</DependentUpon>
@@ -708,6 +846,12 @@
     <EmbeddedResource Include="frm_Otros.resx">
       <DependentUpon>frm_Otros.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Frm_otros_deduccion.resx">
+      <DependentUpon>Frm_otros_deduccion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_otros_deduccion_grif.resx">
+      <DependentUpon>Frm_otros_deduccion_grif.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_pago_impuestos.resx">
       <DependentUpon>frm_pago_impuestos.cs</DependentUpon>
     </EmbeddedResource>
@@ -735,6 +879,12 @@
     <EmbeddedResource Include="frm_reporte_activos.resx">
       <DependentUpon>frm_reporte_activos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_reporte_deduccion.resx">
+      <DependentUpon>frm_reporte_deduccion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_reporte_devengos.resx">
+      <DependentUpon>Frm_reporte_devengos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_reporte_jornada.resx">
       <DependentUpon>frm_reporte_jornada.cs</DependentUpon>
     </EmbeddedResource>
@@ -752,6 +902,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_vacaciones.resx">
       <DependentUpon>frm_vacaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_viewerDeducion.resx">
+      <DependentUpon>frm_viewerDeducion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ISR.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -801,6 +954,60 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>reporteActivos.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="reporte_devengos_halar.resx">
+      <DependentUpon>reporte_devengos_halar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte_nomina.resx">
+      <DependentUpon>Reporte_nomina.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte_nomina_halar.resx">
+      <DependentUpon>Reporte_nomina_halar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rpt_deducciones.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_deducciones.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rpt_devengos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_devengos.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rpt_nomina.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_nomina.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="DataSetNomina.xsc">
+      <DependentUpon>DataSetNomina.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetNomina.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetNomina1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetNomina.xss">
+      <DependentUpon>DataSetNomina.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet_devengos.xsc">
+      <DependentUpon>DataSet_devengos.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet_devengos.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_devengos1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet_devengos.xss">
+      <DependentUpon>DataSet_devengos.xsd</DependentUpon>
+    </None>
+    <None Include="ds_deducciones.xsc">
+      <DependentUpon>ds_deducciones.xsd</DependentUpon>
+    </None>
+    <None Include="ds_deducciones.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ds_deducciones.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ds_deducciones.xss">
+      <DependentUpon>ds_deducciones.xsd</DependentUpon>
+    </None>
     <None Include="dts_activos.xsc">
       <DependentUpon>dts_activos.xsd</DependentUpon>
     </None>

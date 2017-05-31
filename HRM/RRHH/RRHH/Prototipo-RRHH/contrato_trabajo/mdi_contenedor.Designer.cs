@@ -97,6 +97,15 @@
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
+            this.devengoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deduccionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nominaToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.devengoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.deduccionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.horasExtraToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.devengoExtraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.horasDescontadasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deducionExtraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
@@ -194,7 +203,9 @@
             this.funcionToolStripMenuItem,
             this.examenesToolStripMenuItem,
             this.areaDeTrabajoToolStripMenuItem,
-            this.nominaToolStripMenuItem});
+            this.nominaToolStripMenuItem,
+            this.devengoToolStripMenuItem,
+            this.deduccionesToolStripMenuItem});
             this.catalogoToolStripMenuItem.Image = global::contrato_trabajo.Properties.Resources.Edit_Document_icon1;
             this.catalogoToolStripMenuItem.Name = "catalogoToolStripMenuItem";
             resources.ApplyResources(this.catalogoToolStripMenuItem, "catalogoToolStripMenuItem");
@@ -412,7 +423,10 @@
             // reportesToolStripMenuItem
             // 
             this.reportesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.reporteDeEmpleadosToolStripMenuItem});
+            this.reporteDeEmpleadosToolStripMenuItem,
+            this.nominaToolStripMenuItem2,
+            this.devengoToolStripMenuItem1,
+            this.deduccionToolStripMenuItem});
             resources.ApplyResources(this.reportesToolStripMenuItem, "reportesToolStripMenuItem");
             this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
             this.reportesToolStripMenuItem.Tag = "13300";
@@ -624,6 +638,69 @@
             this.toolStripProgressBar1.Name = "toolStripProgressBar1";
             resources.ApplyResources(this.toolStripProgressBar1, "toolStripProgressBar1");
             // 
+            // devengoToolStripMenuItem
+            // 
+            this.devengoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.horasExtraToolStripMenuItem1,
+            this.devengoExtraToolStripMenuItem});
+            this.devengoToolStripMenuItem.Name = "devengoToolStripMenuItem";
+            resources.ApplyResources(this.devengoToolStripMenuItem, "devengoToolStripMenuItem");
+            this.devengoToolStripMenuItem.Tag = "13112";
+            // 
+            // deduccionesToolStripMenuItem
+            // 
+            this.deduccionesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.horasDescontadasToolStripMenuItem,
+            this.deducionExtraToolStripMenuItem});
+            this.deduccionesToolStripMenuItem.Name = "deduccionesToolStripMenuItem";
+            resources.ApplyResources(this.deduccionesToolStripMenuItem, "deduccionesToolStripMenuItem");
+            this.deduccionesToolStripMenuItem.Tag = "13113";
+            // 
+            // nominaToolStripMenuItem2
+            // 
+            this.nominaToolStripMenuItem2.Name = "nominaToolStripMenuItem2";
+            resources.ApplyResources(this.nominaToolStripMenuItem2, "nominaToolStripMenuItem2");
+            this.nominaToolStripMenuItem2.Tag = "13302";
+            this.nominaToolStripMenuItem2.Click += new System.EventHandler(this.nominaToolStripMenuItem2_Click);
+            // 
+            // devengoToolStripMenuItem1
+            // 
+            this.devengoToolStripMenuItem1.Name = "devengoToolStripMenuItem1";
+            resources.ApplyResources(this.devengoToolStripMenuItem1, "devengoToolStripMenuItem1");
+            this.devengoToolStripMenuItem1.Tag = "13303";
+            this.devengoToolStripMenuItem1.Click += new System.EventHandler(this.devengoToolStripMenuItem1_Click);
+            // 
+            // deduccionToolStripMenuItem
+            // 
+            this.deduccionToolStripMenuItem.Name = "deduccionToolStripMenuItem";
+            resources.ApplyResources(this.deduccionToolStripMenuItem, "deduccionToolStripMenuItem");
+            this.deduccionToolStripMenuItem.Tag = "13304";
+            this.deduccionToolStripMenuItem.Click += new System.EventHandler(this.deduccionToolStripMenuItem_Click);
+            // 
+            // horasExtraToolStripMenuItem1
+            // 
+            this.horasExtraToolStripMenuItem1.Name = "horasExtraToolStripMenuItem1";
+            resources.ApplyResources(this.horasExtraToolStripMenuItem1, "horasExtraToolStripMenuItem1");
+            this.horasExtraToolStripMenuItem1.Click += new System.EventHandler(this.horasExtraToolStripMenuItem1_Click);
+            // 
+            // devengoExtraToolStripMenuItem
+            // 
+            this.devengoExtraToolStripMenuItem.Name = "devengoExtraToolStripMenuItem";
+            resources.ApplyResources(this.devengoExtraToolStripMenuItem, "devengoExtraToolStripMenuItem");
+            this.devengoExtraToolStripMenuItem.Click += new System.EventHandler(this.devengoExtraToolStripMenuItem_Click);
+            // 
+            // horasDescontadasToolStripMenuItem
+            // 
+            this.horasDescontadasToolStripMenuItem.Name = "horasDescontadasToolStripMenuItem";
+            resources.ApplyResources(this.horasDescontadasToolStripMenuItem, "horasDescontadasToolStripMenuItem");
+            this.horasDescontadasToolStripMenuItem.Click += new System.EventHandler(this.horasDescontadasToolStripMenuItem_Click);
+            // 
+            // deducionExtraToolStripMenuItem
+            // 
+            this.deducionExtraToolStripMenuItem.Name = "deducionExtraToolStripMenuItem";
+            resources.ApplyResources(this.deducionExtraToolStripMenuItem, "deducionExtraToolStripMenuItem");
+            this.deducionExtraToolStripMenuItem.Click += new System.EventHandler(this.deducionExtraToolStripMenuItem_Click);
+            // 
             // mdi_contenedor
             // 
             this.AllowDrop = true;
@@ -719,6 +796,15 @@
         private System.Windows.Forms.ToolStripMenuItem nominaToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem vacacionesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem calificaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem devengoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem horasExtraToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem devengoExtraToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem deduccionesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem horasDescontadasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem deducionExtraToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem nominaToolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem devengoToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem deduccionToolStripMenuItem;
     }
 }
 

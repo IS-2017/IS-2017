@@ -71,6 +71,13 @@ namespace contrato_trabajo
         frm_impuesto_grid impuesto_grid;
         examen_evaluacion_grid frm_examenes;
         frm_calificacion_evaluacion_grid frm_cal_ex;
+        frm_calculo_horas_grid fhoras;
+        Frm_devengos_grid deve;
+        frm_calculo_hora_descuento_grid dhoras;
+        Frm_otros_deduccion_grif dedu;
+        Reporte_nomina renomina;
+        Frm_reporte_devengos redevengo;
+        frm_reporte_deduccion rededu;
 
         String usuario;
 
@@ -783,6 +790,118 @@ namespace contrato_trabajo
         void frm_cal_ex_FormClosed(object sender, EventArgs e)
         {
             frm_cal_ex = null;
+        }
+
+        private void horasExtraToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            if (fhoras == null)
+            {
+                fhoras = new frm_calculo_horas_grid();
+                fhoras.MdiParent = this;
+
+                fhoras.FormClosed += new FormClosedEventHandler(fhoras_FormClosed);
+                fhoras.Show();
+            }
+        }
+        public void fhoras_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            fhoras = null;
+        }
+
+        private void devengoExtraToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (deve == null)
+            {
+                deve = new Frm_devengos_grid();
+                deve.MdiParent = this;
+
+                deve.FormClosed += new FormClosedEventHandler(deve_FormClosed);
+                deve.Show();
+            }
+        }
+        public void deve_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            deve = null;
+        }
+
+        private void horasDescontadasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (dhoras == null)
+            {
+                dhoras = new frm_calculo_hora_descuento_grid();
+                dhoras.MdiParent = this;
+
+                dhoras.FormClosed += new FormClosedEventHandler(dhoras_FormClosed);
+                dhoras.Show();
+            }
+        }
+        public void dhoras_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            dhoras = null;
+        }
+
+        private void deducionExtraToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (dedu == null)
+            {
+                dedu = new Frm_otros_deduccion_grif();
+                dedu.MdiParent = this;
+
+                dedu.FormClosed += new FormClosedEventHandler(dedu_FormClosed);
+                dedu.Show();
+            }
+        }
+        public void dedu_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            dedu = null;
+        }
+
+        private void nominaToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            if (renomina == null)
+            {
+                renomina = new Reporte_nomina();
+                dedu.MdiParent = this;
+
+                renomina.FormClosed += new FormClosedEventHandler(reno_FormClosed);
+                renomina.Show();
+            }
+        }
+        public void reno_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            renomina = null;
+        }
+
+        private void devengoToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            if (redevengo == null)
+            {
+                redevengo = new Frm_reporte_devengos();
+                redevengo.MdiParent = this;
+
+                redevengo.FormClosed += new FormClosedEventHandler(rede_FormClosed);
+                redevengo.Show();
+            }
+        }
+        public void rede_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            redevengo = null;
+        }
+
+        private void deduccionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (rededu == null)
+            {
+                rededu = new frm_reporte_deduccion();
+                rededu.MdiParent = this;
+
+                rededu.FormClosed += new FormClosedEventHandler(rededu_FormClosed);
+                rededu.Show();
+            }
+        }
+        public void rededu_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            rededu = null;
         }
     }
 }

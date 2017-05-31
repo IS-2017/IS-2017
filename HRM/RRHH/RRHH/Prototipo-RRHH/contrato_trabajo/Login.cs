@@ -84,7 +84,7 @@ namespace contrato_trabajo
         {
             try
             {
-                seguridad.Conexion.DSN = "prueba2";
+                seguridad.Conexion.DSN = "crm";
                 txt_contraseña.PasswordChar = '*';
             }
             catch (Exception ex) { MessageBox.Show(ex.Message); }
