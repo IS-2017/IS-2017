@@ -64,7 +64,7 @@ namespace contrato_trabajo
         private void btn_actualizar_Click(object sender, EventArgs e)
         {
             capa_datos cd = new capa_datos();
-            dgv_horas.DataSource = cd.cargar("select id_tasa_pk,nombre_impuesto,porcentaje from tasa_impuesto where estado='ACTIVO'");
+            dgv_horas.DataSource = cd.cargar("id_hora_pk,descripcion,porcentaje from tasa_hora_extra where estado='ACTIVO'");
         }
 
         capa_datos cd = new capa_datos();
