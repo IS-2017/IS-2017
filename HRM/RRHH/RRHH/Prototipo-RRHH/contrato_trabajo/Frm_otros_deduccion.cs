@@ -53,8 +53,6 @@ namespace contrato_trabajo
         private void frm_Otros_Load(object sender, EventArgs e)
         {
            
-            fn.InhabilitarComponentes(groupbox_deduccion);
-            descripcion.Enabled = false;
         }
         FuncionesNavegador.CapaNegocio fn = new FuncionesNavegador.CapaNegocio();
         Boolean Editar;
@@ -79,6 +77,8 @@ namespace contrato_trabajo
             else
             {
                 this.txt_nombre.Text = nombre_deduccion;
+                ca.llenar_id_empleado(cbo_cod_Empleado);
+                cbo_cod_Empleado.SelectedIndex = -1;
             }
         }
 
@@ -100,7 +100,7 @@ namespace contrato_trabajo
             {
                 if (Editar)
                 {
-                   cr.Ejecutar_Mysql("update deducciones set fecha= '"+Fecha.Value.ToString("yyyy-MM-dd")+"',nombre_deduccion ='"+txt_nombre.Text+"',descripcion='"+descripcion.Text+"',cantidad_deduccion='"+cantidad.Text+"' where id_empleado_pk = '"+cbo_cod_Empleado.Text+"'");
+                   cr.Ejecutar_Mysql("update deducciones set fecha= '"+Fecha.Value.ToString("yyyy-MM-dd")+"',nombre_deduccion ='"+txt_nombre.Text+"',descripcion='"+descripcion.Text+"',cantidad_deduccion='"+cantidad.Text+"' where id_deduccion_pk = '"+codigo+"'");
                     MessageBox.Show("Modificación de Deducción Realizada con Exito");
                 }
                 else
@@ -241,7 +241,7 @@ namespace contrato_trabajo
         {
             try
             {
-                dg.DataSource = ca.cargar("select id_deduccion_pk, fecha, nombre_deduccion, descripcion, cantidad_deduccion, id_empleado_pk from deducciones where nombre_deduccion = 'deduccion extra' and estado = 'activo';");
+                dg.DataSource = ca.cargar("select id_deduccion_pk, fecha, nombre_deduccion, descripcion, cantidad_deduccion, id_empleado_pk from deducciones where nombre_deduccion = 'deduccion extra' and estado = 'activo' order by id_deduccion_pk;");
                 dg.Columns[0].HeaderText = "ID deducción";
                 dg.Columns[1].HeaderText = "Fecha";
                 dg.Columns[2].HeaderText = "Nombre Deducción";
@@ -255,6 +255,12 @@ namespace contrato_trabajo
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void cantidad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validar v = new Validar();
+            v.validacion_solonumeros(e);
         }
     }
     }

@@ -188,6 +188,7 @@
             this.btn_buscar.Size = new System.Drawing.Size(87, 80);
             this.btn_buscar.TabIndex = 4;
             this.btn_buscar.UseVisualStyleBackColor = true;
+            this.btn_buscar.Click += new System.EventHandler(this.btn_buscar_Click);
             // 
             // btn_actualizar
             // 

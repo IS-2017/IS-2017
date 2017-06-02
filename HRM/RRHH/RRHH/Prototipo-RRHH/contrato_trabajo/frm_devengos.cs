@@ -19,8 +19,7 @@ namespace contrato_trabajo
 
         private void frm_devengos_Load(object sender, EventArgs e)
         {
-            fn.InhabilitarComponentes(groupbox_devengo);
-            descripcion.Enabled = false;
+            
         }
 
         FuncionesNavegador.CapaNegocio fn = new FuncionesNavegador.CapaNegocio();
@@ -46,6 +45,8 @@ namespace contrato_trabajo
             else
             {
                 this.txt_nombre.Text = nombre_devengo;
+                ca.llenar_id_empleado(cbo_cod_Empleado);
+                cbo_cod_Empleado.SelectedIndex = -1;
             }
         }
 
@@ -61,27 +62,7 @@ namespace contrato_trabajo
             descripcion.Enabled = true;
         }
         capa_datos cr = new capa_datos();
-        private void btn_guardar_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (Editar)
-                {
-                    cr.Ejecutar_Mysql("update devengos set fecha= '" + Fecha.Value.ToString("yyyy-MM-dd") + "',nombre_devengo ='" + txt_nombre.Text + "',descripcion='" + descripcion.Text + "',cantidad_devengado='" + cantidad.Text + "' where id_empleado_pk = '" + cbo_cod_Empleado.Text + "'");
-                    MessageBox.Show("Modificación de Devengo Realizada con Exito");
-                }
-                else
-                {
-                    string estado = "activo";
-                    cr.Ejecutar_Mysql("insert into devengos(id_devengo_pk, fecha, nombre_devengo, descripcion, cantidad_devengado,estado, id_empleado_pk) values (null,'" + Fecha.Value.ToString("yyyy-MM-dd") + "','" + txt_nombre.Text + "','" + descripcion.Text + "','" + cantidad.Text + "','" + estado + "','" + cbo_cod_Empleado.SelectedValue.ToString() + "');");
-                    MessageBox.Show("Inserción de Deducción Ingresada con Exito");
-                }
-            }
-            catch (Exception Ex)
-            {
-                MessageBox.Show(Ex.Message);
-            }
-        }
+       
 
         private void btn_editar_Click(object sender, EventArgs e)
         {
@@ -114,8 +95,8 @@ namespace contrato_trabajo
                 if (resultado == DialogResult.Yes)
                 {
                     string estado = "inactivo";
-                    ca.Ejecutar_Mysql("update devengos set estado ='" + estado + "' where id_deduccion_pk = '" + codigo2 + "';");
-                    MessageBox.Show("Eliminación de Deducción realizada con exito");
+                    ca.Ejecutar_Mysql("update devengos set estado ='" + estado + "' where id_devengo_pk = '" + codigo2 + "';");
+                    MessageBox.Show("Eliminación de Devengo realizada con exito");
 
                     dg.DataSource = ca.cargar("select id_devengo_pk, fecha, nombre_devengo, descripcion, cantidad_devengado, id_empleado_pk from devengos where nombre_devengo = 'devengo extra' and estado ='activo';");
                     dg.Columns[0].HeaderText = "ID devengo";
@@ -156,7 +137,7 @@ namespace contrato_trabajo
 
         private void btn_actualizar_Click(object sender, EventArgs e)
         {
-            dg.DataSource = ca.cargar("select id_devengo_pk, fecha, nombre_devengo, descripcion, cantidad_devengado, id_empleado_pk from devengos where nombre_devengo = 'devengo extra' and estado ='activo';");
+            dg.DataSource = ca.cargar("select id_devengo_pk, fecha, nombre_devengo, descripcion, cantidad_devengado, id_empleado_pk from devengos where nombre_devengo = 'devengo extra' and estado ='activo' order by id_devengo_pk;");
             dg.Columns[0].HeaderText = "ID devengo";
             dg.Columns[1].HeaderText = "Fecha";
             dg.Columns[2].HeaderText = "Nombre Devengo";
@@ -208,6 +189,34 @@ namespace contrato_trabajo
         private void btn_buscar_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_guardar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (Editar == true)
+                {
+                    cr.Ejecutar_Mysql("update devengos set fecha= '" + Fecha.Value.ToString("yyyy-MM-dd") + "',nombre_devengo ='" + txt_nombre.Text + "',descripcion='" + descripcion.Text + "',cantidad_devengado='" + cantidad.Text + "' where id_devengo_pk = '" + codigo + "'");
+                    MessageBox.Show("Modificación de Devengo Realizada con Exito");
+                }
+                else
+                {
+                    string estado = "activo";
+                    cr.Ejecutar_Mysql("insert into devengos(id_devengo_pk, fecha, nombre_devengo, descripcion, cantidad_devengado,estado, id_empleado_pk) values (null,'" + Fecha.Value.ToString("yyyy-MM-dd") + "','" + txt_nombre.Text + "','" + descripcion.Text + "','" + cantidad.Text + "','" + estado + "','" + cbo_cod_Empleado.SelectedValue.ToString() + "');");
+                    MessageBox.Show("Inserción de Devengo Ingresada con Exito");
+                }
+            }
+            catch (Exception Ex)
+            {
+                MessageBox.Show(Ex.Message);
+            }
+        }
+
+        private void cantidad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validar v = new Validar();
+            v.validacion_solonumeros(e);
         }
     }
 }

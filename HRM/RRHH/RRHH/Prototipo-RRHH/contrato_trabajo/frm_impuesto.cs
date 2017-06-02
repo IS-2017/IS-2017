@@ -129,7 +129,7 @@ namespace contrato_trabajo
         private void btn_actualizar_Click(object sender, EventArgs e)
         {
             capa_datos cd = new capa_datos();
-            this.dg.DataSource = cd.cargar("select id_tasa_pk,minimo_sueldo,maximo_sueldo,porcentaje from tasa_impuesto where estado='ACTIVO'");
+            this.dg.DataSource = cd.cargar("select id_tasa_pk,minimo_sueldo,maximo_sueldo,porcentaje from tasa_impuesto where estado='ACTIVO' order by id_tasa_pk");
 
         }
 
@@ -149,6 +149,12 @@ namespace contrato_trabajo
             {
                 MessageBox.Show("No se ha seleccionado ningun registro a modificar", "Favor Verificar", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void txt_porcentaje_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validar v = new Validar();
+            v.validacion_solonumeros(e);
         }
     }
 }

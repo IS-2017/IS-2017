@@ -21,7 +21,6 @@ namespace contrato_trabajo
         frm_area_grid frm_area;
         frm_asistencia_cap frm_asistencia_cap;
         frm_bono_14 bono14;
-        frm_calculo_seguro_social calculo_seguro_social;
         frm_seguro_social_grid seguro_ssocial;
         frm_cancelar_nominas cancelar_nomina;
         frm_candidato candidato;
@@ -39,11 +38,11 @@ namespace contrato_trabajo
         frm_grid_funcion funcion_grid;
         frm_grid_candidato candidato_grid;
         frm_grid_medio_distribucion medio_difucion;
-        frm_horas_extras horas_extra;
+        //frm_horas_extras horas_extra;
         frm_jornada_grid jornada_grid;
-        frm_nomina_grid nomina_grid;
-        frm_Otros otros;
-        frm_pago_impuestos pago_impuestos;
+        //frm_nomina_grid nomina_grid;
+        //frm_Otros otros;
+        // frm_pago_impuestos pago_impuestos;
         frm_perfil_reclutamiento_grid perfil_reclutamiento;
         frm_indemnizacion indemnizacion;
         frm_prestaciones prestaciones;
@@ -861,7 +860,7 @@ namespace contrato_trabajo
             if (renomina == null)
             {
                 renomina = new Reporte_nomina();
-                dedu.MdiParent = this;
+                renomina.MdiParent = this;
 
                 renomina.FormClosed += new FormClosedEventHandler(reno_FormClosed);
                 renomina.Show();

@@ -70,6 +70,7 @@
             this.txt_porcentaje.Size = new System.Drawing.Size(290, 22);
             this.txt_porcentaje.TabIndex = 192;
             this.txt_porcentaje.Tag = "Porcentaje";
+            this.txt_porcentaje.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_porcentaje_KeyPress);
             // 
             // label2
             // 

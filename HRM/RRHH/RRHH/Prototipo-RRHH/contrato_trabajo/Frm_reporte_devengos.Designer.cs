@@ -40,17 +40,15 @@
             this.btn_buscar = new System.Windows.Forms.Button();
             this.btn_actualizar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.cbo_empleado = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.dateTimePickerfin = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePickerinicio = new System.Windows.Forms.DateTimePicker();
             this.cbo_empresa = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dgv_devengos = new System.Windows.Forms.DataGridView();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.button2 = new System.Windows.Forms.Button();
+            this.dateTimePickerinicio = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePickerfin = new System.Windows.Forms.DateTimePicker();
             this.gpb_navegador.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_devengos)).BeginInit();
@@ -60,7 +58,7 @@
             // 
             this.lbl_form_emp.AutoSize = true;
             this.lbl_form_emp.Font = new System.Drawing.Font("Microsoft Sans Serif", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_form_emp.Location = new System.Drawing.Point(414, 30);
+            this.lbl_form_emp.Location = new System.Drawing.Point(460, 30);
             this.lbl_form_emp.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_form_emp.Name = "lbl_form_emp";
             this.lbl_form_emp.Size = new System.Drawing.Size(341, 39);
@@ -220,86 +218,31 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.radioButton2);
+            this.groupBox1.Controls.Add(this.radioButton1);
             this.groupBox1.Controls.Add(this.cbo_empleado);
-            this.groupBox1.Controls.Add(this.comboBox2);
-            this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.dateTimePickerfin);
             this.groupBox1.Controls.Add(this.dateTimePickerinicio);
             this.groupBox1.Controls.Add(this.cbo_empresa);
-            this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.dgv_devengos);
             this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(20, 191);
+            this.groupBox1.Location = new System.Drawing.Point(2, 191);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1271, 480);
+            this.groupBox1.Size = new System.Drawing.Size(1289, 480);
             this.groupBox1.TabIndex = 199;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Información de Nomina:";
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(20, 314);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(124, 18);
-            this.label4.TabIndex = 214;
-            this.label4.Text = "Fecha Fin Pago:";
-            // 
             // cbo_empleado
             // 
             this.cbo_empleado.FormattingEnabled = true;
-            this.cbo_empleado.Location = new System.Drawing.Point(7, 175);
+            this.cbo_empleado.Location = new System.Drawing.Point(6, 176);
             this.cbo_empleado.Name = "cbo_empleado";
             this.cbo_empleado.Size = new System.Drawing.Size(192, 28);
             this.cbo_empleado.TabIndex = 213;
             this.cbo_empleado.DropDownClosed += new System.EventHandler(this.cbo_empleado_DropDownClosed);
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(6, 175);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(193, 28);
-            this.comboBox2.TabIndex = 212;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(6, 154);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(194, 18);
-            this.label3.TabIndex = 211;
-            this.label3.Text = "Busqueda por Empleado:";
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button2.Location = new System.Drawing.Point(48, 381);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(93, 32);
-            this.button2.TabIndex = 210;
-            this.button2.Text = "Filtrar";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // dateTimePickerfin
-            // 
-            this.dateTimePickerfin.Location = new System.Drawing.Point(-1, 335);
-            this.dateTimePickerfin.Name = "dateTimePickerfin";
-            this.dateTimePickerfin.Size = new System.Drawing.Size(200, 26);
-            this.dateTimePickerfin.TabIndex = 209;
-            // 
-            // dateTimePickerinicio
-            // 
-            this.dateTimePickerinicio.Location = new System.Drawing.Point(0, 276);
-            this.dateTimePickerinicio.Name = "dateTimePickerinicio";
-            this.dateTimePickerinicio.Size = new System.Drawing.Size(200, 26);
-            this.dateTimePickerinicio.TabIndex = 208;
             // 
             // cbo_empresa
             // 
@@ -310,21 +253,11 @@
             this.cbo_empresa.TabIndex = 207;
             this.cbo_empresa.DropDownClosed += new System.EventHandler(this.cbo_empresa_DropDownClosed);
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(20, 255);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(145, 18);
-            this.label2.TabIndex = 200;
-            this.label2.Text = "Fecha Inicio Pago:";
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 66);
+            this.label1.Location = new System.Drawing.Point(7, 66);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(181, 18);
             this.label1.TabIndex = 199;
@@ -335,13 +268,62 @@
             this.dgv_devengos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgv_devengos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgv_devengos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_devengos.Location = new System.Drawing.Point(212, 24);
+            this.dgv_devengos.Location = new System.Drawing.Point(221, 24);
             this.dgv_devengos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgv_devengos.Name = "dgv_devengos";
             this.dgv_devengos.ReadOnly = true;
             this.dgv_devengos.RowTemplate.Height = 24;
             this.dgv_devengos.Size = new System.Drawing.Size(1053, 456);
             this.dgv_devengos.TabIndex = 198;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(3, 146);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(196, 24);
+            this.radioButton1.TabIndex = 200;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Filtrado por empleado:";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(3, 235);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(172, 24);
+            this.radioButton2.TabIndex = 201;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Filtrado por Fechas:";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button2.Location = new System.Drawing.Point(41, 337);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(93, 32);
+            this.button2.TabIndex = 210;
+            this.button2.Text = "Filtrar";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // dateTimePickerinicio
+            // 
+            this.dateTimePickerinicio.Location = new System.Drawing.Point(-4, 262);
+            this.dateTimePickerinicio.Name = "dateTimePickerinicio";
+            this.dateTimePickerinicio.Size = new System.Drawing.Size(200, 26);
+            this.dateTimePickerinicio.TabIndex = 208;
+            // 
+            // dateTimePickerfin
+            // 
+            this.dateTimePickerfin.Location = new System.Drawing.Point(-4, 305);
+            this.dateTimePickerfin.Name = "dateTimePickerfin";
+            this.dateTimePickerfin.Size = new System.Drawing.Size(200, 26);
+            this.dateTimePickerfin.TabIndex = 209;
             // 
             // Frm_reporte_devengos
             // 
@@ -376,17 +358,15 @@
         private System.Windows.Forms.Button btn_buscar;
         private System.Windows.Forms.Button btn_actualizar;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.ComboBox cbo_empresa;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView dgv_devengos;
+        private System.Windows.Forms.ComboBox cbo_empleado;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DateTimePicker dateTimePickerfin;
         private System.Windows.Forms.DateTimePicker dateTimePickerinicio;
-        private System.Windows.Forms.ComboBox cbo_empresa;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dgv_devengos;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox cbo_empleado;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button1;
     }
 }

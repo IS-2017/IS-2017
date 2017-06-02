@@ -140,7 +140,7 @@
             // 
             // btn_guardar
             // 
-            this.btn_guardar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_guardar.BackgroundImage")));
+            this.btn_guardar.BackgroundImage = global::contrato_trabajo.Properties.Resources.Save_icon;
             this.btn_guardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_guardar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_guardar.FlatAppearance.BorderSize = 0;
@@ -452,6 +452,7 @@
             this.cantidad.Size = new System.Drawing.Size(121, 24);
             this.cantidad.TabIndex = 27;
             this.cantidad.Tag = "Cantidad Devengado";
+            this.cantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cantidad_KeyPress);
             // 
             // label7
             // 

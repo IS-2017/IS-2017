@@ -70,7 +70,7 @@ namespace contrato_trabajo
 
         private void btn_actualizar_Click(object sender, EventArgs e)
         {
-            dgv_calculo.DataSource = cd.cargar("select id_devengo_pk, fecha, nombre_devengo, descripcion, cantidad_devengado, cantidad_horas_extra, id_empleado_pk from devengos where nombre_devengo = 'horas extra' and estado = 'ACTIVO'");
+            dgv_calculo.DataSource = cd.cargar("select id_devengo_pk, fecha, nombre_devengo, descripcion, cantidad_devengado, cantidad_horas_extra, id_empleado_pk from devengos where nombre_devengo = 'horas extra' and estado = 'ACTIVO' order by id_devengo_pk");
         }
 
         private void btn_ultimo_Click(object sender, EventArgs e)
@@ -108,7 +108,7 @@ namespace contrato_trabajo
         CapaNegocio fn = new CapaNegocio();
         private void frm_calculo_horas_grid_Load(object sender, EventArgs e)
         {
-            dgv_calculo.DataSource = cd.cargar("select id_devengo_pk,fecha,nombre_devengo,descripcion,cantidad_devengado,cantidad_horas_extra,id_empleado_pk from devengos where nombre_devengo='horas extra' and estado='ACTIVO'");
+            dgv_calculo.DataSource = cd.cargar("select id_devengo_pk,fecha,nombre_devengo,descripcion,cantidad_devengado,cantidad_horas_extra,id_empleado_pk from devengos where nombre_devengo='horas extra' and estado='ACTIVO' order by id_devengo_pk");
         }
     }
 }

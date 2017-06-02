@@ -31,6 +31,11 @@ namespace contrato_trabajo
 
                 dgv_devengos.DataSource = ca.cargar("select empleado.id_empleado_pk, concat(nombre_emp,' ', apellido_emp)as nombre, empleado.id_empresa_pk, nombre_empresa, nombre_devengo, fecha, cantidad_devengado, cantidad_horas_extra from empleado inner join devengos on empleado.id_empleado_pk = devengos.id_empleado_pk inner join empresa on empleado.id_empresa_pk =  empresa.id_empresa_pk");
 
+                button2.Enabled = false;
+                dateTimePickerinicio.Enabled = false;
+                dateTimePickerfin.Enabled = false;
+                cbo_empleado.Enabled = false;
+
             }
             catch
             {
@@ -100,6 +105,22 @@ namespace contrato_trabajo
         private void btn_actualizar_Click(object sender, EventArgs e)
         {
             dgv_devengos.DataSource = ca.cargar("select empleado.id_empleado_pk, concat(nombre_emp,' ', apellido_emp)as nombre, empleado.id_empresa_pk, nombre_empresa, nombre_devengo, fecha, cantidad_devengado, cantidad_horas_extra from empleado inner join devengos on empleado.id_empleado_pk = devengos.id_empleado_pk inner join empresa on empleado.id_empresa_pk =  empresa.id_empresa_pk");
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            cbo_empresa.SelectedIndex = -1;
+            cbo_empleado.Enabled = true;
+
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            cbo_empleado.SelectedIndex = -1;
+            cbo_empresa.SelectedIndex = -1;
+            dateTimePickerinicio.Enabled = true;
+            dateTimePickerfin.Enabled = true;
+            button2.Enabled = true;
         }
     }
 

@@ -197,7 +197,7 @@
             // 
             this.lbl_form_emp.AutoSize = true;
             this.lbl_form_emp.Font = new System.Drawing.Font("Century Gothic", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_form_emp.Location = new System.Drawing.Point(157, 11);
+            this.lbl_form_emp.Location = new System.Drawing.Point(440, 9);
             this.lbl_form_emp.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_form_emp.Name = "lbl_form_emp";
             this.lbl_form_emp.Size = new System.Drawing.Size(473, 42);

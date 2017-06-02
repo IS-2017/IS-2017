@@ -431,47 +431,9 @@ namespace contrato_trabajo
         double bonoIn = 250;
         double deduccion_legal = 36000.00;
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            frm_horas_extras frm = new frm_horas_extras();
-            string id_empleado= Convert.ToString(dgv_nonimas.CurrentRow.Cells[1].Value);
-            string nombre_jornada = ca.nombre_jornada(id_empleado);
-            double sueldo =  ca.ObtenerSueldo(id_empleado);
-            double precio_dia = sueldo / 30;
+       
 
-
-            if (nombre_jornada == "matutina")
-            {
-                double precio_hora_matutina = precio_dia / 8;
-                double precio_aproximado_matutina = Math.Round(precio_hora_matutina, 2);
-                frm.txt_precio_hora.Text = precio_aproximado_matutina.ToString();
-
-            }
-            if (nombre_jornada == "vespertina")
-            {
-                double precio_hora_vespertina = precio_dia / 6;
-                double precio_aproximado_vespertina = Math.Round(precio_hora_vespertina, 2);
-                frm.txt_precio_hora.Text = precio_aproximado_vespertina.ToString();
-            }
-            if (nombre_jornada == "mixta")
-            {
-                double precio_hora_mixta = precio_dia / 7;
-                double precio_aproximado_mixta = Math.Round(precio_hora_mixta, 2);
-                frm.txt_precio_hora.Text = precio_aproximado_mixta.ToString();
-
-            }
-
-            frm.Show();
-            
-
-        }
-
-        private void btn_otros_Click(object sender, EventArgs e)
-        {
-            frm_Otros otros = new frm_Otros();
-            otros.txt_id_empleado.Text = dgv_nonimas.CurrentRow.Cells[1].Value.ToString();
-            otros.Show();
-        }
+        
 
         private void btn_guardar_Click(object sender, EventArgs e)
         {
