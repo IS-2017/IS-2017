@@ -64,13 +64,13 @@ namespace contrato_trabajo
         private void btn_actualizar_Click(object sender, EventArgs e)
         {
             capa_datos cd = new capa_datos();
-            dgv_horas.DataSource = cd.cargar("id_hora_pk,descripcion,porcentaje from tasa_hora_extra where estado='ACTIVO'");
+            dgv_horas.DataSource = cd.cargar("id_hora_pk,descripcion,porcentaje from tasa_hora_extra where estado='ACTIVO' order by id_hora_pk");
         }
 
         capa_datos cd = new capa_datos();
         private void frm_hora_extras_grid_Load(object sender, EventArgs e)
         {
-            dgv_horas.DataSource = cd.cargar("select id_hora_pk,descripcion,porcentaje from tasa_hora_extra where estado='ACTIVO'");
+            dgv_horas.DataSource = cd.cargar("select id_hora_pk,descripcion,porcentaje from tasa_hora_extra where estado='ACTIVO' order by id_hora_pk");
             dgv_horas.Columns[0].HeaderText = "ID Tasa";
             dgv_horas.Columns[1].HeaderText = "Nombre";
             dgv_horas.Columns[2].HeaderText = "Porcentaje";

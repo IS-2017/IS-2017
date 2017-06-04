@@ -50,7 +50,7 @@ namespace contrato_trabajo
         capa_datos ca = new capa_datos();
         private void Frm_otros_deduccion_grif_Load(object sender, EventArgs e)
         {
-            dgv_deduccion.DataSource = ca.cargar("select id_deduccion_pk, fecha, nombre_deduccion, descripcion, cantidad_deduccion, id_empleado_pk from deducciones where nombre_deduccion = 'deduccion extra' and estado ='activo';");
+            dgv_deduccion.DataSource = ca.cargar("select id_deduccion_pk, fecha, nombre_deduccion, descripcion, cantidad_deduccion, id_empleado_pk from deducciones where nombre_deduccion = 'deduccion extra' and estado ='activo' order by id_deduccion_pk;");
             dgv_deduccion.Columns[0].HeaderText = "ID deducción";
             dgv_deduccion.Columns[1].HeaderText = "Fecha";
             dgv_deduccion.Columns[2].HeaderText = "Nombre Deducción";
@@ -64,7 +64,7 @@ namespace contrato_trabajo
 
         private void btn_actualizar_Click(object sender, EventArgs e)
         {
-            dgv_deduccion.DataSource = ca.cargar("select id_deduccion_pk, fecha, nombre_deduccion, descripcion, cantidad_deduccion, id_empleado_pk from deducciones where nombre_deduccion = 'deduccion extra' and estado = 'activo';");
+            dgv_deduccion.DataSource = ca.cargar("select id_deduccion_pk, fecha, nombre_deduccion, descripcion, cantidad_deduccion, id_empleado_pk from deducciones where nombre_deduccion = 'deduccion extra' and estado = 'activo' order by id_deduccion_pk;");
             dgv_deduccion.Columns[0].HeaderText = "ID deducción";
             dgv_deduccion.Columns[1].HeaderText = "Fecha";
             dgv_deduccion.Columns[2].HeaderText = "Nombre Deducción";
@@ -75,6 +75,12 @@ namespace contrato_trabajo
         }
 
         string cod_deduccion, id_Empleado, fecha, descricpion, cantidad, nombre_deduccion;
+
+        private void btn_buscar_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void dgv_deduccion_DoubleClick(object sender, EventArgs e)
         {
             Editar1 = true;

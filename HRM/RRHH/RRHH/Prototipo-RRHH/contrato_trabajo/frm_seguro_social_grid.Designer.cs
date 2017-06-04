@@ -216,6 +216,7 @@
             this.Controls.Add(this.lbl_form_emp);
             this.Controls.Add(this.gpb_navegador);
             this.Name = "frm_seguro_social_grid";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frm_seguro_social";
             this.Load += new System.EventHandler(this.frm_seguro_social_grid_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_social)).EndInit();

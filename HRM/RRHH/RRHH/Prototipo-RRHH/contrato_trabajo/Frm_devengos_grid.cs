@@ -39,7 +39,7 @@ namespace contrato_trabajo
         capa_datos ca = new capa_datos();
         private void Frm_devengos_grid_Load(object sender, EventArgs e)
         {
-            dgv_devengos.DataSource = ca.cargar("select id_devengo_pk, fecha, nombre_devengo, descripcion, cantidad_devengado, id_empleado_pk from devengos where nombre_devengo = 'devengo extra' and estado ='activo';");
+            dgv_devengos.DataSource = ca.cargar("select id_devengo_pk, fecha, nombre_devengo, descripcion, cantidad_devengado, id_empleado_pk from devengos where nombre_devengo = 'devengo extra' and estado ='activo' order by id_devengo_pk;");
             dgv_devengos.Columns[0].HeaderText = "ID devengo";
             dgv_devengos.Columns[1].HeaderText = "Fecha";
             dgv_devengos.Columns[2].HeaderText = "Nombre Devengo";
@@ -51,7 +51,7 @@ namespace contrato_trabajo
 
         private void btn_actualizar_Click(object sender, EventArgs e)
         {
-            dgv_devengos.DataSource = ca.cargar("select id_devengo_pk, fecha, nombre_devengo, descripcion, cantidad_devengado, id_empleado_pk from devengos where nombre_devengo = 'devengo extra' and estado ='activo';");
+            dgv_devengos.DataSource = ca.cargar("select id_devengo_pk, fecha, nombre_devengo, descripcion, cantidad_devengado, id_empleado_pk from devengos where nombre_devengo = 'devengo extra' and estado ='activo' order by id_devengo_pk;");
             dgv_devengos.Columns[0].HeaderText = "ID devengo";
             dgv_devengos.Columns[1].HeaderText = "Fecha";
             dgv_devengos.Columns[2].HeaderText = "Nombre Devengo";

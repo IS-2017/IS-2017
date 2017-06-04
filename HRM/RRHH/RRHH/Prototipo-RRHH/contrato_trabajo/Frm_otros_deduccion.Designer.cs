@@ -30,6 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_otros_deduccion));
             this.groupbox_deduccion = new System.Windows.Forms.GroupBox();
+            this.txt_descripcion = new System.Windows.Forms.TextBox();
+            this.txt_fecha = new System.Windows.Forms.TextBox();
+            this.txt_cod = new System.Windows.Forms.TextBox();
+            this.txt_nombre = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
             this.Fecha = new System.Windows.Forms.DateTimePicker();
             this.cbo_cod_Empleado = new System.Windows.Forms.ComboBox();
@@ -38,6 +43,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.descripcion = new System.Windows.Forms.RichTextBox();
+            this.cantidad = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -54,12 +60,6 @@
             this.btn_buscar = new System.Windows.Forms.Button();
             this.btn_actualizar = new System.Windows.Forms.Button();
             this.btn_cancelar = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txt_nombre = new System.Windows.Forms.TextBox();
-            this.txt_cod = new System.Windows.Forms.TextBox();
-            this.txt_fecha = new System.Windows.Forms.TextBox();
-            this.txt_descripcion = new System.Windows.Forms.TextBox();
-            this.cantidad = new System.Windows.Forms.TextBox();
             this.groupbox_deduccion.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -91,6 +91,54 @@
             this.groupbox_deduccion.TabStop = false;
             this.groupbox_deduccion.Text = "Información de Deducción:";
             this.groupbox_deduccion.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // txt_descripcion
+            // 
+            this.txt_descripcion.Location = new System.Drawing.Point(164, 169);
+            this.txt_descripcion.Name = "txt_descripcion";
+            this.txt_descripcion.Size = new System.Drawing.Size(19, 26);
+            this.txt_descripcion.TabIndex = 207;
+            this.txt_descripcion.Tag = "Descripción";
+            this.txt_descripcion.Visible = false;
+            this.txt_descripcion.TextChanged += new System.EventHandler(this.txt_descripcion_TextChanged);
+            // 
+            // txt_fecha
+            // 
+            this.txt_fecha.Location = new System.Drawing.Point(726, 87);
+            this.txt_fecha.Name = "txt_fecha";
+            this.txt_fecha.Size = new System.Drawing.Size(19, 26);
+            this.txt_fecha.TabIndex = 206;
+            this.txt_fecha.Tag = "Fecha";
+            this.txt_fecha.Visible = false;
+            // 
+            // txt_cod
+            // 
+            this.txt_cod.Location = new System.Drawing.Point(314, 87);
+            this.txt_cod.Name = "txt_cod";
+            this.txt_cod.Size = new System.Drawing.Size(15, 26);
+            this.txt_cod.TabIndex = 205;
+            this.txt_cod.Tag = "Id Empleado";
+            this.txt_cod.Visible = false;
+            // 
+            // txt_nombre
+            // 
+            this.txt_nombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_nombre.Location = new System.Drawing.Point(798, 88);
+            this.txt_nombre.Name = "txt_nombre";
+            this.txt_nombre.ReadOnly = true;
+            this.txt_nombre.Size = new System.Drawing.Size(121, 24);
+            this.txt_nombre.TabIndex = 204;
+            this.txt_nombre.Tag = "Nombre Deducción";
+            this.txt_nombre.TextChanged += new System.EventHandler(this.txt_nombre_TextChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(751, 90);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(41, 20);
+            this.label4.TabIndex = 203;
+            this.label4.Text = "Tipo:";
             // 
             // label35
             // 
@@ -173,6 +221,17 @@
             this.descripcion.Size = new System.Drawing.Size(471, 51);
             this.descripcion.TabIndex = 30;
             this.descripcion.Text = "";
+            // 
+            // cantidad
+            // 
+            this.cantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cantidad.Location = new System.Drawing.Point(769, 146);
+            this.cantidad.Name = "cantidad";
+            this.cantidad.Size = new System.Drawing.Size(121, 24);
+            this.cantidad.TabIndex = 27;
+            this.cantidad.Tag = "Cantidad Deducción";
+            this.cantidad.TextChanged += new System.EventHandler(this.txt_cant_pagar_TextChanged);
+            this.cantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cantidad_KeyPress);
             // 
             // label7
             // 
@@ -426,64 +485,6 @@
             this.btn_cancelar.TabIndex = 5;
             this.btn_cancelar.UseVisualStyleBackColor = true;
             this.btn_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(751, 90);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(41, 20);
-            this.label4.TabIndex = 203;
-            this.label4.Text = "Tipo:";
-            // 
-            // txt_nombre
-            // 
-            this.txt_nombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_nombre.Location = new System.Drawing.Point(798, 88);
-            this.txt_nombre.Name = "txt_nombre";
-            this.txt_nombre.ReadOnly = true;
-            this.txt_nombre.Size = new System.Drawing.Size(121, 24);
-            this.txt_nombre.TabIndex = 204;
-            this.txt_nombre.Tag = "Nombre Deducción";
-            this.txt_nombre.TextChanged += new System.EventHandler(this.txt_nombre_TextChanged);
-            // 
-            // txt_cod
-            // 
-            this.txt_cod.Location = new System.Drawing.Point(314, 87);
-            this.txt_cod.Name = "txt_cod";
-            this.txt_cod.Size = new System.Drawing.Size(15, 26);
-            this.txt_cod.TabIndex = 205;
-            this.txt_cod.Tag = "Id Empleado";
-            this.txt_cod.Visible = false;
-            // 
-            // txt_fecha
-            // 
-            this.txt_fecha.Location = new System.Drawing.Point(726, 87);
-            this.txt_fecha.Name = "txt_fecha";
-            this.txt_fecha.Size = new System.Drawing.Size(19, 26);
-            this.txt_fecha.TabIndex = 206;
-            this.txt_fecha.Tag = "Fecha";
-            this.txt_fecha.Visible = false;
-            // 
-            // txt_descripcion
-            // 
-            this.txt_descripcion.Location = new System.Drawing.Point(164, 169);
-            this.txt_descripcion.Name = "txt_descripcion";
-            this.txt_descripcion.Size = new System.Drawing.Size(19, 26);
-            this.txt_descripcion.TabIndex = 207;
-            this.txt_descripcion.Tag = "Descripción";
-            this.txt_descripcion.Visible = false;
-            this.txt_descripcion.TextChanged += new System.EventHandler(this.txt_descripcion_TextChanged);
-            // 
-            // cantidad
-            // 
-            this.cantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cantidad.Location = new System.Drawing.Point(769, 146);
-            this.cantidad.Name = "cantidad";
-            this.cantidad.Size = new System.Drawing.Size(121, 24);
-            this.cantidad.TabIndex = 27;
-            this.cantidad.Tag = "Cantidad Deducción";
-            this.cantidad.TextChanged += new System.EventHandler(this.txt_cant_pagar_TextChanged);
             // 
             // Frm_otros_deduccion
             // 

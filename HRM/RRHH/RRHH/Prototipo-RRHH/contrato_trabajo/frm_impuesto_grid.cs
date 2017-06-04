@@ -22,7 +22,7 @@ namespace contrato_trabajo
         capa_datos cd = new capa_datos();
         private void frm_impuesto_Load(object sender, EventArgs e)
         {
-            dgv_impuesto.DataSource = cd.cargar("select id_tasa_pk,minimo_sueldo,maximo_sueldo,porcentaje from tasa_impuesto where estado='ACTIVO'");
+            dgv_impuesto.DataSource = cd.cargar("select id_tasa_pk,minimo_sueldo,maximo_sueldo,porcentaje from tasa_impuesto where estado='ACTIVO' order by id_tasa_pk");
             dgv_impuesto.Columns[0].HeaderText = "ID Impuesto";
             dgv_impuesto.Columns[1].HeaderText = "Minimo";
             dgv_impuesto.Columns[2].HeaderText = "Maximo";
@@ -69,7 +69,7 @@ namespace contrato_trabajo
 
         private void btn_actualizar_Click(object sender, EventArgs e)
         {
-            dgv_impuesto.DataSource = cd.cargar("select id_tasa_pk,minimo_sueldo,maximo_sueldo,porcentaje from tasa_impuesto where estado='ACTIVO'");
+            dgv_impuesto.DataSource = cd.cargar("select id_tasa_pk,minimo_sueldo,maximo_sueldo,porcentaje from tasa_impuesto where estado='ACTIVO' order by id_tasa_pk");
         }
 
         private void btn_primero_Click(object sender, EventArgs e)

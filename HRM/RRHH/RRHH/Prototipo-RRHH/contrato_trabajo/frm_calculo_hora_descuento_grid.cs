@@ -35,7 +35,7 @@ namespace contrato_trabajo
 
         private void btn_actualizar_Click(object sender, EventArgs e)
         {
-            dgv_descuento.DataSource = cd.cargar("select id_deduccion_pk,fecha,nombre_deduccion,descripcion,cantidad_deduccion,cantidad_horas,id_empleado_pk from deducciones where nombre_deduccion='horas descontadas' and estado='ACTIVO'");
+            dgv_descuento.DataSource = cd.cargar("select id_deduccion_pk,fecha,nombre_deduccion,descripcion,cantidad_deduccion,cantidad_horas,id_empleado_pk from deducciones where nombre_deduccion='horas descontadas' and estado='ACTIVO' order by id_deduccion_pk");
         }
 
         private void btn_anterior_Click(object sender, EventArgs e)
@@ -85,7 +85,7 @@ namespace contrato_trabajo
         FuncionesNavegador.CapaNegocio fn = new FuncionesNavegador.CapaNegocio();
         private void frm_calculo_hora_descuento_grid_Load(object sender, EventArgs e)
         {
-            dgv_descuento.DataSource = cd.cargar("select id_deduccion_pk,fecha,nombre_deduccion,descripcion,cantidad_deduccion,cantidad_horas,id_empleado_pk from deducciones where nombre_deduccion='horas descontadas' and estado='ACTIVO'");
+            dgv_descuento.DataSource = cd.cargar("select id_deduccion_pk,fecha,nombre_deduccion,descripcion,cantidad_deduccion,cantidad_horas,id_empleado_pk from deducciones where nombre_deduccion='horas descontadas' and estado='ACTIVO' order by id_deduccion_pk");
 
         }
 

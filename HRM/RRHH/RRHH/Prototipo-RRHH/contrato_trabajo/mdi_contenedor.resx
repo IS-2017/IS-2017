@@ -586,22 +586,28 @@
     <value>Area de Trabajo</value>
   </data>
   <data name="horasExtraToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>235, 28</value>
+    <value>361, 28</value>
   </data>
   <data name="horasExtraToolStripMenuItem.Text" xml:space="preserve">
     <value>Horas Extra</value>
   </data>
   <data name="tasaImpuestosToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>235, 28</value>
+    <value>361, 28</value>
   </data>
   <data name="tasaImpuestosToolStripMenuItem.Text" xml:space="preserve">
     <value>Tasa Impuestos</value>
   </data>
   <data name="seguroSocialToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>235, 28</value>
+    <value>361, 28</value>
   </data>
   <data name="seguroSocialToolStripMenuItem.Text" xml:space="preserve">
     <value>Seguro Social</value>
+  </data>
+  <data name="cambiosDeEstadoNominaToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>361, 28</value>
+  </data>
+  <data name="cambiosDeEstadoNominaToolStripMenuItem.Text" xml:space="preserve">
+    <value>Cambios de Estado Nomina</value>
   </data>
   <data name="nominaToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>280, 28</value>
@@ -10016,6 +10022,42 @@
   <data name="&gt;&gt;seguroSocialToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;devengoToolStripMenuItem.Name" xml:space="preserve">
+    <value>devengoToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;devengoToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;horasExtraToolStripMenuItem1.Name" xml:space="preserve">
+    <value>horasExtraToolStripMenuItem1</value>
+  </data>
+  <data name="&gt;&gt;horasExtraToolStripMenuItem1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;devengoExtraToolStripMenuItem.Name" xml:space="preserve">
+    <value>devengoExtraToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;devengoExtraToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;deduccionesToolStripMenuItem.Name" xml:space="preserve">
+    <value>deduccionesToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;deduccionesToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;horasDescontadasToolStripMenuItem.Name" xml:space="preserve">
+    <value>horasDescontadasToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;horasDescontadasToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;deducionExtraToolStripMenuItem.Name" xml:space="preserve">
+    <value>deducionExtraToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;deducionExtraToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;nominasToolStripMenuItem1.Name" xml:space="preserve">
     <value>nominasToolStripMenuItem1</value>
   </data>
@@ -10104,6 +10146,24 @@
     <value>reporteDeEmpleadosToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;reporteDeEmpleadosToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;nominaToolStripMenuItem2.Name" xml:space="preserve">
+    <value>nominaToolStripMenuItem2</value>
+  </data>
+  <data name="&gt;&gt;nominaToolStripMenuItem2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;devengoToolStripMenuItem1.Name" xml:space="preserve">
+    <value>devengoToolStripMenuItem1</value>
+  </data>
+  <data name="&gt;&gt;devengoToolStripMenuItem1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;deduccionToolStripMenuItem.Name" xml:space="preserve">
+    <value>deduccionToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;deduccionToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;estadisticasToolStripMenuItem.Name" xml:space="preserve">
@@ -10268,58 +10328,10 @@
   <data name="&gt;&gt;toolStripProgressBar1.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripProgressBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;devengoToolStripMenuItem.Name" xml:space="preserve">
-    <value>devengoToolStripMenuItem</value>
+  <data name="&gt;&gt;cambiosDeEstadoNominaToolStripMenuItem.Name" xml:space="preserve">
+    <value>cambiosDeEstadoNominaToolStripMenuItem</value>
   </data>
-  <data name="&gt;&gt;devengoToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;deduccionesToolStripMenuItem.Name" xml:space="preserve">
-    <value>deduccionesToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;deduccionesToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;nominaToolStripMenuItem2.Name" xml:space="preserve">
-    <value>nominaToolStripMenuItem2</value>
-  </data>
-  <data name="&gt;&gt;nominaToolStripMenuItem2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;devengoToolStripMenuItem1.Name" xml:space="preserve">
-    <value>devengoToolStripMenuItem1</value>
-  </data>
-  <data name="&gt;&gt;devengoToolStripMenuItem1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;deduccionToolStripMenuItem.Name" xml:space="preserve">
-    <value>deduccionToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;deduccionToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;horasExtraToolStripMenuItem1.Name" xml:space="preserve">
-    <value>horasExtraToolStripMenuItem1</value>
-  </data>
-  <data name="&gt;&gt;horasExtraToolStripMenuItem1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;devengoExtraToolStripMenuItem.Name" xml:space="preserve">
-    <value>devengoExtraToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;devengoExtraToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;horasDescontadasToolStripMenuItem.Name" xml:space="preserve">
-    <value>horasDescontadasToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;horasDescontadasToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;deducionExtraToolStripMenuItem.Name" xml:space="preserve">
-    <value>deducionExtraToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;deducionExtraToolStripMenuItem.Type" xml:space="preserve">
+  <data name="&gt;&gt;cambiosDeEstadoNominaToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

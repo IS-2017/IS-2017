@@ -44,9 +44,9 @@
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dgv_nomina = new System.Windows.Forms.DataGridView();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.gpb_navegador.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_nomina)).BeginInit();
@@ -216,11 +216,11 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.radioButton1);
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.dateTimePicker2);
             this.groupBox1.Controls.Add(this.dateTimePicker1);
             this.groupBox1.Controls.Add(this.comboBox1);
-            this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.dgv_nomina);
             this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -235,7 +235,7 @@
             // button2
             // 
             this.button2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button2.Location = new System.Drawing.Point(48, 278);
+            this.button2.Location = new System.Drawing.Point(56, 279);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(93, 32);
             this.button2.TabIndex = 210;
@@ -245,7 +245,7 @@
             // 
             // dateTimePicker2
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(0, 237);
+            this.dateTimePicker2.Location = new System.Drawing.Point(0, 234);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(200, 26);
             this.dateTimePicker2.TabIndex = 209;
@@ -264,17 +264,8 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(193, 28);
             this.comboBox1.TabIndex = 207;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             this.comboBox1.DropDownClosed += new System.EventHandler(this.comboBox1_DropDownClosed);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(28, 170);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(145, 18);
-            this.label2.TabIndex = 200;
-            this.label2.Text = "Fecha Inicio Pago:";
             // 
             // label1
             // 
@@ -298,6 +289,18 @@
             this.dgv_nomina.RowTemplate.Height = 24;
             this.dgv_nomina.Size = new System.Drawing.Size(1053, 456);
             this.dgv_nomina.TabIndex = 198;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(7, 163);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(167, 24);
+            this.radioButton1.TabIndex = 211;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Filtrado de Fechas:";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // Reporte_nomina
             // 
@@ -333,7 +336,6 @@
         private System.Windows.Forms.Button btn_buscar;
         private System.Windows.Forms.Button btn_actualizar;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgv_nomina;
         private System.Windows.Forms.Button button1;
@@ -341,5 +343,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.RadioButton radioButton1;
     }
 }

@@ -223,7 +223,7 @@ namespace contrato_trabajo
 
         private void btn_actualizar_Click(object sender, EventArgs e)
         {
-            this.dg.DataSource = cn.cargar("select id_deduccion_pk,fecha,nombre_deduccion,descripcion,cantidad_deduccion,cantidad_horas,id_empleado_pk from deducciones where nombre_deduccion='horas descontadas' and estado='ACTIVO'");
+            this.dg.DataSource = cn.cargar("select id_deduccion_pk,fecha,nombre_deduccion,descripcion,cantidad_deduccion,cantidad_horas,id_empleado_pk from deducciones where nombre_deduccion='horas descontadas' and estado='ACTIVO' order by id_deduccion_pk");
         }
 
         private void btn_anterior_Click(object sender, EventArgs e)

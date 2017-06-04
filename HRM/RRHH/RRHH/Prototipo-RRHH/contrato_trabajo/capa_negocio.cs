@@ -27,7 +27,7 @@ namespace contrato_trabajo
 
         public void ModificarTasa(string id, string mini, string max, string por)
         {
-            int resultado = ca.Ejecutar_Mysql("update tasa_impuesto set minimo_sueldo='" + mini + "'maximo_sueldo='" + max + "',porcentaje='" + por + "' where id_tasa_pk='" + id + "';");
+            int resultado = ca.Ejecutar_Mysql("update tasa_impuesto set minimo_sueldo='" + mini + "',maximo_sueldo='" + max + "',porcentaje='" + por + "' where id_tasa_pk='" + id + "';");
             if (resultado > 0)
             {
                 MessageBox.Show("Modificacion Exitosa");
@@ -150,7 +150,7 @@ namespace contrato_trabajo
 
         public void ModificarHora(string id, string des, string por)
         {
-            int resultado = ca.Ejecutar_Mysql("update tasa_hora_extra set nombre_impuesto='" + des + "',porcentaje='" + por + "' where id_hora_pk='" + id + "';");
+            int resultado = ca.Ejecutar_Mysql("update tasa_hora_extra set descripcion='" + des + "',porcentaje='" + por + "' where id_hora_pk='" + id + "';");
             if (resultado > 0)
             {
                 MessageBox.Show("Modificacion Exitosa");
@@ -176,7 +176,7 @@ namespace contrato_trabajo
 
         public void InsertarSocial(string p_l, string p_p, string fe, string emp)
         {
-            int resultado = ca.Ejecutar_Mysql("insert into planilla_igss values (null,'" + p_l + "','" + p_p + "','"+fe+"','ACTIVO','"+emp+"');");
+            int resultado = ca.Ejecutar_Mysql("insert into planilla_igss (id_planilla_igss_pk, porcentaje_igss_laboral, porcentaje_igss_patronal, fecha, estado, id_empresa_pk) values (null,'" + p_l + "','" + p_p + "','"+fe+"','ACTIVO','"+emp+"');");
 
             if (resultado > 0)
             {

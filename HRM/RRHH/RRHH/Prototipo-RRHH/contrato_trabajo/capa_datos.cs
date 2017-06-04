@@ -153,23 +153,30 @@ namespace contrato_trabajo
 
         public int Ejecutar_Mysql(string Query)
         {
+            OdbcConnection con = seguridad.Conexion.ObtenerConexionODBC();
+            OdbcCommand comando = new OdbcCommand();
+            comando.Connection = con;
+
+            OdbcTransaction myTrans;
+            myTrans = con.BeginTransaction(IsolationLevel.ReadCommitted);
+
+            comando.Transaction = myTrans;
             try
             {
-                OdbcCommand MiComando = new OdbcCommand(Query, seguridad.Conexion.ObtenerConexionODBC());
-                int FilasAfectadas = MiComando.ExecuteNonQuery();
+                comando.CommandText = Query;
+                int FilasAfectadas = comando.ExecuteNonQuery();
+                myTrans.Commit();
                 return 1;
-             
-
+                
             }
-            catch (Exception ex)
+            catch
             {
-                MessageBox.Show(ex.Message);
+                myTrans.Rollback();
                 return 0;
+
             }
             seguridad.Conexion.DesconectarODBC();
         }
-
-
 
         public string nombre_jornada(string id_empleado_pk)
         {
@@ -193,9 +200,9 @@ namespace contrato_trabajo
                 nombre_jornada2 = Convert.ToString(dtt.Rows[0][0]);
 
             }
-            catch (Exception ex)
+            catch
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("El empleado no tiene jornada asignada");
                 nombre_jornada2 = null;
             }
             return nombre_jornada2;

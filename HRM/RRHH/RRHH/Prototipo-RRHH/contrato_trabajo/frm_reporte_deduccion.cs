@@ -23,6 +23,9 @@ namespace contrato_trabajo
             cd.llenar_id_empleado(cbo_empleado);
             cbo_empleado.SelectedIndex = -1;
             dgv_deduccion.DataSource = cd.cargar("select empleado.id_empleado_pk,concat(nombre_emp,' ',apellido_emp) as nombre,empresa.id_empresa_pk,empresa.nombre_empresa,nombre_deduccion,fecha,cantidad_horas,cantidad_deduccion from deducciones inner join empleado on empleado.id_empleado_pk=deducciones.id_empleado_pk inner join empresa on empleado.id_empresa_pk=empresa.id_empresa_pk where deducciones.estado='activo';");
+            dtp_fin.Enabled = false;
+            dtp_inicio.Enabled = false;
+            btn_filtrar.Enabled = false;
         }
 
         private void cbo_empleado_DropDownClosed(object sender, EventArgs e)
@@ -70,6 +73,14 @@ namespace contrato_trabajo
             frm_viewerDeducion fd = new frm_viewerDeducion();
             fd.crystalReportViewer1.ReportSource = cRep;
             fd.Show();
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            dtp_fin.Enabled = true;
+            dtp_inicio.Enabled = true;
+            btn_filtrar.Enabled = true;
+            cbo_empleado.SelectedIndex = -1;
         }
     }
 }

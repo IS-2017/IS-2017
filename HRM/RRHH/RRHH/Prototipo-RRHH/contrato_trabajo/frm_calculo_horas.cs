@@ -347,7 +347,7 @@ namespace contrato_trabajo
 
         private void btn_actualizar_Click(object sender, EventArgs e)
         {
-            this.dg.DataSource = cn.cargar("select id_devengo_pk,fecha,nombre_devengo,descripcion,cantidad_devengado,cantidad_horas_extra,id_empleado_pk from devengos where nombre_devengo='horas extra' and estado='ACTIVO'");
+            this.dg.DataSource = cn.cargar("select id_devengo_pk,fecha,nombre_devengo,descripcion,cantidad_devengado,cantidad_horas_extra,id_empleado_pk from devengos where nombre_devengo='horas extra' and estado='ACTIVO' order by id_devengo_pk");
         }
 
         private void cbo_por_SelectedIndexChanged(object sender, EventArgs e)
