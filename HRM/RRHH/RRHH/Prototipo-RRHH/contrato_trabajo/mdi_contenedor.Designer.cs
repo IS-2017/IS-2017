@@ -106,6 +106,7 @@
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
+            this.cambiosDeEstadoNominaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
@@ -295,7 +296,8 @@
             this.nominaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.horasExtraToolStripMenuItem,
             this.tasaImpuestosToolStripMenuItem,
-            this.seguroSocialToolStripMenuItem});
+            this.seguroSocialToolStripMenuItem,
+            this.cambiosDeEstadoNominaToolStripMenuItem});
             this.nominaToolStripMenuItem.Image = global::contrato_trabajo.Properties.Resources.nomina_min;
             this.nominaToolStripMenuItem.Name = "nominaToolStripMenuItem";
             resources.ApplyResources(this.nominaToolStripMenuItem, "nominaToolStripMenuItem");
@@ -708,6 +710,12 @@
             this.toolStripProgressBar1.Name = "toolStripProgressBar1";
             resources.ApplyResources(this.toolStripProgressBar1, "toolStripProgressBar1");
             // 
+            // cambiosDeEstadoNominaToolStripMenuItem
+            // 
+            this.cambiosDeEstadoNominaToolStripMenuItem.Name = "cambiosDeEstadoNominaToolStripMenuItem";
+            resources.ApplyResources(this.cambiosDeEstadoNominaToolStripMenuItem, "cambiosDeEstadoNominaToolStripMenuItem");
+            this.cambiosDeEstadoNominaToolStripMenuItem.Click += new System.EventHandler(this.cambiosDeEstadoNominaToolStripMenuItem_Click);
+            // 
             // mdi_contenedor
             // 
             this.AllowDrop = true;
@@ -812,6 +820,7 @@
         private System.Windows.Forms.ToolStripMenuItem nominaToolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem devengoToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem deduccionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cambiosDeEstadoNominaToolStripMenuItem;
     }
 }
 

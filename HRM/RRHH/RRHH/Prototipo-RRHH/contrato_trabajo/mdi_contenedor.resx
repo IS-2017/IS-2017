@@ -586,22 +586,28 @@
     <value>Area de Trabajo</value>
   </data>
   <data name="horasExtraToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>235, 28</value>
+    <value>361, 28</value>
   </data>
   <data name="horasExtraToolStripMenuItem.Text" xml:space="preserve">
     <value>Horas Extra</value>
   </data>
   <data name="tasaImpuestosToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>235, 28</value>
+    <value>361, 28</value>
   </data>
   <data name="tasaImpuestosToolStripMenuItem.Text" xml:space="preserve">
     <value>Tasa Impuestos</value>
   </data>
   <data name="seguroSocialToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>235, 28</value>
+    <value>361, 28</value>
   </data>
   <data name="seguroSocialToolStripMenuItem.Text" xml:space="preserve">
     <value>Seguro Social</value>
+  </data>
+  <data name="cambiosDeEstadoNominaToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>361, 28</value>
+  </data>
+  <data name="cambiosDeEstadoNominaToolStripMenuItem.Text" xml:space="preserve">
+    <value>Cambios de Estado Nomina</value>
   </data>
   <data name="nominaToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>280, 28</value>
@@ -10321,6 +10327,12 @@
   </data>
   <data name="&gt;&gt;toolStripProgressBar1.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripProgressBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cambiosDeEstadoNominaToolStripMenuItem.Name" xml:space="preserve">
+    <value>cambiosDeEstadoNominaToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;cambiosDeEstadoNominaToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>mdi_contenedor</value>

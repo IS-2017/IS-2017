@@ -35,6 +35,10 @@ namespace contrato_trabajo
                 this.cbo_empresa.Text = empresa;
 
             }
+            else
+            {
+                cn.llenar_id_empresa(this.cbo_empresa);
+            }
         }
         private void frm_seguro_social_Load(object sender, EventArgs e)
         {
@@ -56,7 +60,7 @@ namespace contrato_trabajo
             dt_fecha.CustomFormat = "yyyy-MM-dd";
             if (Editar)
             {
-                cp.ModificarSocial(codigo,txt_p_laboral.Text,txt_p_patronal.Text,dt_fecha.Text,cbo_empresa.SelectedValue.ToString());
+                cp.ModificarSocial(codigo,txt_p_laboral.Text,txt_p_patronal.Text,dt_fecha.Text,cbo_empresa.Text);
             }
             else
             {

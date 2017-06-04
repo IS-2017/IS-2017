@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(nomina));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(nomina));
             this.label35 = new System.Windows.Forms.Label();
             this.Nominas = new System.Windows.Forms.GroupBox();
             this.txt_totaldeducciones = new System.Windows.Forms.TextBox();
@@ -44,6 +44,24 @@
             this.cbo_empresa = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dgv_nonimas = new System.Windows.Forms.DataGridView();
+            this.dtp_hasta = new System.Windows.Forms.DateTimePicker();
+            this.dtp_desde = new System.Windows.Forms.DateTimePicker();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.fecha_hoy = new System.Windows.Forms.DateTimePicker();
+            this.btn_nuevo = new System.Windows.Forms.Button();
+            this.btn_ultimo = new System.Windows.Forms.Button();
+            this.btn_guardar = new System.Windows.Forms.Button();
+            this.btn_primero = new System.Windows.Forms.Button();
+            this.btn_editar = new System.Windows.Forms.Button();
+            this.btn_siguiente = new System.Windows.Forms.Button();
+            this.btn_eliminar = new System.Windows.Forms.Button();
+            this.btn_anterior = new System.Windows.Forms.Button();
+            this.btn_buscar = new System.Windows.Forms.Button();
+            this.btn_actualizar = new System.Windows.Forms.Button();
+            this.btn_cancelar = new System.Windows.Forms.Button();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -64,24 +82,7 @@
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtp_hasta = new System.Windows.Forms.DateTimePicker();
-            this.dtp_desde = new System.Windows.Forms.DateTimePicker();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.fecha_hoy = new System.Windows.Forms.DateTimePicker();
-            this.btn_nuevo = new System.Windows.Forms.Button();
-            this.btn_ultimo = new System.Windows.Forms.Button();
-            this.btn_guardar = new System.Windows.Forms.Button();
-            this.btn_primero = new System.Windows.Forms.Button();
-            this.btn_editar = new System.Windows.Forms.Button();
-            this.btn_siguiente = new System.Windows.Forms.Button();
-            this.btn_eliminar = new System.Windows.Forms.Button();
-            this.btn_anterior = new System.Windows.Forms.Button();
-            this.btn_buscar = new System.Windows.Forms.Button();
-            this.btn_actualizar = new System.Windows.Forms.Button();
-            this.btn_cancelar = new System.Windows.Forms.Button();
+            this.Column21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nominas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_nonimas)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -237,7 +238,8 @@
             this.Column9,
             this.Column10,
             this.Column19,
-            this.Column17});
+            this.Column17,
+            this.Column21});
             this.dgv_nonimas.Location = new System.Drawing.Point(8, 139);
             this.dgv_nonimas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgv_nonimas.Name = "dgv_nonimas";
@@ -246,156 +248,6 @@
             this.dgv_nonimas.Size = new System.Drawing.Size(1267, 320);
             this.dgv_nonimas.TabIndex = 22;
             this.dgv_nonimas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // Column1
-            // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.Column1.DefaultCellStyle = dataGridViewCellStyle1;
-            this.Column1.HeaderText = "ID EMPRESA";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 108;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "ID EMPLEADO";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 118;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "NOMBRE EMPLEADO";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Width = 161;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "APELLIDO EMPLEADO";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Width = 163;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "SUELDO BASE";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            this.Column5.Width = 116;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "BONIFICACION";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            this.Column6.Width = 137;
-            // 
-            // Column12
-            // 
-            this.Column12.HeaderText = "COMISION";
-            this.Column12.Name = "Column12";
-            this.Column12.ReadOnly = true;
-            this.Column12.Width = 109;
-            // 
-            // Column13
-            // 
-            this.Column13.HeaderText = "HORAS EXTRA";
-            this.Column13.Name = "Column13";
-            this.Column13.ReadOnly = true;
-            this.Column13.Width = 118;
-            // 
-            // Column14
-            // 
-            this.Column14.HeaderText = "DEVENGO EXTRA";
-            this.Column14.Name = "Column14";
-            this.Column14.ReadOnly = true;
-            this.Column14.Width = 138;
-            // 
-            // Column18
-            // 
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.Column18.DefaultCellStyle = dataGridViewCellStyle2;
-            this.Column18.HeaderText = "TOTAL DEVENGOS";
-            this.Column18.Name = "Column18";
-            this.Column18.ReadOnly = true;
-            this.Column18.Width = 142;
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "IGSS";
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
-            this.Column7.Width = 67;
-            // 
-            // Column11
-            // 
-            this.Column11.HeaderText = "CUOTA_PATRONAL";
-            this.Column11.Name = "Column11";
-            this.Column11.ReadOnly = true;
-            this.Column11.Visible = false;
-            this.Column11.Width = 168;
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "ISR";
-            this.Column8.Name = "Column8";
-            this.Column8.ReadOnly = true;
-            this.Column8.Width = 57;
-            // 
-            // Column15
-            // 
-            this.Column15.HeaderText = "DESCUENTO EXTRA";
-            this.Column15.Name = "Column15";
-            this.Column15.ReadOnly = true;
-            this.Column15.Width = 148;
-            // 
-            // Column20
-            // 
-            this.Column20.HeaderText = "HORAS DESCONTADAS";
-            this.Column20.Name = "Column20";
-            this.Column20.ReadOnly = true;
-            this.Column20.Width = 171;
-            // 
-            // Column16
-            // 
-            this.Column16.HeaderText = "CANTIDAD HORAS";
-            this.Column16.Name = "Column16";
-            this.Column16.ReadOnly = true;
-            this.Column16.Visible = false;
-            this.Column16.Width = 145;
-            // 
-            // Column9
-            // 
-            this.Column9.HeaderText = "BONO 14";
-            this.Column9.Name = "Column9";
-            this.Column9.ReadOnly = true;
-            this.Column9.Visible = false;
-            this.Column9.Width = 91;
-            // 
-            // Column10
-            // 
-            this.Column10.HeaderText = "AGUINALDO";
-            this.Column10.Name = "Column10";
-            this.Column10.ReadOnly = true;
-            this.Column10.Visible = false;
-            this.Column10.Width = 118;
-            // 
-            // Column19
-            // 
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(183)))), ((int)(((byte)(177)))));
-            this.Column19.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Column19.HeaderText = "TOTAL DEDUCCIONES";
-            this.Column19.Name = "Column19";
-            this.Column19.ReadOnly = true;
-            this.Column19.Width = 163;
-            // 
-            // Column17
-            // 
-            this.Column17.HeaderText = "TOTAL";
-            this.Column17.Name = "Column17";
-            this.Column17.ReadOnly = true;
-            this.Column17.Width = 75;
             // 
             // dtp_hasta
             // 
@@ -658,6 +510,163 @@
             this.btn_cancelar.TabIndex = 5;
             this.btn_cancelar.UseVisualStyleBackColor = true;
             // 
+            // Column1
+            // 
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.Column1.DefaultCellStyle = dataGridViewCellStyle1;
+            this.Column1.HeaderText = "ID EMPRESA";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 117;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "ID EMPLEADO";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 129;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "NOMBRE EMPLEADO";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 161;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "APELLIDO EMPLEADO";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Width = 163;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "SUELDO BASE";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            this.Column5.Width = 116;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "BONIFICACION";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            this.Column6.Width = 137;
+            // 
+            // Column12
+            // 
+            this.Column12.HeaderText = "COMISION";
+            this.Column12.Name = "Column12";
+            this.Column12.ReadOnly = true;
+            this.Column12.Width = 109;
+            // 
+            // Column13
+            // 
+            this.Column13.HeaderText = "HORAS EXTRA";
+            this.Column13.Name = "Column13";
+            this.Column13.ReadOnly = true;
+            this.Column13.Width = 118;
+            // 
+            // Column14
+            // 
+            this.Column14.HeaderText = "DEVENGO EXTRA";
+            this.Column14.Name = "Column14";
+            this.Column14.ReadOnly = true;
+            this.Column14.Width = 138;
+            // 
+            // Column18
+            // 
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.Column18.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Column18.HeaderText = "TOTAL DEVENGOS";
+            this.Column18.Name = "Column18";
+            this.Column18.ReadOnly = true;
+            this.Column18.Width = 142;
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "IGSS";
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            this.Column7.Width = 67;
+            // 
+            // Column11
+            // 
+            this.Column11.HeaderText = "CUOTA_PATRONAL";
+            this.Column11.Name = "Column11";
+            this.Column11.ReadOnly = true;
+            this.Column11.Visible = false;
+            this.Column11.Width = 159;
+            // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "ISR";
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
+            this.Column8.Width = 57;
+            // 
+            // Column15
+            // 
+            this.Column15.HeaderText = "DESCUENTO EXTRA";
+            this.Column15.Name = "Column15";
+            this.Column15.ReadOnly = true;
+            this.Column15.Width = 148;
+            // 
+            // Column20
+            // 
+            this.Column20.HeaderText = "HORAS DESCONTADAS";
+            this.Column20.Name = "Column20";
+            this.Column20.ReadOnly = true;
+            this.Column20.Width = 171;
+            // 
+            // Column16
+            // 
+            this.Column16.HeaderText = "CANTIDAD HORAS";
+            this.Column16.Name = "Column16";
+            this.Column16.ReadOnly = true;
+            this.Column16.Visible = false;
+            this.Column16.Width = 143;
+            // 
+            // Column9
+            // 
+            this.Column9.HeaderText = "BONO 14";
+            this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
+            this.Column9.Visible = false;
+            this.Column9.Width = 92;
+            // 
+            // Column10
+            // 
+            this.Column10.HeaderText = "AGUINALDO";
+            this.Column10.Name = "Column10";
+            this.Column10.ReadOnly = true;
+            this.Column10.Visible = false;
+            this.Column10.Width = 118;
+            // 
+            // Column19
+            // 
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(183)))), ((int)(((byte)(177)))));
+            this.Column19.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Column19.HeaderText = "TOTAL DEDUCCIONES";
+            this.Column19.Name = "Column19";
+            this.Column19.ReadOnly = true;
+            this.Column19.Width = 163;
+            // 
+            // Column17
+            // 
+            this.Column17.HeaderText = "TOTAL";
+            this.Column17.Name = "Column17";
+            this.Column17.ReadOnly = true;
+            this.Column17.Width = 75;
+            // 
+            // Column21
+            // 
+            this.Column21.HeaderText = "DIAS  TRABAJADOS";
+            this.Column21.Name = "Column21";
+            this.Column21.ReadOnly = true;
+            this.Column21.Width = 146;
+            // 
             // nomina
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -734,5 +743,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column19;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column17;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column21;
     }
 }

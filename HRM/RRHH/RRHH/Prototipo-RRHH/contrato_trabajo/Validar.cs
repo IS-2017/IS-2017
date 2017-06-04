@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -93,6 +94,18 @@ namespace contrato_trabajo
                 //MessageBox.Show("Llene el campo ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
+        
         }
+        public void validar_solo_numeros_y_puntos(object sender, KeyPressEventArgs e)
+        {
+            CultureInfo cc = System.Threading.Thread.CurrentThread.CurrentCulture;
+            if (char.IsNumber(e.KeyChar) || e.KeyChar.ToString()==cc.NumberFormat.NumberDecimalSeparator)
+                e.Handled = false;
+            else
+            {
+                e.Handled = true;
+                MessageBox.Show("Solo puede ingresar numero con Punto ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+}
     }
 }

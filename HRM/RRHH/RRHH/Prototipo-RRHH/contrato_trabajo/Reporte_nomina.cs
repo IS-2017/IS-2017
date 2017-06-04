@@ -24,7 +24,7 @@ namespace contrato_trabajo
             {
                 ca.llenar_id_empresa(comboBox1);
                 comboBox1.SelectedIndex = -1;
-                dgv_nomina.DataSource = ca.cargar("select empleado.id_empleado_pk, CONCAT(nombre_emp, ' ', apellido_emp) as 'nombre', detalle_nomina.id_nomina_pk, descripcion, fecha_inicio_pago, fecha_fin_pago, sueldo_base, nombre, total_a_pagar as 'valor', total, nomina.id_empresa_pk, empresa.nombre_empresa, empresa.id_area_trabajo_pk from nomina inner join detalle_nomina on nomina.id_nomina_pk = detalle_nomina.id_nomina_pk inner join empleado on nomina.id_empleado_pk = empleado.id_empleado_pk inner join empresa on empresa.id_empresa_pk = empleado.id_empresa_pk order by id_area_trabajo_pk ");
+                dgv_nomina.DataSource = ca.cargar("select empleado.id_empleado_pk, CONCAT(nombre_emp, ' ', apellido_emp) as 'nombre', detalle_nomina.id_nomina_pk, descripcion, fecha_inicio_pago, fecha_fin_pago, sueldo_base, nombre, total_a_pagar as 'valor', total, nomina.id_empresa_pk, empresa.nombre_empresa, empresa.id_area_trabajo_pk, nomina.estado from nomina inner join detalle_nomina on nomina.id_nomina_pk = detalle_nomina.id_nomina_pk inner join empleado on nomina.id_empleado_pk = empleado.id_empleado_pk inner join empresa on empresa.id_empresa_pk = empleado.id_empresa_pk  where nomina.estado != 'inactivo' order by id_area_trabajo_pk");
                 dateTimePicker1.Enabled = false;
                 dateTimePicker2.Enabled = false;
                 button2.Enabled = false;
@@ -89,7 +89,7 @@ namespace contrato_trabajo
         {
             try
             {
-                dgv_nomina.DataSource = ca.cargar("select empleado.id_empleado_pk, CONCAT(nombre_emp, ' ', apellido_emp) as 'nombre', detalle_nomina.id_nomina_pk, descripcion, fecha_inicio_pago, fecha_fin_pago, sueldo_base, nombre, total_a_pagar as 'valor', total, nomina.id_empresa_pk, empresa.nombre_empresa, empresa.id_area_trabajo_pk from nomina inner join detalle_nomina on nomina.id_nomina_pk = detalle_nomina.id_nomina_pk inner join empleado on nomina.id_empleado_pk = empleado.id_empleado_pk inner join empresa on empresa.id_empresa_pk = empleado.id_empresa_pk  where nomina.id_empresa_pk = '" + comboBox1.SelectedValue.ToString() + "' order by id_area_trabajo_pk;");
+                dgv_nomina.DataSource = ca.cargar("select empleado.id_empleado_pk, CONCAT(nombre_emp, ' ', apellido_emp) as 'nombre', detalle_nomina.id_nomina_pk, descripcion, fecha_inicio_pago, fecha_fin_pago, sueldo_base, nombre, total_a_pagar as 'valor', total, nomina.id_empresa_pk, empresa.nombre_empresa, empresa.id_area_trabajo_pk, nomina.estado from nomina inner join detalle_nomina on nomina.id_nomina_pk = detalle_nomina.id_nomina_pk inner join empleado on nomina.id_empleado_pk = empleado.id_empleado_pk inner join empresa on empresa.id_empresa_pk = empleado.id_empresa_pk  where nomina.estado != 'inactivo' and nomina.id_empresa_pk = '" + comboBox1.SelectedValue.ToString() + "' order by id_area_trabajo_pk;");
 
             }
             catch
@@ -104,7 +104,7 @@ namespace contrato_trabajo
             try
             {
 
-                dgv_nomina.DataSource = ca.cargar("select empleado.id_empleado_pk, CONCAT(nombre_emp, ' ', apellido_emp) as 'nombre', detalle_nomina.id_nomina_pk, descripcion, fecha_inicio_pago, fecha_fin_pago, sueldo_base, nombre, total_a_pagar as 'valor', total, nomina.id_empresa_pk, empresa.nombre_empresa, empresa.id_area_trabajo_pk from nomina inner join detalle_nomina on nomina.id_nomina_pk = detalle_nomina.id_nomina_pk inner join empleado on nomina.id_empleado_pk = empleado.id_empleado_pk inner join empresa on empresa.id_empresa_pk = empleado.id_empresa_pk where fecha_inicio_pago between '"+ dateTimePicker1.Value.ToString("yyyy -MM-dd") + "'and '" + dateTimePicker2.Value.ToString() +  "' order by id_area_trabajo_pk;");
+                dgv_nomina.DataSource = ca.cargar("select empleado.id_empleado_pk, CONCAT(nombre_emp, ' ', apellido_emp) as 'nombre', detalle_nomina.id_nomina_pk, descripcion, fecha_inicio_pago, fecha_fin_pago, sueldo_base, nombre, total_a_pagar as 'valor', total, nomina.id_empresa_pk, empresa.nombre_empresa, empresa.id_area_trabajo_pk ,nomina.estado from nomina inner join detalle_nomina on nomina.id_nomina_pk = detalle_nomina.id_nomina_pk inner join empleado on nomina.id_empleado_pk = empleado.id_empleado_pk inner join empresa on empresa.id_empresa_pk = empleado.id_empresa_pk where nomina.estado != 'inactivo' and fecha_inicio_pago between '"+ dateTimePicker1.Value.ToString("yyyy -MM-dd") + "' and '" + dateTimePicker2.Value.ToString("yyyy-MM-dd") +  "' order by id_area_trabajo_pk;");
             }
             catch(Exception ex)
             {
@@ -115,7 +115,7 @@ namespace contrato_trabajo
         private void btn_actualizar_Click(object sender, EventArgs e)
         {
           
-            dgv_nomina.DataSource = ca.cargar("select empleado.id_empleado_pk, CONCAT(nombre_emp, ' ', apellido_emp) as 'nombre', detalle_nomina.id_nomina_pk, descripcion, fecha_inicio_pago, fecha_fin_pago, sueldo_base, nombre, total_a_pagar as 'valor', total, nomina.id_empresa_pk, empresa.nombre_empresa, empresa.id_area_trabajo_pk from nomina inner join detalle_nomina on nomina.id_nomina_pk = detalle_nomina.id_nomina_pk inner join empleado on nomina.id_empleado_pk = empleado.id_empleado_pk inner join empresa on empresa.id_empresa_pk = empleado.id_empresa_pk order by id_area_trabajo_pk");
+            dgv_nomina.DataSource = ca.cargar("select empleado.id_empleado_pk, CONCAT(nombre_emp, ' ', apellido_emp) as 'nombre', detalle_nomina.id_nomina_pk, descripcion, fecha_inicio_pago, fecha_fin_pago, sueldo_base, nombre, total_a_pagar as 'valor', total, nomina.id_empresa_pk, empresa.nombre_empresa, empresa.id_area_trabajo_pk, nomina.estado from nomina inner join detalle_nomina on nomina.id_nomina_pk = detalle_nomina.id_nomina_pk inner join empleado on nomina.id_empleado_pk = empleado.id_empleado_pk inner join empresa on empresa.id_empresa_pk = empleado.id_empresa_pk where nomina.estado != 'inactivo' order by id_area_trabajo_pk");
 
         }
 

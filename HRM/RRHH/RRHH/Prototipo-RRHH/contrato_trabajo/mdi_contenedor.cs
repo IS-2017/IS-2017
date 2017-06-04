@@ -77,6 +77,7 @@ namespace contrato_trabajo
         Reporte_nomina renomina;
         Frm_reporte_devengos redevengo;
         frm_reporte_deduccion rededu;
+        Frm_nomina_mantenimiento_grid ma_nomina;
 
         String usuario;
 
@@ -901,6 +902,23 @@ namespace contrato_trabajo
         public void rededu_FormClosed(object sender, FormClosedEventArgs e)
         {
             rededu = null;
+        }
+
+        public void nom_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            ma_nomina = null;
+        }
+
+        private void cambiosDeEstadoNominaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (ma_nomina == null)
+            {
+                ma_nomina = new Frm_nomina_mantenimiento_grid();
+                ma_nomina.MdiParent = this;
+
+                ma_nomina.FormClosed += new FormClosedEventHandler(nom_FormClosed);
+                ma_nomina.Show();
+            }
         }
     }
 }
