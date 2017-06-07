@@ -1,0 +1,6 @@
+c:\users\chrix\documents\visual studio 2015\Projects\WebServiceHRM\WebServiceHRM\bin\Debug\WebServiceHRM.dll.config
+c:\users\chrix\documents\visual studio 2015\Projects\WebServiceHRM\WebServiceHRM\bin\Debug\WebServiceHRM.dll
+c:\users\chrix\documents\visual studio 2015\Projects\WebServiceHRM\WebServiceHRM\bin\Debug\WebServiceHRM.pdb
+c:\users\chrix\documents\visual studio 2015\Projects\WebServiceHRM\WebServiceHRM\obj\Debug\WebServiceHRM.csprojResolveAssemblyReference.cache
+c:\users\chrix\documents\visual studio 2015\Projects\WebServiceHRM\WebServiceHRM\obj\Debug\WebServiceHRM.dll
+c:\users\chrix\documents\visual studio 2015\Projects\WebServiceHRM\WebServiceHRM\obj\Debug\WebServiceHRM.pdb

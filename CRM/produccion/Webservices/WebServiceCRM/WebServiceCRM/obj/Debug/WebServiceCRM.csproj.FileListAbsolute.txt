@@ -1,0 +1,6 @@
+c:\users\chrix\documents\visual studio 2015\Projects\WebServiceCRM\WebServiceCRM\bin\Debug\WebServiceCRM.dll.config
+c:\users\chrix\documents\visual studio 2015\Projects\WebServiceCRM\WebServiceCRM\bin\Debug\WebServiceCRM.dll
+c:\users\chrix\documents\visual studio 2015\Projects\WebServiceCRM\WebServiceCRM\bin\Debug\WebServiceCRM.pdb
+c:\users\chrix\documents\visual studio 2015\Projects\WebServiceCRM\WebServiceCRM\obj\Debug\WebServiceCRM.csprojResolveAssemblyReference.cache
+c:\users\chrix\documents\visual studio 2015\Projects\WebServiceCRM\WebServiceCRM\obj\Debug\WebServiceCRM.dll
+c:\users\chrix\documents\visual studio 2015\Projects\WebServiceCRM\WebServiceCRM\obj\Debug\WebServiceCRM.pdb
